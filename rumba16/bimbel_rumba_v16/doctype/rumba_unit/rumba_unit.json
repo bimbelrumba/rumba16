@@ -17,7 +17,6 @@
   "tanggal_mulai",
   "status_unit",
   "kepemilikan",
-  "cost_center",
   "section_alamat_kontak",
   "alamat",
   "telepon_unit",
@@ -26,7 +25,11 @@
   "column_break_urbi",
   "jumlah_ruang_kelas",
   "kapasitas_max_sesi_belajar_minggu",
-  "kapasitas_max_murid"
+  "kapasitas_max_murid",
+  "section_relasi_internal",
+  "cost_center",
+  "column_break_aysc",
+  "warehouse"
  ],
  "fields": [
   {
@@ -167,12 +170,27 @@
    "fieldtype": "Link",
    "label": "Cost Center",
    "options": "Cost Center"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "section_relasi_internal",
+   "fieldtype": "Section Break",
+   "label": "RELASI INTERNAL"
+  },
+  {
+   "fieldname": "column_break_aysc",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-14 12:39:16.339335",
+ "modified": "2026-04-15 04:31:26.379612",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Unit",
