@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nama_tahun_ajaran",
+ "creation": "2026-04-14 15:02:40.803461",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_tahun_ajaran",
+  "nama_tahun_ajaran",
+  "status",
+  "nonaktif",
+  "column_break_dtze",
+  "tanggal_mulai",
+  "tanggal_selesai"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_tahun_ajaran",
+   "fieldtype": "Data",
+   "label": "Kode Tahun Ajaran",
+   "length": 4,
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "description": "Mulai dengan tanggal 1 Juli tahun berjalan.",
+   "fieldname": "tanggal_mulai",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Mulai",
+   "reqd": 1
+  },
+  {
+   "description": "Terisi otomatis dengan tanggal 30 Juni tahun depan.",
+   "fieldname": "tanggal_selesai",
+   "fieldtype": "Date",
+   "label": "Tanggal Selesai",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Bila dicentang, maka Tahun Ajaran ini akan diarsipkan dan tidak dapat dipakai lagi.",
+   "fieldname": "nonaktif",
+   "fieldtype": "Check",
+   "label": "Nonaktif"
+  },
+  {
+   "description": "Masukkan nama tahun ajaran dengan format tahun awal-tahun akhir. Misal: 2026-2027 untuk tahun ajaran mulai 1 Juli 2026 dan berakhir 30 Juni 2027.",
+   "fieldname": "nama_tahun_ajaran",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Nama Tahun Ajaran",
+   "length": 9,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_dtze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Aktif\nArsip"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-14 16:01:23.703953",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Tahun Ajaran",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
