@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:kode_kota",
+ "creation": "2026-04-13 12:30:48.936279",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_kota",
+  "nama_kota",
+  "column_break_uzpu",
+  "kode_provinsi",
+  "nama_provinsi"
+ ],
+ "fields": [
+  {
+   "description": "Masukkan 3 huruf kode kota. Boleh gunakan kode kota yang sudah umum dipakai atau kode bandara terdekat.",
+   "fieldname": "kode_kota",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Kota",
+   "length": 3,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nama_kota",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Nama Kota",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uzpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Kode Provinsi",
+   "options": "Rumba Provinsi",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Provinsi",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-14 11:39:57.648063",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Kota",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nama_kota"
+}

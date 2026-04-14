@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nama_unit",
+ "creation": "2026-04-13 14:27:51.934463",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identitas_cabang",
+  "kode_provinsi",
+  "nama_provinsi",
+  "kode_kota",
+  "nama_kota",
+  "kode_unit",
+  "column_break_bnit",
+  "nama_unit",
+  "tanggal_mulai",
+  "status_unit",
+  "kepemilikan",
+  "cost_center",
+  "section_alamat_kontak",
+  "alamat",
+  "telepon_unit",
+  "email_unit",
+  "koordinator_unit",
+  "column_break_urbi",
+  "jumlah_ruang_kelas",
+  "kapasitas_max_sesi_belajar_minggu",
+  "kapasitas_max_murid"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_kota",
+   "fieldtype": "Link",
+   "label": "Kode Kota",
+   "length": 3,
+   "options": "Rumba Kota",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Nama Unit",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "kepemilikan",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Kepemilikan",
+   "options": "YRKI\nFranchise\nPartnership"
+  },
+  {
+   "fieldname": "column_break_bnit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanggal_mulai",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Mulai",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_unit",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Status Unit",
+   "options": "Rintisan\nAktif\nPindah\nTutup"
+  },
+  {
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Unit",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_identitas_cabang",
+   "fieldtype": "Section Break",
+   "label": "IDENTITAS CABANG"
+  },
+  {
+   "fieldname": "section_alamat_kontak",
+   "fieldtype": "Section Break",
+   "label": "ALAMAT & KONTAK"
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat"
+  },
+  {
+   "fieldname": "column_break_urbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Kode Provinsi",
+   "options": "Rumba Provinsi",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "label": "Nama Provinsi",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "kode_kota.nama_kota",
+   "fieldname": "nama_kota",
+   "fieldtype": "Data",
+   "label": "Nama Kota"
+  },
+  {
+   "fieldname": "email_unit",
+   "fieldtype": "Data",
+   "label": "Email Unit",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "telepon_unit",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Telepon Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "koordinator_unit",
+   "fieldtype": "Link",
+   "label": "Koordinator Unit",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "jumlah_ruang_kelas",
+   "fieldtype": "Int",
+   "label": "Jumlah Ruang Kelas",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Nilai = jumlah ruang kelas x 40 sesi pertemuan/minggu.",
+   "fieldname": "kapasitas_max_sesi_belajar_minggu",
+   "fieldtype": "Int",
+   "label": "Kapasitas Max Sesi Belajar/Minggu",
+   "read_only": 1
+  },
+  {
+   "description": "Nilai = (Kapasitas Max Sesi Belajar/Minggu : 2) x 6",
+   "fieldname": "kapasitas_max_murid",
+   "fieldtype": "Int",
+   "label": "Kapasitas Max Murid",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-14 12:39:16.339335",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Unit",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
