@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2026-04-14 19:34:46.234909",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_semester",
+  "periode_semester",
+  "nama_semester",
+  "nonaktif",
+  "column_break_gish",
+  "kode_tahun_ajaran",
+  "tanggal_mulai_semester",
+  "tanggal_akhir_semester"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_semester",
+   "fieldtype": "Data",
+   "label": "Kode Semester",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "nama_semester",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Semester",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gish",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "periode_semester",
+   "fieldtype": "Select",
+   "label": "Periode Semester",
+   "options": "S1 (Jul-Des)\nS2 (Jan-Jun)",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "nonaktif",
+   "fieldtype": "Check",
+   "label": "Nonaktif"
+  },
+  {
+   "fieldname": "kode_tahun_ajaran",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kode Tahun Ajaran",
+   "options": "Rumba Tahun Ajaran",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_mulai_semester",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Mulai Semester",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_akhir_semester",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Akhir Semester",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-15 04:34:50.797313",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Semester",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
