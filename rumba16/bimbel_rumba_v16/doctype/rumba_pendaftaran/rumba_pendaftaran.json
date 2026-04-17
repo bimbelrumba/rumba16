@@ -1,0 +1,546 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "field",
+ "creation": "2026-04-15 06:36:08.845158",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_bimbel_rumba_tujuan",
+  "nama_kota",
+  "nama_unit",
+  "kode_unit",
+  "section_program_belajar",
+  "program_belajar",
+  "jenis_kelas",
+  "column_break_oqos",
+  "html_hari_belajar",
+  "senin",
+  "selasa",
+  "rabu",
+  "kamis",
+  "jumat",
+  "sabtu",
+  "jam_belajar",
+  "section_info_anak",
+  "nama_lengkap",
+  "nama_panggilan",
+  "tempat_lahir",
+  "tanggal_lahir",
+  "jenis_kelamin",
+  "agama_kepercayaan",
+  "column_break_ucgk",
+  "anak_sudah_sekolah",
+  "nama_sekolah",
+  "kelas",
+  "anak_berkebutuhan_khusus",
+  "jelaskan_kebutuhan_khusus_anak",
+  "section_info_keluarga",
+  "nama_orang_tua_wali",
+  "hubungan_dengan_anak",
+  "alamat",
+  "nomor_handphone",
+  "pendidikan_terakhir",
+  "pekerjaan",
+  "akun_sosmed",
+  "column_break_ltae",
+  "saudara_di_rumba",
+  "nama_saudara",
+  "belajar_di_unit_rumba",
+  "section_info_tambahan",
+  "kegiatan_anak_di_rumah",
+  "hal_menonjol_dari_anak",
+  "pengembangan_lebih_lanjut",
+  "harapan_orang_tua",
+  "les_serupa",
+  "durasi_les",
+  "level_yang_dicapai",
+  "nama_tempat_les",
+  "sumber_info_awal_rumba",
+  "instagram",
+  "facebook",
+  "website_bimbelrumba",
+  "pencarian_di_internet",
+  "kawan",
+  "keluarga",
+  "sekolah",
+  "kegiatan_rumba",
+  "spanduk_di_jalan",
+  "brosur_selebaran",
+  "lainnya",
+  "untuk_jawaban_lainnya",
+  "section_merchandise_rumba",
+  "pilihan_merchandise",
+  "kaos",
+  "ukuran_kaos",
+  "tas",
+  "topi",
+  "section_validasi_admin",
+  "tanggal_pendaftaran",
+  "status_pendaftaran",
+  "alasan_penolakan_batal",
+  "column_break_vzeh",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_bimbel_rumba_tujuan",
+   "fieldtype": "Section Break",
+   "label": "BIMBEL RUMBA TUJUAN"
+  },
+  {
+   "fieldname": "nama_kota",
+   "fieldtype": "Link",
+   "label": "Nama Kota",
+   "options": "Rumba Kota"
+  },
+  {
+   "fieldname": "section_program_belajar",
+   "fieldtype": "Section Break",
+   "label": "PROGRAM BELAJAR"
+  },
+  {
+   "fieldname": "program_belajar",
+   "fieldtype": "Link",
+   "label": "Program Belajar",
+   "options": "Rumba Program Belajar",
+   "reqd": 1
+  },
+  {
+   "default": "Reguler",
+   "description": "Reguler: 5-8 anak/kelas.<br>\nPrivate: 1 anak/kelas.<br>\nSemi-private: 2 anak/kelas.",
+   "fieldname": "jenis_kelas",
+   "fieldtype": "Select",
+   "label": "Jenis Kelas",
+   "options": "Reguler\nPrivate\nSemi-Private",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oqos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_hari_belajar",
+   "fieldtype": "HTML",
+   "label": "Pilihan Hari Belajar"
+  },
+  {
+   "default": "0",
+   "fieldname": "senin",
+   "fieldtype": "Check",
+   "label": "Senin"
+  },
+  {
+   "default": "0",
+   "fieldname": "selasa",
+   "fieldtype": "Check",
+   "label": "Selasa"
+  },
+  {
+   "default": "0",
+   "fieldname": "rabu",
+   "fieldtype": "Check",
+   "label": "Rabu"
+  },
+  {
+   "default": "0",
+   "fieldname": "kamis",
+   "fieldtype": "Check",
+   "label": "Kamis"
+  },
+  {
+   "default": "0",
+   "fieldname": "jumat",
+   "fieldtype": "Check",
+   "label": "Jumat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabtu",
+   "fieldtype": "Check",
+   "label": "Sabtu"
+  },
+  {
+   "fieldname": "jam_belajar",
+   "fieldtype": "Select",
+   "label": "Jam Belajar",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00"
+  },
+  {
+   "fieldname": "section_info_anak",
+   "fieldtype": "Section Break",
+   "label": "INFO ANAK"
+  },
+  {
+   "fieldname": "nama_lengkap",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Nama Lengkap",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_panggilan",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Nama Panggilan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "label": "Unit Rumba",
+   "options": "Rumba Unit"
+  },
+  {
+   "fieldname": "tempat_lahir",
+   "fieldtype": "Data",
+   "label": "Tempat Lahir"
+  },
+  {
+   "fieldname": "tanggal_lahir",
+   "fieldtype": "Date",
+   "label": "Tanggal Lahir",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jenis_kelamin",
+   "fieldtype": "Select",
+   "label": "Jenis Kelamin",
+   "options": "Perempuan\nLaki-laki"
+  },
+  {
+   "fieldname": "agama_kepercayaan",
+   "fieldtype": "Select",
+   "label": "Agama/Kepercayaan",
+   "options": "\nBudha\nHindu\nIslam\nKong Hu Cu\nKristen (Katolik/Protestan)\nLainnya"
+  },
+  {
+   "fieldname": "column_break_ucgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anak_sudah_sekolah",
+   "fieldtype": "Select",
+   "label": "Anak Sudah Sekolah?",
+   "options": "Ya\nBelum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_sekolah",
+   "fieldtype": "Data",
+   "label": "Nama Sekolah"
+  },
+  {
+   "fieldname": "kelas",
+   "fieldtype": "Select",
+   "label": "Kelas",
+   "options": "Kelompok Bermain\nTK A\nTK B\nSD Kelas 1\nSD Kelas 2\nSD Kelas 3\nSD Kelas 4\nSD Kelas 5\nSD Kelas 6"
+  },
+  {
+   "fieldname": "anak_berkebutuhan_khusus",
+   "fieldtype": "Select",
+   "label": "Anak Berkebutuhan Khusus?",
+   "options": "Ya\nTidak",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jelaskan_kebutuhan_khusus_anak",
+   "fieldtype": "Data",
+   "label": "Jelaskan Kebutuhan Khusus Anak"
+  },
+  {
+   "fieldname": "section_info_keluarga",
+   "fieldtype": "Section Break",
+   "label": "INFO KELUARGA"
+  },
+  {
+   "fieldname": "nama_orang_tua_wali",
+   "fieldtype": "Data",
+   "label": "Nama Orang Tua / Wali",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ltae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hubungan_dengan_anak",
+   "fieldtype": "Select",
+   "label": "Hubungan dengan Anak",
+   "options": "Ibu / Bapak\nBibi / Paman\nNenek / Kakek\nSaudara\nPerwalian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nomor_handphone",
+   "fieldtype": "Phone",
+   "label": "Nomor Handphone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pendidikan_terakhir",
+   "fieldtype": "Select",
+   "label": "Pendidikan Terakhir",
+   "options": "SD-SMP\nSMA sederajat\nDiploma\nSarjana (S1)\nPaskasarjana (S2-S3)"
+  },
+  {
+   "fieldname": "pekerjaan",
+   "fieldtype": "Select",
+   "label": "Pekerjaan",
+   "options": "Wirausaha\nPegawai Swasta\nPegawai BUMN\nPegawai Negeri (ASN)\nPolri\nTNI"
+  },
+  {
+   "fieldname": "akun_sosmed",
+   "fieldtype": "Small Text",
+   "label": "Akun Sosmed"
+  },
+  {
+   "fieldname": "saudara_di_rumba",
+   "fieldtype": "Select",
+   "label": "Ada saudara yang sedang belajar di RUMBA?",
+   "options": "Ya\nTidak",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_saudara",
+   "fieldtype": "Data",
+   "label": "Nama Saudara"
+  },
+  {
+   "fieldname": "belajar_di_unit_rumba",
+   "fieldtype": "Data",
+   "label": "Belajar di Unit RUMBA"
+  },
+  {
+   "fieldname": "section_info_tambahan",
+   "fieldtype": "Section Break",
+   "label": "INFO TAMBAHAN"
+  },
+  {
+   "fieldname": "kegiatan_anak_di_rumah",
+   "fieldtype": "Small Text",
+   "label": "Kegiatan anak di rumah dan hobinya?"
+  },
+  {
+   "fieldname": "hal_menonjol_dari_anak",
+   "fieldtype": "Small Text",
+   "label": "Hal menonjol dari anak terkait pelajaran dan kemampuan non-akademik?"
+  },
+  {
+   "fieldname": "pengembangan_lebih_lanjut",
+   "fieldtype": "Small Text",
+   "label": "Hal yang masih perlu dikembangkan terkait pelajaran dan kemampuan non-akademik anak?"
+  },
+  {
+   "fieldname": "harapan_orang_tua",
+   "fieldtype": "Small Text",
+   "label": "Harapan orang tua ketika anak belajar di RUMBA?"
+  },
+  {
+   "fieldname": "les_serupa",
+   "fieldtype": "Select",
+   "label": "Anak pernah ikut program les serupa di tempat lain?",
+   "options": "Ya\nTidak",
+   "reqd": 1
+  },
+  {
+   "fieldname": "durasi_les",
+   "fieldtype": "Data",
+   "label": "Durasi Les"
+  },
+  {
+   "fieldname": "level_yang_dicapai",
+   "fieldtype": "Data",
+   "label": "Level yang Dicapai"
+  },
+  {
+   "fieldname": "nama_tempat_les",
+   "fieldtype": "Data",
+   "label": "Nama Tempat Les"
+  },
+  {
+   "fieldname": "sumber_info_awal_rumba",
+   "fieldtype": "HTML",
+   "label": "Darimana Ibu/Bapak mendapatkan informasi awal tentang RUMBA?"
+  },
+  {
+   "default": "0",
+   "fieldname": "instagram",
+   "fieldtype": "Check",
+   "label": "Instagram"
+  },
+  {
+   "default": "0",
+   "fieldname": "facebook",
+   "fieldtype": "Check",
+   "label": "Facebook"
+  },
+  {
+   "default": "0",
+   "fieldname": "website_bimbelrumba",
+   "fieldtype": "Check",
+   "label": "Website bimbelrumba"
+  },
+  {
+   "default": "0",
+   "fieldname": "pencarian_di_internet",
+   "fieldtype": "Check",
+   "label": "Pencarian di internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "kawan",
+   "fieldtype": "Check",
+   "label": "Kawan"
+  },
+  {
+   "default": "0",
+   "fieldname": "keluarga",
+   "fieldtype": "Check",
+   "label": "Keluarga"
+  },
+  {
+   "default": "0",
+   "fieldname": "sekolah",
+   "fieldtype": "Check",
+   "label": "Sekolah"
+  },
+  {
+   "default": "0",
+   "fieldname": "kegiatan_rumba",
+   "fieldtype": "Check",
+   "label": "Kegiatan RUMBA"
+  },
+  {
+   "default": "0",
+   "fieldname": "spanduk_di_jalan",
+   "fieldtype": "Check",
+   "label": "Spanduk di jalan"
+  },
+  {
+   "default": "0",
+   "fieldname": "brosur_selebaran",
+   "fieldtype": "Check",
+   "label": "Brosur / selebaran"
+  },
+  {
+   "default": "0",
+   "fieldname": "lainnya",
+   "fieldtype": "Check",
+   "label": "Lainnya"
+  },
+  {
+   "fieldname": "untuk_jawaban_lainnya",
+   "fieldtype": "Data",
+   "label": "Untuk jawaban Lainnya"
+  },
+  {
+   "fieldname": "section_merchandise_rumba",
+   "fieldtype": "Section Break",
+   "label": "MERCHANDISE RUMBA"
+  },
+  {
+   "fieldname": "pilihan_merchandise",
+   "fieldtype": "HTML",
+   "label": "Pilihan Merchandise"
+  },
+  {
+   "default": "0",
+   "fieldname": "kaos",
+   "fieldtype": "Check",
+   "label": "Kaos"
+  },
+  {
+   "fieldname": "ukuran_kaos",
+   "fieldtype": "Select",
+   "label": "Ukuran Kaos",
+   "options": "S\nM\nL\nXL\nXXL"
+  },
+  {
+   "default": "0",
+   "fieldname": "tas",
+   "fieldtype": "Check",
+   "label": "Tas"
+  },
+  {
+   "default": "0",
+   "fieldname": "topi",
+   "fieldtype": "Check",
+   "label": "Topi"
+  },
+  {
+   "fieldname": "section_validasi_admin",
+   "fieldtype": "Section Break",
+   "label": "VALIDASI ADMIN"
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_pendaftaran",
+   "fieldtype": "Date",
+   "label": "Tanggal Pendaftaran",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vzeh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_pendaftaran",
+   "fieldtype": "Select",
+   "label": "Status Pendaftaran",
+   "options": "Tunggu\nDiterima\nDitolak\nBatal"
+  },
+  {
+   "fieldname": "alasan_penolakan_batal",
+   "fieldtype": "Small Text",
+   "label": "Alasan Penolakan/Batal"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 21:10:09.628347",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Pendaftaran",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
