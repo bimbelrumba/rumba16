@@ -1,240 +1,192 @@
-# Project State — bimbel_rumba (ERPNext v16)
-
-This document records the **current known state** of the `bimbel_rumba` project.
-
-Its purpose is to provide a stable shared context for all AI agents working on this repository, especially:
-- Inventory Agent
-- Architect Agent
-- Builder Agent
-- Reviewer Agent
-
-This file should be updated whenever the project state changes in a meaningful way.
-
----
+# Project State — bimbel_rumba
 
 ## 1. Project Identity
-
-- **App name:** `bimbel_rumba`
+- **Project name:** bimbel_rumba
 - **Framework:** ERPNext v16 / Frappe
-- **Development site:** `dev.bimbelrumba.id`
-- **Production site:** `bimbelrumba.id`
-- **Source control:** GitHub
-- **Development approach:** build in dev, commit to repo, review, then promote to production
+- **Development site:** dev.bimbelrumba.id
+- **Production site:** bimbelrumba.id
+- **Repository role:** source-controlled reference for reproducible work
+- **Primary working reality:** many DocType changes are performed manually through the ERPNext UI on the development site
 
 ---
 
-## 2. Current Development Goal
-
-The current goal is to continue building the `bimbel_rumba` module in a more structured, version-controlled, and agent-assisted way.
-
-The project is moving from:
-- partially UI-driven customization
-- partially repo-backed development
-
-toward:
-- clearer architecture
-- GitHub-driven workflow
-- safer dev-to-production promotion
-- repeatable multi-agent collaboration
+## 2. Working Rules
+- ERPNext UI, local repo, and GitHub must not be assumed to be automatically synchronized.
+- Important changes should be made traceable and reproducible.
+- GitHub should remain the long-term source of truth for tracked work.
+- AI agents are used for planning, auditing, implementation guidance, and review.
+- AI agents must not default to writing directly into the local repository working tree.
+- Manual ERPNext UI work must be followed by repo/source verification when relevant.
+- Standard ERPNext customizations may require export / fixtures / explicit tracking.
 
 ---
 
-## 3. Current Known Custom DocTypes
+## 3. Current Project Goal
+The current goal is to continue developing the `bimbel_rumba` module in a controlled way using a multi-agent workflow, while keeping the ERPNext development site, repository, and GitHub reasonably aligned.
 
-The following DocTypes are currently known to exist in the `bimbel_rumba` module:
-
-- `Rumba Pendaftaran`
-- `Ruangan`
-- `Semester`
-- `Tahun Ajaran`
-- `Program Belajar`
-- `Provinsi`
-- `Unit`
-- `Kota`
-
-These DocTypes were created through the ERPNext v16 UI.
+Near-term focus:
+- verify current project baseline
+- review and refine existing DocType structures
+- improve implementation workflow between ERPNext UI and GitHub
+- prepare selected DocTypes for safer next-phase development
 
 ---
 
-## 4. Known Repo / GitHub State
+## 4. Multi-Agent Workflow in Use
+The project uses these agents:
 
-Current known state based on available information:
+- **Inventory Agent**  
+  Used to classify baseline status, identify verification gaps, and detect repo/site mismatch risk.
 
-- The DocTypes listed above, **except `Rumba Pendaftaran`**, have already been sent to the repo folder through the server terminal and uploaded to GitHub.
-- The status of `Rumba Pendaftaran` still requires verification.
-- The repository already contains agent guidance documents such as:
-  - `AGENTS.md`
-  - `docs/agents/architect.md`
-  - `docs/agents/builder.md`
-  - `docs/agents/reviewer.md`
-  - `docs/agents/inventory.md`
+- **Architect Agent**  
+  Used to review or design feature structure, field model, workflow, and scope boundaries.
 
-The exact Git state should still be verified whenever a new development cycle begins.
+- **Builder Agent**  
+  Used to translate approved design into manual ERPNext UI actions, repo verification steps, sync warnings, and testing guidance.
 
----
-
-## 5. Current Known Uncertainties
-
-The following items are not yet fully verified:
-
-### A. `Rumba Pendaftaran`
-It is not yet fully confirmed whether `Rumba Pendaftaran` is:
-- fully file-backed in the app
-- Git-tracked
-- already pushed to GitHub
-- safe to extend further without cleanup
-
-### B. Standard DocType Customizations
-It is not yet fully confirmed whether there are existing customizations on standard ERPNext DocTypes such as:
-- Custom Fields
-- Property Setters
-- Workflows
-- Client Scripts
-- Print Formats
-- Notifications
-
-that still exist only in the site and have not yet been exported.
-
-### C. Fixture Coverage
-It is not yet confirmed whether any fixtures/customizations need to be exported and committed.
-
-### D. Branch / Commit Cleanliness
-It is not yet confirmed whether the local repo, dev server, and GitHub are fully aligned.
+- **Reviewer Agent**  
+  Used to assess safety, completeness, sync risk, test adequacy, and production-readiness of proposed work.
 
 ---
 
-## 6. Current Development Rules
+## 5. Known Functional Context
+The project is being developed for the Bimbel Rumba operational context.
 
-Until stated otherwise, all agents should follow these working rules:
-
-1. Do not assume that ERPNext UI state is automatically version-controlled.
-2. Prefer app-based, Git-backed implementation for all future work.
-3. Do not change production directly.
-4. Treat the dev site as the environment for testing and controlled iteration.
-5. If a change involves standard ERPNext DocTypes, check whether export/fixtures are needed.
-6. If baseline inventory is unclear, run Inventory Agent before designing or building new features.
-7. Keep future implementation migration-safe for dev → production promotion.
-
----
-
-## 7. Current Priority Focus
-
-The current practical focus is not to redesign the whole system from zero, but to continue development based on the existing foundation.
-
-### Priority 1
-- Verify baseline project inventory
-- Confirm file-backed status of `Rumba Pendaftaran`
-- Confirm Git / GitHub alignment
-- Identify any missing fixtures or site-only customizations
-
-### Priority 2
-- Design workflow for `Rumba Pendaftaran`
-- Design approval flow
-- Design automatic student ID generation
-- Design Student creation after approved registration
-
-### Priority 3
-- Strengthen academic structure and operational flow around:
-  - Unit
-  - Program Belajar
-  - Semester
-  - Tahun Ajaran
-  - Ruangan
-
-### Priority 4
-- Continue toward:
-  - rombel / class grouping
-  - scheduling
-  - attendance
-  - invoicing
-  - tutor compensation
+Known direction includes:
+- student registration flow
+- academic structure support
+- branch/unit-related data structure
+- future approval workflow needs
+- future student creation flow after approval
+- future operational expansion through controlled module growth
 
 ---
 
-## 8. Recommended Agent Workflow
+## 6. Known Existing Custom DocTypes
+The following custom DocTypes are known to already exist in the project:
 
-Until project maturity improves, the preferred sequence is:
+- Rumba Pendaftaran
+- Ruangan
+- Semester
+- Tahun Ajaran
+- Program Belajar
+- Provinsi
+- Unit
+- Kota
 
-1. **Inventory Agent**
-   - audit current baseline
-   - identify repo/UI mismatches
-   - flag missing exports or unclear status
-
-2. **Architect Agent**
-   - design the next feature based on verified existing objects
-
-3. **Builder Agent**
-   - implement the approved design in a version-controlled way
-
-4. **Reviewer Agent**
-   - review migration safety, deployment safety, and hidden risks
-
-Agents should avoid skipping Inventory when the current state is uncertain.
+Important note:
+- These DocTypes were created through the ERPNext UI.
+- Except **Rumba Pendaftaran**, the other DocTypes were reported as already sent to the repo folder and pushed to GitHub.
+- This status should still be treated as **reported state** unless re-verified during baseline checks.
 
 ---
 
-## 9. Working Assumptions for Agents
+## 7. Baseline Confidence Level
+Current baseline confidence is **partial**.
 
-Unless newer information is provided, agents should assume:
+Reason:
+- some objects are known by user report
+- some objects are reported as already synced to repo/GitHub
+- full verification between ERPNext UI state, app source state, Git state, and GitHub state may still be incomplete
 
-- `bimbel_rumba` is an actively evolving custom ERPNext app
-- the current system already has meaningful business structure
-- not all existing objects may be equally safe in version control yet
-- future work should reduce technical ambiguity, not increase it
-- every important feature should eventually be reproducible from the repository
-
----
-
-## 10. What This File Is For
-
-This file should be used as a shared baseline when prompting agents.
-
-Typical uses:
-- pasted into AI chat as project context
-- referenced before architecture work
-- referenced before implementation planning
-- referenced during audit and review
-- updated after major changes to the project state
-
-This file is not a feature design document.  
-It is a **living baseline context document**.
+This means:
+- feature work can continue carefully
+- but baseline-sensitive features should still be checked before implementation decisions become deeper
 
 ---
 
-## 11. Update Rules
+## 8. Known Workflow Constraint
+A critical constraint in this project is:
 
-This file should be updated when any of the following changes happen:
+- DocType creation and modification are often performed manually through the ERPNext web UI
+- AI agents do not directly execute those changes
+- the local repository must be protected from uncontrolled AI-generated edits
+- repo/GitHub synchronization must be handled deliberately
 
-- a new core DocType is added
-- a major DocType is confirmed as file-backed
-- standard DocType customizations are exported
-- a major workflow is implemented
-- a feature changes the project baseline significantly
-- Git/GitHub structure changes
-- dev/prod deployment strategy changes
-
----
-
-## 12. Current Baseline Summary
-
-At the moment, the known project baseline is:
-
-- the `bimbel_rumba` app already has several core custom DocTypes
-- these were initially created through the ERPNext UI
-- most of them appear to have already been moved into the repo and GitHub
-- `Rumba Pendaftaran` still needs verification
-- the project has begun using a structured multi-agent method
-- the next important step is to stabilize inventory and then design the registration approval flow
+Because of this, the Builder Agent should be used mainly for:
+- manual implementation guidance
+- repo follow-up guidance
+- fixture/export risk awareness
+- testing and deployment caution
 
 ---
 
-## 13. Immediate Next Step
+## 9. Current Known Risks
+The following risks are currently relevant:
 
-The safest immediate next step is:
+### A. Repo vs site mismatch risk
+ERPNext UI changes may exist that are not yet safely reflected in source control.
 
-- run the Inventory Agent against the current known DocTypes
-- verify `Rumba Pendaftaran`
-- confirm repo and GitHub alignment
-- only then move into deeper feature design and implementation
+### B. GitHub freshness risk
+Some project state may be assumed to be pushed, but not recently re-verified.
 
-This will provide a safer baseline for Architect, Builder, and Reviewer to work effectively.
+### C. Site-only customization risk
+Standard ERPNext customizations may exist in the site without proper export or fixture tracking.
+
+### D. Baseline ambiguity risk
+Some future design decisions may become weak if they rely on assumptions rather than verified state.
+
+### E. Local repo drift risk
+If AI-generated local code or uncontrolled edits are used carelessly, repo synchronization may become unreliable.
+
+---
+
+## 10. Current Operating Preference
+Preferred working sequence:
+
+1. establish or refresh baseline with Inventory Agent when needed
+2. review/design with Architect Agent
+3. translate approved design into manual implementation guidance with Builder Agent
+4. validate safety and readiness with Reviewer Agent
+5. execute carefully in ERPNext UI and verify repository impact
+6. synchronize to GitHub in a controlled way
+
+---
+
+## 11. What Is Considered “Safe to Continue”
+A task is considered reasonably safe to continue when:
+- the relevant current state is sufficiently understood
+- the target DocType or feature is not relying on major hidden assumptions
+- repo/site mismatch risk is acknowledged
+- any likely export/customization risk is at least identified
+- the next action is small, controlled, and reversible
+
+---
+
+## 12. Current Documentation Status
+The project currently uses these core coordination documents:
+
+- `AGENTS.md`
+- `docs/project-state.md`
+- `docs/backlog.md`
+- `docs/agents/inventory.md`
+- `docs/agents/architect.md`
+- `docs/agents/builder.md`
+- `docs/agents/reviewer.md`
+
+---
+
+## 13. Immediate Next Priority
+Immediate priority:
+- continue using the multi-agent workflow in a disciplined way
+- review important DocTypes before deeper implementation
+- keep manual ERPNext UI work and repo synchronization under tighter control
+- reduce ambiguity in the current project baseline over time
+
+---
+
+## 14. Update Rule for This Document
+Update this file when any of the following changes materially:
+- major project workflow rule
+- known system architecture direction
+- verified baseline status
+- key existing DocTypes
+- core risk profile
+- working method between ERPNext UI, repo, and GitHub
+
+This file should remain:
+- short
+- stable
+- factual
+- easy for agents to read
+- focused on current project reality
