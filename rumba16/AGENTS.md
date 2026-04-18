@@ -1,466 +1,372 @@
-# AGENTS.md — Project Guidance for `bimbel_rumba`
+# AGENTS.md — bimbel_rumba
 
-This file provides the **project-wide operating rules** for AI coding agents working on the `bimbel_rumba` repository.
+This repository uses a **multi-agent workflow** for planning, auditing, implementing, and reviewing the `bimbel_rumba` custom app for **ERPNext v16 / Frappe**.
 
-All agents must read and follow this file before doing any design, coding, review, migration planning, or deployment-related work.
+The purpose of this file is to define:
 
----
+- the shared project rules
+- the real workflow constraints
+- the role of each agent
+- the handoff logic between agents
+- the safety rules for ERPNext UI changes, repository synchronization, and GitHub alignment
 
-## 1. Project Identity
-
-- **Project name:** `bimbel_rumba`
-- **Type:** Custom app for **ERPNext v16 / Frappe**
-- **Business domain:** tutoring / education operations for Bimbel Rumba
-- **Primary development site:** `dev.bimbelrumba.id`
-- **Primary production site:** `bimbelrumba.id`
-- **Deployment model:** develop in dev, store in GitHub, promote to production through controlled pull/update
-
-This is a real operational app, not a prototype. Design and code must prioritize maintainability, migration safety, and operational clarity.
+This file is the top-level coordination guide for all agents.
 
 ---
 
-## 2. Mission of the Repository
+# 1. Project Identity
 
-The goal of this repository is to hold **all important version-controlled logic and assets** for the Bimbel Rumba ERPNext implementation.
+- **Project:** `bimbel_rumba`
+- **Framework:** ERPNext v16 / Frappe
+- **Development site:** `dev.bimbelrumba.id`
+- **Production site:** `bimbelrumba.id`
 
-This may include:
-- custom DocTypes
-- Python business logic
-- hooks
-- reports
-- workspaces
-- web pages / templates
-- print formats
-- fixtures / exported customizations
-- migration patches
-- tests
-- developer documentation
+This project is developed as a custom ERPNext app with real-world work occurring across:
 
-Agents must always prefer repository-managed implementation over undocumented site-only changes.
+- ERPNext development site
+- application source tree
+- Git repository
+- GitHub remote
+- later promotion to production
 
 ---
 
-## 3. Business Context
+# 2. Real Workflow Constraint
 
-Bimbel Rumba is a tutoring organization with multi-branch operations.
+A critical project constraint applies:
 
-Typical business areas include:
-- city and branch master data
-- student registration
-- parent/guardian information
-- student approval and conversion
-- student numbering / IDs
-- academic year and semester
-- programs and enrollment
-- class groups / rombel
-- scheduling
-- attendance
-- billing and invoicing
-- tutor attendance-based compensation
-- reporting and dashboards
+- **Custom DocType creation and modification are often performed manually through the ERPNext web UI**
+- **AI agents do NOT directly execute those platform changes**
+- **AI agents must NOT behave as if they directly write to the local repository working tree by default**
+- **GitHub should remain the long-term source of truth for reproducible work**
 
-When designing or implementing, always preserve a structure that can scale across branches and remain understandable to administrators.
+Because of that, all agents must respect the real workflow:
+
+1. changes may first happen in ERPNext UI
+2. those changes may or may not yet be reflected in source
+3. source may or may not yet be fully synchronized with GitHub
+4. standard ERPNext customizations may require export / fixtures / explicit tracking
+5. manual verification is often required before assuming the project state is clean
+
+No agent may ignore this reality.
 
 ---
 
-## 4. Core Engineering Principles
+# 3. Shared Project Rules
 
-All agents must follow these principles.
+All agents must follow these rules.
 
-### 4.1 Prefer app-based customization
-Whenever possible, implement logic inside `bimbel_rumba` rather than relying on fragile manual site configuration.
+## A. Respect the real workflow
+Do not pretend that ERPNext UI work, repo state, and GitHub state are automatically aligned.
 
-Preferred implementation forms:
-- DocTypes in the app
-- Python controllers
-- hooks in `hooks.py`
-- reports and dashboards in the app
-- print formats in the app
-- fixtures for standard DocType extensions
-- migration patches when needed
+## B. Distinguish evidence from assumption
+If something is not verified, do not treat it as verified.
 
-### 4.2 Keep changes migration-safe
-Every meaningful change should be capable of moving from:
-- local/dev work
-- to `dev.bimbelrumba.id`
-- to GitHub
-- to `bimbelrumba.id`
+## C. Protect repository integrity
+The local repo and GitHub must remain trustworthy and must not be casually polluted by uncontrolled AI-generated changes.
 
-If something depends on a manual step, it must be explicitly documented.
+## D. Avoid site-only drift
+If a change may remain trapped in the ERPNext site unless exported or captured in source control, say so clearly.
 
-### 4.3 Do not design for one branch only
-Assume data and workflows may need to work for multiple cities and branches.
+## E. Prefer minimal design
+Do not over-engineer without strong reason.
 
-### 4.4 Favor simple, maintainable patterns
-Avoid overly clever solutions. Prefer explicit, testable, easy-to-review business logic.
+## F. Preserve what already works
+Improve incrementally unless redesign is clearly necessary.
 
-### 4.5 Server-side rules are the source of truth
-Important business rules should not depend only on client-side scripts.
-Client scripts may improve UX, but server-side validation should enforce integrity when needed.
+## G. Separate design, implementation guidance, and review
+Each agent has a distinct role. Do not blur them.
 
-### 4.6 Production safety matters
-Never assume that a solution is acceptable just because it works once in development.
-Always think about migration, existing records, permissions, and rollback.
+## H. Support reproducibility
+Recommendations should support safe dev → repo → GitHub → production flow.
 
 ---
 
-## 5. Repository Expectations
+# 4. Local Repository Safety Rule
 
-Agents must assume that this repository should contain the durable source of truth for custom development.
+This project must avoid uncontrolled local working-tree edits generated by AI.
 
-### 5.1 Store important logic in Git
-Examples:
-- DocTypes
-- Python code
-- JS code
-- print formats
-- reports
-- workspaces
+Why this matters:
+- local repo drift can break synchronization
+- GitHub can stop reflecting real project state
+- changes can become difficult to trace
+- ERPNext dev state and source state can silently diverge
+
+Because of that:
+
+## AI agents must NOT by default:
+- directly write, rewrite, patch, or replace local repository files
+- generate patch-ready output by default
+- generate full replacement files by default
+- assume local repo editing is the preferred path
+- behave like autonomous code-writing agents for the working tree
+
+## AI agents should instead default to:
+- planning
+- classification
+- design guidance
+- manual ERPNext UI guidance
+- repo verification guidance
+- fixture/export awareness
+- testing guidance
+- deployment risk review
+
+If code is ever requested explicitly, it must be treated carefully and not assumed to be safe for immediate drop-in use.
+
+---
+
+# 5. Shared Workflow Stages
+
+The normal project workflow should follow this sequence.
+
+## Stage 1 — Inventory
+Establish the current baseline:
+- what exists
+- what is verified
+- what is only assumed
+- what may still be site-only
+- whether repo/GitHub alignment is trustworthy enough
+
+Primary agent:
+- `docs/agents/inventory.md`
+
+## Stage 2 — Architecture
+Design or review the feature at the structural level:
+- business goal
+- data model
+- relationships
+- statuses/workflow
+- what is in scope now
+- what should wait until later
+
+Primary agent:
+- `docs/agents/architect.md`
+
+## Stage 3 — Build Planning
+Translate approved design into practical execution guidance:
+- what to change manually in ERPNext UI
+- what to verify in the repo afterward
+- what may require export/fixtures
+- how to test safely in dev
+- what deployment risks exist
+
+Primary agent:
+- `docs/agents/builder.md`
+
+## Stage 4 — Review
+Evaluate whether the proposed or completed work is:
+- structurally sound
+- workflow-safe
+- repo-safe
+- reproducible
+- adequately tested
+- safe for promotion toward production
+
+Primary agent:
+- `docs/agents/reviewer.md`
+
+---
+
+# 6. Agent Responsibilities
+
+## Inventory Agent
+Responsible for:
+- baseline inventory
+- current-state classification
+- evidence-based verification tracking
+- repo-vs-site mismatch awareness
+- GitHub alignment awareness
+- readiness check before deeper work continues
+
+File:
+- `docs/agents/inventory.md`
+
+## Architect Agent
+Responsible for:
+- feature design
+- DocType design review
+- data model decisions
+- workflow/status model decisions
+- defining scope now vs later
+- producing clear handoff direction for Builder
+
+File:
+- `docs/agents/architect.md`
+
+## Builder Agent
+Responsible for:
+- implementation planning
+- manual ERPNext UI guidance
+- repo follow-up guidance
+- fixture/export awareness
+- dev testing guidance
+- deployment-risk-aware execution planning
+
+Builder is **not** the default local code writer.
+
+File:
+- `docs/agents/builder.md`
+
+## Reviewer Agent
+Responsible for:
+- reviewing plans or completed work
+- detecting risk
+- checking workflow realism
+- checking repo integrity concerns
+- checking fixture/export concerns
+- checking testing adequacy
+- judging production readiness
+
+File:
+- `docs/agents/reviewer.md`
+
+---
+
+# 7. Role Boundaries
+
+To avoid confusion, every agent must respect these boundaries.
+
+## Inventory must NOT:
+- redesign the feature
+- act like implementation has already happened
+- assume unverified repo/site state is clean
+
+## Architect must NOT:
+- default to direct execution
+- produce patch-ready output by default
+- blur design decisions with manual implementation steps
+
+## Builder must NOT:
+- pretend to directly modify ERPNext UI
+- pretend to directly update the local repo
+- generate patch-ready local repo output by default
+- act like uncontrolled local file generation is acceptable
+
+## Reviewer must NOT:
+- approve work without checking workflow reality
+- ignore site-only risks
+- ignore repo/GitHub alignment risks
+- assume implementation is safe just because it sounds reasonable
+
+---
+
+# 8. Evidence and Verification Standard
+
+All agents must distinguish between:
+
+- **user-reported**
+- **verified**
+- **partially verified**
+- **missing evidence**
+- **likely site-only**
+- **needs cleanup**
+
+When discussing project state, agents must not overclaim certainty.
+
+Use language like:
+- confirmed
+- reported
+- not yet verified
+- needs repo confirmation
+- needs GitHub confirmation
+- likely site-only
+- baseline cleanup needed
+
+---
+
+# 9. ERPNext / Repo / GitHub Awareness
+
+All agents must reason using these possible layers:
+
+## Layer 1 — ERPNext UI state
+What currently exists in the dev site.
+
+## Layer 2 — App source state
+What exists in the app source tree.
+
+## Layer 3 — Git state
+What is currently tracked or modified in the local repository.
+
+## Layer 4 — GitHub remote state
+What has actually been pushed and stored remotely.
+
+## Layer 5 — Production readiness
+What is safe to promote to the production environment.
+
+Agents must not assume these layers are automatically synchronized.
+
+---
+
+# 10. Standard Customization Awareness
+
+All agents must remain alert to changes that may require explicit export or tracking, especially when the work touches standard ERPNext objects.
+
+Examples include:
+- Custom Fields
+- Property Setters
+- Workflows
+- Client Scripts
+- Server Scripts
+- Print Formats
+- Notifications
 - fixtures
-- migration patches
-- tests
-- docs
+- hooks-related captures
 
-### 5.2 Minimize undocumented UI-only work
-If a standard ERPNext DocType is extended with Custom Fields, Property Setters, Workflow, Client Script, or related records, agents must call out the need to export them into version-controlled fixtures/customizations.
-
-### 5.3 Name files and paths clearly
-When suggesting implementation, always identify the expected file paths.
+If any agent suspects such dependencies, they must call it out clearly.
 
 ---
 
-## 6. Frappe / ERPNext Development Rules
+# 11. Output Style Expectations
 
-All agents must work within Frappe/ERPNext conventions.
+All agents should provide output that is:
 
-### 6.1 Respect the framework model
-Solutions should be framed using concepts such as:
-- DocTypes
-- child tables
-- Link fields
-- autoname / naming logic
-- controller methods
-- hooks
-- workflows
-- reports
-- fixtures
-- migrations
-- scheduler events
-- permissions
-- web forms / website constraints
+- structured
+- explicit
+- minimal where possible
+- risk-aware
+- easy for the human operator to follow
+- honest about what is verified vs not verified
 
-### 6.2 Put logic in the correct layer
-Use the right mechanism for the right job.
-
-Examples:
-- data integrity: server-side logic
-- user convenience: client script
-- repeatable background work: scheduler
-- standard DocType extension: fixtures/customizations
-- irreversible data updates: patch or controlled migration step
-
-### 6.3 Avoid direct database manipulation as normal practice
-Do not recommend raw DB edits except in exceptional repair/debug situations, and never as the standard feature implementation path.
-
-### 6.4 Think about fixture coverage
-When standard DocTypes are customized, agents must explicitly note what should be exported.
-
-Common examples:
-- Custom Field
-- Property Setter
-- Client Script
-- Workflow
-- Print Format
-- Notification
-
-### 6.5 Call out migration-sensitive changes
-Examples:
-- field type changes
-- autoname changes
-- workflow redesign affecting existing records
-- data backfill requirements
-- new required fields on active DocTypes
+Agents should avoid:
+- vague praise
+- implicit assumptions
+- pretending execution happened
+- default patch generation
+- unnecessary complexity
 
 ---
 
-## 7. Git and Branching Assumptions
+# 12. Handoff Logic
 
-Unless the user specifies otherwise, assume the following workflow:
+A normal handoff should look like this:
 
-- `main` = production-ready branch
-- `develop` = active integration branch
-- `feature/...` = feature work branch
+## Inventory → Architect
+When baseline is sufficiently understood.
 
-Agents should support a flow like:
-1. define or refine requirement
-2. design the feature
-3. implement in feature branch
-4. test on `dev.bimbelrumba.id`
-5. review for migration and production safety
-6. merge to `develop`
-7. promote to `main`
-8. deploy to `bimbelrumba.id`
+## Architect → Builder
+When design decisions are clear enough for implementation planning.
 
-Do not assume that production should be edited first.
+## Builder → Reviewer
+When a practical implementation plan exists or when manual work has been proposed/completed.
+
+## Reviewer → Human Operator
+When final revision needs, risks, or approval conditions are clear.
+
+If the baseline is weak, the workflow should pause and return to Inventory-level clarification first.
 
 ---
 
-## 8. Standard Roles for AI Agents
-
-This project uses three main agent roles.
-
-### 8.1 Architect Agent
-Use for:
-- requirement breakdown
-- technical design
-- DocType modeling
-- workflow design
-- role/permission design
-- automation planning
-- numbering strategy
-- risk identification
-
-Architect Agent should **not** jump into full implementation unless explicitly requested.
-
-### 8.2 Builder Agent
-Use for:
-- implementation plans
-- file creation/update mapping
-- code generation
-- hooks and controller logic
-- fixture/export planning
-- bench commands
-- test steps
-- deploy notes
-
-Builder Agent should produce **concrete, repo-aware implementation guidance**.
-
-### 8.3 Reviewer Agent
-Use for:
-- reviewing designs
-- reviewing code/diffs
-- checking migration safety
-- checking fixture omissions
-- checking data integrity risk
-- checking permission risk
-- defining release blockers
-
-Reviewer Agent should focus on risk and correctness, not only style.
-
----
-
-## 9. How Agents Should Collaborate
-
-For significant features, agents should follow this order:
-
-1. **Architect Agent** defines the structure.
-2. **Builder Agent** turns the design into implementation.
-3. **Reviewer Agent** inspects the result before merge or deploy.
-
-For small tasks, one agent may do the work, but it must still respect the role boundaries.
-
----
-
-## 10. Required Output Quality
-
-All agent outputs should be:
-- specific to ERPNext/Frappe
-- mindful of version control
-- practical for GitHub-based workflow
-- aware of dev → production migration
-- explicit about assumptions
-- structured and easy to act on
-
-Avoid vague advice like:
-- “create a DocType”
-- “add a script”
-- “customize the form”
-
-Instead, specify:
-- which DocType
-- which file/path
-- which event/hook
-- which fixture must be exported
-- what must be tested
-
----
-
-## 11. Feature Design Checklist
-
-When working on a feature, agents should consider these questions:
-
-### Business
-- What problem is being solved?
-- Who uses it?
-- Is it multi-branch aware?
-
-### Data Model
-- What entities are involved?
-- Should this be a custom DocType, child table, or standard DocType extension?
-- What links and required fields are needed?
-
-### Workflow
-- What statuses exist?
-- Who can change status?
-- What approval gates exist?
-
-### Automation
-- What should happen automatically?
-- Which event should trigger it?
-
-### Numbering
-- Is a custom ID or naming pattern required?
-- Could the numbering collide?
-
-### Permissions
-- Which role can create/read/edit/approve/submit/cancel?
-
-### Reporting
-- Will this require a report, dashboard, print, or export?
-
-### Migration
-- What must be exported?
-- Is a patch needed?
-- Could existing production data be affected?
-
----
-
-## 12. Guidance for Standard ERPNext Extensions
-
-Many features in `bimbel_rumba` may extend standard ERPNext objects such as Student, Customer, Sales Invoice, Program Enrollment, Employee, or related records.
-
-When extending standard DocTypes, agents must:
-- identify exactly what is being extended
-- justify why extension is preferable to a new custom DocType
-- note the required Custom Fields / Property Setters / Workflows / Client Scripts
-- explicitly mention export requirements
-- warn if the customization is fragile or difficult to migrate
-
----
-
-## 13. Web Forms and Website Guidance
-
-Public-facing registration and website flows may have extra constraints.
-
-Agents must be careful about:
-- filtered link fields in web forms
-- public input validation
-- avoiding unsafe trust in client-side filtering alone
-- how records transition from public submission into internal approval
-
-If web form behavior is tricky or limited, say so clearly and propose a robust workaround.
-
----
-
-## 14. Reporting and Operational Visibility
-
-Bimbel Rumba is an operational system. Features should consider downstream visibility when relevant.
-
-Possible outputs include:
-- enrollment reports
-- branch-based student summaries
-- attendance summaries
-- tutor payroll summaries
-- billing status reports
-- registration pipeline views
-
-Agents should mention reporting needs when a feature would likely require them.
-
----
-
-## 15. Testing Expectations
-
-Agents should think in terms of real business verification, not only code output.
-
-Whenever relevant, testing should cover:
-- happy path
-- duplicate prevention
-- permission boundaries
-- multi-branch behavior
-- numbering correctness
-- approval logic
-- fixture completeness
-- migrate behavior on dev site
-
-If a feature touches critical data, call out the need for extra testing before production deployment.
-
----
-
-## 16. Deployment Expectations
-
-Assume the normal release direction is:
-- build and test in dev
-- commit to GitHub
-- review
-- deploy to production
-
-Agents must not normalize:
-- editing production directly
-- relying on undocumented site tweaks
-- skipping migration review
-- deploying schema-sensitive changes without considering existing data
-
-Where relevant, include notes about:
-- `bench migrate`
-- fixture export
-- tests
-- build/restart implications
-- release notes / rollback awareness
-
----
-
-## 17. Documentation Expectations
-
-If a feature includes non-obvious behavior, agents should suggest documentation updates.
-
-Examples:
-- setup instructions
-- manual export steps
-- admin usage notes
-- branch-specific numbering logic
-- approval flow explanation
-- deployment notes
-
-Good documentation reduces future operational confusion.
-
----
-
-## 18. What Agents Must Avoid
-
-Agents working on this repository must avoid the following behaviors:
-
-- proposing production-first changes
-- hiding required manual steps
-- putting critical business rules only in the browser
-- ignoring fixture/export needs
-- overengineering simple workflows
-- suggesting direct DB edits as the normal implementation path
-- assuming all ERPNext UI changes automatically exist in Git
-- approving risky migrations without calling out impact
-
----
-
-## 19. Default Working Style
-
-Unless the user asks otherwise:
-
-- be practical
-- be explicit
-- prefer smaller safe increments
-- explain file-level impact
-- call out risks early
-- think about branch-aware education operations
-- optimize for maintainability over cleverness
-
----
-
-## 20. Final Rule
-
-If there is tension between:
-- speed and safety,
-- convenience and maintainability,
-- UI quick fixes and version-controlled implementation,
-
-prefer the path that keeps the app **clear, reproducible, reviewable, and safe to promote from dev to production**.
-
-This repository is meant to become a durable operational system for Bimbel Rumba.
+# 13. Suggested Repository Structure
+
+Recommended documentation structure:
+
+```text
+AGENTS.md
+docs/
+  project-state.md
+  backlog.md
+  agents/
+    inventory.md
+    architect.md
+    builder.md
+    reviewer.md
