@@ -12,6 +12,7 @@
   "nama_unit",
   "kode_unit",
   "section_program_belajar",
+  "tahun_ajaran",
   "program_belajar",
   "jenis_kelas",
   "column_break_oqos",
@@ -513,12 +514,19 @@
    "fieldname": "naming_series",
    "fieldtype": "Data",
    "label": "Naming Series"
+  },
+  {
+   "fieldname": "tahun_ajaran",
+   "fieldtype": "Link",
+   "label": "Tahun Ajaran",
+   "options": "Rumba Tahun Ajaran",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-16 21:10:09.628347",
+ "modified": "2026-04-18 07:29:03.710000",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
