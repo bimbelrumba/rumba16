@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "allow_rename": 1,
  "autoname": "field",
  "creation": "2026-04-15 06:36:08.845158",
  "doctype": "DocType",
@@ -82,7 +81,10 @@
   "status_pendaftaran",
   "alasan_penolakan_batal",
   "column_break_vzeh",
-  "naming_series"
+  "naming_series",
+  "disetujui_oleh",
+  "tanggal_persetujuan",
+  "murid_rumba"
  ],
  "fields": [
   {
@@ -500,10 +502,11 @@
    "read_only": 1
   },
   {
+   "default": "Menunggu",
    "fieldname": "status_pendaftaran",
    "fieldtype": "Select",
    "label": "Status Pendaftaran",
-   "options": "Tunggu\nDiterima\nDitolak\nBatal"
+   "options": "Menunggu\nDisetujui\nDitolak\nBatal"
   },
   {
    "fieldname": "alasan_penolakan_batal",
@@ -521,12 +524,30 @@
    "label": "Tahun Ajaran",
    "options": "Rumba Tahun Ajaran",
    "reqd": 1
+  },
+  {
+   "fieldname": "disetujui_oleh",
+   "fieldtype": "Link",
+   "label": "Disetujui Oleh",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_persetujuan",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Persetujuan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "murid_rumba",
+   "fieldtype": "Data",
+   "label": "Murid Rumba"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-18 07:29:03.710000",
+ "modified": "2026-04-24 22:16:01.462103",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
