@@ -122,7 +122,8 @@
    "fieldname": "nama_kota",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nama Kota"
+   "label": "Nama Kota",
+   "read_only": 1
   },
   {
    "fieldname": "email_unit",
@@ -191,7 +192,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-24 22:36:18.676751",
+ "modified": "2026-04-30 10:39:26.288707",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Unit",

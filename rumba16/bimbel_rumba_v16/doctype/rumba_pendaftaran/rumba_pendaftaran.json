@@ -15,7 +15,7 @@
   "program_belajar",
   "jenis_kelas",
   "column_break_oqos",
-  "html_hari_belajar",
+  "pilihan_hari_belajar",
   "senin",
   "selasa",
   "rabu",
@@ -81,7 +81,6 @@
   "status_pendaftaran",
   "alasan_penolakan_batal",
   "column_break_vzeh",
-  "naming_series",
   "disetujui_oleh",
   "tanggal_persetujuan",
   "murid_rumba"
@@ -106,6 +105,7 @@
   {
    "fieldname": "program_belajar",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Program Belajar",
    "options": "Rumba Program Belajar",
    "reqd": 1
@@ -115,6 +115,7 @@
    "description": "Reguler: 5-8 anak/kelas.<br>\nPrivate: 1 anak/kelas.<br>\nSemi-private: 2 anak/kelas.",
    "fieldname": "jenis_kelas",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Jenis Kelas",
    "options": "Reguler\nPrivate\nSemi-Private",
    "reqd": 1
@@ -122,11 +123,6 @@
   {
    "fieldname": "column_break_oqos",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "html_hari_belajar",
-   "fieldtype": "HTML",
-   "label": "Pilihan Hari Belajar"
   },
   {
    "default": "0",
@@ -193,6 +189,8 @@
   {
    "fieldname": "nama_unit",
    "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
    "label": "Unit Rumba",
    "options": "Rumba Unit"
   },
@@ -370,8 +368,8 @@
   },
   {
    "fieldname": "sumber_info_awal_rumba",
-   "fieldtype": "HTML",
-   "label": "Darimana Ibu/Bapak mendapatkan informasi awal tentang RUMBA?"
+   "fieldtype": "Heading",
+   "label": "Sumber Info Awal Rumba"
   },
   {
    "default": "0",
@@ -451,7 +449,7 @@
   },
   {
    "fieldname": "pilihan_merchandise",
-   "fieldtype": "HTML",
+   "fieldtype": "Heading",
    "label": "Pilihan Merchandise"
   },
   {
@@ -505,6 +503,7 @@
    "default": "Menunggu",
    "fieldname": "status_pendaftaran",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status Pendaftaran",
    "options": "Menunggu\nDisetujui\nDitolak\nBatal"
   },
@@ -514,13 +513,9 @@
    "label": "Alasan Penolakan/Batal"
   },
   {
-   "fieldname": "naming_series",
-   "fieldtype": "Data",
-   "label": "Naming Series"
-  },
-  {
    "fieldname": "tahun_ajaran",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Tahun Ajaran",
    "options": "Rumba Tahun Ajaran",
    "reqd": 1
@@ -542,12 +537,17 @@
    "fieldname": "murid_rumba",
    "fieldtype": "Data",
    "label": "Murid Rumba"
+  },
+  {
+   "fieldname": "pilihan_hari_belajar",
+   "fieldtype": "Heading",
+   "label": "Pilihan Hari Belajar"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-24 22:16:01.462103",
+ "modified": "2026-05-01 17:42:15.195833",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
