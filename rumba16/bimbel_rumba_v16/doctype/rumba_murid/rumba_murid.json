@@ -202,7 +202,7 @@
    "fieldname": "jam_belajar",
    "fieldtype": "Select",
    "label": "Jam Belajar",
-   "options": "09.00 - 10.15\n10.30 - 11.45"
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00"
   },
   {
    "fieldname": "orang_tua_customer_section",
@@ -256,7 +256,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-22 11:20:06.718769",
+ "modified": "2026-05-22 22:12:11.465450",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",
