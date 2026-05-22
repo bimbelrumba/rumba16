@@ -83,6 +83,7 @@
   "tanggal_pendaftaran",
   "status_pendaftaran",
   "alasan_penolakan_batal",
+  "duplicate_check_key",
   "column_break_vzeh",
   "disetujui_oleh",
   "tanggal_persetujuan",
@@ -582,12 +583,20 @@
    "label": "Customer Orang Tua",
    "options": "Customer",
    "read_only": 1
+  },
+  {
+   "fieldname": "duplicate_check_key",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Duplicate Check Key",
+   "no_copy": 1,
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 00:09:38.445592",
+ "modified": "2026-05-23 01:14:27.107047",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
