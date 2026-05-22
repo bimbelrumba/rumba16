@@ -50,8 +50,8 @@
   {
    "fieldname": "nomor_induk_murid",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Nomor Induk Murid",
-   "read_only": 1,
    "unique": 1
   },
   {
@@ -104,6 +104,7 @@
   {
    "fieldname": "status_murid",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status Murid",
    "options": "Aktif\nCuti\nLulus\nBerhenti"
   },
@@ -118,13 +119,16 @@
    "label": "UNIT & PROGRAM"
   },
   {
+   "fetch_from": "pendaftaran.nama_unit",
    "fieldname": "nama_unit",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Unit Rumba",
    "options": "Rumba Unit"
   },
   {
-   "fetch_from": "nama_unit.kode_unit",
+   "fetch_from": "pendaftaran.kode_unit",
    "fieldname": "kode_unit",
    "fieldtype": "Data",
    "label": "Kode Unit"
@@ -148,6 +152,8 @@
   {
    "fieldname": "program_belajar",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Program Belajar",
    "options": "Rumba Program Belajar"
   },
@@ -250,7 +256,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-22 09:38:34.966212",
+ "modified": "2026-05-22 11:20:06.718769",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",
