@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
- "autoname": "field",
  "creation": "2026-04-15 06:36:08.845158",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -539,8 +538,10 @@
   },
   {
    "fieldname": "murid_rumba",
-   "fieldtype": "Data",
-   "label": "Murid Rumba"
+   "fieldtype": "Link",
+   "label": "Murid Rumba",
+   "options": "Rumba Murid",
+   "read_only": 1
   },
   {
    "fieldname": "pilihan_hari_belajar",
@@ -580,11 +581,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-08 10:22:21.253375",
+ "modified": "2026-05-22 10:05:54.576168",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
- "naming_rule": "Expression",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
@@ -604,5 +605,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "nama_lengkap"
 }
