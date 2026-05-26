@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-26 23:32:18.496189",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identitas_kelas_section",
+  "nama_kelas",
+  "status_kelas",
+  "column_break_nlyd",
+  "nama_unit",
+  "kode_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "identitas_kelas_section",
+   "fieldtype": "Section Break",
+   "label": "IDENTITAS KELAS"
+  },
+  {
+   "fieldname": "nama_kelas",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Kelas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_kelas",
+   "fieldtype": "Select",
+   "label": "Status Kelas",
+   "options": "Draft\nAktif\nSelesai\nDibatalkan"
+  },
+  {
+   "fieldname": "column_break_nlyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit Rumba",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-26 23:36:36.573552",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Kelas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
