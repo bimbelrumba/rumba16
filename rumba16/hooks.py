@@ -253,3 +253,14 @@ app_license = "mit"
 fixtures = [
     {"dt": "Client Script"}
 ]
+
+doc_events = {
+    "Sales Invoice": {
+        "on_update_after_submit": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_sales_invoice",
+        "on_cancel": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_sales_invoice",
+    },
+    "Payment Entry": {
+        "on_submit": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
+        "on_cancel": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
+    },
+}

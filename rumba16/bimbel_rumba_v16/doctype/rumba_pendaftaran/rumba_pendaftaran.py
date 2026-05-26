@@ -7,7 +7,7 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import getseries
-from frappe.utils import add_days, flt, getdate, nowdate
+from frappe.utils import add_days, flt, getdate, nowdate, today
 
 
 class RumbaPendaftaran(Document):
@@ -173,3 +173,40 @@ def buat_sales_invoice(pendaftaran, item_code, rate, due_date=None, submit_invoi
     doc.db_set("status_pembayaran", "Menunggu Pembayaran")
 
     return invoice.name
+
+@frappe.whitelist()
+def sinkronkan_pembayaran(pendaftaran):
+    doc = frappe.get_doc("Rumba Pendaftaran", pendaftaran)
+    doc.check_permission("write")
+
+    if not doc.sales_invoice:
+        frappe.throw(_("Sales Invoice belum terhubung ke pendaftaran ini."))
+
+    invoice = frappe.get_doc("Sales Invoice", doc.sales_invoice)
+
+    if invoice.docstatus == 2:
+        status_pembayaran = "Dibatalkan"
+        tanggal_pembayaran = None
+    elif invoice.docstatus == 0:
+        status_pembayaran = "Menunggu Pembayaran"
+        tanggal_pembayaran = None
+    elif flt(invoice.outstanding_amount) <= 0:
+        status_pembayaran = "Lunas"
+        tanggal_pembayaran = today()
+    elif flt(invoice.outstanding_amount) < flt(invoice.grand_total):
+        status_pembayaran = "Dibayar Sebagian"
+        tanggal_pembayaran = None
+    else:
+        status_pembayaran = "Menunggu Pembayaran"
+        tanggal_pembayaran = None
+
+    doc.db_set("status_pembayaran", status_pembayaran)
+    doc.db_set("tanggal_pembayaran", tanggal_pembayaran)
+
+    return {
+        "sales_invoice": invoice.name,
+        "invoice_status": invoice.status,
+        "outstanding_amount": invoice.outstanding_amount,
+        "status_pembayaran": status_pembayaran,
+        "tanggal_pembayaran": tanggal_pembayaran,
+    }
