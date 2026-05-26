@@ -286,8 +286,9 @@
   },
   {
    "fieldname": "nomor_handphone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Nomor Handphone",
+   "options": "Phone",
    "reqd": 1
   },
   {
@@ -596,7 +597,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 01:14:27.107047",
+ "modified": "2026-05-23 01:50:54.007959",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
