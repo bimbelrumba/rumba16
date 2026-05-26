@@ -7,7 +7,7 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import getseries
-from frappe.utils import getdate, nowdate
+from frappe.utils import add_days, flt, getdate, nowdate
 
 
 class RumbaPendaftaran(Document):
@@ -30,6 +30,7 @@ class RumbaPendaftaran(Document):
         self.normalize_nomor_handphone()
         self.set_duplicate_check_key()
         self.validate_duplicate_pendaftaran()
+        self.validate_persetujuan_harus_lunas()
 
     def set_kode_unit(self):
         if self.kode_unit:
@@ -95,8 +96,80 @@ class RumbaPendaftaran(Document):
                 title=_("Pendaftaran Dobel"),
             )
 
+    def validate_persetujuan_harus_lunas(self):
+        if self.status_pendaftaran != "Disetujui":
+            return
+
+        if getattr(self, "status_pembayaran", None) == "Lunas":
+            return
+
+        frappe.throw(
+            _(
+                "Pendaftaran hanya bisa disetujui jika Status Pembayaran sudah Lunas."
+            ),
+            title=_("Pembayaran Belum Lunas"),
+        )
+
     def clean_duplicate_text(self, value):
         if not value:
             return ""
 
         return " ".join(str(value).strip().lower().split())
+
+@frappe.whitelist()
+def buat_sales_invoice(pendaftaran, item_code, rate, due_date=None, submit_invoice=0):
+    doc = frappe.get_doc("Rumba Pendaftaran", pendaftaran)
+    doc.check_permission("write")
+
+    if doc.sales_invoice:
+        frappe.throw(
+            _("Sales Invoice {0} sudah dibuat untuk pendaftaran ini.").format(
+                frappe.bold(doc.sales_invoice)
+            )
+        )
+
+    if not doc.customer_orang_tua:
+        frappe.throw(_("Buat Customer Orang Tua terlebih dahulu sebelum membuat invoice."))
+
+    if doc.status_pendaftaran == "Disetujui" and doc.status_pembayaran != "Lunas":
+        frappe.throw(
+            _("Pendaftaran yang belum lunas tidak boleh berada dalam status Disetujui."),
+            title=_("Pembayaran Belum Lunas"),
+        )
+
+    if not item_code:
+        frappe.throw(_("Item invoice wajib dipilih."))
+
+    rate = flt(rate)
+    if rate <= 0:
+        frappe.throw(_("Nominal invoice harus lebih besar dari 0."))
+
+    company = frappe.defaults.get_user_default("Company") or frappe.defaults.get_global_default("company")
+    if not company:
+        frappe.throw(_("Default Company belum diatur."))
+
+    invoice = frappe.new_doc("Sales Invoice")
+    invoice.customer = doc.customer_orang_tua
+    invoice.company = company
+    invoice.posting_date = nowdate()
+    invoice.due_date = due_date or add_days(nowdate(), 7)
+    invoice.append(
+        "items",
+        {
+            "item_code": item_code,
+            "qty": 1,
+            "rate": rate,
+            "description": _("Tagihan pendaftaran {0} - {1}").format(
+                doc.name, doc.nama_lengkap
+            ),
+        },
+    )
+    invoice.insert()
+
+    if int(submit_invoice):
+        invoice.submit()
+
+    doc.db_set("sales_invoice", invoice.name)
+    doc.db_set("status_pembayaran", "Menunggu Pembayaran")
+
+    return invoice.name
