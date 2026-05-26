@@ -60,6 +60,14 @@ Known direction includes:
 - future student creation flow after approval
 - future operational expansion through controlled module growth
 
+Verified development-site registration workflow as of 2026-05-26:
+- `Rumba Pendaftaran` can move through: registration created -> Customer created -> Sales Invoice created -> invoice paid -> payment manually synchronized -> registration approved -> `Rumba Murid` created.
+- Minimum payment-control fields added to `Rumba Pendaftaran`: `sales_invoice`, `status_pembayaran`, and `tanggal_pembayaran`.
+- Server-side validation is active on the development site: `status_pendaftaran` cannot be changed to `Disetujui` unless `status_pembayaran` is `Lunas`.
+- Current payment sync behavior is intentionally manual: after ERPNext marks the linked `Sales Invoice` as paid, the operator uses the `Sinkronkan Pembayaran` button on `Rumba Pendaftaran` to update `status_pembayaran` to `Lunas`.
+- Current active client-script actions on `Rumba Pendaftaran` include: `Buat Customer`, `Buat Invoice`, `Buka Invoice`, `Sinkronkan Pembayaran`, and `Buat Murid`.
+- These site-side changes should be exported and committed to GitHub before being treated as source-controlled baseline.
+
 ---
 
 ## 6. Known Existing Custom DocTypes
