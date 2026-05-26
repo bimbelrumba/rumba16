@@ -83,12 +83,15 @@
   "tanggal_pendaftaran",
   "status_pendaftaran",
   "alasan_penolakan_batal",
+  "murid_rumba",
+  "customer_orang_tua",
   "duplicate_check_key",
   "column_break_vzeh",
+  "sales_invoice",
+  "status_pembayaran",
+  "tanggal_pembayaran",
   "disetujui_oleh",
-  "tanggal_persetujuan",
-  "murid_rumba",
-  "customer_orang_tua"
+  "tanggal_persetujuan"
  ],
  "fields": [
   {
@@ -592,12 +595,37 @@
    "label": "Duplicate Check Key",
    "no_copy": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "default": "Belum Ditagih",
+   "fieldname": "status_pembayaran",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Pembayaran",
+   "options": "Belum Ditagih\nMenunggu Pembayaran\nDibayar Sebagian\nLunas\nDibatalkan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_pembayaran",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Tanggal Pembayaran",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 01:50:54.007959",
+ "modified": "2026-05-26 11:28:43.922164",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",
