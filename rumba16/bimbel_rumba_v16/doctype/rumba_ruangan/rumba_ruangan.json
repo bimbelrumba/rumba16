@@ -8,7 +8,9 @@
  "field_order": [
   "nama_unit",
   "kode_ruangan",
-  "nama_ruangan"
+  "nama_ruangan",
+  "kapasitas",
+  "status_ruangan"
  ],
  "fields": [
   {
@@ -32,14 +34,28 @@
   {
    "fieldname": "nama_unit",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Unit Rumba",
    "options": "Rumba Unit"
+  },
+  {
+   "fieldname": "kapasitas",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Kapasitas"
+  },
+  {
+   "fieldname": "status_ruangan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Ruangan",
+   "options": "Aktif\nTidak Aktif"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-27 21:21:23.723621",
+ "modified": "2026-05-27 23:17:07.676558",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ruangan",
