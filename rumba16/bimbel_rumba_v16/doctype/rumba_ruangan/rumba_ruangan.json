@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "nama_unit",
   "kode_ruangan",
   "nama_ruangan"
  ],
@@ -27,12 +28,18 @@
    "in_list_view": 1,
    "label": "Nama Ruangan",
    "reqd": 1
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "label": "Unit Rumba",
+   "options": "Rumba Unit"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-15 06:28:33.676124",
+ "modified": "2026-05-27 21:21:23.723621",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ruangan",
