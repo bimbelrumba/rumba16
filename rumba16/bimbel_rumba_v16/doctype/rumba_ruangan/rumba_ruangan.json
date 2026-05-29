@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:kode_ruangan",
+ "autoname": "{kode_unit}{kode_ruangan}",
  "creation": "2026-04-15 06:26:17.825993",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "nama_unit",
+  "kode_unit",
   "kode_ruangan",
   "nama_ruangan",
   "kapasitas",
@@ -20,8 +21,7 @@
    "in_list_view": 1,
    "label": "Kode Ruangan",
    "length": 2,
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "description": "Contoh: Ruang 1, Ruang 2, dst.",
@@ -50,12 +50,19 @@
    "in_list_view": 1,
    "label": "Status Ruangan",
    "options": "Aktif\nTidak Aktif"
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-27 23:17:07.676558",
+ "modified": "2026-05-27 23:40:24.821097",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ruangan",

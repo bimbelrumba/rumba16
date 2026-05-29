@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:nama_kelas",
  "creation": "2026-05-26 23:32:18.496189",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,7 +11,27 @@
   "status_kelas",
   "column_break_nlyd",
   "nama_unit",
-  "kode_unit"
+  "kode_unit",
+  "program_periode_section",
+  "tahun_ajaran",
+  "semester",
+  "column_break_bbwv",
+  "program_belajar",
+  "jenis_kelas",
+  "jadwal_ruangan_section",
+  "nama_ruangan",
+  "kode_ruangan",
+  "kapasitas_murid",
+  "catatan",
+  "column_break_exny",
+  "hari_belajar",
+  "senin",
+  "seals",
+  "rabu",
+  "kamis",
+  "jump",
+  "sabot",
+  "jam_belajar"
  ],
  "fields": [
   {
@@ -19,17 +40,22 @@
    "label": "IDENTITAS KELAS"
   },
   {
+   "description": "Gunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]-[Semester]-Tahun Ajaran].\n<br><br>\nContoh Penulisan: 1901-KIDD-Reg-Sen,Rab-09.30-S1-26/27.",
    "fieldname": "nama_kelas",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Nama Kelas",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "status_kelas",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status Kelas",
-   "options": "Draft\nAktif\nSelesai\nDibatalkan"
+   "options": "Draft\nAktif\nSelesai\nDibatalkan",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nlyd",
@@ -39,6 +65,7 @@
    "fieldname": "nama_unit",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Unit Rumba",
    "options": "Rumba Unit",
    "reqd": 1
@@ -49,15 +76,135 @@
    "fieldtype": "Data",
    "label": "Kode Unit",
    "read_only": 1
+  },
+  {
+   "fieldname": "program_periode_section",
+   "fieldtype": "Section Break",
+   "label": "PROGRAM & PERIODE"
+  },
+  {
+   "fieldname": "tahun_ajaran",
+   "fieldtype": "Link",
+   "label": "Tahun Ajaran",
+   "options": "Rumba Tahun Ajaran",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Rumba Semester",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bbwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_belajar",
+   "fieldtype": "Link",
+   "label": "Program Belajar",
+   "options": "Rumba Program Belajar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jenis_kelas",
+   "fieldtype": "Select",
+   "label": "Jenis Kelas",
+   "options": "Reguler\nPrivate\nSemi-Private",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jadwal_ruangan_section",
+   "fieldtype": "Section Break",
+   "label": "JADWAL & RUANGAN"
+  },
+  {
+   "fieldname": "kapasitas_murid",
+   "fieldtype": "Int",
+   "label": "Kapasitas Murid",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "column_break_exny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hari_belajar",
+   "fieldtype": "HTML",
+   "label": "Hari Belajar"
+  },
+  {
+   "default": "0",
+   "fieldname": "senin",
+   "fieldtype": "Check",
+   "label": "Senin"
+  },
+  {
+   "default": "0",
+   "fieldname": "seals",
+   "fieldtype": "Check",
+   "label": "Selasa"
+  },
+  {
+   "default": "0",
+   "fieldname": "rabu",
+   "fieldtype": "Check",
+   "label": "Rabu"
+  },
+  {
+   "default": "0",
+   "fieldname": "kamis",
+   "fieldtype": "Check",
+   "label": "Kamis"
+  },
+  {
+   "default": "0",
+   "fieldname": "jump",
+   "fieldtype": "Check",
+   "label": "Jumat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabot",
+   "fieldtype": "Check",
+   "label": "Sabtu"
+  },
+  {
+   "fieldname": "jam_belajar",
+   "fieldtype": "Select",
+   "label": "Jam Belajar",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_ruangan",
+   "fieldtype": "Link",
+   "label": "Nama Ruangan",
+   "options": "Rumba Ruangan"
+  },
+  {
+   "fetch_from": "nama_ruangan.kode_ruangan",
+   "fieldname": "kode_ruangan",
+   "fieldtype": "Data",
+   "label": "Kode Ruangan",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-26 23:36:36.573552",
+ "modified": "2026-05-30 06:08:13.319443",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
