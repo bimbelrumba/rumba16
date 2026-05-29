@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "Rumba Kelas",
+  "enabled": 1,
+  "modified": "2026-05-30 06:15:50.890069",
+  "module": "Bimbel Rumba v16",
+  "name": "Warna Status Kelas",
+  "script": "frappe.listview_settings[\"Rumba Kelas\"] = {\n\tget_indicator(doc) {\n\t\tconst status_map = {\n\t\t\tDraft: \"gray\",\n\t\t\tAktif: \"green\",\n\t\t\tSelesai: \"blue\",\n\t\t\tDibatalkan: \"red\",\n\t\t};\n\n\t\tconst status = doc.status_kelas || \"Draft\";\n\t\tconst color = status_map[status] || \"gray\";\n\n\t\treturn [__(status), color, `status_kelas,=,${status}`];\n\t},\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "Rumba Unit",
   "enabled": 1,
   "modified": "2026-04-14 12:24:52.858049",

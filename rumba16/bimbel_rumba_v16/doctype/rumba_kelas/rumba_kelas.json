@@ -7,11 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "identitas_kelas_section",
-  "nama_kelas",
-  "status_kelas",
-  "column_break_nlyd",
   "nama_unit",
   "kode_unit",
+  "column_break_nlyd",
+  "nama_kelas",
+  "status_kelas",
   "program_periode_section",
   "tahun_ajaran",
   "semester",
@@ -40,7 +40,7 @@
    "label": "IDENTITAS KELAS"
   },
   {
-   "description": "Gunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]-[Semester]-Tahun Ajaran].\n<br><br>\nContoh Penulisan: 1901-KIDD-Reg-Sen,Rab-09.30-S1-26/27.",
+   "description": "Gunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]-[Semester]-Tahun Ajaran].\n<br>\n<b>Contoh Penulisan:</b> 1901-KIDD-Reg-Sen,Rab-09.30-S1-26/27.",
    "fieldname": "nama_kelas",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -200,7 +200,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-30 06:08:13.319443",
+ "modified": "2026-05-30 06:41:39.314449",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
