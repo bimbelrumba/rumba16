@@ -30,8 +30,8 @@
   "seals",
   "rabu",
   "kamis",
-  "jump",
-  "sabot",
+  "jumat",
+  "sabtu",
   "jam_belajar"
  ],
  "fields": [
@@ -166,18 +166,6 @@
    "label": "Kamis"
   },
   {
-   "default": "0",
-   "fieldname": "jump",
-   "fieldtype": "Check",
-   "label": "Jumat"
-  },
-  {
-   "default": "0",
-   "fieldname": "sabot",
-   "fieldtype": "Check",
-   "label": "Sabtu"
-  },
-  {
    "fieldname": "jam_belajar",
    "fieldtype": "Select",
    "label": "Jam Belajar",
@@ -202,12 +190,24 @@
    "fieldtype": "HTML",
    "label": "Panduan Nama Kelas",
    "options": "<div class=\"text-muted small\">\nGunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]- [Semester]-[Tahun Ajaran]<br>\n<b>Contoh</b>: 1901-KIDD-Reguler-Sen,Rab-09:30-S1- 2026/2027</b>\n</div>\n<br/>"
+  },
+  {
+   "default": "0",
+   "fieldname": "jumat",
+   "fieldtype": "Check",
+   "label": "Jumat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabtu",
+   "fieldtype": "Check",
+   "label": "Sabtu"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-30 06:55:47.564258",
+ "modified": "2026-05-30 07:14:38.196193",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
