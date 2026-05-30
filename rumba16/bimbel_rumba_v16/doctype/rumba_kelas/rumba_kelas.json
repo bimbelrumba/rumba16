@@ -11,6 +11,7 @@
   "kode_unit",
   "column_break_nlyd",
   "nama_kelas",
+  "panduan_nama_kelas",
   "status_kelas",
   "program_periode_section",
   "tahun_ajaran",
@@ -40,7 +41,6 @@
    "label": "IDENTITAS KELAS"
   },
   {
-   "description": "Gunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]-[Semester]-Tahun Ajaran].\n<br>\n<b>Contoh Penulisan:</b> 1901-KIDD-Reg-Sen,Rab-09.30-S1-26/27.",
    "fieldname": "nama_kelas",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -138,7 +138,8 @@
   {
    "fieldname": "hari_belajar",
    "fieldtype": "HTML",
-   "label": "Hari Belajar"
+   "label": "Hari Belajar",
+   "options": "<p>Pilihan Hari Belajar</p>"
   },
   {
    "default": "0",
@@ -195,12 +196,18 @@
    "fieldtype": "Data",
    "label": "Kode Ruangan",
    "read_only": 1
+  },
+  {
+   "fieldname": "panduan_nama_kelas",
+   "fieldtype": "HTML",
+   "label": "Panduan Nama Kelas",
+   "options": "<div class=\"text-muted small\">\nGunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]- [Semester]-[Tahun Ajaran]<br>\n<b>Contoh</b>: 1901-KIDD-Reguler-Sen,Rab-09:30-S1- 2026/2027</b>\n</div>\n<br/>"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-30 06:41:39.314449",
+ "modified": "2026-05-30 06:55:47.564258",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
