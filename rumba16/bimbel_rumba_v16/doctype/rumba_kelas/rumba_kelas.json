@@ -27,7 +27,7 @@
   "column_break_exny",
   "hari_belajar",
   "senin",
-  "seals",
+  "selasa",
   "rabu",
   "kamis",
   "jumat",
@@ -149,12 +149,6 @@
   },
   {
    "default": "0",
-   "fieldname": "seals",
-   "fieldtype": "Check",
-   "label": "Selasa"
-  },
-  {
-   "default": "0",
    "fieldname": "rabu",
    "fieldtype": "Check",
    "label": "Rabu"
@@ -202,12 +196,18 @@
    "fieldname": "sabtu",
    "fieldtype": "Check",
    "label": "Sabtu"
+  },
+  {
+   "default": "0",
+   "fieldname": "selasa",
+   "fieldtype": "Check",
+   "label": "Selasa"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-30 07:14:38.196193",
+ "modified": "2026-05-30 07:20:26.426129",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
