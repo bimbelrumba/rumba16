@@ -39,12 +39,12 @@ class RumbaPendaftaran(Document):
 
         # Kalau kode_unit kosong tapi ada unit/cabang, sesuaikan field ini bila perlu.
         # Contoh: self.unit, self.cabang, atau self.rumba_cabang.
-        unit = getattr(self, "unit", None) or getattr(self, "cabang", None) or getattr(self, "rumba_cabang", None)
+        unit = self.nama_unit
 
         if unit:
             kode_unit = frappe.db.get_value("Rumba Unit", unit, "kode_unit")
-            if kode_unit:
-                self.kode_unit = str(kode_unit).strip().upper()
+        if kode_unit:
+            self.kode_unit = str(kode_unit).strip().upper()
 
     def validate_kode_unit(self):
         if not self.kode_unit:
@@ -210,3 +210,67 @@ def sinkronkan_pembayaran(pendaftaran):
         "status_pembayaran": status_pembayaran,
         "tanggal_pembayaran": tanggal_pembayaran,
     }
+
+def sync_status_pembayaran_from_sales_invoice(doc, method=None):
+    """Dipanggil oleh hooks.py saat Sales Invoice on_update_after_submit atau on_cancel."""
+    pendaftaran_name = frappe.db.get_value(
+        "Rumba Pendaftaran", {"sales_invoice": doc.name}, "name"
+    )
+    if not pendaftaran_name:
+        return
+
+    pendaftaran = frappe.get_doc("Rumba Pendaftaran", pendaftaran_name)
+    pendaftaran.check_permission("write")
+
+    from frappe.utils import flt, today
+
+    if doc.docstatus == 2:
+        status_pembayaran = "Dibatalkan"
+        tanggal_pembayaran = None
+    elif flt(doc.outstanding_amount) <= 0:
+        status_pembayaran = "Lunas"
+        tanggal_pembayaran = today()
+    elif flt(doc.outstanding_amount) < flt(doc.grand_total):
+        status_pembayaran = "Dibayar Sebagian"
+        tanggal_pembayaran = None
+    else:
+        status_pembayaran = "Menunggu Pembayaran"
+        tanggal_pembayaran = None
+
+    pendaftaran.db_set("status_pembayaran", status_pembayaran)
+    pendaftaran.db_set("tanggal_pembayaran", tanggal_pembayaran)
+
+
+def sync_status_pembayaran_from_payment_entry(doc, method=None):
+    """Dipanggil oleh hooks.py saat Payment Entry on_submit atau on_cancel."""
+    for ref in doc.references or []:
+        if ref.reference_doctype != "Sales Invoice":
+            continue
+
+        pendaftaran_name = frappe.db.get_value(
+            "Rumba Pendaftaran", {"sales_invoice": ref.reference_name}, "name"
+        )
+        if not pendaftaran_name:
+            continue
+
+        invoice = frappe.get_doc("Sales Invoice", ref.reference_name)
+        pendaftaran = frappe.get_doc("Rumba Pendaftaran", pendaftaran_name)
+        pendaftaran.check_permission("write")
+
+        from frappe.utils import flt, today
+
+        if invoice.docstatus == 2:
+            status_pembayaran = "Dibatalkan"
+            tanggal_pembayaran = None
+        elif flt(invoice.outstanding_amount) <= 0:
+            status_pembayaran = "Lunas"
+            tanggal_pembayaran = today()
+        elif flt(invoice.outstanding_amount) < flt(invoice.grand_total):
+            status_pembayaran = "Dibayar Sebagian"
+            tanggal_pembayaran = None
+        else:
+            status_pembayaran = "Menunggu Pembayaran"
+            tanggal_pembayaran = None
+
+        pendaftaran.db_set("status_pembayaran", status_pembayaran)
+        pendaftaran.db_set("tanggal_pembayaran", tanggal_pembayaran)
