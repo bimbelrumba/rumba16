@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_bulk_edit": 1,
  "allow_rename": 1,
  "autoname": "field:nomor_induk_murid",
  "creation": "2026-04-22 00:13:10.988187",
@@ -122,7 +123,7 @@
   {
    "fetch_from": "pendaftaran.nama_unit",
    "fieldname": "nama_unit",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Unit Rumba",
@@ -257,7 +258,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 01:52:17.618348",
+ "modified": "2026-06-17 11:34:47.062864",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",
