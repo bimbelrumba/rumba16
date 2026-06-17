@@ -116,6 +116,30 @@ class RumbaPendaftaran(Document):
 
         return " ".join(str(value).strip().lower().split())
 
+    def on_update(self):
+        self.konversi_lead_jika_disetujui()
+
+    def konversi_lead_jika_disetujui(self):
+        """Saat Pendaftaran Disetujui dan tertaut ke Lead, tandai Lead sebagai
+        'Terdaftar' dan catat tanggal konversi. Idempoten: tidak menimpa lead
+        yang sudah Terdaftar."""
+        if self.status_pendaftaran != "Disetujui" or not self.lead:
+            return
+
+        status_lead = frappe.db.get_value("Rumba Lead", self.lead, "status_lead")
+        if status_lead == "Terdaftar":
+            return
+
+        frappe.db.set_value(
+            "Rumba Lead",
+            self.lead,
+            {
+                "status_lead": "Terdaftar",
+                "tanggal_konversi": today(),
+                "pendaftaran": self.name,
+            },
+        )
+
 @frappe.whitelist()
 def buat_sales_invoice(pendaftaran, item_code, rate, due_date=None, submit_invoice=0):
     doc = frappe.get_doc("Rumba Pendaftaran", pendaftaran)
