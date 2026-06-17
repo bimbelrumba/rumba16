@@ -32,7 +32,10 @@
   "kamis",
   "jumat",
   "sabtu",
-  "jam_belajar"
+  "jam_belajar",
+  "roster_section",
+  "jumlah_anggota",
+  "anggota_kelas"
  ],
  "fields": [
   {
@@ -202,12 +205,30 @@
    "fieldname": "selasa",
    "fieldtype": "Check",
    "label": "Selasa"
+  },
+  {
+   "fieldname": "roster_section",
+   "fieldtype": "Section Break",
+   "label": "ANGGOTA KELAS"
+  },
+  {
+   "fieldname": "jumlah_anggota",
+   "fieldtype": "Int",
+   "label": "Jumlah Anggota Aktif",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "anggota_kelas",
+   "fieldtype": "Table",
+   "label": "Anggota Kelas",
+   "options": "Rumba Anggota Kelas"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-30 07:20:26.426129",
+ "modified": "2026-06-17 17:52:51.839829",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
