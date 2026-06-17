@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_bulk_edit": 1,
  "allow_guest_to_view": 1,
  "creation": "2026-04-15 06:36:08.845158",
  "doctype": "DocType",
@@ -91,7 +92,8 @@
   "status_pembayaran",
   "tanggal_pembayaran",
   "disetujui_oleh",
-  "tanggal_persetujuan"
+  "tanggal_persetujuan",
+  "lead"
  ],
  "fields": [
   {
@@ -620,12 +622,18 @@
    "in_standard_filter": 1,
    "label": "Tanggal Pembayaran",
    "read_only": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Rumba Lead"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-26 11:28:43.922164",
+ "modified": "2026-06-17 13:45:38.785150",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",

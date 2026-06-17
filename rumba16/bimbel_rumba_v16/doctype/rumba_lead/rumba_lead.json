@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "format:RL-{YYYY}-{#####}",
+ "creation": "2026-06-17 13:05:30.787555",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_identitas",
+  "tanggal_lead",
+  "nama_kota",
+  "nama_unit",
+  "kode_unit",
+  "status_lead",
+  "sec_calon",
+  "nama_calon",
+  "nama_orang_tua_wali",
+  "nomor_handphone",
+  "alamat_email",
+  "program_diminati",
+  "sec_sumber",
+  "sumber_info",
+  "catatan",
+  "sec_konversi",
+  "pendaftaran",
+  "tanggal_konversi"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_identitas",
+   "fieldtype": "Section Break",
+   "label": "Identitas Lead"
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_lead",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Lead",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_kota",
+   "fieldtype": "Link",
+   "label": "Kota",
+   "options": "Rumba Kota"
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  },
+  {
+   "default": "Baru",
+   "fieldname": "status_lead",
+   "fieldtype": "Select",
+   "label": "Status Lead",
+   "options": "Baru\nDihubungi\nTrial\nTerdaftar\nTidak Jadi"
+  },
+  {
+   "fieldname": "sec_calon",
+   "fieldtype": "Section Break",
+   "label": "Info Calon"
+  },
+  {
+   "fieldname": "nama_calon",
+   "fieldtype": "Data",
+   "label": "Nama Calon (Anak)"
+  },
+  {
+   "fieldname": "nama_orang_tua_wali",
+   "fieldtype": "Data",
+   "label": "Nama Orang Tua / Wali"
+  },
+  {
+   "fieldname": "nomor_handphone",
+   "fieldtype": "Data",
+   "label": "Nomor Handphone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "alamat_email",
+   "fieldtype": "Data",
+   "label": "Alamat Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "program_diminati",
+   "fieldtype": "Link",
+   "label": "Program Diminati",
+   "options": "Rumba Program Belajar"
+  },
+  {
+   "fieldname": "sec_sumber",
+   "fieldtype": "Section Break",
+   "label": "Sumber & Catatan"
+  },
+  {
+   "fieldname": "sumber_info",
+   "fieldtype": "Select",
+   "label": "Sumber Info",
+   "options": "\nIG\nFB\nWebsite\nInternet\nKawan\nKeluarga\nSekolah\nKegiatan RUMBA\nSpanduk\nBrosur\nLainnya"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "sec_konversi",
+   "fieldtype": "Section Break",
+   "label": "Konversi"
+  },
+  {
+   "fieldname": "pendaftaran",
+   "fieldtype": "Link",
+   "label": "Pendaftaran",
+   "options": "Rumba Pendaftaran"
+  },
+  {
+   "fieldname": "tanggal_konversi",
+   "fieldtype": "Date",
+   "label": "Tanggal Konversi",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-17 13:44:54.912622",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Lead",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
