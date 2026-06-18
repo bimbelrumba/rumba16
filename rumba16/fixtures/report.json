@@ -107,5 +107,35 @@
    }
   ],
   "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-18 20:46:22.380427",
+  "module": "Bimbel Rumba v16",
+  "name": "Pengunduran Diri Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    name AS \"No.:Link/Rumba Pengunduran Diri:140\",\n    nama_murid AS \"Murid:Data:160\",\n    nama_unit AS \"Unit:Link/Rumba Unit:120\",\n    kategori AS \"Kategori:Data:90\",\n    tanggal_pemberitahuan AS \"Diberitahu:Date:100\",\n    tanggal_efektif AS \"Efektif:Date:100\",\n    notice_terpenuhi AS \"Notice H-14:Check:90\",\n    status_pengunduran AS \"Status:Data:90\",\n    tunggakan AS \"Tunggakan:Currency:110\"\nFROM `tabRumba Pengunduran Diri`\nORDER BY tanggal_efektif DESC, creation DESC",
+  "ref_doctype": "Rumba Pengunduran Diri",
+  "reference_report": null,
+  "report_name": "Pengunduran Diri Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
  }
 ]
