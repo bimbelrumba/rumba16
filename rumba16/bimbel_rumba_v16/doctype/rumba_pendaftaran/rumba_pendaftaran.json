@@ -61,19 +61,6 @@
   "durasi_les",
   "level_yang_dicapai",
   "nama_tempat_les",
-  "sumber_info_awal_rumba",
-  "instagram",
-  "facebook",
-  "website_bimbelrumba",
-  "pencarian_di_internet",
-  "kawan",
-  "keluarga",
-  "sekolah",
-  "kegiatan_rumba",
-  "spanduk_di_jalan",
-  "brosur_selebaran",
-  "lainnya",
-  "untuk_jawaban_lainnya",
   "section_merchandise_rumba",
   "pilihan_merchandise",
   "kaos",
@@ -378,82 +365,6 @@
    "label": "Nama Tempat Les"
   },
   {
-   "fieldname": "sumber_info_awal_rumba",
-   "fieldtype": "Heading",
-   "label": "Sumber Info Awal Rumba"
-  },
-  {
-   "default": "0",
-   "fieldname": "instagram",
-   "fieldtype": "Check",
-   "label": "Instagram"
-  },
-  {
-   "default": "0",
-   "fieldname": "facebook",
-   "fieldtype": "Check",
-   "label": "Facebook"
-  },
-  {
-   "default": "0",
-   "fieldname": "website_bimbelrumba",
-   "fieldtype": "Check",
-   "label": "Website bimbelrumba"
-  },
-  {
-   "default": "0",
-   "fieldname": "pencarian_di_internet",
-   "fieldtype": "Check",
-   "label": "Pencarian di internet"
-  },
-  {
-   "default": "0",
-   "fieldname": "kawan",
-   "fieldtype": "Check",
-   "label": "Kawan"
-  },
-  {
-   "default": "0",
-   "fieldname": "keluarga",
-   "fieldtype": "Check",
-   "label": "Keluarga"
-  },
-  {
-   "default": "0",
-   "fieldname": "sekolah",
-   "fieldtype": "Check",
-   "label": "Sekolah"
-  },
-  {
-   "default": "0",
-   "fieldname": "kegiatan_rumba",
-   "fieldtype": "Check",
-   "label": "Kegiatan RUMBA"
-  },
-  {
-   "default": "0",
-   "fieldname": "spanduk_di_jalan",
-   "fieldtype": "Check",
-   "label": "Spanduk di jalan"
-  },
-  {
-   "default": "0",
-   "fieldname": "brosur_selebaran",
-   "fieldtype": "Check",
-   "label": "Brosur / selebaran"
-  },
-  {
-   "default": "0",
-   "fieldname": "lainnya",
-   "fieldtype": "Check",
-   "label": "Lainnya"
-  },
-  {
-   "fieldname": "untuk_jawaban_lainnya",
-   "fieldtype": "Data",
-   "label": "Untuk jawaban Lainnya"
-  },
-  {
    "fieldname": "section_merchandise_rumba",
    "fieldtype": "Section Break",
    "label": "MERCHANDISE RUMBA"
@@ -633,7 +544,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-17 13:45:38.785150",
+ "modified": "2026-06-18 11:00:09.781589",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",

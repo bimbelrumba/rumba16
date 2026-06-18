@@ -251,8 +251,15 @@ app_license = "mit"
 # ignore_translatable_strings_from = []
 
 fixtures = [
-    {"dt": "Client Script"}
+    {"dt": "Client Script"},
+    {"dt": "Server Script", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Notification", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
 ]
+
 
 doc_events = {
     "Sales Invoice": {
