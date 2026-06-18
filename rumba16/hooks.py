@@ -257,7 +257,6 @@ fixtures = [
     {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
-    {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
 ]
 
 
