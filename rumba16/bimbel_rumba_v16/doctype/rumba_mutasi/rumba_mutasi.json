@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-18 20:20:34.606593",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "murid",
+  "nama_murid",
+  "program_belajar",
+  "cb1",
+  "unit_asal",
+  "unit_tujuan",
+  "tanggal_mutasi",
+  "sec_status",
+  "status_mutasi",
+  "tunggakan_unit_asal",
+  "konfirmasi_lunas_unit_asal",
+  "cb2",
+  "rekap_bintang",
+  "sec_catatan",
+  "alasan",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Murid",
+   "options": "Rumba Murid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "murid.nama_lengkap",
+   "fieldname": "nama_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Murid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.program_belajar",
+   "fieldname": "program_belajar",
+   "fieldtype": "Data",
+   "label": "Program Belajar",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_asal",
+   "fieldtype": "Link",
+   "label": "Unit Asal",
+   "options": "Rumba Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_tujuan",
+   "fieldtype": "Link",
+   "label": "Unit Tujuan",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_mutasi",
+   "fieldtype": "Date",
+   "label": "Tanggal Mutasi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_status",
+   "fieldtype": "Section Break",
+   "label": "STATUS & TUNGGAKAN"
+  },
+  {
+   "default": "Diajukan",
+   "fieldname": "status_mutasi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Mutasi",
+   "options": "Diajukan\nDisetujui\nSelesai\nBatal"
+  },
+  {
+   "fieldname": "tunggakan_unit_asal",
+   "fieldtype": "Currency",
+   "label": "Tunggakan Unit Asal (advisory)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "konfirmasi_lunas_unit_asal",
+   "fieldtype": "Check",
+   "label": "Konfirmasi Lunas di Unit Asal"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rekap_bintang",
+   "fieldtype": "Int",
+   "label": "Rekap Bintang Dibawa"
+  },
+  {
+   "fieldname": "sec_catatan",
+   "fieldtype": "Section Break",
+   "label": "CATATAN"
+  },
+  {
+   "fieldname": "alasan",
+   "fieldtype": "Small Text",
+   "label": "Alasan Pindah"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-18 20:24:53.801890",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Mutasi",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

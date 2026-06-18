@@ -77,5 +77,35 @@
    }
   ],
   "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-18 20:21:49.396949",
+  "module": "Bimbel Rumba v16",
+  "name": "Mutasi Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    name AS \"Mutasi:Link/Rumba Mutasi:130\",\n    nama_murid AS \"Murid:Data:160\",\n    unit_asal AS \"Unit Asal:Link/Rumba Unit:130\",\n    unit_tujuan AS \"Unit Tujuan:Link/Rumba Unit:130\",\n    status_mutasi AS \"Status:Data:100\",\n    tanggal_mutasi AS \"Tanggal:Date:100\",\n    tunggakan_unit_asal AS \"Tunggakan:Currency:120\",\n    rekap_bintang AS \"Bintang:Int:80\"\nFROM `tabRumba Mutasi`\nORDER BY tanggal_mutasi DESC, creation DESC",
+  "ref_doctype": "Rumba Mutasi",
+  "reference_report": null,
+  "report_name": "Mutasi Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
  }
 ]
