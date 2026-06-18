@@ -45,7 +45,10 @@
   "hasil_trial",
   "tanggal_followup_1",
   "tanggal_followup_2",
-  "catatan_observasi_trial"
+  "catatan_observasi_trial",
+  "waitlist_section",
+  "tanggal_masuk_tunggu",
+  "catatan_tunggu"
  ],
  "fields": [
   {
@@ -87,7 +90,7 @@
    "fieldname": "status_lead",
    "fieldtype": "Select",
    "label": "Status Lead",
-   "options": "Baru\nDihubungi\nTrial\nTerdaftar\nTidak Jadi"
+   "options": "Baru\nDihubungi\nTrial\nDaftar Tunggu\nTerdaftar\nTidak Jadi"
   },
   {
    "fieldname": "sec_calon",
@@ -276,12 +279,28 @@
    "fieldname": "untuk_jawaban_lainnya",
    "fieldtype": "Data",
    "label": "Untuk jawaban Lainnya"
+  },
+  {
+   "depends_on": "eval:doc.status_lead=='Daftar Tunggu' || doc.tanggal_masuk_tunggu",
+   "fieldname": "waitlist_section",
+   "fieldtype": "Section Break",
+   "label": "DAFTAR TUNGGU"
+  },
+  {
+   "fieldname": "tanggal_masuk_tunggu",
+   "fieldtype": "Date",
+   "label": "Tanggal Masuk Daftar Tunggu"
+  },
+  {
+   "fieldname": "catatan_tunggu",
+   "fieldtype": "Small Text",
+   "label": "Catatan Daftar Tunggu"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-18 10:58:28.665390",
+ "modified": "2026-06-18 19:41:16.125149",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Lead",

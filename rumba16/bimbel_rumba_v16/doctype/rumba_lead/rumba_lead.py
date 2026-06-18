@@ -4,12 +4,13 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
-from frappe.utils import getdate
+from frappe.utils import getdate, today
 
 
 class RumbaLead(Document):
     def validate(self):
         self.validasi_trial()
+        self.validasi_daftar_tunggu()
 
     def validasi_trial(self):
         """Fase D / G4 — alur Trial (ERP-LIFE-001).
@@ -62,4 +63,46 @@ class RumbaLead(Document):
                             tgl_trial,
                         ),
                         indicator="orange",
+                    )
+
+    def validasi_daftar_tunggu(self):
+        """Fase D / G5 — Daftar Tunggu (ERP-LIFE-001 v0.2).
+
+        Target tunggu = program + unit (tanpa link kelas spesifik). FIFO via
+        tanggal_masuk_tunggu. Petunjuk kursi tersedia bersifat advisory.
+        """
+
+        # FIFO — auto-stempel tanggal masuk saat status menjadi Daftar Tunggu.
+        if self.status_lead == "Daftar Tunggu":
+            if not self.tanggal_masuk_tunggu:
+                self.tanggal_masuk_tunggu = today()
+
+            # Petunjuk lunak: ada kelas Aktif program ini di unit yang masih ada kursi?
+            if self.nama_unit and self.program_diminati:
+                kelas_kosong = frappe.db.sql(
+                    """
+                    SELECT name, jumlah_anggota, kapasitas_murid
+                    FROM `tabRumba Kelas`
+                    WHERE nama_unit = %(unit)s
+                      AND program_belajar = %(program)s
+                      AND status_kelas = 'Aktif'
+                      AND IFNULL(jumlah_anggota, 0) < IFNULL(kapasitas_murid, 0)
+                    """,
+                    {"unit": self.nama_unit, "program": self.program_diminati},
+                    as_dict=True,
+                )
+                if kelas_kosong:
+                    daftar = ", ".join(
+                        "{0} ({1}/{2})".format(
+                            k.name, k.jumlah_anggota or 0, k.kapasitas_murid or 0
+                        )
+                        for k in kelas_kosong
+                    )
+                    frappe.msgprint(
+                        _(
+                            "Ada kelas dengan kursi kosong untuk program ini di {0}: {1}. "
+                            "Pertimbangkan menempatkan calon langsung daripada masuk daftar tunggu."
+                        ).format(frappe.bold(self.nama_unit), daftar),
+                        title=_("Kursi Mungkin Tersedia"),
+                        indicator="blue",
                     )
