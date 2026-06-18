@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-18 20:45:24.681954",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "murid",
+  "nama_murid",
+  "nama_unit",
+  "cb1",
+  "kategori",
+  "tanggal_pemberitahuan",
+  "tanggal_efektif",
+  "sec_notice",
+  "selisih_notice_hari",
+  "notice_terpenuhi",
+  "status_pengunduran",
+  "cb2",
+  "tunggakan",
+  "persetujuan_kepala_unit",
+  "sec_catatan",
+  "alasan",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Murid",
+   "options": "Rumba Murid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "murid.nama_lengkap",
+   "fieldname": "nama_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Murid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Resmi",
+   "fieldname": "kategori",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Kategori",
+   "options": "Resmi\nDrop-off",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_pemberitahuan",
+   "fieldtype": "Date",
+   "label": "Tanggal Pemberitahuan"
+  },
+  {
+   "fieldname": "tanggal_efektif",
+   "fieldtype": "Date",
+   "label": "Tanggal Efektif Berhenti",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_notice",
+   "fieldtype": "Section Break",
+   "label": "NOTICE & STATUS"
+  },
+  {
+   "fieldname": "selisih_notice_hari",
+   "fieldtype": "Int",
+   "label": "Selisih Notice (hari)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "notice_terpenuhi",
+   "fieldtype": "Check",
+   "label": "Notice H-14 Terpenuhi",
+   "read_only": 1
+  },
+  {
+   "default": "Diajukan",
+   "fieldname": "status_pengunduran",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Pengunduran",
+   "options": "Diajukan\nFinal\nBatal"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tunggakan",
+   "fieldtype": "Currency",
+   "label": "Tunggakan (advisory)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "persetujuan_kepala_unit",
+   "fieldtype": "Check",
+   "label": "Persetujuan Kepala Unit (Drop-off)"
+  },
+  {
+   "fieldname": "sec_catatan",
+   "fieldtype": "Section Break",
+   "label": "ALASAN & CATATAN"
+  },
+  {
+   "fieldname": "alasan",
+   "fieldtype": "Small Text",
+   "label": "Alasan Berhenti"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-18 20:45:24.681954",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Pengunduran Diri",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
