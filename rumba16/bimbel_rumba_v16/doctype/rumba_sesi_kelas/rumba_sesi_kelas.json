@@ -6,21 +6,96 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_wbat"
+  "kelas",
+  "tanggal_sesi",
+  "jam_sesi",
+  "status_sesi",
+  "guru",
+  "guru_pengganti",
+  "durasi_jam",
+  "jumlah_hadir",
+  "jumlah_anggota_roster",
+  "presensi",
+  "catatan"
  ],
  "fields": [
   {
-   "fieldname": "section_break_wbat",
-   "fieldtype": "Section Break"
+   "fieldname": "kelas",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kelas",
+   "options": "Rumba Kelas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_sesi",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Sesi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jam_sesi",
+   "fieldtype": "Select",
+   "label": "Jam Sesi",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00"
+  },
+  {
+   "fieldname": "status_sesi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Sesi",
+   "options": "Terlaksana\nBatal\nDiganti",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guru",
+   "fieldtype": "Link",
+   "label": "Guru",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guru_pengganti",
+   "fieldtype": "Link",
+   "label": "Guru Pengganti",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "durasi_jam",
+   "fieldtype": "Float",
+   "label": "Durasi Jam"
+  },
+  {
+   "fieldname": "jumlah_hadir",
+   "fieldtype": "Int",
+   "label": "Jumlah Hadir"
+  },
+  {
+   "fieldname": "jumlah_anggota_roster",
+   "fieldtype": "Int",
+   "label": "Jumlah Anggota Roster"
+  },
+  {
+   "fieldname": "presensi",
+   "fieldtype": "Table",
+   "label": "Presensi",
+   "options": "Rumba Presensi Murid"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-19 14:02:03.462152",
+ "modified": "2026-06-19 18:03:56.986072",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
@@ -32,6 +107,29 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
    "share": 1,
    "write": 1
   }

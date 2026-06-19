@@ -33,8 +33,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status Kehadiran",
-   "options": "Hadir\nIzin\nSakit\nAlpa",
-   "reqd": 1
+   "options": "Hadir\nIzin\nSakit\nAlpa"
   },
   {
    "fieldname": "keterangan",
@@ -46,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-06-19 14:00:31.753589",
+ "modified": "2026-06-19 18:33:27.667177",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Presensi Murid",

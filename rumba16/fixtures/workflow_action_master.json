@@ -1,0 +1,30 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.393242",
+  "name": "Ajukan",
+  "workflow_action_name": "Ajukan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.416886",
+  "name": "Setujui",
+  "workflow_action_name": "Setujui"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.436878",
+  "name": "Minta Revisi",
+  "workflow_action_name": "Minta Revisi"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.468545",
+  "name": "Ajukan Ulang",
+  "workflow_action_name": "Ajukan Ulang"
+ }
+]

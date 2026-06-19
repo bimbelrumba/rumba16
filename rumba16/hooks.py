@@ -257,6 +257,10 @@ fixtures = [
     {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
+    {"dt": "Workflow", "filters": [["name", "=", "Persetujuan Presensi Sesi"]]},
+    {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi"]]]},
+    {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang"]]]},
 ]
 
 
