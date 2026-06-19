@@ -36,6 +36,7 @@ class RumbaSesiKelas(Document):
     def validate(self):
         self.set_default_awal()
         self.set_guru_default()
+        self.set_durasi_menit()
         self.cegah_duplikat_sesi()
         self.isi_presensi_dari_roster()
         self.hitung_rekap()
@@ -47,6 +48,16 @@ class RumbaSesiKelas(Document):
             self.tanggal_sesi = nowdate()
         if not self.status_sesi:
             self.status_sesi = "Terlaksana"
+
+    # --- Durasi menit deterministik dari jenis kelas (read-only, auto) ---
+    # Reguler & Semi-Private = 75 menit; Private = 60 menit (aturan RUMBA).
+    def set_durasi_menit(self):
+        jenis = (
+            frappe.db.get_value("Rumba Kelas", self.kelas, "jenis_kelas")
+            if self.kelas
+            else None
+        )
+        self.durasi_menit = 60 if jenis == "Private" else 75
 
     # --- A8: default guru = Employee dari user yang login ---
     def set_guru_default(self):

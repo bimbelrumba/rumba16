@@ -12,7 +12,7 @@
   "status_sesi",
   "guru",
   "guru_pengganti",
-  "durasi_jam",
+  "durasi_menit",
   "jumlah_hadir",
   "jumlah_anggota_roster",
   "presensi",
@@ -62,19 +62,24 @@
    "options": "Employee"
   },
   {
-   "fieldname": "durasi_jam",
-   "fieldtype": "Float",
-   "label": "Durasi Jam"
+   "default": "75",
+   "description": "Otomatis dari jenis kelas: Reguler & Semi-Private = 75, Private = 60.",
+   "fieldname": "durasi_menit",
+   "fieldtype": "Int",
+   "label": "Durasi (Menit)",
+   "read_only": 1
   },
   {
    "fieldname": "jumlah_hadir",
    "fieldtype": "Int",
-   "label": "Jumlah Hadir"
+   "label": "Jumlah Hadir",
+   "read_only": 1
   },
   {
    "fieldname": "jumlah_anggota_roster",
    "fieldtype": "Int",
-   "label": "Jumlah Anggota Roster"
+   "label": "Jumlah Anggota Roster",
+   "read_only": 1
   },
   {
    "fieldname": "presensi",
@@ -91,7 +96,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-19 18:03:56.986072",
+ "modified": "2026-06-19 19:30:00.000000",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",
