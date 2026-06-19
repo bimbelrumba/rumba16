@@ -70,11 +70,21 @@ class RumbaUjianKenaikanLevel(Document):
     def _is_calistung(self, program) -> bool:
         """Guard L4: kenaikan level otomatis hanya untuk program Calistung.
 
-        BSD = kenaikan kelas sekolah; EMFK/EFPS level belum matang → di luar
-        iterasi. Deteksi sederhana berdasar nama program; model tetap
-        program-aware agar mudah diperluas.
+        PENTING: `murid.program_belajar` menyimpan KODE program (mis. "BMSK"),
+        bukan nama deskriptif. Program Calistung RUMBA = kode "BMSK" / nama
+        "Bekal Masuk Sekolah (Calistung)". Maka deteksi dilakukan terhadap
+        nama deskriptif (field `program_belajar` di Rumba Program Belajar) yang
+        memuat kata "Calistung" — bukan terhadap kode yang tersimpan di murid.
+        Model tetap program-aware: program Calistung baru otomatis terdeteksi
+        selama namanya memuat "calistung".
+
+        BSD = kenaikan kelas sekolah; EMFK/EFPS (English) level belum matang →
+        di luar iterasi.
         """
-        return bool(program) and "calistung" in str(program).lower()
+        if not program:
+            return False
+        nama = frappe.db.get_value("Rumba Program Belajar", program, "program_belajar") or ""
+        return "calistung" in f"{program} {nama}".lower()
 
     def eksekusi_kenaikan(self):
         """Eksekusi kenaikan saat Final + Lulus (idempoten)."""
