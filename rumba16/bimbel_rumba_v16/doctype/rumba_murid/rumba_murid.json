@@ -10,6 +10,7 @@
   "pendaftaran",
   "tanggal_pendaftaran",
   "status_murid",
+  "level_saat_ini",
   "identitas_murid_section",
   "nomor_induk_murid",
   "nama_lengkap",
@@ -252,12 +253,20 @@
    "fieldname": "alamat",
    "fieldtype": "Small Text",
    "label": "Alamat"
+  },
+  {
+   "description": "Level Calistung berjalan; diisi/di-update otomatis oleh controller Ujian Kenaikan Level. Kosong = belum berlevel (mis. program non-Calistung).",
+   "fieldname": "level_saat_ini",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Level Saat Ini",
+   "options": "\nLevel 1\nLevel 2\nLevel 3"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-17 11:58:44.172429",
+ "modified": "2026-06-20 00:17:36.232828",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",
