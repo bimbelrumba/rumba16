@@ -11,6 +11,7 @@
   "tanggal_pendaftaran",
   "status_murid",
   "level_saat_ini",
+  "saldo_bintang",
   "identitas_murid_section",
   "nomor_induk_murid",
   "nama_lengkap",
@@ -261,12 +262,20 @@
    "in_standard_filter": 1,
    "label": "Level Saat Ini",
    "options": "\nLevel 1\nLevel 2\nLevel 3"
+  },
+  {
+   "default": "0",
+   "description": "Total bintang dari BKM Entry berstatus Disetujui (auto, E3).",
+   "fieldname": "saldo_bintang",
+   "fieldtype": "Int",
+   "label": "Saldo Bintang",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-20 00:17:36.232828",
+ "modified": "2026-06-20 10:58:01.202105",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",

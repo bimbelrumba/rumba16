@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-20 12:37:25.821782",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_data",
+  "sesi_kelas",
+  "murid",
+  "nama_murid",
+  "cb1",
+  "kelas",
+  "tanggal_sesi",
+  "guru",
+  "program",
+  "sec_kegiatan",
+  "level",
+  "kegiatan",
+  "cb2",
+  "bintang",
+  "paraf_guru",
+  "sec_ortu",
+  "catatan_ortu"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_data",
+   "fieldtype": "Section Break",
+   "label": "Data Sesi & Murid"
+  },
+  {
+   "fieldname": "sesi_kelas",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sesi Kelas",
+   "options": "Rumba Sesi Kelas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Murid",
+   "options": "Rumba Murid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "murid.nama_lengkap",
+   "fieldname": "nama_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Murid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sesi_kelas.kelas",
+   "fieldname": "kelas",
+   "fieldtype": "Link",
+   "label": "Kelas",
+   "options": "Rumba Kelas",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sesi_kelas.tanggal_sesi",
+   "fieldname": "tanggal_sesi",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Sesi",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sesi_kelas.guru",
+   "fieldname": "guru",
+   "fieldtype": "Link",
+   "label": "Guru",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.program_belajar",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Rumba Program Belajar",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_kegiatan",
+   "fieldtype": "Section Break",
+   "label": "Kegiatan & Penilaian"
+  },
+  {
+   "description": "Untuk Calistung: level berjalan (mis. Lv.2), per SOP-OPS-011. Default dari level murid bila kosong.",
+   "fieldname": "level",
+   "fieldtype": "Data",
+   "label": "Level (Calistung)"
+  },
+  {
+   "description": "Materi + halaman buku sesuai format program (SOP-OPS-011).",
+   "fieldname": "kegiatan",
+   "fieldtype": "Small Text",
+   "label": "Kegiatan"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "bintang",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bintang"
+  },
+  {
+   "fieldname": "paraf_guru",
+   "fieldtype": "Link",
+   "label": "Paraf Guru",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sec_ortu",
+   "fieldtype": "Section Break",
+   "label": "Catatan Orang Tua"
+  },
+  {
+   "description": "Catatan orang tua yang dibaca guru di awal sesi (SOP-OPS-011).",
+   "fieldname": "catatan_ortu",
+   "fieldtype": "Small Text",
+   "label": "Catatan Orang Tua"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-20 12:37:25.821782",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba BKM Entry",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
