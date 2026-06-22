@@ -143,7 +143,7 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"rumba16.tasks.all"
 # 	],
@@ -156,10 +156,10 @@ app_license = "mit"
 # 	"weekly": [
 # 		"rumba16.tasks.weekly"
 # 	],
-# 	"monthly": [
-# 		"rumba16.tasks.monthly"
-# 	],
-# }
+ 	"monthly": [
+ 		"rumba16.tasks.generate_spp_bulanan"
+ 	],
+ }
 
 # Testing
 # -------
