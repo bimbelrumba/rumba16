@@ -133,6 +133,7 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
+
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
@@ -282,5 +283,9 @@ doc_events = {
     "Payment Entry": {
         "on_submit": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
         "on_cancel": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
+    },
+# ... entri Sales Invoice & Payment Entry yang sudah ada — JANGAN buat dict doc_events kedua ...
+    "Employee": {
+        "before_naming": "rumba16.hr_naming.employee_autoname",
     },
 }
