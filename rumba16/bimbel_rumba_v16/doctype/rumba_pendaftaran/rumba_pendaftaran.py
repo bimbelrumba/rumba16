@@ -1,6 +1,21 @@
 # Copyright (c) 2026, Yayasan Rumba Kita Indonesia and contributors
 # For license information, please see license.txt
 
+# ============================================================================
+# CATATAN DEPLOY (Fase F / F4b — follow-up):
+# File ini = controller Pendaftaran EXISTING + 1 baris tag unit pada invoice.
+# Salin/timpa ke:
+#   apps/rumba16/rumba16/bimbel_rumba_v16/doctype/rumba_pendaftaran/
+#       rumba_pendaftaran.py
+#
+# Satu-satunya perubahan vs versi lama: di buat_sales_invoice(), invoice
+# pendaftaran kini diberi tag `invoice.rumba_unit = doc.nama_unit` sebelum
+# insert. Tujuan: biaya pendaftaran ikut ber-tag unit, sehingga gerbang
+# tunggakan G6 Mutasi (F9) menghitung tunggakan unit asal SECARA LENGKAP
+# (bukan hanya SPP). Tanpa ini, tagihan pendaftaran hanya muncul sebagai
+# "advisory tak ber-tag" di rumba_mutasi.py.
+# ============================================================================
+
 import re
 
 import frappe
@@ -177,6 +192,8 @@ def buat_sales_invoice(pendaftaran, item_code, rate, due_date=None, submit_invoi
     invoice.company = company
     invoice.posting_date = nowdate()
     invoice.due_date = due_date or add_days(nowdate(), 7)
+    # F4b — tag unit pada tagihan pendaftaran (melengkapi gerbang tunggakan G6/F9).
+    invoice.rumba_unit = doc.nama_unit
     invoice.append(
         "items",
         {
