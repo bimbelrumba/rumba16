@@ -261,6 +261,16 @@ fixtures = [
     {"dt": "Workflow", "filters": [["name","in",["Persetujuan Presensi Sesi","Persetujuan BKM"]]]},
     {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi"]]]},
     {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang"]]]},
+    {"dt": "Custom Field", "filters": [["name", "in", [
+        "Rumba Program Belajar-item_spp",
+        "Rumba Unit-price_list_spp",
+        "Rumba Murid-nominal_spp",
+        "Rumba Murid-tanggal_mulai_spp",
+        "Rumba Murid-tanggal_spp_dimuka_sampai",
+        "Sales Invoice-rumba_unit",
+        "Sales Invoice-rumba_murid",
+        "Sales Invoice-spp_periode"
+    ]]]},
 ]
 
 

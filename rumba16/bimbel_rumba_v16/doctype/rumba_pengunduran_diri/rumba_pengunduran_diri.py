@@ -1,6 +1,18 @@
 # Copyright (c) 2026, Yayasan Rumba Kita Indonesia and contributors
 # For license information, please see license.txt
 
+# ============================================================================
+# CATATAN DEPLOY (Fase F / F6):
+# File ini = controller G7 Pengunduran Diri EXISTING + 1 tambahan wiring F6.
+# Salin/timpa ke:
+#   apps/rumba16/rumba16/bimbel_rumba_v16/doctype/rumba_pengunduran_diri/
+#       rumba_pengunduran_diri.py
+# Satu-satunya perubahan vs versi lama: pada eksekusi Final (setelah murid
+# di-set Berhenti + roster Keluar), memanggil hanguskan_saldo_dimuka() (F6).
+# Panggilan dibungkus try/except → bila penghangusan bermasalah, pengunduran
+# TETAP diproses (selaras SOP-OPS-006), error dicatat ke Error Log.
+# ============================================================================
+
 import frappe
 from frappe import _
 from frappe.model.document import Document
@@ -14,6 +26,7 @@ class RumbaPengunduranDiri(Document):
     Notice H-14 & tunggakan = advisory (pengunduran tetap diproses, SOP).
     Drop-off (penonaktifan sepihak) butuh persetujuan Kepala Unit.
     Eksekusi (status_murid=Berhenti + roster Keluar) saat ARU finalisasi.
+    Fase F/F6: saat Final, saldo SPP di muka yang tersisa dihanguskan.
     """
 
     def autoname(self):
@@ -115,6 +128,20 @@ class RumbaPengunduranDiri(Document):
             return
         frappe.db.set_value("Rumba Murid", self.murid, "status_murid", "Berhenti")
         self.tandai_roster_keluar()
+        self.hanguskan_saldo_spp_dimuka()
+
+    def hanguskan_saldo_spp_dimuka(self):
+        """Fase F/F6 — hanguskan sisa SPP di muka (SOP-FIN-012 §4.4). Non-blok:
+        kegagalan dicatat ke Error Log, pengunduran tetap final."""
+        try:
+            from rumba16.spp_dimuka import hanguskan_saldo_dimuka
+
+            hanguskan_saldo_dimuka(self.murid, self.tanggal_efektif)
+        except Exception:
+            frappe.log_error(
+                title=f"Hangus saldo SPP di muka gagal: {self.murid}",
+                message=frappe.get_traceback(),
+            )
 
     def tandai_roster_keluar(self):
         # Murid keluar dari RUMBA → tandai semua keanggotaan kelas Aktif (lintas kelas).
