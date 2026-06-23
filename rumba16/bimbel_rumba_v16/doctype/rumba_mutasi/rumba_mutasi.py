@@ -1,6 +1,22 @@
 # Copyright (c) 2026, Yayasan Rumba Kita Indonesia and contributors
 # For license information, please see license.txt
 
+# ============================================================================
+# CATATAN DEPLOY (Fase F / F9):
+# File ini = controller G6 Mutasi EXISTING + pengetatan gerbang tunggakan (F9).
+# Salin/timpa ke:
+#   apps/rumba16/rumba16/bimbel_rumba_v16/doctype/rumba_mutasi/rumba_mutasi.py
+#
+# Perubahan vs versi lama (ERP-FIN-001 F9, pengingat G10):
+#  1. hitung_tunggakan(): outstanding dihitung PER UNIT ASAL via tag rumba_unit
+#     (bukan lagi total lintas unit). Tambahan: outstanding tak ber-tag unit
+#     ditampilkan sebagai advisory terpisah (sampai invoice non-SPP ber-tag).
+#  2. Gerbang: dari checkbox manual (konfirmasi_lunas_unit_asal) → BLOKIR KERAS
+#     bila tunggakan_unit_asal > 0 saat status Disetujui/Selesai. Checkbox
+#     DIPENSIUNKAN sebagai gerbang (field boleh tetap ada di DocType, tidak lagi
+#     ditegakkan; pertimbangkan disembunyikan dari form).
+# ============================================================================
+
 import frappe
 from frappe import _
 from frappe.model.document import Document
@@ -9,12 +25,11 @@ from frappe.utils import flt, fmt_money, getdate, nowdate
 
 
 class RumbaMutasi(Document):
-    """Fase D / G6 — Mutasi Murid antar unit (ERP-LIFE-001 v0.3, SOP-OPS-003).
+    """Fase D / G6 — Mutasi Murid antar unit (ERP-LIFE-001, SOP-OPS-003).
 
-    Gerbang tunggakan (M2, 18 Jun 2026): checkbox konfirmasi manual = gerbang
-    nyata; tunggakan_unit_asal otomatis hanya ADVISORY. Saat G10 (SPP berulang)
-    + invoice ber-tag unit tersedia, perketat jadi blokir keras (lihat memori
-    pengingat G10).
+    Gerbang tunggakan (F9 / G10, 23 Jun 2026): kini invoice SPP ber-tag
+    rumba_unit tersedia, sehingga tunggakan_unit_asal dihitung khusus unit asal
+    dan menjadi GERBANG KERAS (blokir) — menggantikan checkbox manual M2.
     """
 
     def autoname(self):
@@ -28,7 +43,7 @@ class RumbaMutasi(Document):
         self.set_data_murid()
         self.validasi_unit_tujuan()
         self.hitung_tunggakan()
-        self.gerbang_konfirmasi()
+        self.gerbang_tunggakan()
 
     def on_update(self):
         self.eksekusi_mutasi()
@@ -56,43 +71,67 @@ class RumbaMutasi(Document):
             frappe.throw(_("Unit Tujuan tidak boleh sama dengan Unit Asal."))
 
     def hitung_tunggakan(self):
-        """Advisory (M2): total outstanding Sales Invoice customer (lintas unit)."""
-        outstanding = 0
+        """F9 — tunggakan KHUSUS unit asal via tag rumba_unit (gerbang nyata).
+
+        Juga hitung outstanding tak ber-tag unit sebagai advisory terpisah
+        (mis. biaya pendaftaran yang belum di-tag; akan hilang setelah seluruh
+        invoice ber-tag rumba_unit).
+        """
+        self.tunggakan_unit_asal = 0
         customer = (
             frappe.db.get_value("Rumba Murid", self.murid, "customer")
             if self.murid
             else None
         )
-        if customer:
-            outstanding = frappe.db.sql(
-                """
-                SELECT IFNULL(SUM(outstanding_amount), 0)
-                FROM `tabSales Invoice`
-                WHERE customer = %s AND docstatus = 1
-                """,
-                customer,
-            )[0][0]
-        self.tunggakan_unit_asal = flt(outstanding)
+        if not customer:
+            return
 
-        if flt(outstanding) > 0 and self.status_mutasi in ("Disetujui", "Selesai"):
+        # Tunggakan ber-tag unit asal — basis gerbang keras.
+        tunggakan_unit = frappe.db.sql(
+            """
+            SELECT IFNULL(SUM(outstanding_amount), 0)
+            FROM `tabSales Invoice`
+            WHERE customer = %s AND docstatus = 1 AND rumba_unit = %s
+            """,
+            (customer, self.unit_asal),
+        )[0][0]
+        self.tunggakan_unit_asal = flt(tunggakan_unit)
+
+        # Outstanding tanpa tag unit — advisory (belum bisa diatribusikan ke unit).
+        tak_bertag = frappe.db.sql(
+            """
+            SELECT IFNULL(SUM(outstanding_amount), 0)
+            FROM `tabSales Invoice`
+            WHERE customer = %s AND docstatus = 1
+              AND (rumba_unit IS NULL OR rumba_unit = '')
+            """,
+            (customer,),
+        )[0][0]
+        if flt(tak_bertag) > 0 and self.status_mutasi in ("Disetujui", "Selesai"):
             frappe.msgprint(
                 _(
-                    "Customer murid masih punya tagihan outstanding {0} (lintas unit). "
-                    "Pastikan tunggakan di unit asal sudah lunas (SOP-OPS-003) sebelum lanjut."
-                ).format(frappe.bold(fmt_money(outstanding))),
-                title=_("Peringatan Tunggakan"),
+                    "Ada tagihan outstanding {0} tanpa tag unit (mis. biaya pendaftaran) "
+                    "yang belum bisa diatribusikan ke unit asal. Periksa manual sesuai "
+                    "SOP-OPS-003."
+                ).format(frappe.bold(fmt_money(tak_bertag))),
+                title=_("Tunggakan Tanpa Tag Unit"),
                 indicator="orange",
             )
 
-    def gerbang_konfirmasi(self):
-        """Gerbang nyata (M2): wajib centang konfirmasi sebelum status final."""
-        if self.status_mutasi in ("Disetujui", "Selesai") and not self.konfirmasi_lunas_unit_asal:
+    def gerbang_tunggakan(self):
+        """F9 — GERBANG KERAS: blokir final selama masih ada tunggakan di unit asal.
+
+        Menggantikan gerbang checkbox manual (M2). Checkbox
+        konfirmasi_lunas_unit_asal dipensiunkan — tidak lagi ditegakkan.
+        """
+        if self.status_mutasi in ("Disetujui", "Selesai") and flt(self.tunggakan_unit_asal) > 0:
             frappe.throw(
                 _(
-                    "Centang 'Konfirmasi Lunas di Unit Asal' lebih dulu (koordinasikan "
-                    "dengan unit asal, SOP-OPS-003) sebelum menyetujui/menyelesaikan mutasi."
-                ),
-                title=_("Konfirmasi Tunggakan Diperlukan"),
+                    "Mutasi tidak dapat disetujui/diselesaikan: murid masih punya "
+                    "tunggakan {0} di unit asal. Lunasi seluruh tagihan unit asal lebih "
+                    "dulu (SOP-OPS-003)."
+                ).format(frappe.bold(fmt_money(self.tunggakan_unit_asal))),
+                title=_("Tunggakan Unit Asal Belum Lunas"),
             )
 
     def eksekusi_mutasi(self):
