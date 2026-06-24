@@ -277,7 +277,8 @@ fixtures = [
     {"dt": "Designation", "filters": [["name", "in", [
     "Kepala Unit","Lead Tutor","Tutor","Admin Unit","Staf Pendukung",
     "Manajer Operasional","Koordinator Personalia & Umum","Koordinator Kurikulum & Akademik",
-    "Koordinator Keuangan","Staf Keuangan","Koordinator Teknologi & Sistem","Koordinator Pengembangan Usaha","Staf Pemasaran & Pengembangan Usaha"
+    "Koordinator Keuangan","Koordinator Teknologi & Sistem","Koordinator Pengembangan Usaha",
+    "Staf Keuangan","Staf Pemasaran & Pengembangan Usaha"
     ]]]},
     {"dt": "Employment Type", "filters": [["name", "in", ["Tetap","Kontrak","Paruh Waktu"]]]},
     {"dt": "Custom DocPerm", "filters": [["role", "in", [

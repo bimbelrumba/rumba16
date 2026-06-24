@@ -2,6 +2,26 @@
  {
   "appraisal_template": null,
   "description": null,
+  "designation_name": "Staf Keuangan",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-24 11:20:07.703339",
+  "name": "Staf Keuangan",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Staf Pemasaran & Pengembangan Usaha",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-24 11:20:08.561286",
+  "name": "Staf Pemasaran & Pengembangan Usaha",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
   "designation_name": "Kepala Unit",
   "docstatus": 0,
   "doctype": "Designation",
