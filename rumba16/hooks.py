@@ -286,6 +286,6 @@ doc_events = {
     },
 # ... entri Sales Invoice & Payment Entry yang sudah ada — JANGAN buat dict doc_events kedua ...
     "Employee": {
-        "before_naming": "rumba16.hr_naming.employee_autoname",
+        "autoname": "rumba16.hr_naming.employee_autoname",
     },
 }

@@ -16,3 +16,4 @@ def employee_autoname(doc, method=None):
         kep = frappe.db.get_value("Rumba Unit", doc.rumba_unit, "kepemilikan")
         mg = MG_MAP.get(kep, "01")
     doc.name = make_autoname(yy + mm + et + mg + ".##")
+    doc.employee = doc.name   # samakan field employee dgn name (HRMS set employee=name)
