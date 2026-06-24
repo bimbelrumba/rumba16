@@ -267,7 +267,7 @@ fixtures = [
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp",
     "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
-    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch"
+    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch", "Employee-tarif_honor_per_pertemuan"
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",

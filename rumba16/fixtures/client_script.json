@@ -152,5 +152,16 @@
   "name": "Rumba Lead - Tombol Lanjut Pendaftaran",
   "script": "frappe.ui.form.on('Rumba Lead', {\n    refresh(frm) {\n        if (frm.is_new()) return;\n        if (frm.doc.pendaftaran) {\n            frm.add_custom_button(__('Lihat Pendaftaran'), function () {\n                frappe.set_route('Form', 'Rumba Pendaftaran', frm.doc.pendaftaran);\n            });\n            return;\n        }\n        frm.add_custom_button(__('Lanjut Pendaftaran'), function () {\n            frappe.model.with_doctype('Rumba Pendaftaran', function () {\n                const doc = frappe.model.get_new_doc('Rumba Pendaftaran');\n                doc.lead = frm.doc.name;\n                doc.nama_lengkap = frm.doc.nama_calon;\n                doc.nama_orang_tua_wali = frm.doc.nama_orang_tua_wali;\n                doc.nomor_handphone = frm.doc.nomor_handphone;\n                doc.alamat_email = frm.doc.alamat_email;\n                doc.nama_unit = frm.doc.nama_unit;\n                doc.nama_kota = frm.doc.nama_kota;\n                doc.program_belajar = frm.doc.program_diminati;\n                frappe.set_route('Form', 'Rumba Pendaftaran', doc.name);\n            });\n        }).addClass('btn-primary');\n    }\n});",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Payroll Entry",
+  "enabled": 1,
+  "modified": "2026-06-24 22:04:20.899094",
+  "module": "Bimbel Rumba v16",
+  "name": "Payroll Entry - Tombol Honor RUMBA",
+  "script": "frappe.ui.form.on('Payroll Entry', {\n  refresh(frm) {\n    frm.add_custom_button('Buat Draft Honor Mengajar (RUMBA)', () => {\n      frappe.prompt([\n        {fieldname:'unit', label:'Unit RUMBA', fieldtype:'Link', options:'Rumba Unit', reqd:1},\n        {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1, default:(frm.doc.start_date||'').slice(0,7)}\n      ], (v) => {\n        frappe.call({method:'rumba16.payroll.generate_honor_mengajar', args:{unit:v.unit, bulan:v.bulan}, freeze:true, freeze_message:'Membuat draft honor...'})\n        .then(r => { const d=r.message||{}; frappe.msgprint({title:'Hasil Generate Honor', message:'Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length+'<br><pre>'+frappe.utils.escape_html(JSON.stringify(d,null,2))+'</pre>'}); });\n      }, 'Generate Honor Mengajar', 'Buat');\n    });\n  }\n});",
+  "view": "Form"
  }
 ]
