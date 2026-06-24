@@ -163,5 +163,16 @@
   "name": "Payroll Entry - Tombol Honor RUMBA",
   "script": "frappe.ui.form.on('Payroll Entry', {\n  refresh(frm) {\n    frm.add_custom_button('Buat Draft Honor Mengajar (RUMBA)', () => {\n      frappe.prompt([\n        {fieldname:'unit', label:'Unit RUMBA', fieldtype:'Link', options:'Rumba Unit', reqd:1},\n        {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1, default:(frm.doc.start_date||'').slice(0,7)}\n      ], (v) => {\n        frappe.call({method:'rumba16.payroll.generate_honor_mengajar', args:{unit:v.unit, bulan:v.bulan}, freeze:true, freeze_message:'Membuat draft honor...'})\n        .then(r => { const d=r.message||{}; frappe.msgprint({title:'Hasil Generate Honor', message:'Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length+'<br><pre>'+frappe.utils.escape_html(JSON.stringify(d,null,2))+'</pre>'}); });\n      }, 'Generate Honor Mengajar', 'Buat');\n    });\n  }\n});",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Attendance",
+  "enabled": 1,
+  "modified": "2026-06-25 06:35:17.815113",
+  "module": "Bimbel Rumba v16",
+  "name": "Attendance List - Generator Pendidik RUMBA",
+  "script": "frappe.listview_settings['Attendance'] = frappe.listview_settings['Attendance'] || {};\nfrappe.listview_settings['Attendance'].onload = function(listview) {\n  listview.page.add_inner_button('Generate Attendance Pendidik (RUMBA)', () => {\n    frappe.prompt([\n      {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1},\n      {fieldname:'unit', label:'Unit (opsional)', fieldtype:'Link', options:'Rumba Unit'}\n    ], (v) => {\n      frappe.call({method:'rumba16.attendance.generate_pendidik_attendance', args:{bulan:v.bulan, unit:v.unit||null}, freeze:true, freeze_message:'Membuat attendance pendidik...'})\n      .then(r => { const d=r.message||{}; frappe.msgprint('Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length); listview.refresh(); });\n    }, 'Generate Attendance Pendidik', 'Buat');\n  });\n};",
+  "view": "List"
  }
 ]
