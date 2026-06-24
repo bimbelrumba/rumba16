@@ -1,0 +1,112 @@
+[
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Kepala Unit",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:01.189666",
+  "name": "Kepala Unit",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Lead Tutor",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:01.759575",
+  "name": "Lead Tutor",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Tutor",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:02.607080",
+  "name": "Tutor",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Admin Unit",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:02.883550",
+  "name": "Admin Unit",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Staf Pendukung",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:03.444958",
+  "name": "Staf Pendukung",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Manajer Operasional",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:03.759067",
+  "name": "Manajer Operasional",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Koordinator Personalia & Umum",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:03.956143",
+  "name": "Koordinator Personalia & Umum",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Koordinator Kurikulum & Akademik",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:04.215223",
+  "name": "Koordinator Kurikulum & Akademik",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Koordinator Keuangan",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:04.390505",
+  "name": "Koordinator Keuangan",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Koordinator Teknologi & Sistem",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:04.508177",
+  "name": "Koordinator Teknologi & Sistem",
+  "skills": []
+ },
+ {
+  "appraisal_template": null,
+  "description": null,
+  "designation_name": "Koordinator Pengembangan Usaha",
+  "docstatus": 0,
+  "doctype": "Designation",
+  "modified": "2026-06-23 17:44:04.705906",
+  "name": "Koordinator Pengembangan Usaha",
+  "skills": []
+ }
+]

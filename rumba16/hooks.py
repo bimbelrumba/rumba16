@@ -263,22 +263,28 @@ fixtures = [
     {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi"]]]},
     {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang"]]]},
     {"dt": "Custom Field", "filters": [["name", "in", [
-        "Rumba Program Belajar-item_spp",
-        "Rumba Unit-price_list_spp",
-        "Rumba Murid-nominal_spp",
-        "Rumba Murid-tanggal_mulai_spp",
-        "Rumba Murid-tanggal_spp_dimuka_sampai",
-        "Sales Invoice-rumba_unit",
-        "Sales Invoice-rumba_murid",
-        "Sales Invoice-spp_periode"
+    "Rumba Program Belajar-item_spp", "Rumba Unit-price_list_spp",
+    "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp",
+    "Rumba Murid-tanggal_spp_dimuka_sampai",
+    "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
+    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch"
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
-    "Gaji Pokok", "Honor Mengajar", "PPh 21", "Iuran BPJS",
+    "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
     "Insentif Kehadiran", "Insentif Transportasi", "Insentif Laporan Perkembangan",
     "Insentif Kunjungan", "Insentif Kegiatan Bersama", "Tunjangan Hari Raya"
     ]]]},
+    {"dt": "Designation", "filters": [["name", "in", [
+    "Kepala Unit","Lead Tutor","Tutor","Admin Unit","Staf Pendukung",
+    "Manajer Operasional","Koordinator Personalia & Umum","Koordinator Kurikulum & Akademik",
+    "Koordinator Keuangan","Staf Keuangan","Koordinator Teknologi & Sistem","Koordinator Pengembangan Usaha","Staf Pemasaran & Pengembangan Usaha"
+    ]]]},
+    {"dt": "Employment Type", "filters": [["name", "in", ["Tetap","Kontrak","Paruh Waktu"]]]},
+    {"dt": "Custom DocPerm", "filters": [["role", "in", [
+    "Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance",
+    "Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"
+    ]]]},
 ]
-
 
 doc_events = {
     "Sales Invoice": {
