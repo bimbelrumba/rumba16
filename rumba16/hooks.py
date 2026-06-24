@@ -296,8 +296,10 @@ doc_events = {
         "on_submit": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
         "on_cancel": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
     },
-# ... entri Sales Invoice & Payment Entry yang sudah ada — JANGAN buat dict doc_events kedua ...
     "Employee": {
         "autoname": "rumba16.hr_naming.employee_autoname",
+    },
+    "Job Applicant": {
+        "before_insert": "rumba16.recruitment.set_job_applicant_source",
     },
 }
