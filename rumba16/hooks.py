@@ -272,6 +272,11 @@ fixtures = [
         "Sales Invoice-rumba_murid",
         "Sales Invoice-spp_periode"
     ]]]},
+    {"dt": "Salary Component", "filters": [["name", "in", [
+    "Gaji Pokok", "Honor Mengajar", "PPh 21", "Iuran BPJS",
+    "Insentif Kehadiran", "Insentif Transportasi", "Insentif Laporan Perkembangan",
+    "Insentif Kunjungan", "Insentif Kegiatan Bersama", "Tunjangan Hari Raya"
+    ]]]},
 ]
 
 
