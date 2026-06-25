@@ -267,7 +267,7 @@ fixtures = [
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp",
     "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
-    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch", "Employee-tarif_honor_per_pertemuan"
+    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch", "Employee-tarif_honor_per_pertemuan","Job Opening-rumba_unit","Job Applicant-sumber","Job Applicant-rumba_unit"
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -285,6 +285,16 @@ fixtures = [
     "Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance",
     "Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"
     ]]]},
+    {"dt": "Web Form", "filters": [["name", "in", ["kerja-di-rumba"]]]},
+    {"dt": "Skill", "filters": [["name", "in", [
+    "Motivasi & Pemahaman Peran","Pengajaran & Interaksi dengan Anak",
+    "Administrasi & Tanggung Jawab","Nilai & Karakter (JUARA)",
+    "Penguasaan Materi","Cara Penyampaian","Interaksi dengan Murid",
+    "Pengelolaan Kelas","Kesesuaian dengan Gaya RUMBA"
+    ]]]},
+    {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
+    {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
+    {"dt": "Employee Onboarding Template", "filters": [["title", "=", "Onboarding Tutor RUMBA"]]},
 ]
 
 doc_events = {
