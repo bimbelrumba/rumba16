@@ -295,6 +295,9 @@ fixtures = [
     {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
     {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
     {"dt": "Employee Onboarding Template", "filters": [["title", "=", "Onboarding Tutor RUMBA"]]},
+    {"dt": "Leave Type", "filters": [["name", "in", [
+    "Cuti Melahirkan", "Cuti Kedukaan", "Cuti Pernikahan", "Cuti Keagamaan"
+    ]]]},
 ]
 
 doc_events = {
