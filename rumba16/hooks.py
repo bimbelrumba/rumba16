@@ -309,7 +309,8 @@ doc_events = {
         "on_submit": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
         "on_cancel": "rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sync_status_pembayaran_from_payment_entry",
     },
-    "Employee": {
+   "Employee": {
+        "before_insert": "rumba16.hr_naming.set_employee_kategori",
         "autoname": "rumba16.hr_naming.employee_autoname",
     },
     "Job Applicant": {
