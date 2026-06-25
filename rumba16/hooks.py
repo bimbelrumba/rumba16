@@ -264,10 +264,20 @@ fixtures = [
     {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang"]]]},
     {"dt": "Custom Field", "filters": [["name", "in", [
     "Rumba Program Belajar-item_spp", "Rumba Unit-price_list_spp",
-    "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp",
-    "Rumba Murid-tanggal_spp_dimuka_sampai",
+    "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp", "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
-    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch", "Employee-tarif_honor_per_pertemuan","Job Opening-rumba_unit","Job Applicant-sumber","Job Applicant-rumba_unit"
+    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch",
+    "Employee-tarif_honor_per_pertemuan",
+    "Job Opening-rumba_unit", "Job Applicant-sumber", "Job Applicant-rumba_unit",
+    "Employee Separation-jenis_pemberhentian", "Employee Separation-rumba_unit",
+    "Exit Interview-section_penilaian_rumba",
+    "Exit Interview-ei_kejelasan_peran", "Exit Interview-ei_dukungan_atasan",
+    "Exit Interview-ei_kerjasama_rekan", "Exit Interview-ei_onboarding_pelatihan",
+    "Exit Interview-ei_beban_kerja", "Exit Interview-ei_kompensasi_insentif",
+    "Exit Interview-ei_sarana_lingkungan", "Exit Interview-ei_kesempatan_berkembang",
+    "Exit Interview-ei_nilai_juara", "Exit Interview-ei_kepuasan_keseluruhan",
+    "Exit Interview-ei_masukan_disukai", "Exit Interview-ei_masukan_perbaikan",
+    "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali"
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -285,7 +295,7 @@ fixtures = [
     "Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance",
     "Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"
     ]]]},
-    {"dt": "Web Form", "filters": [["name", "in", ["kerja-di-rumba"]]]},
+    {"dt": "Web Form", "filters": [["name", "in", ["kerja-di-rumba", "exit-interview-rumba"]]]},
     {"dt": "Skill", "filters": [["name", "in", [
     "Motivasi & Pemahaman Peran","Pengajaran & Interaksi dengan Anak",
     "Administrasi & Tanggung Jawab","Nilai & Karakter (JUARA)",
@@ -300,6 +310,10 @@ fixtures = [
     ]]]},
     {"dt": "Leave Type", "filters": [["name", "in", [
     "Cuti Melahirkan", "Cuti Kedukaan", "Cuti Pernikahan", "Cuti Keagamaan"
+    ]]]},
+    {"dt": "Employee Separation Template", "filters": [["title", "in", [
+    "Offboarding Tutor RUMBA", "Offboarding Admin Unit RUMBA", "Offboarding Kepala Unit RUMBA",
+    "Offboarding Lead Tutor RUMBA", "Offboarding Pendukung RUMBA"
     ]]]},
 ]
 
