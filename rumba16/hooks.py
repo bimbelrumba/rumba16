@@ -294,7 +294,10 @@ fixtures = [
     ]]]},
     {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
     {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
-    {"dt": "Employee Onboarding Template", "filters": [["title", "=", "Onboarding Tutor RUMBA"]]},
+    {"dt": "Employee Onboarding Template", "filters": [["title", "in", [
+    "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA", "Onboarding Lead Tutor RUMBA",
+    "Onboarding Admin Unit RUMBA", "Onboarding Pendukung RUMBA"
+    ]]]},
     {"dt": "Leave Type", "filters": [["name", "in", [
     "Cuti Melahirkan", "Cuti Kedukaan", "Cuti Pernikahan", "Cuti Keagamaan"
     ]]]},
