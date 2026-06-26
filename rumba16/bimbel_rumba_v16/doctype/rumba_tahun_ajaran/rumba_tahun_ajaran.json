@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_bulk_edit": 1,
  "allow_rename": 1,
  "autoname": "field:nama_tahun_ajaran",
  "creation": "2026-04-14 15:02:40.803461",
@@ -71,7 +72,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-14 16:01:23.703953",
+ "modified": "2026-06-27 00:42:31.075284",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Tahun Ajaran",
@@ -89,6 +90,30 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor"
   }
  ],
  "row_format": "Dynamic",
