@@ -103,7 +103,7 @@ class RumbaSesiKelas(Document):
             as_dict=True,
         )
         for a in anggota:
-            self.append("presensi", {"murid": a.murid, "nama_murid": a.nama_murid})
+            self.append("presensi", {"murid": a.murid, "nama_murid": a.nama_murid, "status_kehadiran": "Hadir"},)
 
     def hitung_rekap(self):
         self.jumlah_hadir = sum(
