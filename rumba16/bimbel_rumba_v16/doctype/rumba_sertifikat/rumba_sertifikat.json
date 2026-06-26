@@ -163,7 +163,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 00:42:04.991008",
+ "modified": "2026-06-27 01:29:50.012616",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sertifikat",
@@ -217,6 +217,21 @@
    "read": 1,
    "report": 1,
    "role": "Rumba Tutor"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
   }
  ],
  "row_format": "Dynamic",

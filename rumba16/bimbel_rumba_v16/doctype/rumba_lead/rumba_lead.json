@@ -300,7 +300,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 00:42:00.959528",
+ "modified": "2026-06-27 01:29:32.758917",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Lead",
@@ -342,6 +342,26 @@
    "read": 1,
    "report": 1,
    "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
   }
  ],
  "row_format": "Dynamic",

@@ -161,7 +161,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 00:42:21.180685",
+ "modified": "2026-06-27 01:29:48.106346",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ujian Kenaikan Level",
@@ -177,18 +177,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Rumba Akademik",
    "share": 1,
    "write": 1
   },
@@ -226,11 +214,26 @@
   },
   {
    "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik",
+   "write": 1
+  },
+  {
+   "create": 1,
    "export": 1,
    "read": 1,
    "report": 1,
    "role": "Rumba Tutor",
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
   }
  ],
  "row_format": "Dynamic",

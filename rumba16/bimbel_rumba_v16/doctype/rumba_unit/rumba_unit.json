@@ -193,7 +193,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 00:42:31.504603",
+ "modified": "2026-06-27 01:30:01.361800",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Unit",
@@ -244,6 +244,38 @@
    "read": 1,
    "report": 1,
    "role": "Rumba Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Personalia"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
   }
  ],
  "row_format": "Dynamic",
