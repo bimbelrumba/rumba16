@@ -1,0 +1,116 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Outgoing Bills (Sales Invoice)",
+   "label": "Outgoing Bills (Sales Invoice)"
+  }
+ ],
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Keuangan \u2014 SPP\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagihan SPP\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pembayaran\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Outgoing Bills\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Incoming Payment\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Outgoing Bills (Sales Invoice)\",\"col\":12}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Penagihan\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tagihan\",\"label\":\"Tagihan\",\"col\":4}}]",
+ "creation": "2026-06-26 21:09:33.727448",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "accounting",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Keuangan (SPP)",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penagihan",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item Price",
+   "link_count": 0,
+   "link_to": "Item Price",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-26 23:42:31.088889",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Keuangan (SPP)",
+ "number_cards": [
+  {
+   "label": "Total Outgoing Bills",
+   "number_card_name": "Total Outgoing Bills"
+  },
+  {
+   "label": "Total Incoming Payment",
+   "number_card_name": "Total Incoming Payment"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Sales Invoice",
+   "label": "Tagihan"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 4.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Tagihan SPP",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Pembayaran",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  }
+ ],
+ "title": "Keuangan (SPP)",
+ "type": "Workspace"
+}

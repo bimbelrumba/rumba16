@@ -8,6 +8,7 @@
  "field_order": [
   "sec_data",
   "murid",
+  "nama_unit",
   "nama_murid",
   "program",
   "cb1",
@@ -146,12 +147,21 @@
    "fieldname": "catatan",
    "fieldtype": "Small Text",
    "label": "Catatan"
+  },
+  {
+   "fetch_from": "murid.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nama Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-20 00:16:47.763065",
+ "modified": "2026-06-26 22:34:20.313074",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ujian Kenaikan Level",

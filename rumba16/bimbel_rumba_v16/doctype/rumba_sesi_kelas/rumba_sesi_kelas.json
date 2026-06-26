@@ -8,6 +8,7 @@
  "field_order": [
   "kelas",
   "tanggal_sesi",
+  "nama_unit",
   "jam_sesi",
   "status_sesi",
   "guru",
@@ -91,12 +92,21 @@
    "fieldname": "catatan",
    "fieldtype": "Small Text",
    "label": "Catatan"
+  },
+  {
+   "fetch_from": "kelas.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nama Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-19 19:30:00.000000",
+ "modified": "2026-06-26 22:34:18.987471",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",

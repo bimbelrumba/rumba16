@@ -37,36 +37,36 @@
    "reqd": 1
   },
   {
+   "fetch_from": "murid.nama_lengkap",
    "fieldname": "nama_murid",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Nama Murid",
-   "read_only": 1,
-   "fetch_from": "murid.nama_lengkap"
+   "read_only": 1
   },
   {
+   "fetch_from": "murid.nama_unit",
    "fieldname": "nama_unit",
    "fieldtype": "Link",
    "in_filter": 1,
    "label": "Nama Unit",
    "options": "Rumba Unit",
-   "read_only": 1,
-   "fetch_from": "murid.nama_unit"
+   "read_only": 1
   },
   {
+   "fetch_from": "murid.kode_unit",
    "fieldname": "kode_unit",
    "fieldtype": "Data",
    "label": "Kode Unit",
-   "read_only": 1,
-   "fetch_from": "murid.kode_unit"
+   "read_only": 1
   },
   {
+   "fetch_from": "murid.tahun_ajaran",
    "fieldname": "tahun_ajaran",
    "fieldtype": "Link",
    "label": "Tahun Ajaran",
    "options": "Rumba Tahun Ajaran",
-   "read_only": 1,
-   "fetch_from": "murid.tahun_ajaran"
+   "read_only": 1
   },
   {
    "fieldname": "cb1",
@@ -111,22 +111,22 @@
    "options": "Rumba Ujian Kenaikan Level"
   },
   {
+   "default": "Today",
    "fieldname": "tanggal_terbit",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Tanggal Terbit",
-   "reqd": 1,
-   "default": "Today"
+   "reqd": 1
   },
   {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_filter": 1,
    "in_list_view": 1,
    "label": "Status",
    "options": "Draft\nDiterbitkan\nDibatalkan",
-   "reqd": 1,
-   "default": "Draft"
+   "reqd": 1
   },
   {
    "fieldname": "cb2",
@@ -163,7 +163,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-20 19:49:36.068244",
+ "modified": "2026-06-26 22:37:38.166738",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sertifikat",
@@ -179,6 +179,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
    "share": 1,
    "write": 1
   }
