@@ -128,6 +128,14 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+permission_query_conditions = {
+    "Rumba Mutasi": "rumba16.rumba16.permissions.mutasi_query_conditions",
+}
+
+has_permission = {
+    "Rumba Mutasi": "rumba16.rumba16.permissions.mutasi_has_permission",
+}
+
 # Document Events
 # ---------------
 # Hook on document methods and events

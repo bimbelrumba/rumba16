@@ -55,6 +55,7 @@
   {
    "fieldname": "unit_asal",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Unit Asal",
    "options": "Rumba Unit",
    "read_only": 1
@@ -62,6 +63,7 @@
   {
    "fieldname": "unit_tujuan",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Unit Tujuan",
    "options": "Rumba Unit",
    "reqd": 1
@@ -126,7 +128,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 00:42:03.050323",
+ "modified": "2026-06-27 01:02:32.734558",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Mutasi",
