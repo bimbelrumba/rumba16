@@ -64,6 +64,19 @@ app_license = "mit"
 # 	"Role": "home_page"
 # }
 
+role_home_page = {
+    "Rumba Admin Unit": "rumba",
+    "Rumba Kepala Unit": "rumba",
+    "Rumba Lead Tutor": "rumba",
+    "Rumba Tutor": "rumba",
+    "Rumba Akademik": "rumba",
+    "Rumba Finance": "rumba",
+    "Rumba Personalia": "rumba",
+    "Rumba Bisnis": "rumba",
+    "Rumba Mitra": "rumba",
+    "Rumba Founder": "rumba",
+}
+
 # Generators
 # ----------
 
