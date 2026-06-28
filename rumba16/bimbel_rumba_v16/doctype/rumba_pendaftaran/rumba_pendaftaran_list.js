@@ -2,21 +2,21 @@
 // For license information, please see license.txt
 
 frappe.listview_settings["Rumba Pendaftaran"] = {
-	// Pastikan field status ikut diambil meski in_list_view=0,
-	// supaya get_indicator punya datanya (pola sama seperti Rumba Murid).
-	add_fields: ["status_pendaftaran"],
-
-	// Warna indikator status di List View Rumba Pendaftaran.
+	// Warnai kolom Status Pendaftaran di List View (pola sama seperti Rumba Murid).
+	// Field status_pendaftaran harus in_list_view=1 agar tampil sebagai kolom.
 	// Menunggu = merah, Disetujui = hijau.
-	get_indicator: function (doc) {
-		const colors = {
-			Menunggu: "red",
-			Disetujui: "green",
-			Ditolak: "red",
-			Batal: "gray",
-		};
-		const status = doc.status_pendaftaran;
-		const color = colors[status] || "gray";
-		return [__(status), color, "status_pendaftaran,=," + status];
+	formatters: {
+		status_pendaftaran: function (value) {
+			const colors = {
+				Menunggu: "red",
+				Disetujui: "green",
+				Ditolak: "red",
+				Batal: "gray",
+			};
+			const color = colors[value] || "gray";
+			return `<span class="indicator-pill ${color}"><span class="indicator-dot"></span> ${__(
+				value || ""
+			)}</span>`;
+		},
 	},
 };

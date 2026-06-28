@@ -424,6 +424,7 @@
    "default": "Menunggu",
    "fieldname": "status_pendaftaran",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status Pendaftaran",
    "options": "Menunggu\nDisetujui\nDitolak\nBatal"
   },
