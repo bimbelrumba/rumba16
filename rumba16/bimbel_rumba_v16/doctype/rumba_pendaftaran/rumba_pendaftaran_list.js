@@ -2,6 +2,10 @@
 // For license information, please see license.txt
 
 frappe.listview_settings["Rumba Pendaftaran"] = {
+	// Pastikan field status ikut diambil meski in_list_view=0,
+	// supaya get_indicator punya datanya (pola sama seperti Rumba Murid).
+	add_fields: ["status_pendaftaran"],
+
 	// Warna indikator status di List View Rumba Pendaftaran.
 	// Menunggu = merah, Disetujui = hijau.
 	get_indicator: function (doc) {
