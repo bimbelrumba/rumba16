@@ -17,6 +17,7 @@ add_to_apps_screen = [
  		"logo": "/assets/rumba16/logo.png",
  		"title": "Bimbel RUMBA",
  		"route": "/masuk",
+ 		"has_permission": "rumba16.api.permission.has_app_permission"
  	}
  ]
 
@@ -56,7 +57,7 @@ add_to_apps_screen = [
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "masuk"
+# home_page = "login"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -64,16 +65,16 @@ home_page = "masuk"
 # }
 
 role_home_page = {
-    "Rumba Admin Unit": "masuk",
-    "Rumba Kepala Unit": "masuk",
-    "Rumba Lead Tutor": "masuk",
-    "Rumba Tutor": "masuk",
-    "Rumba Akademik": "masuk",
-    "Rumba Finance": "masuk",
-    "Rumba Personalia": "masuk",
-    "Rumba Bisnis": "masuk",
-    "Rumba Mitra": "masuk",
-    "Rumba Founder": "masuk",
+    "Rumba Admin Unit": "admin-unit",
+    "Rumba Kepala Unit": "admin-unit",
+    "Rumba Lead Tutor": "rumba",
+    "Rumba Tutor": "rumba",
+    "Rumba Akademik": "rumba",
+    "Rumba Finance": "rumba",
+    "Rumba Personalia": "rumba",
+    "Rumba Bisnis": "rumba",
+    "Rumba Mitra": "rumba",
+    "Rumba Founder": "rumba",
 }
 
 # Generators
