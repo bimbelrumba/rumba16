@@ -1,0 +1,145 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Murid Aktif per Bulan",
+   "label": "Tren Murid Aktif per Bulan"
+  },
+  {
+   "chart_name": "Sesi Terlaksana per Bulan",
+   "label": "Sesi Terlaksana per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat \u2014 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 \u00b7 Pendaftaran & Lead\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":4}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":2}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran\",\"col\":2}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 \u00b7 Murid\",\"col\":12}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"n3a\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru\",\"col\":3}},{\"id\":\"n3b\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":3}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":8}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":4}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 \u00b7 Kelas & Jadwal\",\"col\":12}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"n6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"s6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"c3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}}]",
+ "creation": "2026-06-28 05:28:21.643511",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Distribusi Murid per Program (Donut)",
+   "label": "Distribusi Murid per Program (Donut)"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Admin Unit",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-06-28 06:32:39.895298",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Admin Unit",
+ "number_cards": [
+  {
+   "label": "Lead Belum Ditindaklanjuti",
+   "number_card_name": "Lead Belum Ditindaklanjuti"
+  },
+  {
+   "label": "Total Terdaftar",
+   "number_card_name": "Total Terdaftar"
+  },
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Murid Berhenti",
+   "number_card_name": "Murid Berhenti"
+  },
+  {
+   "label": "Murid Naik Level Bulan Ini",
+   "number_card_name": "Murid Naik Level Bulan Ini"
+  },
+  {
+   "label": "Kelas Berjalan",
+   "number_card_name": "Kelas Berjalan"
+  },
+  {
+   "label": "Sesi Hari Ini",
+   "number_card_name": "Sesi Hari Ini"
+  },
+  {
+   "label": "Murid Baru",
+   "number_card_name": "Murid Baru"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.5,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Pendaftaran",
+   "type": "URL",
+   "url": "/app/rumba-pendaftaran/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Murid",
+   "type": "URL",
+   "url": "/app/rumba-murid/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Kelas",
+   "type": "URL",
+   "url": "/app/rumba-kelas/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Sesi",
+   "type": "URL",
+   "url": "/app/rumba-sesi-kelas/new"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Lead",
+   "link_to": "Rumba Lead",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Pendaftaran",
+   "link_to": "Rumba Pendaftaran",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Kelas",
+   "link_to": "Rumba Kelas",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Sesi Kelas",
+   "link_to": "Rumba Sesi Kelas",
+   "type": "DocType"
+  }
+ ],
+ "title": "Admin Unit",
+ "type": "Workspace"
+}
