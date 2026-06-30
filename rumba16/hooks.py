@@ -286,6 +286,7 @@ fixtures = [
     "Rumba Program Belajar-item_spp", "Rumba Unit-price_list_spp",
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp", "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
+    "Sales Invoice-rumba_event",
     "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch",
     "Employee-tarif_honor_per_pertemuan",
     "Job Opening-rumba_unit", "Job Applicant-sumber", "Job Applicant-rumba_unit",
