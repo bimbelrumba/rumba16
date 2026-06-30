@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-30 17:58:56.641575",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deskripsi",
+  "kategori",
+  "jumlah",
+  "tanggal",
+  "cb_e1",
+  "bukti",
+  "voucher_doctype",
+  "voucher_akuntansi",
+  "status_gl"
+ ],
+ "fields": [
+  {
+   "fieldname": "deskripsi",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Deskripsi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kategori",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Kategori",
+   "options": "Sewa Tempat\nHadiah/Trofi/Medali\nKonsumsi\nSertifikat & Cetak\nDokumentasi\nTransport\nPerlengkapan\nLain-lain",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jumlah",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Jumlah",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal",
+   "fieldtype": "Date",
+   "label": "Tanggal"
+  },
+  {
+   "fieldname": "cb_e1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bukti",
+   "fieldtype": "Attach",
+   "label": "Bukti"
+  },
+  {
+   "fieldname": "voucher_doctype",
+   "fieldtype": "Select",
+   "label": "Jenis Voucher GL",
+   "options": "\nJournal Entry\nPurchase Invoice"
+  },
+  {
+   "fieldname": "voucher_akuntansi",
+   "fieldtype": "Dynamic Link",
+   "label": "Voucher Akuntansi (GL)",
+   "options": "voucher_doctype"
+  },
+  {
+   "default": "Belum Dicatat",
+   "fieldname": "status_gl",
+   "fieldtype": "Select",
+   "label": "Status GL",
+   "options": "Belum Dicatat\nSudah Dicatat di GL"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-30 17:58:56.641575",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Event Pengeluaran",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

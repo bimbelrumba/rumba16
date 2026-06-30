@@ -17,13 +17,13 @@
  "doctype": "Workspace",
  "hide_custom": 0,
  "icon": "getting-started",
- "idx": 3,
+ "idx": 5,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "RUMBA",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-06-26 23:42:29.999329",
+ "modified": "2026-06-30 05:51:39.854001",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "RUMBA",
@@ -49,7 +49,11 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  }
+ ],
  "sequence_id": 0.0,
  "shortcuts": [],
  "title": "RUMBA",

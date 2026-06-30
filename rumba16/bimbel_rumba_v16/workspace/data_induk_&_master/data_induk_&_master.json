@@ -7,7 +7,7 @@
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
- "hide_custom": 0,
+ "hide_custom": 1,
  "icon": "setting",
  "idx": 0,
  "indicator_color": "gray",
@@ -104,7 +104,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-26 23:42:31.575773",
+ "modified": "2026-06-30 05:59:44.540163",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Data Induk & Master",
