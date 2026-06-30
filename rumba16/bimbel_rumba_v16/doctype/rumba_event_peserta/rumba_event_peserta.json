@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-30 17:58:44.037685",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "murid",
+  "nama_murid",
+  "unit_murid",
+  "kode_unit",
+  "program_belajar",
+  "customer",
+  "cb_p1",
+  "status_kehadiran",
+  "nominal",
+  "sales_invoice",
+  "status_pembayaran",
+  "keterangan_hasil",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Murid",
+   "options": "Rumba Murid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "murid.nama_lengkap",
+   "fieldname": "nama_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Murid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.nama_unit",
+   "fieldname": "unit_murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.program_belajar",
+   "fieldname": "program_belajar",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Rumba Program Belajar",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_p1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Terdaftar",
+   "fieldname": "status_kehadiran",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Kehadiran",
+   "options": "Terdaftar\nHadir\nTidak Hadir\nBatal"
+  },
+  {
+   "fieldname": "nominal",
+   "fieldtype": "Currency",
+   "label": "Nominal Kontribusi"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "default": "Belum Ditagih",
+   "fieldname": "status_pembayaran",
+   "fieldtype": "Select",
+   "label": "Status Pembayaran",
+   "options": "Belum Ditagih\nTertagih\nLunas",
+   "read_only": 1
+  },
+  {
+   "fieldname": "keterangan_hasil",
+   "fieldtype": "Data",
+   "label": "Keterangan / Predikat"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-30 17:58:44.037685",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Event Peserta",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

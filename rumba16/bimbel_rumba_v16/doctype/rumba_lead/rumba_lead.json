@@ -1,0 +1,372 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "format:RL-{YYYY}-{#####}",
+ "creation": "2026-06-17 13:05:30.787555",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_identitas",
+  "tanggal_lead",
+  "nama_kota",
+  "nama_unit",
+  "kode_unit",
+  "email_unit",
+  "status_lead",
+  "sec_calon",
+  "nama_calon",
+  "nama_orang_tua_wali",
+  "nomor_handphone",
+  "alamat_email",
+  "program_diminati",
+  "sec_sumber",
+  "sumber_info_awal_rumba",
+  "instagram",
+  "facebook",
+  "website_bimbelrumba",
+  "pencarian_di_internet",
+  "kawan",
+  "keluarga",
+  "sekolah",
+  "kegiatan_rumba",
+  "spanduk_di_jalan",
+  "brosur_selebaran",
+  "lainnya",
+  "untuk_jawaban_lainnya",
+  "catatan",
+  "sec_konversi",
+  "pendaftaran",
+  "tanggal_konversi",
+  "trial_section",
+  "tanggal_trial",
+  "kelas_trial",
+  "guru_trial",
+  "hasil_trial",
+  "tanggal_followup_1",
+  "tanggal_followup_2",
+  "catatan_observasi_trial",
+  "waitlist_section",
+  "tanggal_masuk_tunggu",
+  "catatan_tunggu"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_identitas",
+   "fieldtype": "Section Break",
+   "label": "Identitas Lead"
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_lead",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Lead",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_kota",
+   "fieldtype": "Link",
+   "label": "Kota",
+   "options": "Rumba Kota"
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  },
+  {
+   "default": "Baru",
+   "fieldname": "status_lead",
+   "fieldtype": "Select",
+   "label": "Status Lead",
+   "options": "Baru\nDihubungi\nTrial\nDaftar Tunggu\nTerdaftar\nTidak Jadi"
+  },
+  {
+   "fieldname": "sec_calon",
+   "fieldtype": "Section Break",
+   "label": "Info Calon"
+  },
+  {
+   "fieldname": "nama_calon",
+   "fieldtype": "Data",
+   "label": "Nama Calon (Anak)"
+  },
+  {
+   "fieldname": "nama_orang_tua_wali",
+   "fieldtype": "Data",
+   "label": "Nama Orang Tua / Wali"
+  },
+  {
+   "fieldname": "nomor_handphone",
+   "fieldtype": "Data",
+   "label": "Nomor Handphone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "alamat_email",
+   "fieldtype": "Data",
+   "label": "Alamat Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "program_diminati",
+   "fieldtype": "Link",
+   "label": "Program Diminati",
+   "options": "Rumba Program Belajar"
+  },
+  {
+   "fieldname": "sec_sumber",
+   "fieldtype": "Section Break",
+   "label": "Sumber & Catatan"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "sec_konversi",
+   "fieldtype": "Section Break",
+   "label": "Konversi"
+  },
+  {
+   "fieldname": "pendaftaran",
+   "fieldtype": "Link",
+   "label": "Pendaftaran",
+   "options": "Rumba Pendaftaran"
+  },
+  {
+   "fieldname": "tanggal_konversi",
+   "fieldtype": "Date",
+   "label": "Tanggal Konversi",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.status_lead=='Trial' || doc.tanggal_trial || doc.hasil_trial!='Belum'",
+   "fieldname": "trial_section",
+   "fieldtype": "Section Break",
+   "label": "SESI TRIAL"
+  },
+  {
+   "fieldname": "tanggal_trial",
+   "fieldtype": "Date",
+   "label": "Tanggal Trial"
+  },
+  {
+   "fieldname": "kelas_trial",
+   "fieldtype": "Link",
+   "label": "Kelas Trial",
+   "options": "Rumba Kelas"
+  },
+  {
+   "fieldname": "guru_trial",
+   "fieldtype": "Data",
+   "label": "Guru Trial"
+  },
+  {
+   "default": "Belum",
+   "fieldname": "hasil_trial",
+   "fieldtype": "Select",
+   "label": "Hasil Trial",
+   "options": "Belum\nDaftar\nBelum Memutuskan\nTidak Jadi"
+  },
+  {
+   "fieldname": "tanggal_followup_1",
+   "fieldtype": "Date",
+   "label": "Tanggal Follow-up 1"
+  },
+  {
+   "fieldname": "tanggal_followup_2",
+   "fieldtype": "Date",
+   "label": "Tanggal Follow-up 2"
+  },
+  {
+   "fieldname": "catatan_observasi_trial",
+   "fieldtype": "Small Text",
+   "label": "Catatan Observasi Trial"
+  },
+  {
+   "fetch_from": "nama_unit.email_unit",
+   "fieldname": "email_unit",
+   "fieldtype": "Data",
+   "label": "Email Unit",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sumber_info_awal_rumba",
+   "fieldtype": "Heading",
+   "label": "Sumber Info Awal Rumba"
+  },
+  {
+   "default": "0",
+   "fieldname": "instagram",
+   "fieldtype": "Check",
+   "label": "Instagram"
+  },
+  {
+   "default": "0",
+   "fieldname": "facebook",
+   "fieldtype": "Check",
+   "label": "Facebook"
+  },
+  {
+   "default": "0",
+   "fieldname": "website_bimbelrumba",
+   "fieldtype": "Check",
+   "label": "Website bimbelrumba"
+  },
+  {
+   "default": "0",
+   "fieldname": "pencarian_di_internet",
+   "fieldtype": "Check",
+   "label": "Pencarian di internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "kawan",
+   "fieldtype": "Check",
+   "label": "Kawan"
+  },
+  {
+   "default": "0",
+   "fieldname": "keluarga",
+   "fieldtype": "Check",
+   "label": "Keluarga"
+  },
+  {
+   "default": "0",
+   "fieldname": "sekolah",
+   "fieldtype": "Check",
+   "label": "Sekolah"
+  },
+  {
+   "default": "0",
+   "fieldname": "kegiatan_rumba",
+   "fieldtype": "Check",
+   "label": "Kegiatan RUMBA"
+  },
+  {
+   "default": "0",
+   "fieldname": "spanduk_di_jalan",
+   "fieldtype": "Check",
+   "label": "Spanduk di jalan"
+  },
+  {
+   "default": "0",
+   "fieldname": "brosur_selebaran",
+   "fieldtype": "Check",
+   "label": "Brosur / selebaran"
+  },
+  {
+   "default": "0",
+   "fieldname": "lainnya",
+   "fieldtype": "Check",
+   "label": "Lainnya"
+  },
+  {
+   "fieldname": "untuk_jawaban_lainnya",
+   "fieldtype": "Data",
+   "label": "Untuk jawaban Lainnya"
+  },
+  {
+   "depends_on": "eval:doc.status_lead=='Daftar Tunggu' || doc.tanggal_masuk_tunggu",
+   "fieldname": "waitlist_section",
+   "fieldtype": "Section Break",
+   "label": "DAFTAR TUNGGU"
+  },
+  {
+   "fieldname": "tanggal_masuk_tunggu",
+   "fieldtype": "Date",
+   "label": "Tanggal Masuk Daftar Tunggu"
+  },
+  {
+   "fieldname": "catatan_tunggu",
+   "fieldtype": "Small Text",
+   "label": "Catatan Daftar Tunggu"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:29:32.758917",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Lead",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

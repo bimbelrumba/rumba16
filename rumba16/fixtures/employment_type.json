@@ -1,0 +1,23 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Employment Type",
+  "employee_type_name": "Tetap",
+  "modified": "2026-06-23 17:44:18.116240",
+  "name": "Tetap"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Employment Type",
+  "employee_type_name": "Kontrak",
+  "modified": "2026-06-23 17:44:18.400824",
+  "name": "Kontrak"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Employment Type",
+  "employee_type_name": "Paruh Waktu",
+  "modified": "2026-06-23 17:44:18.469506",
+  "name": "Paruh Waktu"
+ }
+]

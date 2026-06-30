@@ -1,0 +1,134 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Data Induk & Master\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Geografi & Unit\",\"col\":4}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Akademik Master\",\"col\":4}}]",
+ "creation": "2026-06-26 21:09:57.134591",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "setting",
+ "idx": 0,
+ "indicator_color": "gray",
+ "is_hidden": 0,
+ "label": "Data Induk & Master",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Geografi & Unit",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Provinsi",
+   "link_count": 0,
+   "link_to": "Rumba Provinsi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Kota",
+   "link_count": 0,
+   "link_to": "Rumba Kota",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Unit",
+   "link_count": 0,
+   "link_to": "Rumba Unit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Ruangan",
+   "link_count": 0,
+   "link_to": "Rumba Ruangan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Akademik Master",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Program Belajar",
+   "link_count": 0,
+   "link_to": "Rumba Program Belajar",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Tahun Ajaran",
+   "link_count": 0,
+   "link_to": "Rumba Tahun Ajaran",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Semester",
+   "link_count": 0,
+   "link_to": "Rumba Semester",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-30 05:59:44.540163",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Data Induk & Master",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Akademik"
+  },
+  {
+   "role": "Rumba Bisnis"
+  }
+ ],
+ "sequence_id": 6.0,
+ "shortcuts": [],
+ "title": "Data Induk & Master",
+ "type": "Workspace"
+}

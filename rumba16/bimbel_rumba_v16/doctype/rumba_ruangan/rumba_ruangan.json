@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "{kode_unit}{kode_ruangan}",
+ "creation": "2026-04-15 06:26:17.825993",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nama_unit",
+  "kode_unit",
+  "kode_ruangan",
+  "nama_ruangan",
+  "kapasitas",
+  "status_ruangan"
+ ],
+ "fields": [
+  {
+   "description": "Contoh: R1, R2, dst.",
+   "fieldname": "kode_ruangan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Ruangan",
+   "length": 2,
+   "reqd": 1
+  },
+  {
+   "description": "Contoh: Ruang 1, Ruang 2, dst.",
+   "fieldname": "nama_ruangan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Ruangan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit Rumba",
+   "options": "Rumba Unit"
+  },
+  {
+   "fieldname": "kapasitas",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Kapasitas"
+  },
+  {
+   "fieldname": "status_ruangan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Ruangan",
+   "options": "Aktif\nTidak Aktif"
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:29:35.464712",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Ruangan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nama_ruangan"
+}

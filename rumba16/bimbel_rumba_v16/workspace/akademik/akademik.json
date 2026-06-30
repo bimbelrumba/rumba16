@@ -1,0 +1,173 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Sesi Terlaksana per Bulan",
+   "label": "Sesi Terlaksana per Bulan"
+  },
+  {
+   "chart_name": "Distribusi Level Murid",
+   "label": "Distribusi Level Murid"
+  }
+ ],
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Akademik\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ujian Kenaikan Level\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sertifikat\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sertifikat Terbit Bulan Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribusi Level Murid\",\"col\":6}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pembelajaran\",\"col\":4}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progres & Penghargaan\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kelas\",\"label\":\"Sesi Kelas\",\"col\":4}}]",
+ "creation": "2026-06-26 21:09:20.830878",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "education",
+ "idx": 0,
+ "indicator_color": "orange",
+ "is_hidden": 0,
+ "label": "Akademik",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembelajaran",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Sesi Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Progres & Penghargaan",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Ujian Kenaikan Level",
+   "link_count": 0,
+   "link_to": "Rumba Ujian Kenaikan Level",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba BKM Entry",
+   "link_count": 0,
+   "link_to": "Rumba BKM Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Sertifikat",
+   "link_count": 0,
+   "link_to": "Rumba Sertifikat",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-26 23:42:30.900402",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Akademik",
+ "number_cards": [
+  {
+   "label": "Sesi Hari Ini",
+   "number_card_name": "Sesi Hari Ini"
+  },
+  {
+   "label": "Murid Naik Level Bulan Ini",
+   "number_card_name": "Murid Naik Level Bulan Ini"
+  },
+  {
+   "label": "Sertifikat Terbit Bulan Ini",
+   "number_card_name": "Sertifikat Terbit Bulan Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Rumba Sesi Kelas",
+   "label": "Sesi Kelas"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Akademik"
+  },
+  {
+   "role": "Rumba Lead Tutor"
+  },
+  {
+   "role": "Rumba Tutor"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Sesi Kelas",
+   "link_to": "Rumba Sesi Kelas",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Ujian Kenaikan Level",
+   "link_to": "Rumba Ujian Kenaikan Level",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "BKM Entry",
+   "link_to": "Rumba BKM Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Sertifikat",
+   "link_to": "Rumba Sertifikat",
+   "type": "DocType"
+  }
+ ],
+ "title": "Akademik",
+ "type": "Workspace"
+}

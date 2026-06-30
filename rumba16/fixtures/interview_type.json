@@ -1,0 +1,64 @@
+[
+ {
+  "description": null,
+  "designation": "Tutor",
+  "docstatus": 0,
+  "doctype": "Interview Type",
+  "expected_average_rating": 0.0,
+  "expected_skill_set": [
+   {
+    "description": null,
+    "skill": "Motivasi & Pemahaman Peran"
+   },
+   {
+    "description": null,
+    "skill": "Pengajaran & Interaksi dengan Anak"
+   },
+   {
+    "description": null,
+    "skill": "Administrasi & Tanggung Jawab"
+   },
+   {
+    "description": null,
+    "skill": "Nilai & Karakter (JUARA)"
+   }
+  ],
+  "interview_type_name": "Wawancara Tutor",
+  "interviewers": [],
+  "modified": "2026-06-25 05:36:36.116290",
+  "name": "Wawancara Tutor"
+ },
+ {
+  "description": null,
+  "designation": "Tutor",
+  "docstatus": 0,
+  "doctype": "Interview Type",
+  "expected_average_rating": 0.0,
+  "expected_skill_set": [
+   {
+    "description": null,
+    "skill": "Penguasaan Materi"
+   },
+   {
+    "description": null,
+    "skill": "Cara Penyampaian"
+   },
+   {
+    "description": null,
+    "skill": "Interaksi dengan Murid"
+   },
+   {
+    "description": null,
+    "skill": "Pengelolaan Kelas"
+   },
+   {
+    "description": null,
+    "skill": "Kesesuaian dengan Gaya RUMBA"
+   }
+  ],
+  "interview_type_name": "Demo Mengajar Tutor",
+  "interviewers": [],
+  "modified": "2026-06-25 05:36:36.251558",
+  "name": "Demo Mengajar Tutor"
+ }
+]

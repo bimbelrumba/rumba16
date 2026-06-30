@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-20 00:15:03.124415",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_data",
+  "murid",
+  "nama_unit",
+  "nama_murid",
+  "program",
+  "cb1",
+  "level_diuji",
+  "tanggal_ujian",
+  "penguji",
+  "sec_hasil",
+  "aspek_membaca",
+  "aspek_menulis",
+  "aspek_berhitung",
+  "cb2",
+  "hasil",
+  "status_ujian",
+  "tanggal_ujian_ulang",
+  "sec_catatan",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_data",
+   "fieldtype": "Section Break",
+   "label": "Data Ujian"
+  },
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Murid",
+   "options": "Rumba Murid",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "murid.nama_lengkap",
+   "fieldname": "nama_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Murid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "murid.program_belajar",
+   "fieldname": "program",
+   "fieldtype": "Data",
+   "label": "Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "level_diuji",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level Diuji",
+   "options": "Level 1\nLevel 2\nLevel 3",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal_ujian",
+   "fieldtype": "Date",
+   "label": "Tanggal Ujian",
+   "reqd": 1
+  },
+  {
+   "description": "Tutor lain (bukan wali kelas) sesuai ACD-CUR-001. Penegakan advisory.",
+   "fieldname": "penguji",
+   "fieldtype": "Link",
+   "label": "Penguji",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_hasil",
+   "fieldtype": "Section Break",
+   "label": "Penilaian Aspek (SOP-ACD-005 / ACD-CUR-001)"
+  },
+  {
+   "default": "Belum Tuntas",
+   "fieldname": "aspek_membaca",
+   "fieldtype": "Select",
+   "label": "Aspek Membaca",
+   "options": "Belum Tuntas\nTuntas"
+  },
+  {
+   "default": "Belum Tuntas",
+   "fieldname": "aspek_menulis",
+   "fieldtype": "Select",
+   "label": "Aspek Menulis",
+   "options": "Belum Tuntas\nTuntas"
+  },
+  {
+   "default": "Belum Tuntas",
+   "fieldname": "aspek_berhitung",
+   "fieldtype": "Select",
+   "label": "Aspek Berhitung",
+   "options": "Belum Tuntas\nTuntas"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hasil",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hasil",
+   "options": "Belum Lulus\nLulus",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "description": "Kenaikan level murid dieksekusi saat status = Final.",
+   "fieldname": "status_ujian",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Ujian",
+   "options": "Draft\nFinal",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.hasil=='Belum Lulus'",
+   "description": "Advisory: interval ujian ulang minimal 2 minggu (SOP-ACD-005 \u00a74).",
+   "fieldname": "tanggal_ujian_ulang",
+   "fieldtype": "Date",
+   "label": "Tanggal Ujian Ulang (rencana)"
+  },
+  {
+   "fieldname": "sec_catatan",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "description": "Aspek yang perlu diperkuat / catatan penguji.",
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fetch_from": "murid.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nama Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:29:48.106346",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Ujian Kenaikan Level",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

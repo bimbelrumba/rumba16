@@ -1,0 +1,125 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Leads per Unit",
+   "label": "Leads per Unit"
+  },
+  {
+   "chart_name": "Tren Leads per Bulan",
+   "label": "Tren Leads per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"CRM & Pendaftaran \u2014 Lead & Konversi\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Lead\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Konversi Lead per Cabang\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Leads\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leads per Unit\",\"col\":6}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Leads per Bulan\",\"col\":6}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendaftaran\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead\",\"label\":\"Lead\",\"col\":4}}]",
+ "creation": "2026-06-18 12:08:47.096654",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "crm",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CRM & Pendaftaran",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendaftaran",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Lead",
+   "link_count": 0,
+   "link_to": "Rumba Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Pendaftaran",
+   "link_count": 0,
+   "link_to": "Rumba Pendaftaran",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-30 05:59:03.005069",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "CRM & Pendaftaran",
+ "number_cards": [
+  {
+   "label": "Total Leads",
+   "number_card_name": "Total Leads"
+  },
+  {
+   "label": "Total Terdaftar",
+   "number_card_name": "Total Terdaftar"
+  },
+  {
+   "label": "Lead Belum Ditindaklanjuti",
+   "number_card_name": "Lead Belum Ditindaklanjuti"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Rumba Lead",
+   "label": "Lead"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "role": "Rumba Bisnis"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Konversi Lead per Cabang",
+   "link_to": "CRM - Konversi Lead per Cabang",
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Daftar Lead",
+   "link_to": "Rumba Lead",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Pendaftaran",
+   "link_to": "Rumba Pendaftaran",
+   "type": "DocType"
+  }
+ ],
+ "title": "CRM & Pendaftaran",
+ "type": "Workspace"
+}

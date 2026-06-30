@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:kode_provinsi",
+ "creation": "2026-04-14 11:32:31.816728",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nama_provinsi",
+  "kode_provinsi"
+ ],
+ "fields": [
+  {
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Nama Provinsi",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Kode Provinsi",
+   "length": 2,
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:30:08.403960",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Provinsi",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Personalia"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nama_provinsi"
+}

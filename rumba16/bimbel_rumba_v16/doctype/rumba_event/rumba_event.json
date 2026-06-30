@@ -1,0 +1,318 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "EVT-.YY.-.#####",
+ "creation": "2026-06-30 17:59:26.314883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "judul_event",
+  "jenis_event",
+  "status",
+  "cb_h1",
+  "penyelenggara",
+  "pic",
+  "sec_jadwal",
+  "tanggal_mulai",
+  "tanggal_selesai",
+  "cb_j1",
+  "batas_pendaftaran",
+  "lokasi",
+  "sec_daftar",
+  "berbayar",
+  "item_event",
+  "biaya_per_peserta",
+  "cb_d1",
+  "kuota",
+  "jumlah_peserta",
+  "sec_peserta",
+  "peserta",
+  "sec_keu",
+  "company_pusat",
+  "cost_center_pengeluaran",
+  "pengeluaran",
+  "cb_k1",
+  "total_pendapatan",
+  "total_pengeluaran",
+  "surplus_defisit",
+  "sec_lain",
+  "deskripsi",
+  "catatan_evaluasi"
+ ],
+ "fields": [
+  {
+   "fieldname": "judul_event",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Judul Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jenis_event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Jenis Event",
+   "options": "Kelulusan CALISTUNG\nKejuaraan SD\nLainnya",
+   "reqd": 1
+  },
+  {
+   "default": "Draf",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draf\nPendaftaran Dibuka\nPendaftaran Ditutup\nBerlangsung\nSelesai\nDibatalkan"
+  },
+  {
+   "fieldname": "cb_h1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pusat",
+   "description": "Event terpusat (KD-7) \u2014 milik Pemasaran & Event / Rumba Bisnis",
+   "fieldname": "penyelenggara",
+   "fieldtype": "Data",
+   "label": "Penyelenggara",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pic",
+   "fieldtype": "Link",
+   "label": "PIC (Pemasaran & Event)",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sec_jadwal",
+   "fieldtype": "Section Break",
+   "label": "Jadwal & Lokasi"
+  },
+  {
+   "fieldname": "tanggal_mulai",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Mulai",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_selesai",
+   "fieldtype": "Datetime",
+   "label": "Tanggal Selesai"
+  },
+  {
+   "fieldname": "cb_j1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batas_pendaftaran",
+   "fieldtype": "Date",
+   "label": "Batas Pendaftaran"
+  },
+  {
+   "fieldname": "lokasi",
+   "fieldtype": "Small Text",
+   "label": "Lokasi"
+  },
+  {
+   "fieldname": "sec_daftar",
+   "fieldtype": "Section Break",
+   "label": "Pendaftaran & Biaya"
+  },
+  {
+   "default": "0",
+   "fieldname": "berbayar",
+   "fieldtype": "Check",
+   "label": "Berbayar"
+  },
+  {
+   "depends_on": "eval:doc.berbayar",
+   "fieldname": "item_event",
+   "fieldtype": "Link",
+   "label": "Item Event (per jenis)",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:doc.berbayar",
+   "fieldname": "biaya_per_peserta",
+   "fieldtype": "Currency",
+   "label": "Biaya per Peserta"
+  },
+  {
+   "fieldname": "cb_d1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kuota",
+   "fieldtype": "Int",
+   "label": "Kuota Peserta (0 = tanpa batas)"
+  },
+  {
+   "fieldname": "jumlah_peserta",
+   "fieldtype": "Int",
+   "label": "Jumlah Peserta",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_peserta",
+   "fieldtype": "Section Break",
+   "label": "Peserta"
+  },
+  {
+   "fieldname": "peserta",
+   "fieldtype": "Table",
+   "label": "Peserta",
+   "options": "Rumba Event Peserta"
+  },
+  {
+   "description": "Pengeluaran ditanggung Pusat; pendapatan ditagih via unit peserta (KD-7).",
+   "fieldname": "sec_keu",
+   "fieldtype": "Section Break",
+   "label": "Keuangan Event (Profitabilitas)"
+  },
+  {
+   "fieldname": "company_pusat",
+   "fieldtype": "Link",
+   "label": "Company Pusat (penanggung pengeluaran)",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center_pengeluaran",
+   "fieldtype": "Link",
+   "label": "Cost Center Pengeluaran (Pusat)",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "pengeluaran",
+   "fieldtype": "Table",
+   "label": "Pengeluaran",
+   "options": "Rumba Event Pengeluaran"
+  },
+  {
+   "fieldname": "cb_k1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_pendapatan",
+   "fieldtype": "Currency",
+   "label": "Total Pendapatan (lintas unit)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_pengeluaran",
+   "fieldtype": "Currency",
+   "label": "Total Pengeluaran (Pusat)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "surplus_defisit",
+   "fieldtype": "Currency",
+   "label": "Surplus / Defisit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_lain",
+   "fieldtype": "Section Break",
+   "label": "Lain-lain"
+  },
+  {
+   "fieldname": "deskripsi",
+   "fieldtype": "Text Editor",
+   "label": "Deskripsi / Agenda"
+  },
+  {
+   "fieldname": "catatan_evaluasi",
+   "fieldtype": "Small Text",
+   "label": "Catatan Evaluasi (pasca-event)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-30 18:00:33.961804",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Event",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "judul_event",
+ "track_changes": 1
+}

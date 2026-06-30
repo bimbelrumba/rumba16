@@ -1,0 +1,178 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Kelas",
+  "enabled": 1,
+  "modified": "2026-05-30 06:15:50.890069",
+  "module": "Bimbel Rumba v16",
+  "name": "Warna Status Kelas",
+  "script": "frappe.listview_settings[\"Rumba Kelas\"] = {\n\tget_indicator(doc) {\n\t\tconst status_map = {\n\t\t\tDraft: \"gray\",\n\t\t\tAktif: \"green\",\n\t\t\tSelesai: \"blue\",\n\t\t\tDibatalkan: \"red\",\n\t\t};\n\n\t\tconst status = doc.status_kelas || \"Draft\";\n\t\tconst color = status_map[status] || \"gray\";\n\n\t\treturn [__(status), color, `status_kelas,=,${status}`];\n\t},\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Unit",
+  "enabled": 1,
+  "modified": "2026-04-14 12:24:52.858049",
+  "module": "Bimbel Rumba v16",
+  "name": "Generate Kapasitas Sesi Belajar per Minggu",
+  "script": "frappe.ui.form.on('Rumba Unit', {\n  jumlah_ruang_kelas(frm) {\n    const jumlah = cint(frm.doc.jumlah_ruang_kelas || 0);\n    frm.set_value('kapasitas_max_sesi_belajar_minggu', jumlah * 40);\n  }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Unit",
+  "enabled": 1,
+  "modified": "2026-04-14 12:31:04.693427",
+  "module": "Bimbel Rumba v16",
+  "name": "Generate Kapasitas Max Murid",
+  "script": "frappe.ui.form.on('Rumba Unit', {\n  refresh(frm) {\n    hitung_kapasitas(frm);\n  },\n  kapasitas_max_sesi_belajar_minggu(frm) {\n    hitung_kapasitas(frm);\n  }\n});\n\nfunction hitung_kapasitas(frm) {\n  const sesi = flt(frm.doc.kapasitas_max_sesi_belajar_minggu || 0);\n  const hasil = sesi * 3; // sama dengan (sesi / 2) * 6\n  frm.set_value('kapasitas_max_murid', hasil);\n}\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Unit",
+  "enabled": 1,
+  "modified": "2026-04-14 14:46:29.307095",
+  "module": null,
+  "name": "Warna Status Unit dan Kepemilikan",
+  "script": "frappe.listview_settings['Rumba Unit'] = {\r\n  add_fields: ['status_unit', 'kepemilikan'],\r\n\r\n  // Warna badge per kolom\r\n  formatters: {\r\n    status_unit(value) {\r\n      const map = {\r\n        'Rintisan': 'blue',\r\n        'Aktif': 'green',\r\n        'Pindah': 'red',\r\n        'Tutup': 'gray'\r\n      };\r\n      return make_pill(value, map);\r\n    },\r\n\r\n    kepemilikan(value) {\r\n      const map = {\r\n        'Crowdfunding': 'orange',\r\n        'Franchise': 'blue',\r\n        'YRKI': 'green'\r\n      };\r\n      return make_pill(value, map);\r\n    }\r\n  },\r\n\r\n  // Opsional: indikator utama baris ikut warna status_unit\r\n  get_indicator(doc) {\r\n    const map = {\r\n      'Rintisan': 'blue',\r\n      'Aktif': 'green',\r\n      'Pindah': 'red',\r\n      'Tutup': 'gray'\r\n    };\r\n    const s = doc.status_unit || 'Tutup';\r\n    return [__(s), map[s] || 'gray', `status_unit,=,${s}`];\r\n  }\r\n};\r\n\r\nfunction make_pill(value, color_map) {\r\n  const val = value || '';\r\n  const color = color_map[val] || 'gray';\r\n  return `<span class=\"indicator-pill ${color}\">${frappe.utils.escape_html(__(val))}</span>`;\r\n}\r\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Program Belajar",
+  "enabled": 1,
+  "modified": "2026-04-14 14:53:08.388907",
+  "module": "Bimbel Rumba v16",
+  "name": "Kode Program Belajar AllCaps",
+  "script": "frappe.ui.form.on(\"Rumba Program Belajar\", {\r\n  kode_program_belajar(frm) {\r\n    const v = (frm.doc.kode_program_belajar || \"\").toUpperCase().trim();\r\n    if (v !== frm.doc.kode_program_belajar) {\r\n      frm.set_value(\"kode_program_belajar\", v);\r\n    }\r\n  }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Tahun Ajaran",
+  "enabled": 1,
+  "modified": "2026-04-14 15:23:07.213521",
+  "module": "Bimbel Rumba v16",
+  "name": "Tanggal Akhir Tahun Ajaran",
+  "script": "frappe.ui.form.on('Rumba Tahun Ajaran', {\r\n\ttanggal_mulai(frm) {\r\n\t\tif (!frm.doc.tanggal_mulai) {\r\n\t\t\tfrm.set_value('tanggal_selesai', null);\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tconst start = frappe.datetime.str_to_obj(frm.doc.tanggal_mulai);\r\n\t\tconst endDate = new Date(start.getFullYear() + 1, 5, 30); // 30 Juni tahun berikutnya\r\n\t\tfrm.set_value('tanggal_selesai', frappe.datetime.obj_to_str(endDate));\r\n\t}\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Tahun Ajaran",
+  "enabled": 1,
+  "modified": "2026-04-14 15:55:53.748899",
+  "module": "Bimbel Rumba v16",
+  "name": "Warna Status Tahun Ajaran",
+  "script": "frappe.listview_settings['Rumba Tahun Ajaran'] = {\r\n  add_fields: ['status'],\r\n\r\n  formatters: {\r\n    status(value) {\r\n      const map = {\r\n        'Aktif': 'green',\r\n        'Arsip': 'red'\r\n      };\r\n      return make_pill(value, map);\r\n    }\r\n  },\r\n\r\n  // Indikator utama baris mengikuti warna status\r\n  get_indicator(doc) {\r\n    const map = {\r\n      'Aktif': 'green',\r\n      'Arsip': 'red'\r\n    };\r\n    const s = doc.status || 'Arsip';\r\n    return [__(s), map[s] || 'gray', `status,=,${s}`];\r\n  }\r\n};\r\n\r\nfunction make_pill(value, color_map) {\r\n  const val = value || '';\r\n  const color = color_map[val] || 'gray';\r\n  return `<span class=\"indicator-pill ${color}\">${frappe.utils.escape_html(__(val))}</span>`;\r\n}\r\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Semester",
+  "enabled": 1,
+  "modified": "2026-04-15 03:26:04.006026",
+  "module": "Bimbel Rumba v16",
+  "name": "Generate Nama Semester",
+  "script": "frappe.ui.form.on('Semester', {\r\n\trefresh(frm) {\r\n\t\tgenerate_semester_fields(frm);\r\n\t},\r\n\tkode_tahun_ajaran(frm) {\r\n\t\tgenerate_semester_fields(frm);\r\n\t},\r\n\tperiode_semester(frm) {\r\n\t\tgenerate_semester_fields(frm);\r\n\t}\r\n});\r\n\r\nfunction extract_years(text) {\r\n\tconst s = String(text || '');\r\n\tconst m = s.match(/(\\d{4})\\D+(\\d{4})/); // contoh: 2026-2027\r\n\tif (!m) return null;\r\n\treturn { y1: m[1], y2: m[2] };\r\n}\r\n\r\nfunction generate_semester_fields(frm) {\r\n\tconst taLink = frm.doc.kode_tahun_ajaran;\r\n\tconst periode = (frm.doc.periode_semester || '').trim();\r\n\r\n\tif (!taLink || !periode) {\r\n\t\tfrm.set_value('kode_semester', '');\r\n\t\tfrm.set_value('nama_semester', '');\r\n\t\tfrm.set_value('tanggal_mulai_semester', null);\r\n\t\tfrm.set_value('tanggal_akhir_semester', null);\r\n\t\treturn;\r\n\t}\r\n\r\n\tfrappe.db.get_value(\r\n\t\t'Rumba Tahun Ajaran',\r\n\t\ttaLink,\r\n\t\t['kode_tahun_ajaran', 'nama_tahun_ajaran']\r\n\t).then(r => {\r\n\t\tconst row = (r && r.message) || {};\r\n\t\tconst kodeTA = row.kode_tahun_ajaran || taLink; // contoh: 2627\r\n\t\tconst taText = row.nama_tahun_ajaran || row.kode_tahun_ajaran || taLink; // contoh: 2026-2027\r\n\t\tconst years = extract_years(taText);\r\n\r\n\t\tlet kodePeriode = '';\r\n\t\tlet angkaPeriode = '';\r\n\t\tlet startDate = null;\r\n\t\tlet endDate = null;\r\n\r\n\t\tif (periode.startsWith('S1')) {\r\n\t\t\tkodePeriode = 'S1';\r\n\t\t\tangkaPeriode = '1';\r\n\t\t\t// Jul-Des tahun pertama\r\n\t\t\tif (years) {\r\n\t\t\t\tstartDate = `${years.y1}-07-01`;\r\n\t\t\t\tendDate = `${years.y1}-12-31`;\r\n\t\t\t}\r\n\t\t} else if (periode.startsWith('S2')) {\r\n\t\t\tkodePeriode = 'S2';\r\n\t\t\tangkaPeriode = '2';\r\n\t\t\t// Jan-Jun tahun kedua\r\n\t\t\tif (years) {\r\n\t\t\t\tstartDate = `${years.y2}-01-01`;\r\n\t\t\t\tendDate = `${years.y2}-06-30`;\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tfrm.set_value('kode_semester', '');\r\n\t\t\tfrm.set_value('nama_semester', '');\r\n\t\t\tfrm.set_value('tanggal_mulai_semester', null);\r\n\t\t\tfrm.set_value('tanggal_akhir_semester', null);\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tfrm.set_value('kode_semester', `${kodeTA}-${kodePeriode}`);\r\n\t\tfrm.set_value('nama_semester', `${kodeTA}-SMTR-${angkaPeriode}`);\r\n\t\tfrm.set_value('tanggal_mulai_semester', startDate);\r\n\t\tfrm.set_value('tanggal_akhir_semester', endDate);\r\n\t});\r\n}\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Pendaftaran",
+  "enabled": 1,
+  "modified": "2026-04-30 19:57:57.639056",
+  "module": "Bimbel Rumba v16",
+  "name": "Pilihan Kota dan Unit",
+  "script": "frappe.ui.form.on(\"Rumba Pendaftaran\", {\r\n\tsetup(frm) {\r\n\t\tfrm.set_query(\"nama_unit\", () => {\r\n\t\t\tif (!frm.doc.nama_kota) {\r\n\t\t\t\treturn {\r\n\t\t\t\t\tfilters: {\r\n\t\t\t\t\t\tname: [\"is\", \"not set\"]\r\n\t\t\t\t\t}\r\n\t\t\t\t};\r\n\t\t\t}\r\n\r\n\t\t\treturn {\r\n\t\t\t\tfilters: {\r\n\t\t\t\t\tkode_kota: frm.doc.nama_kota\r\n\t\t\t\t}\r\n\t\t\t};\r\n\t\t});\r\n\t},\r\n\r\n\tnama_kota(frm) {\r\n\t\tfrm.set_value(\"nama_unit\", \"\");\r\n\t\tfrm.set_value(\"kode_unit\", \"\");\r\n\t}\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Pendaftaran",
+  "enabled": 1,
+  "modified": "2026-05-22 20:37:27.767136",
+  "module": "Bimbel Rumba v16",
+  "name": "Tombol Buat Murid",
+  "script": "frappe.ui.form.on(\"Rumba Pendaftaran\", {\r\n  refresh(frm) {\r\n    if (\r\n      frm.doc.docstatus === 0 &&\r\n      frm.doc.status_pendaftaran === \"Disetujui\" &&\r\n      !frm.doc.murid_rumba\r\n    ) {\r\n      frm.add_custom_button(__(\"Buat Murid\"), () => {\r\n        frm.trigger(\"buat_murid\");\r\n      });\r\n    }\r\n  },\r\n\r\n  buat_murid(frm) {\r\n    frappe.confirm(\r\n      __(\"Buat data murid dari pendaftaran ini?\"),\r\n      () => {\r\n        frappe.call({\r\n          method: \"frappe.client.insert\",\r\n          args: {\r\n            doc: {\r\n              doctype: \"Rumba Murid\",\r\n\r\n              // Nomor Induk Murid memakai ID/naming Rumba Pendaftaran\r\n              nomor_induk_murid: frm.doc.name,\r\n\r\n              pendaftaran: frm.doc.name,\r\n              nama_lengkap: frm.doc.nama_lengkap,\r\n              nama_panggilan: frm.doc.nama_panggilan,\r\n              tanggal_lahir: frm.doc.tanggal_lahir,\r\n              jenis_kelamin: frm.doc.jenis_kelamin,\r\n              tempat_lahir: frm.doc.tempat_lahir,\r\n\r\n              nama_unit: frm.doc.nama_unit,\r\n              kode_unit: frm.doc.kode_unit,\r\n              tahun_ajaran: frm.doc.tahun_ajaran,\r\n              program_belajar: frm.doc.program_belajar,\r\n              jenis_kelas: frm.doc.jenis_kelas,\r\n\r\n              nama_orang_tua_wali: frm.doc.nama_orang_tua_wali,\r\n              hubungan_dengan_anak: frm.doc.hubungan_dengan_anak,\r\n              nomor_handphone: frm.doc.nomor_handphone,\r\n              alamat: frm.doc.alamat,\r\n\r\n              senin: frm.doc.senin,\r\n              selasa: frm.doc.selasa,\r\n              rabu: frm.doc.rabu,\r\n              kamis: frm.doc.kamis,\r\n              jumat: frm.doc.jumat,\r\n              sabtu: frm.doc.sabtu,\r\n              jam_belajar: frm.doc.jam_belajar\r\n            }\r\n          },\r\n          freeze: true,\r\n          freeze_message: __(\"Membuat data murid...\"),\r\n          callback(r) {\r\n            if (!r.exc && r.message) {\r\n              frm.set_value(\"murid_rumba\", r.message.name);\r\n              frm.save().then(() => {\r\n                frappe.msgprint({\r\n                  title: __(\"Murid Dibuat\"),\r\n                  message: __(\"Data murid {0} berhasil dibuat.\", [r.message.name]),\r\n                  indicator: \"green\"\r\n                });\r\n                frm.reload_doc();\r\n              });\r\n            }\r\n          }\r\n        });\r\n      }\r\n    );\r\n  }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Murid",
+  "enabled": 1,
+  "modified": "2026-05-22 23:53:48.262432",
+  "module": "Bimbel Rumba v16",
+  "name": "Warna Status Murid",
+  "script": "frappe.listview_settings[\"Rumba Murid\"] = {\r\n  add_fields: [\"status_murid\"],\r\n\r\n  get_indicator(doc) {\r\n    const colors = {\r\n      \"Aktif\": \"green\",\r\n      \"Cuti\": \"gray\",\r\n      \"Lulus\": \"blue\",\r\n      \"Berhenti\": \"red\"\r\n    };\r\n\r\n    return [\r\n      __(doc.status_murid || \"Belum Diisi\"),\r\n      colors[doc.status_murid] || \"gray\",\r\n      `status_murid,=,${doc.status_murid || \"\"}`\r\n    ];\r\n  },\r\n\r\n  formatters: {\r\n    status_murid(value) {\r\n      const colors = {\r\n        \"Aktif\": \"green\",\r\n        \"Cuti\": \"gray\",\r\n        \"Lulus\": \"blue\",\r\n        \"Berhenti\": \"red\"\r\n      };\r\n\r\n      const color = colors[value] || \"gray\";\r\n\r\n      return `<span class=\"indicator-pill ${color}\">\r\n        <span class=\"indicator-dot\"></span>\r\n        ${frappe.utils.escape_html(value || \"\")}\r\n      </span>`;\r\n    }\r\n  }\r\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Pendaftaran",
+  "enabled": 1,
+  "modified": "2026-05-23 00:12:46.183040",
+  "module": "Bimbel Rumba v16",
+  "name": "Tombol Customer Orang Tua",
+  "script": "frappe.ui.form.on(\"Rumba Pendaftaran\", {\r\n  refresh(frm) {\r\n    if (!frm.doc.customer_orang_tua && frm.doc.nama_orang_tua_wali) {\r\n      frm.add_custom_button(__(\"Buat Customer\"), () => {\r\n        frm.trigger(\"buat_customer_orang_tua\");\r\n      });\r\n    }\r\n\r\n    if (frm.doc.customer_orang_tua) {\r\n      frm.add_custom_button(__(\"Buka Customer\"), () => {\r\n        frappe.set_route(\"Form\", \"Customer\", frm.doc.customer_orang_tua);\r\n      });\r\n    }\r\n  },\r\n\r\n  buat_customer_orang_tua(frm) {\r\n    if (!frm.doc.nama_orang_tua_wali) {\r\n      frappe.msgprint(__(\"Nama Orang Tua / Wali wajib diisi.\"));\r\n      return;\r\n    }\r\n\r\n    frappe.confirm(__(\"Buat Customer dari data orang tua/wali?\"), () => {\r\n      frappe.call({\r\n        method: \"frappe.client.insert\",\r\n        args: {\r\n          doc: {\r\n            doctype: \"Customer\",\r\n            customer_name: frm.doc.nama_orang_tua_wali,\r\n            customer_type: \"Individual\",\r\n\r\n            // Sesuaikan dengan master ERPNext di site kamu jika berbeda.\r\n            customer_group: \"Individual\",\r\n            territory: \"Indonesia\",\r\n\r\n            mobile_no: frm.doc.nomor_handphone\r\n          }\r\n        },\r\n        freeze: true,\r\n        freeze_message: __(\"Membuat Customer...\"),\r\n        callback(r) {\r\n          if (!r.exc && r.message) {\r\n            frm.set_value(\"customer_orang_tua\", r.message.name);\r\n            frm.save().then(() => {\r\n              frappe.msgprint({\r\n                title: __(\"Customer Dibuat\"),\r\n                message: __(\"Customer {0} berhasil dibuat.\", [r.message.name]),\r\n                indicator: \"green\"\r\n              });\r\n            });\r\n          }\r\n        }\r\n      });\r\n    });\r\n  }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Pendaftaran",
+  "enabled": 1,
+  "modified": "2026-05-26 22:40:21.638098",
+  "module": "Bimbel Rumba v16",
+  "name": "Tombol Buat Invoice",
+  "script": "frappe.ui.form.on(\"Rumba Pendaftaran\", {\n  refresh(frm) {\n    if (frm.is_new()) {\n      return;\n    }\n\n    if (frm.doc.sales_invoice) {\n      frm.add_custom_button(__(\"Buka Invoice\"), () => {\n        frappe.set_route(\"Form\", \"Sales Invoice\", frm.doc.sales_invoice);\n      });\n\n      frm.add_custom_button(__(\"Sinkronkan Pembayaran\"), () => {\n        frm.trigger(\"sinkronkan_pembayaran\");\n      });\n\n      return;\n    }\n\n    if (frm.doc.customer_orang_tua) {\n      frm.add_custom_button(__(\"Buat Invoice\"), () => {\n        frm.trigger(\"buat_invoice\");\n      });\n    }\n  },\n\n  buat_invoice(frm) {\n    const dialog = new frappe.ui.Dialog({\n      title: __(\"Buat Invoice\"),\n      fields: [\n        {\n          fieldname: \"item_code\",\n          fieldtype: \"Link\",\n          label: __(\"Item\"),\n          options: \"Item\",\n          reqd: 1\n        },\n        {\n          fieldname: \"rate\",\n          fieldtype: \"Currency\",\n          label: __(\"Nominal\"),\n          reqd: 1\n        },\n        {\n          fieldname: \"due_date\",\n          fieldtype: \"Date\",\n          label: __(\"Tanggal Jatuh Tempo\"),\n          default: frappe.datetime.add_days(frappe.datetime.get_today(), 7),\n          reqd: 1\n        },\n        {\n          fieldname: \"submit_invoice\",\n          fieldtype: \"Check\",\n          label: __(\"Submit Invoice Sekarang\"),\n          default: 1\n        }\n      ],\n      primary_action_label: __(\"Buat\"),\n      primary_action(values) {\n        dialog.hide();\n\n        frappe.call({\n          method: \"rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.buat_sales_invoice\",\n          args: {\n            pendaftaran: frm.doc.name,\n            item_code: values.item_code,\n            rate: values.rate,\n            due_date: values.due_date,\n            submit_invoice: values.submit_invoice ? 1 : 0\n          },\n          freeze: true,\n          freeze_message: __(\"Membuat invoice...\"),\n          callback(r) {\n            if (!r.exc && r.message) {\n              frappe.msgprint({\n                title: __(\"Invoice Dibuat\"),\n                message: __(\"Sales Invoice {0} berhasil dibuat.\", [r.message]),\n                indicator: \"green\"\n              });\n              frm.reload_doc();\n            }\n          }\n        });\n      }\n    });\n\n    dialog.show();\n  },\n\n  sinkronkan_pembayaran(frm) {\n    frappe.call({\n      method: \"rumba16.bimbel_rumba_v16.doctype.rumba_pendaftaran.rumba_pendaftaran.sinkronkan_pembayaran\",\n      args: {\n        pendaftaran: frm.doc.name\n      },\n      freeze: true,\n      freeze_message: __(\"Menyinkronkan pembayaran...\"),\n      callback(r) {\n        if (!r.exc && r.message) {\n          frappe.msgprint({\n            title: __(\"Pembayaran Disinkronkan\"),\n            message: __(\"Status pembayaran sekarang: {0}\", [r.message.status_pembayaran]),\n            indicator: \"green\"\n          });\n          frm.reload_doc();\n        }\n      }\n    });\n  }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Lead",
+  "enabled": 1,
+  "modified": "2026-06-17 14:38:16.606001",
+  "module": null,
+  "name": "Rumba Lead - Tombol Lanjut Pendaftaran",
+  "script": "frappe.ui.form.on('Rumba Lead', {\n    refresh(frm) {\n        if (frm.is_new()) return;\n        if (frm.doc.pendaftaran) {\n            frm.add_custom_button(__('Lihat Pendaftaran'), function () {\n                frappe.set_route('Form', 'Rumba Pendaftaran', frm.doc.pendaftaran);\n            });\n            return;\n        }\n        frm.add_custom_button(__('Lanjut Pendaftaran'), function () {\n            frappe.model.with_doctype('Rumba Pendaftaran', function () {\n                const doc = frappe.model.get_new_doc('Rumba Pendaftaran');\n                doc.lead = frm.doc.name;\n                doc.nama_lengkap = frm.doc.nama_calon;\n                doc.nama_orang_tua_wali = frm.doc.nama_orang_tua_wali;\n                doc.nomor_handphone = frm.doc.nomor_handphone;\n                doc.alamat_email = frm.doc.alamat_email;\n                doc.nama_unit = frm.doc.nama_unit;\n                doc.nama_kota = frm.doc.nama_kota;\n                doc.program_belajar = frm.doc.program_diminati;\n                frappe.set_route('Form', 'Rumba Pendaftaran', doc.name);\n            });\n        }).addClass('btn-primary');\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Payroll Entry",
+  "enabled": 1,
+  "modified": "2026-06-24 22:04:20.899094",
+  "module": "Bimbel Rumba v16",
+  "name": "Payroll Entry - Tombol Honor RUMBA",
+  "script": "frappe.ui.form.on('Payroll Entry', {\n  refresh(frm) {\n    frm.add_custom_button('Buat Draft Honor Mengajar (RUMBA)', () => {\n      frappe.prompt([\n        {fieldname:'unit', label:'Unit RUMBA', fieldtype:'Link', options:'Rumba Unit', reqd:1},\n        {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1, default:(frm.doc.start_date||'').slice(0,7)}\n      ], (v) => {\n        frappe.call({method:'rumba16.payroll.generate_honor_mengajar', args:{unit:v.unit, bulan:v.bulan}, freeze:true, freeze_message:'Membuat draft honor...'})\n        .then(r => { const d=r.message||{}; frappe.msgprint({title:'Hasil Generate Honor', message:'Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length+'<br><pre>'+frappe.utils.escape_html(JSON.stringify(d,null,2))+'</pre>'}); });\n      }, 'Generate Honor Mengajar', 'Buat');\n    });\n  }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Attendance",
+  "enabled": 1,
+  "modified": "2026-06-25 06:35:17.815113",
+  "module": "Bimbel Rumba v16",
+  "name": "Attendance List - Generator Pendidik RUMBA",
+  "script": "frappe.listview_settings['Attendance'] = frappe.listview_settings['Attendance'] || {};\nfrappe.listview_settings['Attendance'].onload = function(listview) {\n  listview.page.add_inner_button('Generate Attendance Pendidik (RUMBA)', () => {\n    frappe.prompt([\n      {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1},\n      {fieldname:'unit', label:'Unit (opsional)', fieldtype:'Link', options:'Rumba Unit'}\n    ], (v) => {\n      frappe.call({method:'rumba16.attendance.generate_pendidik_attendance', args:{bulan:v.bulan, unit:v.unit||null}, freeze:true, freeze_message:'Membuat attendance pendidik...'})\n      .then(r => { const d=r.message||{}; frappe.msgprint('Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length); listview.refresh(); });\n    }, 'Generate Attendance Pendidik', 'Buat');\n  });\n};",
+  "view": "List"
+ }
+]

@@ -1,0 +1,320 @@
+[
+ {
+  "activities": [
+   {
+    "activity_name": "Tahap 3 — Perencanaan Pengalihan Murid",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Lead Tutor",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 4 — Serah-Terima & Tuntaskan Laporan Sesi",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Lead Tutor",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 5 — Pengembalian Aset & Nonaktif Akses (akun + akses data murid)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 6 — Full & Final (honor sesi terlaksana)",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Finance",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 7 — Exit Interview",
+    "begin_on": 4,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Tutor",
+  "docstatus": 0,
+  "doctype": "Employee Separation Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 17:34:05.014228",
+  "name": "HR-EMP-STP-00001",
+  "title": "Offboarding Tutor RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Tahap 3 — Perencanaan Serah-Terima",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Rekonsiliasi & Serah-Terima Kas (WAJIB sebelum F&F)",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 4 — Serah-Terima Data & Administrasi",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 5 — Pengembalian Aset & Nonaktif Akses",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 6 — Full & Final (ditahan s/d kas tuntas)",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Finance",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 7 — Exit Interview",
+    "begin_on": 4,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Admin Unit",
+  "docstatus": 0,
+  "doctype": "Employee Separation Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 17:34:05.495557",
+  "name": "HR-EMP-STP-00002",
+  "title": "Offboarding Admin Unit RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Tahap 3–4 — Serah-Terima Kepemimpinan, Keuangan & Relasi Eksternal",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 5 — Pengembalian Aset & Nonaktif Akun",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 6 — Full & Final (persetujuan Pusat, hindari konflik kepentingan)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Finance",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 7 — Exit Interview (oleh Pusat)",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Kepala Unit",
+  "docstatus": 0,
+  "doctype": "Employee Separation Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 17:37:11.883734",
+  "name": "HR-EMP-STP-00003",
+  "title": "Offboarding Kepala Unit RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Tahap 3–4 — Serah-Terima Akademik & Mentoring",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 5 — Pengembalian Aset & Turun/Nonaktif Akun",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 6 — Full & Final (honor mengajar)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Finance",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 7 — Exit Interview",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Lead Tutor",
+  "docstatus": 0,
+  "doctype": "Employee Separation Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 17:37:12.145421",
+  "name": "HR-EMP-STP-00004",
+  "title": "Offboarding Lead Tutor RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Tahap 3–4 — Serah-Terima Tugas",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 5 — Pengembalian Aset",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 6 — Full & Final",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Finance",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Tahap 7 — Exit Interview",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Staf Pendukung",
+  "docstatus": 0,
+  "doctype": "Employee Separation Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 17:37:12.254319",
+  "name": "HR-EMP-STP-00005",
+  "title": "Offboarding Pendukung RUMBA"
+ }
+]

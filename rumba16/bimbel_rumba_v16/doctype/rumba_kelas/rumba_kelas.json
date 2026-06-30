@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nama_kelas",
+ "creation": "2026-05-26 23:32:18.496189",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identitas_kelas_section",
+  "nama_unit",
+  "kode_unit",
+  "column_break_nlyd",
+  "nama_kelas",
+  "panduan_nama_kelas",
+  "status_kelas",
+  "program_periode_section",
+  "tahun_ajaran",
+  "semester",
+  "column_break_bbwv",
+  "program_belajar",
+  "jenis_kelas",
+  "jadwal_ruangan_section",
+  "nama_ruangan",
+  "kode_ruangan",
+  "kapasitas_murid",
+  "catatan",
+  "column_break_exny",
+  "hari_belajar",
+  "senin",
+  "selasa",
+  "rabu",
+  "kamis",
+  "jumat",
+  "sabtu",
+  "jam_belajar",
+  "roster_section",
+  "jumlah_anggota",
+  "anggota_kelas"
+ ],
+ "fields": [
+  {
+   "fieldname": "identitas_kelas_section",
+   "fieldtype": "Section Break",
+   "label": "IDENTITAS KELAS"
+  },
+  {
+   "fieldname": "nama_kelas",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Kelas",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status_kelas",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Kelas",
+   "options": "Draft\nAktif\nSelesai\nDibatalkan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit Rumba",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nama_unit.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "program_periode_section",
+   "fieldtype": "Section Break",
+   "label": "PROGRAM & PERIODE"
+  },
+  {
+   "fieldname": "tahun_ajaran",
+   "fieldtype": "Link",
+   "label": "Tahun Ajaran",
+   "options": "Rumba Tahun Ajaran",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Link",
+   "label": "Semester",
+   "options": "Rumba Semester",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bbwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_belajar",
+   "fieldtype": "Link",
+   "label": "Program Belajar",
+   "options": "Rumba Program Belajar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jenis_kelas",
+   "fieldtype": "Select",
+   "label": "Jenis Kelas",
+   "options": "Reguler\nPrivate\nSemi-Private",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jadwal_ruangan_section",
+   "fieldtype": "Section Break",
+   "label": "JADWAL & RUANGAN"
+  },
+  {
+   "fieldname": "kapasitas_murid",
+   "fieldtype": "Int",
+   "label": "Kapasitas Murid",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "column_break_exny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hari_belajar",
+   "fieldtype": "HTML",
+   "label": "Hari Belajar",
+   "options": "<p>Pilihan Hari Belajar</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "senin",
+   "fieldtype": "Check",
+   "label": "Senin"
+  },
+  {
+   "default": "0",
+   "fieldname": "rabu",
+   "fieldtype": "Check",
+   "label": "Rabu"
+  },
+  {
+   "default": "0",
+   "fieldname": "kamis",
+   "fieldtype": "Check",
+   "label": "Kamis"
+  },
+  {
+   "fieldname": "jam_belajar",
+   "fieldtype": "Select",
+   "label": "Jam Belajar",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_ruangan",
+   "fieldtype": "Link",
+   "label": "Nama Ruangan",
+   "options": "Rumba Ruangan"
+  },
+  {
+   "fetch_from": "nama_ruangan.kode_ruangan",
+   "fieldname": "kode_ruangan",
+   "fieldtype": "Data",
+   "label": "Kode Ruangan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "panduan_nama_kelas",
+   "fieldtype": "HTML",
+   "label": "Panduan Nama Kelas",
+   "options": "<div class=\"text-muted small\">\nGunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]- [Semester]-[Tahun Ajaran]<br>\n<b>Contoh</b>: 1901-KIDD-Reguler-Sen,Rab-09:30-S1- 2026/2027</b>\n</div>\n<br/>"
+  },
+  {
+   "default": "0",
+   "fieldname": "jumat",
+   "fieldtype": "Check",
+   "label": "Jumat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabtu",
+   "fieldtype": "Check",
+   "label": "Sabtu"
+  },
+  {
+   "default": "0",
+   "fieldname": "selasa",
+   "fieldtype": "Check",
+   "label": "Selasa"
+  },
+  {
+   "fieldname": "roster_section",
+   "fieldtype": "Section Break",
+   "label": "ANGGOTA KELAS"
+  },
+  {
+   "fieldname": "jumlah_anggota",
+   "fieldtype": "Int",
+   "label": "Jumlah Anggota Aktif",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "anggota_kelas",
+   "fieldtype": "Table",
+   "label": "Anggota Kelas",
+   "options": "Rumba Anggota Kelas"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:29:34.317834",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Kelas",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

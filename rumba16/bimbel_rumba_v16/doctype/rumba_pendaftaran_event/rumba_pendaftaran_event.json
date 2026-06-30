@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "PEV-.YY.-.#####",
+ "creation": "2026-06-30 20:36:59.465501",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event",
+  "nama_anak",
+  "cb_d1",
+  "nama_orang_tua",
+  "no_wa_orang_tua",
+  "email_orang_tua",
+  "catatan",
+  "sec_verif",
+  "status_intake",
+  "murid",
+  "cb_v1",
+  "catatan_internal"
+ ],
+ "fields": [
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event",
+   "options": "Rumba Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nama_anak",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Anak",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_d1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_orang_tua",
+   "fieldtype": "Data",
+   "label": "Nama Orang Tua / Wali",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_wa_orang_tua",
+   "fieldtype": "Data",
+   "label": "No. WhatsApp",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_orang_tua",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "sec_verif",
+   "fieldtype": "Section Break",
+   "label": "Verifikasi (Internal)"
+  },
+  {
+   "default": "Baru",
+   "fieldname": "status_intake",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Intake",
+   "options": "Baru\nTercocokkan\nMasuk Event\nDitolak"
+  },
+  {
+   "fieldname": "murid",
+   "fieldtype": "Link",
+   "label": "Murid (cocokkan)",
+   "options": "Rumba Murid"
+  },
+  {
+   "fieldname": "cb_v1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "catatan_internal",
+   "fieldtype": "Small Text",
+   "label": "Catatan Internal"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-30 20:36:59.465501",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Pendaftaran Event",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nama_anak",
+ "track_changes": 1
+}

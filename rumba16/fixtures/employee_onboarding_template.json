@@ -1,0 +1,265 @@
+[
+ {
+  "activities": [
+   {
+    "activity_name": "Hari 1 — Orientasi Kepemimpinan & Transisi Peran (Pusat)",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 2 — Kepemimpinan Tim, Mutu Pembelajaran & Hubungan Orang Tua (Unit)",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 3 — Pertumbuhan Unit, Pelaporan & Evaluasi (Unit)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 1,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Kepala Unit",
+  "docstatus": 0,
+  "doctype": "Employee Onboarding Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 16:38:26.668197",
+  "name": "HR-EMP-ONT-00002",
+  "title": "Onboarding Kepala Unit RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Hari 1 — Orientasi Peran & Transisi Mindset (Pusat)",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 2 — Supervisi Kelas & Koordinasi Tim (Unit)",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 3 — Pelaporan, Administrasi Tim & Evaluasi (Unit)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 1,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Lead Tutor",
+  "docstatus": 0,
+  "doctype": "Employee Onboarding Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 16:38:26.766523",
+  "name": "HR-EMP-ONT-00003",
+  "title": "Onboarding Lead Tutor RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Hari 1 — Orientasi RUMBA (Pusat/Daring)",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 2 — Shadow Penuh (Unit Percontohan)",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 3 — Shadow Terfokus: Administrasi & Keuangan (Unit Percontohan)",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 4 — Praktek Terpantau (Unit Percontohan)",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 5 — Evaluasi & Briefing Penempatan (Unit Percontohan/Pusat)",
+    "begin_on": 4,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 1,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Admin Unit",
+  "docstatus": 0,
+  "doctype": "Employee Onboarding Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 16:38:26.806752",
+  "name": "HR-EMP-ONT-00004",
+  "title": "Onboarding Admin Unit RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Hari 1 — Orientasi & Pengenalan Unit",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 2 — Praktek Mandiri Terpantau & Evaluasi",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 1,
+    "role": "Rumba Kepala Unit",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Staf Pendukung",
+  "docstatus": 0,
+  "doctype": "Employee Onboarding Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 16:38:26.864615",
+  "name": "HR-EMP-ONT-00005",
+  "title": "Onboarding Pendukung RUMBA"
+ },
+ {
+  "activities": [
+   {
+    "activity_name": "Hari 1 — Orientasi RUMBA & Pengenalan Kurikulum (Pusat/Daring)",
+    "begin_on": 0,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 2 — Shadow Mengajar Penuh (Unit Percontohan)",
+    "begin_on": 1,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Lead Tutor",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 3 — Pendalaman Asesmen & Laporan Sesi",
+    "begin_on": 2,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Lead Tutor",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 4 — Praktek Mengajar Terpantau",
+    "begin_on": 3,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 0,
+    "role": "Rumba Lead Tutor",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   },
+   {
+    "activity_name": "Hari 5 — Evaluasi & Briefing Penempatan",
+    "begin_on": 4,
+    "description": null,
+    "duration": 1,
+    "required_for_employee_creation": 1,
+    "role": "Rumba Personalia",
+    "task": null,
+    "task_weight": 0.0,
+    "user": null
+   }
+  ],
+  "company": "Bimbel Rumba",
+  "department": null,
+  "designation": "Tutor",
+  "docstatus": 0,
+  "doctype": "Employee Onboarding Template",
+  "employee_grade": null,
+  "modified": "2026-06-25 06:56:26.530064",
+  "name": "HR-EMP-ONT-00001",
+  "title": "Onboarding Tutor RUMBA"
+ }
+]

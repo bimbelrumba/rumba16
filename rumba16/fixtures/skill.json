@@ -1,0 +1,74 @@
+[
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.028672",
+  "name": "Motivasi & Pemahaman Peran",
+  "skill_name": "Motivasi & Pemahaman Peran"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.406733",
+  "name": "Pengajaran & Interaksi dengan Anak",
+  "skill_name": "Pengajaran & Interaksi dengan Anak"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.570900",
+  "name": "Administrasi & Tanggung Jawab",
+  "skill_name": "Administrasi & Tanggung Jawab"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.685272",
+  "name": "Nilai & Karakter (JUARA)",
+  "skill_name": "Nilai & Karakter (JUARA)"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.778199",
+  "name": "Penguasaan Materi",
+  "skill_name": "Penguasaan Materi"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.875696",
+  "name": "Cara Penyampaian",
+  "skill_name": "Cara Penyampaian"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:09.999660",
+  "name": "Interaksi dengan Murid",
+  "skill_name": "Interaksi dengan Murid"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:10.095940",
+  "name": "Pengelolaan Kelas",
+  "skill_name": "Pengelolaan Kelas"
+ },
+ {
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Skill",
+  "modified": "2026-06-25 05:36:10.223187",
+  "name": "Kesesuaian dengan Gaya RUMBA",
+  "skill_name": "Kesesuaian dengan Gaya RUMBA"
+ }
+]

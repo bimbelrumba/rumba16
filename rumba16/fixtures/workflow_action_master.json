@@ -1,0 +1,72 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:34.713137",
+  "name": "Buka Pendaftaran",
+  "workflow_action_name": "Buka Pendaftaran"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:34.942083",
+  "name": "Tutup Pendaftaran",
+  "workflow_action_name": "Tutup Pendaftaran"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:35.124095",
+  "name": "Buka Kembali Pendaftaran",
+  "workflow_action_name": "Buka Kembali Pendaftaran"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:35.232472",
+  "name": "Mulai Event",
+  "workflow_action_name": "Mulai Event"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:35.310656",
+  "name": "Selesaikan",
+  "workflow_action_name": "Selesaikan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-30 18:10:35.378515",
+  "name": "Batalkan",
+  "workflow_action_name": "Batalkan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.393242",
+  "name": "Ajukan",
+  "workflow_action_name": "Ajukan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.416886",
+  "name": "Setujui",
+  "workflow_action_name": "Setujui"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.436878",
+  "name": "Minta Revisi",
+  "workflow_action_name": "Minta Revisi"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-06-19 18:44:40.468545",
+  "name": "Ajukan Ulang",
+  "workflow_action_name": "Ajukan Ulang"
+ }
+]

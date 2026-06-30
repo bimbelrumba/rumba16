@@ -1,0 +1,315 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nomor_induk_murid",
+ "creation": "2026-04-22 00:13:10.988187",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asal_pendaftaran_section",
+  "pendaftaran",
+  "tanggal_pendaftaran",
+  "status_murid",
+  "level_saat_ini",
+  "saldo_bintang",
+  "identitas_murid_section",
+  "nomor_induk_murid",
+  "nama_lengkap",
+  "nama_panggilan",
+  "column_break_ebfe",
+  "tanggal_lahir",
+  "jenis_kelamin",
+  "unit_program_section",
+  "nama_unit",
+  "kode_unit",
+  "tahun_ajaran",
+  "jenis_kelas",
+  "column_break_yelv",
+  "program_belajar",
+  "hari_belajar",
+  "senin",
+  "selasa",
+  "rabu",
+  "kamis",
+  "jumat",
+  "sabtu",
+  "jam_belajar",
+  "orang_tua_customer_section",
+  "nama_orang_tua_wali",
+  "customer",
+  "hubungan_dengan_anak",
+  "column_break_mild",
+  "nomor_handphone",
+  "alamat_email",
+  "alamat"
+ ],
+ "fields": [
+  {
+   "fieldname": "identitas_murid_section",
+   "fieldtype": "Section Break",
+   "label": "IDENTITAS MURID"
+  },
+  {
+   "fieldname": "nomor_induk_murid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Induk Murid",
+   "unique": 1
+  },
+  {
+   "fetch_from": "pendaftaran.nama_lengkap",
+   "fieldname": "nama_lengkap",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Lengkap",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pendaftaran.nama_panggilan",
+   "fieldname": "nama_panggilan",
+   "fieldtype": "Data",
+   "label": "Nama Panggilan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ebfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "pendaftaran.tanggal_lahir",
+   "fieldname": "tanggal_lahir",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Lahir",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pendaftaran.jenis_kelamin",
+   "fieldname": "jenis_kelamin",
+   "fieldtype": "Select",
+   "label": "Jenis Kelamin",
+   "options": "Perempuan\nLaki-laki",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pendaftaran",
+   "fieldtype": "Link",
+   "label": "Pendaftaran",
+   "options": "Rumba Pendaftaran"
+  },
+  {
+   "fetch_from": "pendaftaran.tanggal_pendaftaran",
+   "fieldname": "tanggal_pendaftaran",
+   "fieldtype": "Date",
+   "label": "Tanggal Pendaftaran",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_murid",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Murid",
+   "options": "Aktif\nCuti\nLulus\nBerhenti"
+  },
+  {
+   "fieldname": "asal_pendaftaran_section",
+   "fieldtype": "Section Break",
+   "label": "ASAL PENDAFTARAN"
+  },
+  {
+   "fieldname": "unit_program_section",
+   "fieldtype": "Section Break",
+   "label": "UNIT & PROGRAM"
+  },
+  {
+   "fetch_from": "pendaftaran.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit Rumba",
+   "options": "Rumba Unit"
+  },
+  {
+   "fetch_from": "pendaftaran.kode_unit",
+   "fieldname": "kode_unit",
+   "fieldtype": "Data",
+   "label": "Kode Unit"
+  },
+  {
+   "fieldname": "tahun_ajaran",
+   "fieldtype": "Link",
+   "label": "Tahun Ajaran",
+   "options": "Rumba Tahun Ajaran"
+  },
+  {
+   "fieldname": "jenis_kelas",
+   "fieldtype": "Select",
+   "label": "Jenis Kelas",
+   "options": "Reguler\nPrivate\nSemi-Private"
+  },
+  {
+   "fieldname": "column_break_yelv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_belajar",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Program Belajar",
+   "options": "Rumba Program Belajar"
+  },
+  {
+   "fieldname": "hari_belajar",
+   "fieldtype": "Heading",
+   "label": "Hari Belajar"
+  },
+  {
+   "default": "0",
+   "fieldname": "senin",
+   "fieldtype": "Check",
+   "label": "Senin"
+  },
+  {
+   "default": "0",
+   "fieldname": "selasa",
+   "fieldtype": "Check",
+   "label": "Selasa"
+  },
+  {
+   "default": "0",
+   "fieldname": "rabu",
+   "fieldtype": "Check",
+   "label": "Rabu"
+  },
+  {
+   "default": "0",
+   "fieldname": "kamis",
+   "fieldtype": "Check",
+   "label": "Kamis"
+  },
+  {
+   "default": "0",
+   "fieldname": "jumat",
+   "fieldtype": "Check",
+   "label": "Jumat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sabtu",
+   "fieldtype": "Check",
+   "label": "Sabtu"
+  },
+  {
+   "fieldname": "jam_belajar",
+   "fieldtype": "Select",
+   "label": "Jam Belajar",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00"
+  },
+  {
+   "fieldname": "orang_tua_customer_section",
+   "fieldtype": "Section Break",
+   "label": "ORANG TUA / CUSTOMER"
+  },
+  {
+   "fetch_from": "pendaftaran.nama_orang_tua_wali",
+   "fieldname": "nama_orang_tua_wali",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Orang Tua / Wali",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer Orang Tua",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "pendaftaran.hubungan_dengan_anak",
+   "fieldname": "hubungan_dengan_anak",
+   "fieldtype": "Data",
+   "label": "Hubungan dengan Anak",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mild",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "pendaftaran.nomor_handphone",
+   "fieldname": "nomor_handphone",
+   "fieldtype": "Data",
+   "label": "Nomor Handphone"
+  },
+  {
+   "fetch_from": "pendaftaran.alamat_email",
+   "fieldname": "alamat_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fetch_from": "pendaftaran.alamat",
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat"
+  },
+  {
+   "description": "Level Calistung berjalan; diisi/di-update otomatis oleh controller Ujian Kenaikan Level. Kosong = belum berlevel (mis. program non-Calistung).",
+   "fieldname": "level_saat_ini",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Level Saat Ini",
+   "options": "\nLevel 1\nLevel 2\nLevel 3"
+  },
+  {
+   "default": "0",
+   "description": "Total bintang dari BKM Entry berstatus Disetujui (auto, E3).",
+   "fieldname": "saldo_bintang",
+   "fieldtype": "Int",
+   "label": "Saldo Bintang",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-26 23:18:23.171593",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Murid",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

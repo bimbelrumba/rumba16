@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-06-19 14:02:03.462152",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kelas",
+  "tanggal_sesi",
+  "nama_unit",
+  "jam_sesi",
+  "status_sesi",
+  "guru",
+  "guru_pengganti",
+  "durasi_menit",
+  "jumlah_hadir",
+  "jumlah_anggota_roster",
+  "presensi",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "kelas",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kelas",
+   "options": "Rumba Kelas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_sesi",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Sesi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jam_sesi",
+   "fieldtype": "Select",
+   "label": "Jam Sesi",
+   "options": "09.30 - 10.45\n11.00 - 12.15\n12.30 - 13.45\n14.00 - 15.15\n15.30 - 16.45\n17.00 - 18.15\n18.45 - 20.00"
+  },
+  {
+   "fieldname": "status_sesi",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status Sesi",
+   "options": "Terlaksana\nBatal\nDiganti",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guru",
+   "fieldtype": "Link",
+   "label": "Guru",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guru_pengganti",
+   "fieldtype": "Link",
+   "label": "Guru Pengganti",
+   "options": "Employee"
+  },
+  {
+   "default": "75",
+   "description": "Otomatis dari jenis kelas: Reguler & Semi-Private = 75, Private = 60.",
+   "fieldname": "durasi_menit",
+   "fieldtype": "Int",
+   "label": "Durasi (Menit)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah_hadir",
+   "fieldtype": "Int",
+   "label": "Jumlah Hadir",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah_anggota_roster",
+   "fieldtype": "Int",
+   "label": "Jumlah Anggota Roster",
+   "read_only": 1
+  },
+  {
+   "fieldname": "presensi",
+   "fieldtype": "Table",
+   "label": "Presensi",
+   "options": "Rumba Presensi Murid"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  },
+  {
+   "fetch_from": "kelas.nama_unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Nama Unit",
+   "options": "Rumba Unit",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-27 01:29:47.441707",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Sesi Kelas",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit"
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Lead Tutor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Tutor",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Akademik",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Personalia"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Mitra"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
