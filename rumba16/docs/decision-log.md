@@ -145,6 +145,26 @@ Setiap entri **append-only**. Jangan menghapus atau menulis ulang entri lama. Ji
 
 ---
 
+## ADR-0011 — Arsitektur multi-entity: hybrid multi-company bertahap
+
+- **Tanggal:** 2026-06-26
+- **Status:** Accepted
+- **Konteks:** RUMBA punya unit milik sendiri (YRKI) dan unit franchise/partnership; field `kepemilikan` (YRKI/Franchise/Partnership) sudah ada di `Rumba Unit`. Franchise/partnership = badan hukum terpisah (NPWP & buku sendiri), namun pembukuannya akan dikelola di dalam ERP RUMBA. Desain modul saat ini berbasis `Rumba Unit` + `cost_center` dalam **satu** company (tidak ada DocType operasional yang link ke `Company`). Sudah ada **1 unit franchise existing**.
+- **Keputusan:** Adopsi arsitektur **hybrid multi-company, diterapkan bertahap**:
+  - Unit YRKI = **cost center** dalam company **Pusat** (satu company). Buka unit YRKI baru = tambah cost center.
+  - Unit franchise/partnership = **Company terpisah** di site yang sama, pakai CoA template + akun antar-entitas. Buka franchise baru = tambah Company (record master), **bukan** install/site baru.
+  - Hanya posting **keuangan** (Sales Invoice/SPP, Payment, Payroll) yang sadar-company; data **akademik/operasional tetap company-agnostik**, di-scope per `Rumba Unit`.
+  - Urutan: (1) go-live produksi single-company untuk semua unit YRKI; (2) bangun enhancement multi-company (field `company` di `Rumba Unit` + pemetaan Unit→Company + routing posting keuangan); (3) onboard unit franchise existing. Langkah 2–3 **diprioritaskan segera** setelah unit YRKI onboard karena sudah ada 1 franchise.
+- **Alasan:** Mencampur buku dua badan hukum dalam satu company salah secara akuntansi & pajak. Company terpisah memberi ledger sah per entitas + konsolidasi via group company. Sekuensing menjaga go-live tidak terblokir dan menghindari over-engineering dini. App tetap **1x install** untuk semua entitas (banyak company dalam satu site).
+- **Konsekuensi:**
+  - + Satu install app melayani semua unit & company; akademik terpusat → kendali mutu brand terjaga.
+  - − Perlu pengembangan modul (field `company`, pemetaan Unit→Company, controller keuangan multi-company) + setup per-company (CoA, cost center, seri nomor, warehouse, permission).
+  - Melengkapi ADR-0010 (isolasi per unit) dengan isolasi per company.
+  - CoA siap: `coa_rumba_terpadu.csv` (backbone), `coa_rumba_pusat_final.csv`, `coa_rumba_franchise_template.csv`.
+- **Referensi:** ERP-DEPLOY-001 (runbook §2 & §10), ERP-PLAN-001 (Fase Multi-Entity), CoA-RUMBA-Terpadu-Catatan.md, ADR-0010, memori user `produksi-deploy-status`.
+
+---
+
 ## Template untuk Entri Baru
 
 ```
