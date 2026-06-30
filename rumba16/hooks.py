@@ -279,9 +279,9 @@ fixtures = [
     {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
-    {"dt": "Workflow", "filters": [["name","in",["Persetujuan Presensi Sesi","Persetujuan BKM"]]]},
-    {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi"]]]},
-    {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang"]]]},
+    {"dt": "Workflow", "filters": [["name","in",["Persetujuan Presensi Sesi","Persetujuan BKM","Alur Event RUMBA"]]]},
+    {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi","Draf","Pendaftaran Dibuka","Pendaftaran Ditutup","Berlangsung","Selesai","Dibatalkan"]]]},
+    {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang","Buka Pendaftaran","Tutup Pendaftaran","Buka Kembali Pendaftaran","Mulai Event","Selesaikan","Batalkan"]]]},
     {"dt": "Custom Field", "filters": [["name", "in", [
     "Rumba Program Belajar-item_spp", "Rumba Unit-price_list_spp",
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp", "Rumba Murid-tanggal_spp_dimuka_sampai",

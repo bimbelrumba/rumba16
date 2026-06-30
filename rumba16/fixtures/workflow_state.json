@@ -3,6 +3,42 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2026-06-30 18:10:33.893049",
+  "name": "Draf",
+  "style": "Primary",
+  "workflow_state_name": "Draf"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-30 18:10:34.041826",
+  "name": "Pendaftaran Dibuka",
+  "style": "Info",
+  "workflow_state_name": "Pendaftaran Dibuka"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-30 18:10:34.182355",
+  "name": "Pendaftaran Ditutup",
+  "style": "Warning",
+  "workflow_state_name": "Pendaftaran Ditutup"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-30 18:10:34.574115",
+  "name": "Dibatalkan",
+  "style": "Danger",
+  "workflow_state_name": "Dibatalkan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2026-06-19 18:01:05.837788",
   "name": "Draft",
   "style": "",
@@ -34,5 +70,23 @@
   "name": "Diajukan",
   "style": "Warning",
   "workflow_state_name": "Diajukan"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-30 18:10:34.502699",
+  "name": "Selesai",
+  "style": "Success",
+  "workflow_state_name": "Selesai"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-30 18:10:34.368982",
+  "name": "Berlangsung",
+  "style": "Info",
+  "workflow_state_name": "Berlangsung"
  }
 ]
