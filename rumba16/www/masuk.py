@@ -6,6 +6,9 @@ no_cache = 1
 # Role unit yang mendarat langsung di workspace "Admin Unit" (quick links).
 UNIT_ROLES = {"Rumba Admin Unit", "Rumba Kepala Unit"}
 
+# BARU: role pengajar yang mendarat di workspace "Tutor" (sesi & presensi harian).
+TUTOR_ROLES = {"Rumba Tutor", "Rumba Lead Tutor"}
+
 
 def get_context(context):
     """Arahkan pengguna ke tujuan yang sesuai dengan jenis akun & role-nya.
@@ -13,6 +16,7 @@ def get_context(context):
     - Belum login        -> /login
     - Akun portal ortu   -> /me (Website User, tidak punya akses desk)
     - Admin/Kepala Unit  -> /app/admin-unit (quick links unit)
+    - Tutor/Lead Tutor   -> /app/tutor (sesi saya & presensi)
     - Role lain (desk)   -> /app/rumba (landing bersama RUMBA)
     """
     user = frappe.session.user
@@ -20,12 +24,16 @@ def get_context(context):
     if not user or user == "Guest":
         target = "/login"
     elif frappe.db.get_value("User", user, "user_type") == "Website User":
-        # Akun orang tua/portal: jangan dilempar ke desk. Sesuaikan bila ada
-        # halaman portal khusus RUMBA.
+        # Akun orang tua/portal: jangan dilempar ke desk.
         target = "/me"
     else:
         roles = set(frappe.get_roles())
-        target = "/app/admin-unit" if (roles & UNIT_ROLES) else "/app/rumba"
+        if roles & UNIT_ROLES:                 # BARU: blok if/elif ini
+            target = "/app/admin-unit"         # menggantikan 1 baris lama:
+        elif roles & TUTOR_ROLES:              # target = "/app/admin-unit" if (roles & UNIT_ROLES) else "/app/rumba"
+            target = "/app/tutor"
+        else:
+            target = "/app/rumba"
 
     frappe.local.flags.redirect_location = target
     raise frappe.Redirect

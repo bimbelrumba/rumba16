@@ -14,7 +14,7 @@
    "label": "Sesi Terlaksana per Bulan"
   }
  ],
- "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat \u2014 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 \u00b7 Pendaftaran & Lead\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":4}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":2}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran\",\"col\":2}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 \u00b7 Murid\",\"col\":12}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"n3a\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru\",\"col\":3}},{\"id\":\"n3b\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":3}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":8}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":4}},{\"id\":\"cb2\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":12}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 \u00b7 Kelas & Jadwal\",\"col\":12}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"nkr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"n6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":6}},{\"id\":\"s6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":6}},{\"id\":\"c3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"c4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"spakad\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hakad\",\"type\":\"header\",\"data\":{\"text\":\"4 \u00b7 Akademik\",\"col\":12}},{\"id\":\"cardakad\",\"type\":\"card\",\"data\":{\"card_name\":\"Akademik\",\"col\":4}}]",
+ "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat \u2014 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 \u00b7 Pendaftaran & Lead\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":4}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":2}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran\",\"col\":2}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 \u00b7 Murid\",\"col\":12}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"n3a\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru\",\"col\":3}},{\"id\":\"n3b\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":3}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":8}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":4}},{\"id\":\"cb2\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":12}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 \u00b7 Kelas & Jadwal\",\"col\":12}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"nkr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"n6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":6}},{\"id\":\"s6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":6}},{\"id\":\"c3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"c4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"spakad\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hakad\",\"type\":\"header\",\"data\":{\"text\":\"4 \u00b7 Akademik\",\"col\":12}},{\"id\":\"cardakad\",\"type\":\"card\",\"data\":{\"card_name\":\"Akademik\",\"col\":4}},{\"id\":\"sp4x\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h4persetujuan\",\"type\":\"header\",\"data\":{\"text\":\"5 \u00b7 Persetujuan\",\"col\":12}},{\"id\":\"p1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi Menunggu Persetujuan\",\"col\":4}},{\"id\":\"p2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BKM Menunggu Persetujuan\",\"col\":4}},{\"id\":\"p3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Presensi Diajukan\",\"col\":3}},{\"id\":\"p4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Diajukan\",\"col\":3}}]",
  "creation": "2026-06-28 05:28:21.643511",
  "custom_blocks": [
   {
@@ -56,7 +56,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-30 05:56:30.284562",
+ "modified": "2026-07-02 10:00:05.434562",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Admin Unit",
@@ -96,6 +96,14 @@
   {
    "label": "Kelas Reguler Kurang dari 4 Murid",
    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+  },
+  {
+   "label": "Presensi Menunggu Persetujuan",
+   "number_card_name": "Presensi Menunggu Persetujuan"
+  },
+  {
+   "label": "BKM Menunggu Persetujuan",
+   "number_card_name": "BKM Menunggu Persetujuan"
   }
  ],
  "owner": "Administrator",
@@ -165,11 +173,25 @@
    "type": "DocType"
   },
   {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Presensi Diajukan",
+   "type": "URL",
+   "url": "/app/rumba-sesi-kelas?workflow_state=Diajukan"
+  },
+  {
    "color": "Grey",
    "doc_view": "",
    "label": "Sesi Kelas",
    "link_to": "Rumba Sesi Kelas",
    "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "BKM Diajukan",
+   "type": "URL",
+   "url": "/app/rumba-bkm-entry?workflow_state=Diajukan"
   }
  ],
  "title": "Admin Unit",

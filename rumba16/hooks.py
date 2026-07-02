@@ -288,7 +288,7 @@ fixtures = [
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
     "Sales Invoice-rumba_event",
     "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch",
-    "Employee-tarif_honor_per_pertemuan",
+    "Employee-tarif_honor_per_pertemuan", "Rumba Kelas-tanggal_mulai", "Rumba Murid-kode_program",
     "Job Opening-rumba_unit", "Job Applicant-sumber", "Job Applicant-rumba_unit",
     "Employee Separation-jenis_pemberhentian", "Employee Separation-rumba_unit",
     "Exit Interview-section_penilaian_rumba",
@@ -335,6 +335,11 @@ fixtures = [
     {"dt": "Employee Separation Template", "filters": [["title", "in", [
     "Offboarding Tutor RUMBA", "Offboarding Admin Unit RUMBA", "Offboarding Kepala Unit RUMBA",
     "Offboarding Lead Tutor RUMBA", "Offboarding Pendukung RUMBA"
+    ]]]},
+    {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Custom HTML Block", "filters": [["name", "in", [
+    "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
+    "Sesi Saya Hari Ini"
     ]]]},
 ]
 
