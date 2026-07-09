@@ -35,7 +35,7 @@ def get_context(context):
         elif "Rumba Personalia" in roles:
             target = "/app/sdm"
         elif "Rumba Finance" in roles:
-            target = "/app/keuangan-(spp)"
+            target = "/app/keuangan"
         elif "Rumba Bisnis" in roles:
             target = "/app/crm-&-pendaftaran"
         elif "Rumba Akademik" in roles:
