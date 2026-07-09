@@ -24,8 +24,8 @@
  {
   "docstatus": 0,
   "doctype": "Custom HTML Block",
-  "html": "<div class=\"rpa-root\"><div class=\"rpa-title\">Murid Sering Absen — Alpa &gt; 4× (30 hari)</div><div class=\"rpa-list\"></div></div>",
-  "modified": "2026-06-28 15:35:20.273259",
+  "html": "<div class=\"rpa-root\"><div class=\"rpa-title\">Murid Kritis — Alpa &gt; 4× dalam 30 hari terakhir</div><div class=\"rpa-list\"></div></div>",
+  "modified": "2026-07-09 20:15:31.412493",
   "name": "Murid Sering Absen (Alpa)",
   "private": 0,
   "roles": [],
