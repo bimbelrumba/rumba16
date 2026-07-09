@@ -32,8 +32,16 @@ def get_context(context):
             target = "/app/admin-unit"         # menggantikan 1 baris lama:
         elif roles & TUTOR_ROLES:              # target = "/app/admin-unit" if (roles & UNIT_ROLES) else "/app/rumba"
             target = "/app/tutor"
+        elif "Rumba Personalia" in roles:
+            target = "/app/sdm"
+        elif "Rumba Finance" in roles:
+            target = "/app/keuangan-(spp)"
+        elif "Rumba Bisnis" in roles:
+            target = "/app/crm-&-pendaftaran"
+        elif "Rumba Akademik" in roles:
+            target = "/app/akademik"
         else:
-            target = "/app/rumba"
+            target = "/app/rumba"             # Founder & sisanya
 
     frappe.local.flags.redirect_location = target
     raise frappe.Redirect

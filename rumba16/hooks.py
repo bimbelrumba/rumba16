@@ -338,7 +338,7 @@ fixtures = [
     {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Custom HTML Block", "filters": [["name", "in", [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
-    "Sesi Saya Hari Ini"
+    "Sesi Saya Hari Ini", "Sumber Informasi Lead"
     ]]]},
 ]
 
