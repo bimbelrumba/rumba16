@@ -340,6 +340,19 @@ fixtures = [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
     "Sesi Saya Hari Ini", "Sumber Informasi Lead"
     ]]]},
+    {
+    "dt": "Custom Role",
+    "filters": [
+        ["report", "in", [
+            "Stock Balance",
+            "Stock Ledger",
+            "Mutasi Murid",
+            "Pengunduran Diri Murid",
+            "Daftar Tunggu (FIFO)",
+            "Rekap Kehadiran Murid",
+        ]]
+    ],
+},
 ]
 
 doc_events = {
