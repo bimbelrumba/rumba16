@@ -7,6 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "section_bimbel_rumba_tujuan",
+  "kode_provinsi",
+  "nama_provinsi",
   "nama_kota",
   "nama_unit",
   "column_break_jgrs",
@@ -539,12 +541,25 @@
    "fieldtype": "Link",
    "label": "Lead",
    "options": "Rumba Lead"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Provinsi",
+   "options": "Rumba Provinsi"
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "label": "Nama Provinsi",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-26 23:18:23.943585",
+ "modified": "2026-07-09 10:41:08.774132",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",

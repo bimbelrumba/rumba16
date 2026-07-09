@@ -66,7 +66,6 @@ home_page = "masuk"
 role_home_page = {
     "Rumba Admin Unit": "masuk",
     "Rumba Kepala Unit": "masuk",
-    "Rumba Lead Tutor": "masuk",
     "Rumba Tutor": "masuk",
     "Rumba Akademik": "masuk",
     "Rumba Finance": "masuk",
@@ -278,7 +277,7 @@ fixtures = [
     {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
-    {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
+    {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
     {"dt": "Workflow", "filters": [["name","in",["Persetujuan Presensi Sesi","Persetujuan BKM","Alur Event RUMBA"]]]},
     {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi","Draf","Pendaftaran Dibuka","Pendaftaran Ditutup","Berlangsung","Selesai","Dibatalkan"]]]},
     {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang","Buka Pendaftaran","Tutup Pendaftaran","Buka Kembali Pendaftaran","Mulai Event","Selesaikan","Batalkan"]]]},
@@ -313,7 +312,7 @@ fixtures = [
     ]]]},
     {"dt": "Employment Type", "filters": [["name", "in", ["Tetap","Kontrak","Paruh Waktu"]]]},
     {"dt": "Custom DocPerm", "filters": [["role", "in", [
-    "Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance",
+    "Rumba Kepala Unit","Rumba Admin Unit","Rumba Tutor","Rumba Finance",
     "Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"
     ]]]},
     {"dt": "Web Form", "filters": [["name", "in", ["kerja-di-rumba", "exit-interview-rumba"]]]},

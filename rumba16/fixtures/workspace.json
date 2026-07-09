@@ -307,7 +307,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 05:54:27.279488",
+  "modified": "2026-07-08 13:48:23.980670",
   "module": "Bimbel Rumba v16",
   "name": "Operasional Unit",
   "number_cards": [
@@ -339,9 +339,6 @@
    },
    {
     "role": "Rumba Kepala Unit"
-   },
-   {
-    "role": "Rumba Lead Tutor"
    },
    {
     "role": "Rumba Tutor"
@@ -541,7 +538,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-26 23:42:30.900402",
+  "modified": "2026-07-08 13:48:23.627300",
   "module": "Bimbel Rumba v16",
   "name": "Akademik",
   "number_cards": [
@@ -574,9 +571,6 @@
    },
    {
     "role": "Rumba Akademik"
-   },
-   {
-    "role": "Rumba Lead Tutor"
    },
    {
     "role": "Rumba Tutor"
@@ -1489,7 +1483,7 @@
   "link_to": null,
   "link_type": "DocType",
   "links": [],
-  "modified": "2026-07-02 09:56:40.178890",
+  "modified": "2026-07-08 13:48:23.304298",
   "module": "Bimbel Rumba v16",
   "name": "Tutor",
   "number_cards": [
@@ -1505,9 +1499,6 @@
   "roles": [
    {
     "role": "Rumba Tutor"
-   },
-   {
-    "role": "Rumba Lead Tutor"
    },
    {
     "role": "Rumba Founder"

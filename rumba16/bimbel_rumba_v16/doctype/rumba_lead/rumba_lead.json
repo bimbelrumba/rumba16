@@ -9,6 +9,8 @@
  "field_order": [
   "sec_identitas",
   "tanggal_lead",
+  "kode_provinsi",
+  "nama_provinsi",
   "nama_kota",
   "nama_unit",
   "kode_unit",
@@ -295,12 +297,25 @@
    "fieldname": "catatan_tunggu",
    "fieldtype": "Small Text",
    "label": "Catatan Daftar Tunggu"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Provinsi",
+   "options": "Rumba Provinsi"
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "label": "Nama Provinsi",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:32.758917",
+ "modified": "2026-07-09 10:41:05.239310",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Lead",
