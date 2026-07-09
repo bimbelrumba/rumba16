@@ -78,6 +78,7 @@
    "description": "Tutor lain (bukan wali kelas) sesuai ACD-CUR-001. Penegakan advisory.",
    "fieldname": "penguji",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Penguji",
    "options": "Employee",
    "reqd": 1
@@ -161,7 +162,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:48.106346",
+ "modified": "2026-07-09 21:22:57.402468",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Ujian Kenaikan Level",

@@ -80,6 +80,7 @@
    "fetch_from": "sesi_kelas.guru",
    "fieldname": "guru",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Guru",
    "options": "Employee",
    "read_only": 1
@@ -123,6 +124,7 @@
   {
    "fieldname": "paraf_guru",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Paraf Guru",
    "options": "Employee"
   },
@@ -150,7 +152,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:48.929820",
+ "modified": "2026-07-09 21:22:56.149376",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba BKM Entry",

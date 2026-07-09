@@ -52,6 +52,7 @@
   {
    "fieldname": "guru",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Guru",
    "options": "Employee",
    "reqd": 1
@@ -59,6 +60,7 @@
   {
    "fieldname": "guru_pengganti",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Guru Pengganti",
    "options": "Employee"
   },
@@ -106,7 +108,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:47.441707",
+ "modified": "2026-07-09 21:22:54.407740",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",
