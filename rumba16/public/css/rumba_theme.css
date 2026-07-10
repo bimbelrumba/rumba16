@@ -1,0 +1,228 @@
+/* ============================================================
+   RUMBA THEME — DESK (ERPNext v16 / rumba16)
+   File   : rumba_theme.css
+   Dok    : ERP-THEME-001 v1.0 (10 Jul 2026)
+   Muat   : hooks.py → app_include_css = "/assets/rumba16/css/rumba_theme.css"
+   Lingkup: Desk (backoffice) saja. Login & web form publik → rumba_web.css
+   Catatan: Dark mode BELUM di-override (backlog). Semua aturan
+            ditulis untuk tema light.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. PALET RESMI RUMBA
+   ------------------------------------------------------------ */
+:root {
+  --rumba-hijau:          #288f3d;   /* hijau terang — aksen utama */
+  --rumba-hijau-gelap:    #09601B;   /* hijau gelap — ujung gradasi, hover */
+  --rumba-kuning:         #EDCA0D;   /* kuning gelap — aksen sekunder */
+  --rumba-kuning-terang:  #F9E788;   /* kuning terang */
+  --rumba-merah:          #E31E1E;   /* merah terang — aksi berbahaya, tagihan */
+  --rumba-merah-gelap:    #780909;   /* merah gelap — hover aksi berbahaya */
+
+  /* Tint turunan (latar lembut untuk chip/hover/status) */
+  --rumba-hijau-tint:     #e6f4e9;
+  --rumba-kuning-tint:    #fdf7dc;
+  --rumba-merah-tint:     #fdeaea;
+
+  --rumba-gradasi-hijau:  linear-gradient(135deg, #288f3d 0%, #09601B 100%);
+  --rumba-gradasi-merah:  linear-gradient(135deg, #E31E1E 0%, #780909 100%);
+}
+
+/* ------------------------------------------------------------
+   2. OVERRIDE VARIABEL FRAPPE (tema light)
+   Variabel inti yang dipakai komponen bawaan: tombol primer,
+   fokus input, checkbox, link, sidebar terpilih.
+   ------------------------------------------------------------ */
+:root,
+[data-theme="light"] {
+  --primary:              var(--rumba-hijau);
+  --primary-color:        var(--rumba-hijau);
+  --btn-primary:          var(--rumba-hijau);
+  --checkbox-color:       var(--rumba-hijau);
+  --checkbox-focus-shadow: 0 0 0 2px var(--rumba-hijau-tint);
+  --sidebar-select-color: var(--rumba-hijau-tint);
+  --scrollbar-thumb-color: #c9dccd;
+}
+
+/* ------------------------------------------------------------
+   3. TOMBOL
+   ------------------------------------------------------------ */
+/* Primer: gradasi hijau (gaya Timedoor) */
+.btn-primary,
+.btn.btn-primary {
+  background: var(--rumba-gradasi-hijau) !important;
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn.btn-primary:hover {
+  background: var(--rumba-hijau-gelap) !important;
+  border-color: var(--rumba-hijau-gelap) !important;
+}
+
+/* Sekunder / warning (mis. tombol "Sinkron"): kuning RUMBA */
+.btn-warning,
+.btn.btn-warning {
+  background: var(--rumba-kuning) !important;
+  border-color: var(--rumba-kuning) !important;
+  color: #3a3104 !important;
+}
+.btn-warning:hover { filter: brightness(0.95); }
+
+/* Bahaya: merah RUMBA */
+.btn-danger,
+.btn.btn-danger {
+  background: var(--rumba-merah) !important;
+  border-color: var(--rumba-merah-gelap) !important;
+  color: #fff !important;
+}
+.btn-danger:hover { background: var(--rumba-merah-gelap) !important; }
+
+/* ------------------------------------------------------------
+   4. SIDEBAR DESK
+   Item aktif bergradasi hijau + teks putih (gaya Timedoor).
+   ⚠ Selector .desk-sidebar-item.selected perlu diverifikasi di
+   markup Frappe v16 asli (lihat panduan §7 Risiko).
+   ------------------------------------------------------------ */
+.desk-sidebar-item.selected,
+.desk-sidebar .desk-sidebar-item.selected,
+.sidebar-item-container .item-anchor.active,
+.standard-sidebar-item.selected {
+  background: var(--rumba-gradasi-hijau) !important;
+  border-radius: 8px;
+}
+.desk-sidebar-item.selected span,
+.desk-sidebar-item.selected .sidebar-item-label,
+.desk-sidebar-item.selected svg,
+.standard-sidebar-item.selected span,
+.standard-sidebar-item.selected svg {
+  color: #fff !important;
+  fill: #fff;
+  stroke: #fff;
+}
+
+/* Hover item sidebar: tint hijau lembut */
+.desk-sidebar-item:not(.selected):hover,
+.standard-sidebar-item:not(.selected):hover {
+  background: var(--rumba-hijau-tint) !important;
+  border-radius: 8px;
+}
+
+/* ------------------------------------------------------------
+   5. NAVBAR
+   ------------------------------------------------------------ */
+.navbar {
+  border-bottom: 2px solid var(--rumba-hijau);
+}
+
+/* ------------------------------------------------------------
+   6. LINK, FOKUS INPUT, ELEMEN FORM
+   ------------------------------------------------------------ */
+a:not(.btn),
+.text-primary { color: var(--rumba-hijau); }
+a:not(.btn):hover { color: var(--rumba-hijau-gelap); }
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--rumba-hijau) !important;
+  box-shadow: 0 0 0 2px var(--rumba-hijau-tint) !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--rumba-hijau) !important;
+  border-color: var(--rumba-hijau) !important;
+}
+
+/* Switch/toggle aktif */
+.switch input:checked + .slider,
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--rumba-hijau) !important;
+  border-color: var(--rumba-hijau) !important;
+}
+
+/* ------------------------------------------------------------
+   7. KARTU ANALITIK / NUMBER CARD / WORKSPACE
+   Chip ikon berwarna ala kartu analitik Timedoor.
+   Jalur UTAMA warna angka merah = properti "Color" di Number Card
+   (fixture) — CSS di bawah hanya penyelaras tampilan kartu.
+   ------------------------------------------------------------ */
+.widget.number-widget-box {
+  border: 1px solid #e3e8e4;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(9, 96, 27, 0.06);
+}
+.widget.number-widget-box:hover {
+  border-color: var(--rumba-hijau);
+  box-shadow: 0 2px 8px rgba(9, 96, 27, 0.12);
+}
+
+/* Judul shortcut/kartu di workspace */
+.widget .widget-head .widget-title { font-weight: 600; }
+
+/* Chip ikon workspace (bulatan latar tint hijau) */
+.widget .widget-head .widget-icon,
+.workspace-sidebar-item .item-icon {
+  background: var(--rumba-hijau-tint);
+  border-radius: 8px;
+}
+
+/* ------------------------------------------------------------
+   8. LOGOUT MERAH
+   ⚠ Selector bergantung pada atribut onclick logout di dropdown
+   navbar Frappe v16 — verifikasi via inspect (panduan §7).
+   ------------------------------------------------------------ */
+.dropdown-menu .dropdown-item[onclick*="logout"],
+.dropdown-menu a[href*="logout"] {
+  color: var(--rumba-merah) !important;
+  font-weight: 600;
+}
+.dropdown-menu .dropdown-item[onclick*="logout"]:hover,
+.dropdown-menu a[href*="logout"]:hover {
+  background: var(--rumba-merah-tint) !important;
+  color: var(--rumba-merah-gelap) !important;
+}
+
+/* ------------------------------------------------------------
+   9. INDICATOR PILL (list view & form)
+   Menyelaraskan pill bawaan ke palet RUMBA.
+   Warna pill dipilih di <doctype>_list.js (lihat pola
+   get_indicator/formatters — memori erp-listview-status-warna).
+   ------------------------------------------------------------ */
+.indicator-pill.green,
+.indicator-pill.green .indicator-dot::before {
+  background: var(--rumba-hijau-tint);
+  color: var(--rumba-hijau-gelap);
+}
+.indicator-pill.red {
+  background: var(--rumba-merah-tint);
+  color: var(--rumba-merah-gelap);
+}
+.indicator-pill.yellow,
+.indicator-pill.orange {
+  background: var(--rumba-kuning-tint);
+  color: #7a6503;
+}
+
+/* ------------------------------------------------------------
+   10. KELAS BANTU RUMBA
+   .rumba-merah = FALLBACK bila properti Color Number Card tidak
+   tersedia — dipakai untuk "Belum Dibayar" & "Tunggakan >30 hari".
+   ------------------------------------------------------------ */
+.rumba-merah,
+.rumba-merah .widget-content .number {
+  color: var(--rumba-merah) !important;
+  font-weight: 700;
+}
+.rumba-hijau  { color: var(--rumba-hijau) !important; }
+.rumba-kuning { color: var(--rumba-kuning) !important; }
+.rumba-bg-hijau-tint  { background: var(--rumba-hijau-tint) !important; }
+.rumba-bg-kuning-tint { background: var(--rumba-kuning-tint) !important; }
+.rumba-bg-merah-tint  { background: var(--rumba-merah-tint) !important; }
+
+/* ============================================================
+   SELESAI — rumba_theme.css v1.0
+   ============================================================ */

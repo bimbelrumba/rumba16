@@ -24,11 +24,11 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/rumba16/css/rumba16.css"
+app_include_css = "/assets/rumba16/css/rumba_theme.css"
 # app_include_js = "/assets/rumba16/js/rumba16.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/rumba16/css/rumba16.css"
+web_include_css = "/assets/rumba16/css/rumba_web.css"
 # web_include_js = "/assets/rumba16/js/rumba16.js"
 
 # include custom scss in every website theme (without file extension ".scss")

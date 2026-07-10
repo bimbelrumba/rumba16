@@ -1,0 +1,140 @@
+/* ============================================================
+   RUMBA THEME — WEB (login + web form publik)
+   File   : rumba_web.css
+   Dok    : ERP-THEME-001 v1.0 (10 Jul 2026)
+   Muat   : hooks.py → web_include_css = "/assets/rumba16/css/rumba_web.css"
+   Lingkup: Halaman login, /kelas-gratis, /pendaftaran-murid-baru,
+            /daftar-event, /lamaran, dan web form publik lain.
+   Keputusan 10 Jul 2026: halaman login memakai DESAIN BAWAAN
+   ERPNext, hanya RECOLOR (bukan split page ala Timedoor).
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. PALET RESMI RUMBA
+   ------------------------------------------------------------ */
+:root {
+  --rumba-hijau:          #288f3d;
+  --rumba-hijau-gelap:    #09601B;
+  --rumba-kuning:         #EDCA0D;
+  --rumba-kuning-terang:  #F9E788;
+  --rumba-merah:          #E31E1E;
+  --rumba-merah-gelap:    #780909;
+  --rumba-hijau-tint:     #e6f4e9;
+  --rumba-kuning-tint:    #fdf7dc;
+  --rumba-merah-tint:     #fdeaea;
+  --rumba-gradasi-hijau:  linear-gradient(135deg, #288f3d 0%, #09601B 100%);
+
+  /* Variabel yang dipakai template web Frappe */
+  --primary:       var(--rumba-hijau);
+  --primary-color: var(--rumba-hijau);
+  --btn-primary:   var(--rumba-hijau);
+}
+
+/* ------------------------------------------------------------
+   2. HALAMAN LOGIN (recolor desain bawaan)
+   ------------------------------------------------------------ */
+.for-login .page-card,
+.for-signup .page-card,
+.for-forgot .page-card {
+  border-top: 4px solid var(--rumba-hijau);
+  border-radius: 10px;
+}
+
+.for-login .btn-primary,
+.for-signup .btn-primary,
+.for-forgot .btn-primary,
+.page-card .btn-primary,
+.btn-login {
+  background: var(--rumba-gradasi-hijau) !important;
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.for-login .btn-primary:hover,
+.page-card .btn-primary:hover,
+.btn-login:hover {
+  background: var(--rumba-hijau-gelap) !important;
+}
+
+/* Tautan (lupa password, dsb.) */
+.for-login a,
+.for-signup a,
+.for-forgot a,
+.page-card a {
+  color: var(--rumba-hijau);
+}
+.for-login a:hover,
+.page-card a:hover {
+  color: var(--rumba-hijau-gelap);
+}
+
+/* Fokus input login */
+.for-login .form-control:focus,
+.page-card .form-control:focus {
+  border-color: var(--rumba-hijau) !important;
+  box-shadow: 0 0 0 2px var(--rumba-hijau-tint) !important;
+}
+
+/* ------------------------------------------------------------
+   3. WEB FORM PUBLIK
+   (/kelas-gratis, /pendaftaran-murid-baru, /daftar-event, dst.)
+   ------------------------------------------------------------ */
+.web-form-container .btn-primary,
+.web-form .btn-primary,
+.web-form-actions .btn-primary {
+  background: var(--rumba-gradasi-hijau) !important;
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.web-form-container .btn-primary:hover {
+  background: var(--rumba-hijau-gelap) !important;
+}
+
+.web-form-container .form-control:focus,
+.web-form .form-control:focus {
+  border-color: var(--rumba-hijau) !important;
+  box-shadow: 0 0 0 2px var(--rumba-hijau-tint) !important;
+}
+
+/* Checkbox (mis. 11 checkbox sumber info di /kelas-gratis) */
+.web-form input[type="checkbox"]:checked,
+.web-form-container input[type="checkbox"]:checked {
+  background-color: var(--rumba-hijau) !important;
+  border-color: var(--rumba-hijau) !important;
+}
+
+/* Judul & progress web form multi-halaman */
+.web-form-header .title { color: var(--rumba-hijau-gelap); }
+.web-form-container .progress-bar {
+  background-color: var(--rumba-hijau) !important;
+}
+
+/* Pesan sukses setelah submit */
+.web-form-container .alert-success,
+.success-page {
+  background: var(--rumba-hijau-tint);
+  border-color: var(--rumba-hijau);
+  color: var(--rumba-hijau-gelap);
+}
+
+/* ------------------------------------------------------------
+   4. NAVBAR & FOOTER WEBSITE
+   ------------------------------------------------------------ */
+.navbar-light,
+.web-footer {
+  border-color: var(--rumba-hijau-tint);
+}
+.navbar-light .nav-link:hover { color: var(--rumba-hijau) !important; }
+
+a { color: var(--rumba-hijau); }
+a:hover { color: var(--rumba-hijau-gelap); }
+
+/* ------------------------------------------------------------
+   5. KELAS BANTU (paritas dengan rumba_theme.css)
+   ------------------------------------------------------------ */
+.rumba-merah  { color: var(--rumba-merah) !important; font-weight: 700; }
+.rumba-hijau  { color: var(--rumba-hijau) !important; }
+.rumba-kuning { color: var(--rumba-kuning) !important; }
+
+/* ============================================================
+   SELESAI — rumba_web.css v1.0
+   ============================================================ */
