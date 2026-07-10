@@ -83,18 +83,19 @@
 /* ------------------------------------------------------------
    4. SIDEBAR DESK
    Item aktif bergradasi hijau + teks putih (gaya Timedoor).
-   ⚠ Selector .desk-sidebar-item.selected perlu diverifikasi di
-   markup Frappe v16 asli (lihat panduan §7 Risiko).
+   ✔ DIVERIFIKASI di dev.bimbelrumba.id 10 Jul 2026: markup
+   Frappe v16 = .standard-sidebar-item.active-sidebar
+   (bukan .selected). Selector lama disimpan sebagai fallback.
    ------------------------------------------------------------ */
+.standard-sidebar-item.active-sidebar,
 .desk-sidebar-item.selected,
-.desk-sidebar .desk-sidebar-item.selected,
-.sidebar-item-container .item-anchor.active,
 .standard-sidebar-item.selected {
   background: var(--rumba-gradasi-hijau) !important;
   border-radius: 8px;
 }
+.standard-sidebar-item.active-sidebar span,
+.standard-sidebar-item.active-sidebar svg,
 .desk-sidebar-item.selected span,
-.desk-sidebar-item.selected .sidebar-item-label,
 .desk-sidebar-item.selected svg,
 .standard-sidebar-item.selected span,
 .standard-sidebar-item.selected svg {
@@ -104,8 +105,8 @@
 }
 
 /* Hover item sidebar: tint hijau lembut */
-.desk-sidebar-item:not(.selected):hover,
-.standard-sidebar-item:not(.selected):hover {
+.standard-sidebar-item:not(.active-sidebar):not(.selected):hover,
+.desk-sidebar-item:not(.selected):hover {
   background: var(--rumba-hijau-tint) !important;
   border-radius: 8px;
 }
@@ -150,14 +151,47 @@ input[type="checkbox"]:checked {
    Jalur UTAMA warna angka merah = properti "Color" di Number Card
    (fixture) — CSS di bawah hanya penyelaras tampilan kartu.
    ------------------------------------------------------------ */
-.widget.number-widget-box {
-  border: 1px solid #e3e8e4;
+/* Outline hijau semua kotak workspace
+   ✔ DIVERIFIKASI di dev 10 Jul 2026 (halaman Admin Unit): kelas
+   widget v16 = shortcut-widget-box / links-widget-box /
+   number-widget-box / dashboard-widget-box */
+.widget.shortcut-widget-box,
+.widget.links-widget-box,
+.widget.number-widget-box,
+.widget.dashboard-widget-box {
+  border: 1px solid var(--rumba-hijau) !important;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(9, 96, 27, 0.06);
 }
-.widget.number-widget-box:hover {
-  border-color: var(--rumba-hijau);
-  box-shadow: 0 2px 8px rgba(9, 96, 27, 0.12);
+.widget.shortcut-widget-box:hover,
+.widget.links-widget-box:hover,
+.widget.number-widget-box:hover,
+.widget.dashboard-widget-box:hover {
+  border-color: var(--rumba-hijau-gelap) !important;
+  box-shadow: 0 2px 8px rgba(9, 96, 27, 0.15);
+}
+
+/* Hover isi kotak: tint hijau, selaras hover sidebar kiri.
+   Kotak shortcut/angka di-tint utuh; di kotak Menu (links) yang
+   di-tint per item link-nya (a.link-item), bukan seluruh kotak. */
+.widget.shortcut-widget-box:hover,
+.widget.number-widget-box:hover,
+.widget.dashboard-widget-box:hover {
+  background: var(--rumba-hijau-tint) !important;
+}
+.widget.links-widget-box .link-item:hover {
+  background: var(--rumba-hijau-tint) !important;
+  border-radius: 6px;
+}
+
+/* Judul seksi workspace ("Info Cepat", "Tambah Baru", "Menu"):
+   hijau gelap + semi-tebal. Konten workspace dirender Editor.js
+   (codex-editor), judulnya span.h4 di dalam .ce-header. */
+.codex-editor .ce-header,
+.codex-editor .ce-header .h4,
+.codex-editor .ce-header span {
+  color: var(--rumba-hijau-gelap) !important;
+  font-weight: 600 !important;
 }
 
 /* Judul shortcut/kartu di workspace */
@@ -170,16 +204,143 @@ input[type="checkbox"]:checked {
   border-radius: 8px;
 }
 
+/* Judul kartu shortcut: semi-tebal (permintaan Sisco 10 Jul 2026) */
+.widget.shortcut-widget-box .widget-title,
+.widget.shortcut-widget-box .widget-title span {
+  font-weight: 600 !important;
+}
+
+/* ------------------------------------------------------------
+   7b. KARTU "INFO CEPAT" — ikon chip + pill di bawah judul
+   ✔ DIVERIFIKASI live di dev 10 Jul 2026 (workspace Admin Unit).
+   Gaya kartu analitik Timedoor: chip ikon berwarna di kiri,
+   judul semi-tebal, pill jumlah di bawah judul (rata kiri),
+   panah pindah ke pojok kanan-atas.
+   CATATAN: kotak ditarget lewat aria-label (= label shortcut).
+   Bila label shortcut diganti di workspace, selector ini harus
+   ikut diperbarui (kalau tidak, kotak itu kembali ke layout
+   bawaan tanpa ikon — tidak rusak, hanya polos).
+   Warna chip: hijau = alur masuk, merah = perlu perhatian,
+   kuning = menunggu persetujuan (sesuai palet ERP-THEME-001).
+   ------------------------------------------------------------ */
+.widget.shortcut-widget-box[aria-label="Lead Baru"],
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"],
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"],
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"],
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"],
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] {
+  position: relative;
+}
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-head,
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-head,
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-head,
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-head,
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-head,
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+/* Chip ikon (pseudo-element jadi item grid, kolom 1 melintang 2 baris) */
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-head::before,
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-head::before,
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-head::before,
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-head::before,
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-head::before,
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-head::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-label,
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-label,
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-label,
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-label,
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-label,
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-label {
+  grid-column: 2;
+  grid-row: 1;
+}
+/* Pill jumlah: pindah ke bawah judul, rata kiri */
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-control,
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-control,
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-control,
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-control,
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-control,
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-control {
+  grid-column: 2;
+  grid-row: 2;
+  justify-content: flex-start !important;
+  justify-self: start !important;
+  margin: 2px 0 0 0 !important;
+}
+/* Panah ↗ dipindah ke pojok kanan-atas kartu */
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-control svg,
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-control svg,
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-control svg,
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-control svg,
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-control svg,
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-control svg {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  margin: 0;
+}
+/* Ikon per kartu (SVG inline gaya Feather, stroke warna gelap palet) */
+.widget.shortcut-widget-box[aria-label="Lead Baru"] .widget-head::before {
+  background-color: var(--rumba-hijau-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2309601B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>');
+}
+.widget.shortcut-widget-box[aria-label="Pendaftaran Baru"] .widget-head::before {
+  background-color: var(--rumba-hijau-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2309601B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>');
+}
+.widget.shortcut-widget-box[aria-label="SPP Belum Dibayar"] .widget-head::before {
+  background-color: var(--rumba-merah-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23780909" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>');
+}
+.widget.shortcut-widget-box[aria-label="Kelas Kritis"] .widget-head::before {
+  background-color: var(--rumba-merah-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23780909" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>');
+}
+.widget.shortcut-widget-box[aria-label="Sesi Perlu Disetujui"] .widget-head::before {
+  background-color: var(--rumba-kuning-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23806a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>');
+}
+.widget.shortcut-widget-box[aria-label="BKM Perlu Disetujui"] .widget-head::before {
+  background-color: var(--rumba-kuning-tint);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23806a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01"/></svg>');
+}
+
 /* ------------------------------------------------------------
    8. LOGOUT MERAH
-   ⚠ Selector bergantung pada atribut onclick logout di dropdown
-   navbar Frappe v16 — verifikasi via inspect (panduan §7).
+   ✔ DIVERIFIKASI di dev.bimbelrumba.id 10 Jul 2026: item Logout
+   di Frappe v16 = <a> TANPA class/onclick di dalam
+   .frappe-menu .dropdown-menu-item, dikenali lewat ikonnya
+   (use[href="#icon-logout"]) via :has(). Selector lama disimpan
+   sebagai fallback.
    ------------------------------------------------------------ */
+.dropdown-menu-item a:has(use[href="#icon-logout"]),
 .dropdown-menu .dropdown-item[onclick*="logout"],
 .dropdown-menu a[href*="logout"] {
   color: var(--rumba-merah) !important;
   font-weight: 600;
 }
+.dropdown-menu-item a:has(use[href="#icon-logout"]) span {
+  color: var(--rumba-merah) !important;
+}
+.dropdown-menu-item a:has(use[href="#icon-logout"]) svg {
+  stroke: var(--rumba-merah);
+  color: var(--rumba-merah);
+}
+.dropdown-menu-item a:has(use[href="#icon-logout"]):hover,
 .dropdown-menu .dropdown-item[onclick*="logout"]:hover,
 .dropdown-menu a[href*="logout"]:hover {
   background: var(--rumba-merah-tint) !important;
