@@ -353,6 +353,15 @@ fixtures = [
         ]]
     ],
 },
+{
+    "dt": "Property Setter",
+    "filters": [
+        ["name", "in", [
+            "Sales Invoice-write_off_cost_center-ignore_user_permissions",
+            "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
+        ]]
+    ],
+},
 ]
 
 doc_events = {

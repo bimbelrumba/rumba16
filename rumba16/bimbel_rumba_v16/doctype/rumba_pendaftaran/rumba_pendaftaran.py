@@ -194,12 +194,16 @@ def buat_sales_invoice(pendaftaran, item_code, rate, due_date=None, submit_invoi
     invoice.due_date = due_date or add_days(nowdate(), 7)
     # F4b — tag unit pada tagihan pendaftaran (melengkapi gerbang tunggakan G6/F9).
     invoice.rumba_unit = doc.nama_unit
+    cost_center = frappe.db.get_value("Rumba Unit", doc.nama_unit, "cost_center") if doc.nama_unit else None
+    if cost_center:
+        invoice.cost_center = cost_center
     invoice.append(
         "items",
         {
             "item_code": item_code,
             "qty": 1,
             "rate": rate,
+            "cost_center": cost_center,
             "description": _("Tagihan pendaftaran {0} - {1}").format(
                 doc.name, doc.nama_lengkap
             ),
