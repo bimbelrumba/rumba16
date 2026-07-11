@@ -141,10 +141,16 @@ role_home_page = {
 
 permission_query_conditions = {
     "Rumba Mutasi": "rumba16.permissions.mutasi_query_conditions",
+    "Rumba Kelas": "rumba16.permissions.kelas_query_conditions",
+    "Rumba Sesi Kelas": "rumba16.permissions.sesi_query_conditions",
+    "Rumba BKM Entry": "rumba16.permissions.bkm_query_conditions",
 }
 
 has_permission = {
     "Rumba Mutasi": "rumba16.permissions.mutasi_has_permission",
+    "Rumba Kelas": "rumba16.permissions.kelas_has_permission",
+    "Rumba Sesi Kelas": "rumba16.permissions.sesi_has_permission",
+    "Rumba BKM Entry": "rumba16.permissions.bkm_has_permission",
 }
 
 # Document Events
@@ -336,6 +342,7 @@ fixtures = [
     "Offboarding Lead Tutor RUMBA", "Offboarding Pendukung RUMBA"
     ]]]},
     {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Workspace Sidebar", "filters": [["name", "in", ["Bimbel Rumba v16"]]]},
     {"dt": "Custom HTML Block", "filters": [["name", "in", [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
     "Sesi Saya Hari Ini", "Sumber Informasi Lead"

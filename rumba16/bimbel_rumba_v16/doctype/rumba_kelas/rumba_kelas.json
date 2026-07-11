@@ -14,6 +14,7 @@
   "panduan_nama_kelas",
   "status_kelas",
   "program_periode_section",
+  "wali_kelas",
   "tahun_ajaran",
   "semester",
   "column_break_bbwv",
@@ -223,12 +224,21 @@
    "fieldtype": "Table",
    "label": "Anggota Kelas",
    "options": "Rumba Anggota Kelas"
+  },
+  {
+   "description": "Tutor pengampu utama kelas ini. Menentukan kelas mana yang tampil untuk akun Tutor.",
+   "fieldname": "wali_kelas",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Wali Kelas (Tutor)",
+   "options": "Employee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:34.317834",
+ "modified": "2026-07-11 08:38:39.187243",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",

@@ -11,7 +11,7 @@
   }
  ],
  "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Operasional Unit\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mutasi\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pengunduran Diri\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Murid per Unit\",\"col\":6}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas per Unit\",\"col\":6}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Murid & Kelas\",\"col\":4}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Perpindahan\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Kelas\",\"label\":\"Kelas\",\"col\":4}}]",
- "creation": "2026-06-26 21:09:01.856842",
+ "creation": "2026-07-10 13:42:02.238945",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -103,7 +103,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-30 05:54:27.279488",
+ "modified": "2026-07-11 08:38:11.822982",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Operasional Unit",
@@ -135,9 +135,6 @@
   },
   {
    "role": "Rumba Kepala Unit"
-  },
-  {
-   "role": "Rumba Tutor"
   }
  ],
  "sequence_id": 2.0,

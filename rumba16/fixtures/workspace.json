@@ -408,7 +408,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-08 13:48:23.980670",
+  "modified": "2026-07-11 08:38:11.822982",
   "module": "Bimbel Rumba v16",
   "name": "Operasional Unit",
   "number_cards": [
@@ -440,9 +440,6 @@
    },
    {
     "role": "Rumba Kepala Unit"
-   },
-   {
-    "role": "Rumba Tutor"
    }
   ],
   "sequence_id": 2.0,
@@ -639,7 +636,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-08 13:48:23.627300",
+  "modified": "2026-07-11 08:38:12.932291",
   "module": "Bimbel Rumba v16",
   "name": "Akademik",
   "number_cards": [
@@ -672,9 +669,6 @@
    },
    {
     "role": "Rumba Akademik"
-   },
-   {
-    "role": "Rumba Tutor"
    },
    {
     "role": "Rumba Kepala Unit"
@@ -1939,7 +1933,7 @@
  {
   "app": "rumba16",
   "charts": [],
-  "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"⚡ Aksi Cepat — Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Kelas\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 · Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 · Kelas & Murid\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Murid\",\"col\":3}}]",
+  "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"⚡ Aksi Cepat — Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Kelas\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 · Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 · Kelas & Murid\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Murid\",\"col\":3}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 · Izin & Guru Pengganti\",\"col\":12}},{\"id\":\"p1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Ajukan izin bila berhalangan mengajar. Sesi yang Anda gantikan otomatis tampil di daftar Sesi Kelas Anda.\",\"col\":12}},{\"id\":\"s5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Ajukan Izin/Cuti\",\"col\":3}},{\"id\":\"s6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Izin & Cuti Saya\",\"col\":3}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Sesi Saya Hari Ini",
@@ -1958,7 +1952,7 @@
   "link_to": null,
   "link_type": "DocType",
   "links": [],
-  "modified": "2026-07-08 13:48:23.304298",
+  "modified": "2026-07-11 08:39:54.592909",
   "module": "Bimbel Rumba v16",
   "name": "Tutor",
   "number_cards": [
@@ -2064,130 +2058,37 @@
     "stats_filter": null,
     "type": "DocType",
     "url": null
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Ajukan Izin/Cuti",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/leave-application/new"
+   },
+   {
+    "color": "Grey",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Izin & Cuti Saya",
+    "link_to": "Leave Application",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
    }
   ],
   "title": "Tutor",
-  "type": "Workspace"
- },
- {
-  "app": "rumba16",
-  "charts": [
-   {
-    "chart_name": "Tren Murid Aktif per Bulan",
-    "label": "Tren Murid Aktif per Bulan"
-   },
-   {
-    "chart_name": "Tren Leads per Bulan",
-    "label": "Tren Leads per Bulan"
-   },
-   {
-    "chart_name": "Murid per Unit",
-    "label": "Murid per Unit"
-   },
-   {
-    "chart_name": "Leads per Unit",
-    "label": "Leads per Unit"
-   },
-   {
-    "chart_name": "Sesi Terlaksana per Bulan",
-    "label": "Sesi Terlaksana per Bulan"
-   },
-   {
-    "chart_name": "Kelas Aktif per Bulan",
-    "label": "Kelas Aktif per Bulan"
-   }
-  ],
-  "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"RUMBA — Pusat Kendali Operasi\",\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 · Pertumbuhan\",\"col\":12}},{\"id\":\"c1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"c2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"c3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Leads\",\"col\":3}},{\"id\":\"c4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":3}},{\"id\":\"ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":6}},{\"id\":\"ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Leads per Bulan\",\"col\":6}},{\"id\":\"ch3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Murid per Unit\",\"col\":6}},{\"id\":\"ch4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leads per Unit\",\"col\":6}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 · Operasional\",\"col\":12}},{\"id\":\"c5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":3}},{\"id\":\"c6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"c7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":3}},{\"id\":\"c8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"ch5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"ch6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 · Keuangan (SPP)\",\"col\":12}},{\"id\":\"c9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":3}},{\"id\":\"c10\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":3}},{\"id\":\"c11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":3}},{\"id\":\"c12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":3}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"4 · SDM\",\"col\":12}},{\"id\":\"c13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":3}},{\"id\":\"c14\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":3}},{\"id\":\"c15\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":3}}]",
-  "custom_blocks": [],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "external_link": null,
-  "for_user": null,
-  "hide_custom": 0,
-  "icon": "getting-started",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "RUMBA",
-  "link_to": null,
-  "link_type": "DocType",
-  "links": [],
-  "modified": "2026-07-09 22:54:56.291476",
-  "module": "Bimbel Rumba v16",
-  "name": "RUMBA",
-  "number_cards": [
-   {
-    "label": "Murid Aktif",
-    "number_card_name": "Murid Aktif"
-   },
-   {
-    "label": "Total Leads",
-    "number_card_name": "Total Leads"
-   },
-   {
-    "label": "Sesi Hari Ini",
-    "number_card_name": "Sesi Hari Ini"
-   },
-   {
-    "label": "Kelas Berjalan",
-    "number_card_name": "Kelas Berjalan"
-   },
-   {
-    "label": "Murid Baru Bulan Ini",
-    "number_card_name": "Murid Baru Bulan Ini"
-   },
-   {
-    "label": "Total Terdaftar",
-    "number_card_name": "Total Terdaftar"
-   },
-   {
-    "label": "Kelas Reguler Kurang dari 4 Murid",
-    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
-   },
-   {
-    "label": "Murid Berhenti",
-    "number_card_name": "Murid Berhenti"
-   },
-   {
-    "label": "Nominal SPP Terbit Bulan Ini",
-    "number_card_name": "Nominal SPP Terbit Bulan Ini"
-   },
-   {
-    "label": "Nominal SPP Terbayar Bulan Ini",
-    "number_card_name": "Nominal SPP Terbayar Bulan Ini"
-   },
-   {
-    "label": "Nominal SPP Belum Dibayar",
-    "number_card_name": "Nominal SPP Belum Dibayar"
-   },
-   {
-    "label": "Invoice SPP Belum Dibayar",
-    "number_card_name": "Invoice SPP Belum Dibayar"
-   },
-   {
-    "label": "Total Employees",
-    "number_card_name": "Total Employees"
-   },
-   {
-    "label": "Pelamar Belum Diproses",
-    "number_card_name": "Pelamar Belum Diproses"
-   },
-   {
-    "label": "Cuti Menunggu Persetujuan",
-    "number_card_name": "Cuti Menunggu Persetujuan"
-   }
-  ],
-  "parent_page": "",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [
-   {
-    "role": "Rumba Founder"
-   }
-  ],
-  "sequence_id": 0.0,
-  "shortcuts": [],
-  "title": "RUMBA",
   "type": "Workspace"
  },
  {
@@ -2863,6 +2764,127 @@
    }
   ],
   "title": "Keuangan",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [
+   {
+    "chart_name": "Tren Murid Aktif per Bulan",
+    "label": "Tren Murid Aktif per Bulan"
+   },
+   {
+    "chart_name": "Tren Leads per Bulan",
+    "label": "Tren Leads per Bulan"
+   },
+   {
+    "chart_name": "Murid per Unit",
+    "label": "Murid per Unit"
+   },
+   {
+    "chart_name": "Leads per Unit",
+    "label": "Leads per Unit"
+   },
+   {
+    "chart_name": "Sesi Terlaksana per Bulan",
+    "label": "Sesi Terlaksana per Bulan"
+   },
+   {
+    "chart_name": "Kelas Aktif per Bulan",
+    "label": "Kelas Aktif per Bulan"
+   }
+  ],
+  "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"RUMBA — Pusat Kendali Operasi\",\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 · Pertumbuhan\",\"col\":12}},{\"id\":\"c1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"c2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"c3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Leads\",\"col\":3}},{\"id\":\"c4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":3}},{\"id\":\"ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":6}},{\"id\":\"ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Leads per Bulan\",\"col\":6}},{\"id\":\"ch3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Murid per Unit\",\"col\":6}},{\"id\":\"ch4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leads per Unit\",\"col\":6}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 · Operasional\",\"col\":12}},{\"id\":\"c5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":3}},{\"id\":\"c6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"c7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":3}},{\"id\":\"c8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"ch5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"ch6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 · Keuangan (SPP)\",\"col\":12}},{\"id\":\"c9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":3}},{\"id\":\"c10\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":3}},{\"id\":\"c11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":3}},{\"id\":\"c12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":3}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"4 · SDM\",\"col\":12}},{\"id\":\"c13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":3}},{\"id\":\"c14\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":3}},{\"id\":\"c15\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 0,
+  "icon": "getting-started",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "RUMBA",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [],
+  "modified": "2026-07-09 22:54:56.291476",
+  "module": "Bimbel Rumba v16",
+  "name": "RUMBA",
+  "number_cards": [
+   {
+    "label": "Murid Aktif",
+    "number_card_name": "Murid Aktif"
+   },
+   {
+    "label": "Total Leads",
+    "number_card_name": "Total Leads"
+   },
+   {
+    "label": "Sesi Hari Ini",
+    "number_card_name": "Sesi Hari Ini"
+   },
+   {
+    "label": "Kelas Berjalan",
+    "number_card_name": "Kelas Berjalan"
+   },
+   {
+    "label": "Murid Baru Bulan Ini",
+    "number_card_name": "Murid Baru Bulan Ini"
+   },
+   {
+    "label": "Total Terdaftar",
+    "number_card_name": "Total Terdaftar"
+   },
+   {
+    "label": "Kelas Reguler Kurang dari 4 Murid",
+    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+   },
+   {
+    "label": "Murid Berhenti",
+    "number_card_name": "Murid Berhenti"
+   },
+   {
+    "label": "Nominal SPP Terbit Bulan Ini",
+    "number_card_name": "Nominal SPP Terbit Bulan Ini"
+   },
+   {
+    "label": "Nominal SPP Terbayar Bulan Ini",
+    "number_card_name": "Nominal SPP Terbayar Bulan Ini"
+   },
+   {
+    "label": "Nominal SPP Belum Dibayar",
+    "number_card_name": "Nominal SPP Belum Dibayar"
+   },
+   {
+    "label": "Invoice SPP Belum Dibayar",
+    "number_card_name": "Invoice SPP Belum Dibayar"
+   },
+   {
+    "label": "Total Employees",
+    "number_card_name": "Total Employees"
+   },
+   {
+    "label": "Pelamar Belum Diproses",
+    "number_card_name": "Pelamar Belum Diproses"
+   },
+   {
+    "label": "Cuti Menunggu Persetujuan",
+    "number_card_name": "Cuti Menunggu Persetujuan"
+   }
+  ],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   }
+  ],
+  "sequence_id": 0.0,
+  "shortcuts": [],
+  "title": "RUMBA",
   "type": "Workspace"
  }
 ]

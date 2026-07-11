@@ -1,8 +1,8 @@
 {
  "app": "rumba16",
  "charts": [],
- "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat \u2014 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Kelas\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 \u00b7 Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 \u00b7 Kelas & Murid\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Murid\",\"col\":3}}]",
- "creation": "2026-07-02 09:56:40.178890",
+ "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat \u2014 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Kelas\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"1 \u00b7 Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"2 \u00b7 Kelas & Murid\",\"col\":12}},{\"id\":\"s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":3}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":3}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":3}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Murid\",\"col\":3}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"3 \u00b7 Izin & Guru Pengganti\",\"col\":12}},{\"id\":\"p1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Ajukan izin bila berhalangan mengajar. Sesi yang Anda gantikan otomatis tampil di daftar Sesi Kelas Anda.\",\"col\":12}},{\"id\":\"s5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Ajukan Izin/Cuti\",\"col\":3}},{\"id\":\"s6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Izin & Cuti Saya\",\"col\":3}}]",
+ "creation": "2026-07-10 13:42:03.743499",
  "custom_blocks": [
   {
    "custom_block_name": "Sesi Saya Hari Ini",
@@ -19,7 +19,7 @@
  "label": "Tutor",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-07-02 09:56:40.178890",
+ "modified": "2026-07-11 08:39:54.592909",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Tutor",
@@ -36,9 +36,6 @@
  "roles": [
   {
    "role": "Rumba Tutor"
-  },
-  {
-   "role": "Rumba Lead Tutor"
   },
   {
    "role": "Rumba Founder"
@@ -86,6 +83,20 @@
    "doc_view": "",
    "label": "Murid",
    "link_to": "Rumba Murid",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Ajukan Izin/Cuti",
+   "type": "URL",
+   "url": "/app/leave-application/new"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Izin & Cuti Saya",
+   "link_to": "Leave Application",
    "type": "DocType"
   }
  ],
