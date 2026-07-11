@@ -277,7 +277,7 @@ scheduler_events = {
 # ignore_translatable_strings_from = []
 
 fixtures = [
-    {"dt": "Client Script"},
+    {"dt": "Client Script",},
     {"dt": "Server Script", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Notification", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
@@ -311,7 +311,7 @@ fixtures = [
     "Insentif Kunjungan", "Insentif Kegiatan Bersama", "Tunjangan Hari Raya"
     ]]]},
     {"dt": "Designation", "filters": [["name", "in", [
-    "Kepala Unit","Lead Tutor","Tutor","Admin Unit","Staf Pendukung",
+    "Kepala Unit","Tutor","Admin Unit","Staf Pendukung",
     "Manajer Operasional","Koordinator Personalia & Umum","Koordinator Kurikulum & Akademik",
     "Koordinator Keuangan","Koordinator Teknologi & Sistem","Koordinator Pengembangan Usaha",
     "Staf Keuangan","Staf Pemasaran & Pengembangan Usaha"
@@ -331,7 +331,7 @@ fixtures = [
     {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
     {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
     {"dt": "Employee Onboarding Template", "filters": [["title", "in", [
-    "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA", "Onboarding Lead Tutor RUMBA",
+    "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA",
     "Onboarding Admin Unit RUMBA", "Onboarding Pendukung RUMBA"
     ]]]},
     {"dt": "Leave Type", "filters": [["name", "in", [
@@ -339,7 +339,7 @@ fixtures = [
     ]]]},
     {"dt": "Employee Separation Template", "filters": [["title", "in", [
     "Offboarding Tutor RUMBA", "Offboarding Admin Unit RUMBA", "Offboarding Kepala Unit RUMBA",
-    "Offboarding Lead Tutor RUMBA", "Offboarding Pendukung RUMBA"
+    "Offboarding Pendukung RUMBA"
     ]]]},
     {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Workspace Sidebar", "filters": [["name", "in", ["Bimbel Rumba v16"]]]},
@@ -366,6 +366,7 @@ fixtures = [
         ["name", "in", [
             "Sales Invoice-write_off_cost_center-ignore_user_permissions",
             "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
+            "Employee-naming_series-hidden",
         ]]
     ],
 },

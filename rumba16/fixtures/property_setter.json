@@ -1,6 +1,22 @@
 [
  {
   "default_value": null,
+  "doc_type": "Employee",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "naming_series",
+  "is_system_generated": 1,
+  "modified": "2026-07-11 10:52:28.723737",
+  "module": null,
+  "name": "Employee-naming_series-hidden",
+  "property": "hidden",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ },
+ {
+  "default_value": null,
   "doc_type": "Sales Invoice",
   "docstatus": 0,
   "doctype": "Property Setter",

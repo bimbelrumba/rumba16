@@ -174,5 +174,16 @@
   "name": "Attendance List - Generator Pendidik RUMBA",
   "script": "frappe.listview_settings['Attendance'] = frappe.listview_settings['Attendance'] || {};\nfrappe.listview_settings['Attendance'].onload = function(listview) {\n  listview.page.add_inner_button('Generate Attendance Pendidik (RUMBA)', () => {\n    frappe.prompt([\n      {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1},\n      {fieldname:'unit', label:'Unit (opsional)', fieldtype:'Link', options:'Rumba Unit'}\n    ], (v) => {\n      frappe.call({method:'rumba16.attendance.generate_pendidik_attendance', args:{bulan:v.bulan, unit:v.unit||null}, freeze:true, freeze_message:'Membuat attendance pendidik...'})\n      .then(r => { const d=r.message||{}; frappe.msgprint('Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length); listview.refresh(); });\n    }, 'Generate Attendance Pendidik', 'Buat');\n  });\n};",
   "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee",
+  "enabled": 1,
+  "modified": "2026-07-11 10:58:53.976844",
+  "module": "Bimbel Rumba v16",
+  "name": "Employee - Sembunyikan Series RUMBA",
+  "script": "frappe.ui.form.on('Employee', {\n  onload(frm) { frm.toggle_display('naming_series', false); },\n  refresh(frm) {\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  },\n  onload_post_render(frm) {\n    // erpnext.toggle_naming_series() (dipanggil employee.js HRMS pasca-render) menampilkan ulang field ini;\n    // handler custom terdaftar terakhir -> jalan setelahnya -> kita menang.\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  }\n});\n// ID Employee dibentuk hook autoname rumba16 (ERP-HR-002, 10 angka) — field Series bawaan menyesatkan, disembunyikan.",
+  "view": "Form"
  }
 ]
