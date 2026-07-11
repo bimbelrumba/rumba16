@@ -35,6 +35,17 @@
  {
   "docstatus": 0,
   "doctype": "Custom HTML Block",
+  "html": "<div class=\"ttk-widget\">\n  <div class=\"ttk-title\">Tutor Tanpa Kelas — <span class=\"ttk-count\">…</span> tutor belum mengampu kelas aktif</div>\n  <div class=\"ttk-body\"><div class=\"ttk-empty\">Memuat…</div></div>\n</div>",
+  "modified": "2026-07-11 13:27:30.296348",
+  "name": "Tutor Tanpa Kelas (Pengampu)",
+  "private": 0,
+  "roles": [],
+  "script": "(async () => {\n  const root = root_element.querySelector('.ttk-body');\n  const badge = root_element.querySelector('.ttk-count');\n  try {\n    const tr = await frappe.call('frappe.client.get_list', {doctype:'Employee', filters:{kategori_karyawan:'Tutor', status:'Active'}, fields:['name','employee_name','rumba_unit'], limit_page_length:0});\n    const tutors = tr.message || [];\n    if (!tutors.length) { badge.textContent = '0'; root.innerHTML = '<div class=\"ttk-empty\">Belum ada tutor aktif.</div>'; return; }\n    const kr = await frappe.call('frappe.client.get_list', {doctype:'Rumba Kelas', filters:{status_kelas:'Aktif', tutor_pengampu:['is','set']}, fields:['tutor_pengampu'], limit_page_length:0});\n    const assigned = new Set((kr.message||[]).map(k => k.tutor_pengampu));\n    const tanpa = tutors.filter(t => !assigned.has(t.name));\n    badge.textContent = tanpa.length;\n    if (!tanpa.length) { root.innerHTML = '<div class=\"ttk-empty\">✓ Semua tutor aktif sudah mengampu kelas.</div>'; return; }\n    root.innerHTML = tanpa.map(t => '<div class=\"ttk-row\" data-emp=\"' + t.name + '\"><span class=\"ttk-nama\">' + frappe.utils.escape_html(t.employee_name || t.name) + '</span><span class=\"ttk-unit\">' + frappe.utils.escape_html(t.rumba_unit || '—') + '</span></div>').join('');\n    root.querySelectorAll('.ttk-row').forEach(el => el.addEventListener('click', () => frappe.set_route('Form','Employee', el.dataset.emp)));\n  } catch(e) { badge.textContent = '?'; root.innerHTML = '<div class=\"ttk-empty\">Gagal memuat data.</div>'; }\n})();",
+  "style": ".ttk-widget{background:var(--card-bg);border:1px solid var(--border-color);border-radius:var(--border-radius-md);padding:12px 15px;height:100%}\n.ttk-title{font-weight:600;margin-bottom:8px}\n.ttk-count{color:#E31E1E}\n.ttk-row{display:flex;justify-content:space-between;padding:6px 8px;border-radius:6px;cursor:pointer}\n.ttk-row:hover{background:var(--bg-color)}\n.ttk-nama{font-weight:500}\n.ttk-unit{color:var(--text-muted)}\n.ttk-empty{color:var(--text-muted);padding:6px 0}"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom HTML Block",
   "html": "<div class=\"sesi-saya\"><div class=\"ss-head\">Sesi mengajar Anda hari ini</div><div class=\"ss-body\"><div class=\"ss-empty\">Memuat…</div></div></div>",
   "modified": "2026-07-09 21:26:31.979379",
   "name": "Sesi Saya Hari Ini",

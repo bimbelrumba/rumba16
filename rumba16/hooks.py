@@ -303,7 +303,8 @@ fixtures = [
     "Exit Interview-ei_sarana_lingkungan", "Exit Interview-ei_kesempatan_berkembang",
     "Exit Interview-ei_nilai_juara", "Exit Interview-ei_kepuasan_keseluruhan",
     "Exit Interview-ei_masukan_disukai", "Exit Interview-ei_masukan_perbaikan",
-    "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali"
+    "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali",
+    "Rumba Kelas-tutor_pengampu",
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -345,7 +346,8 @@ fixtures = [
     {"dt": "Workspace Sidebar", "filters": [["name", "in", ["Bimbel Rumba v16"]]]},
     {"dt": "Custom HTML Block", "filters": [["name", "in", [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
-    "Sesi Saya Hari Ini", "Sumber Informasi Lead"
+    "Sesi Saya Hari Ini", "Sumber Informasi Lead",
+    "Tutor Tanpa Kelas (Pengampu)",
     ]]]},
     {
     "dt": "Custom Role",
@@ -366,7 +368,7 @@ fixtures = [
         ["name", "in", [
             "Sales Invoice-write_off_cost_center-ignore_user_permissions",
             "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
-            "Employee-naming_series-hidden",
+            "Employee-naming_series-hidden","Rumba Kelas-tutor_pengampu",
         ]]
     ],
 },
