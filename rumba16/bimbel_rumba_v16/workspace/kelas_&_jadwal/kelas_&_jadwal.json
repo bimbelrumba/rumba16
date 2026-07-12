@@ -1,0 +1,146 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Sesi Terlaksana per Bulan",
+   "label": "Sesi Terlaksana per Bulan"
+  },
+  {
+   "chart_name": "Kelas Aktif per Bulan",
+   "label": "Kelas Aktif per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83c\udfeb Kelas & Jadwal\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":3}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":3}},{\"id\":\"kj5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":3}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Tren\",\"col\":12}},{\"id\":\"kj11\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"kj12\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc2 Menu\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Kelas & Jadwal\",\"col\":4}}]",
+ "creation": "2026-07-11 19:11:36.029408",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "calendar",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Kelas & Jadwal",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kelas & Jadwal",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sesi Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ruangan",
+   "link_count": 0,
+   "link_to": "Rumba Ruangan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Program Belajar",
+   "link_count": 0,
+   "link_to": "Rumba Program Belajar",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-12 21:10:00.617208",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Kelas & Jadwal",
+ "number_cards": [
+  {
+   "label": "Kelas Berjalan",
+   "number_card_name": "Kelas Berjalan"
+  },
+  {
+   "label": "Kelas Reguler Kurang dari 4 Murid",
+   "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+  },
+  {
+   "label": "Sesi Minggu Ini",
+   "number_card_name": "Sesi Minggu Ini"
+  },
+  {
+   "label": "Kelas Tanpa Tutor",
+   "number_card_name": "Kelas Tanpa Tutor"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.52,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Kelas",
+   "type": "URL",
+   "url": "/app/rumba-kelas/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Sesi",
+   "type": "URL",
+   "url": "/app/rumba-sesi-kelas/new"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "format": "{} sesi",
+   "label": "Sesi Perlu Disetujui",
+   "link_to": "Rumba Sesi Kelas",
+   "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Kelas & Jadwal",
+ "type": "Workspace"
+}

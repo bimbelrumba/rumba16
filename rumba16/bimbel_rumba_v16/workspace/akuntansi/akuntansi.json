@@ -1,0 +1,164 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"ak1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"ak2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcb0 Keuangan (SPP)\",\"col\":12}},{\"id\":\"ak3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":3}},{\"id\":\"ak4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":3}},{\"id\":\"ak5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Invoice\",\"col\":4}},{\"id\":\"ak8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengeluaran\",\"col\":4}},{\"id\":\"ak9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Setor Kas\",\"col\":4}},{\"id\":\"ak10\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ak11\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udce6 Menu & Persediaan\",\"col\":12}},{\"id\":\"ak12\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":4}},{\"id\":\"ak13\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan Barang\",\"col\":4}}]",
+ "creation": "2026-07-11 19:12:04.875323",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "accounting",
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Akuntansi",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Keuangan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice (SPP)",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembayaran",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Persediaan Barang",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Inventory (Modul & Merchandise)",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pesanan Pembelian",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penerimaan Barang",
+   "link_count": 0,
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengeluaran Barang",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-12 20:42:46.447407",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Akuntansi",
+ "number_cards": [
+  {
+   "label": "Nominal SPP Terbit Bulan Ini",
+   "number_card_name": "Nominal SPP Terbit Bulan Ini"
+  },
+  {
+   "label": "Nominal SPP Terbayar Bulan Ini",
+   "number_card_name": "Nominal SPP Terbayar Bulan Ini"
+  },
+  {
+   "label": "Nominal SPP Belum Dibayar",
+   "number_card_name": "Nominal SPP Belum Dibayar"
+  },
+  {
+   "label": "Invoice SPP Belum Dibayar",
+   "number_card_name": "Invoice SPP Belum Dibayar"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.53,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Invoice",
+   "type": "URL",
+   "url": "/app/sales-invoice/new"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Pengeluaran",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Pay"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Setor Kas",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Internal%20Transfer"
+  }
+ ],
+ "title": "Akuntansi",
+ "type": "Workspace"
+}

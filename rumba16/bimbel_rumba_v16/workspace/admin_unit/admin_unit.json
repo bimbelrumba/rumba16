@@ -1,29 +1,16 @@
 {
  "app": "rumba16",
- "charts": [
-  {
-   "chart_name": "Tren Murid Aktif per Bulan",
-   "label": "Tren Murid Aktif per Bulan"
-  },
-  {
-   "chart_name": "Sesi Terlaksana per Bulan",
-   "label": "Sesi Terlaksana per Bulan"
-  },
-  {
-   "chart_name": "Kelas Aktif per Bulan",
-   "label": "Kelas Aktif per Bulan"
-  }
- ],
- "content": "[{\"id\":\"hqi\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udd0e Info Cepat\",\"col\":12}},{\"id\":\"i1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Baru\",\"col\":4}},{\"id\":\"i2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran Baru\",\"col\":4}},{\"id\":\"i3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPP Belum Dibayar\",\"col\":4}},{\"id\":\"i4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas Kritis\",\"col\":4}},{\"id\":\"i5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"i6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Perlu Disetujui\",\"col\":4}},{\"id\":\"mk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":12}},{\"id\":\"sp0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"htb\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":3}},{\"id\":\"q5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Invoice\",\"col\":3}},{\"id\":\"q6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengeluaran\",\"col\":3}},{\"id\":\"q7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Setor Kas\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hm\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc2 Menu\",\"col\":12}},{\"id\":\"k1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendaftaran\",\"col\":4}},{\"id\":\"k2\",\"type\":\"card\",\"data\":{\"card_name\":\"Murid\",\"col\":4}},{\"id\":\"k3\",\"type\":\"card\",\"data\":{\"card_name\":\"Kelas & Jadwal\",\"col\":4}},{\"id\":\"k4\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":4}},{\"id\":\"k5\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory\",\"col\":4}},{\"id\":\"k6\",\"type\":\"card\",\"data\":{\"card_name\":\"Report\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hr\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Ringkasan\",\"col\":12}},{\"id\":\"r1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"r2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"r3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"r4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":8}},{\"id\":\"r5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":4}},{\"id\":\"r6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"r7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}}]",
- "creation": "2026-07-09 21:33:05.532904",
+ "charts": [],
+ "content": "[{\"id\":\"r591\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r592\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc5 Info Hari Ini\",\"col\":12}},{\"id\":\"r593\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"r594\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Belum Terlaksana\",\"col\":6}},{\"id\":\"r595\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pembayaran Masuk Hari Ini\",\"col\":6}},{\"id\":\"r596\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Hari Ini\",\"col\":6}},{\"id\":\"r597\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r598\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"r599\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"r5100\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":4}},{\"id\":\"r5101\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kemarin Tanpa Presensi\",\"col\":4}},{\"id\":\"r5102\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Invoice Belum Dibayar\",\"col\":4}},{\"id\":\"r5103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"r5104\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":4}}]",
+ "creation": "2026-07-10 13:42:03.620581",
  "custom_blocks": [
-  {
-   "custom_block_name": "Distribusi Murid per Program (Donut)",
-   "label": "Distribusi Murid per Program (Donut)"
-  },
   {
    "custom_block_name": "Murid Sering Absen (Alpa)",
    "label": "Murid Sering Absen (Alpa)"
+  },
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
   }
  ],
  "docstatus": 0,
@@ -35,318 +22,58 @@
  "is_hidden": 0,
  "label": "Admin Unit",
  "link_type": "DocType",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pendaftaran",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Lead",
-   "link_count": 0,
-   "link_to": "Rumba Lead",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pendaftaran",
-   "link_count": 0,
-   "link_to": "Rumba Pendaftaran",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Murid",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Murid",
-   "link_count": 0,
-   "link_to": "Rumba Murid",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Mutasi",
-   "link_count": 0,
-   "link_to": "Rumba Mutasi",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pengunduran Diri",
-   "link_count": 0,
-   "link_to": "Rumba Pengunduran Diri",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sertifikat",
-   "link_count": 0,
-   "link_to": "Rumba Sertifikat",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Kelas & Jadwal",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Kelas",
-   "link_count": 0,
-   "link_to": "Rumba Kelas",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sesi Kelas",
-   "link_count": 0,
-   "link_to": "Rumba Sesi Kelas",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Keuangan",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Invoice (SPP)",
-   "link_count": 0,
-   "link_to": "Sales Invoice",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pembayaran / Pengeluaran / Setor Kas",
-   "link_count": 0,
-   "link_to": "Payment Entry",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Inventory",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Inventory (Modul & Merchandise)",
-   "link_count": 0,
-   "link_to": "Item",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pesanan Pembelian",
-   "link_count": 0,
-   "link_to": "Purchase Order",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Penerimaan Barang",
-   "link_count": 0,
-   "link_to": "Purchase Receipt",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Pengeluaran Barang",
-   "link_count": 0,
-   "link_to": "Stock Entry",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Report",
-   "link_count": 9,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Laba Rugi",
-   "link_count": 0,
-   "link_to": "Profit and Loss Statement",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Neraca",
-   "link_count": 0,
-   "link_to": "Balance Sheet",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Aliran Kas",
-   "link_count": 0,
-   "link_to": "Cash Flow",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Kesiswaan: Kehadiran Murid",
-   "link_count": 0,
-   "link_to": "Rekap Kehadiran Murid",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Kesiswaan: Mutasi",
-   "link_count": 0,
-   "link_to": "Mutasi Murid",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Kesiswaan: Pengunduran Diri",
-   "link_count": 0,
-   "link_to": "Pengunduran Diri Murid",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Kesiswaan: Daftar Tunggu",
-   "link_count": 0,
-   "link_to": "Daftar Tunggu (FIFO)",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Kehadiran Tutor (F-GAJ-01)",
-   "link_count": 0,
-   "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Inventory: Stok",
-   "link_count": 0,
-   "link_to": "Stock Balance",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2026-07-09 22:54:57.507756",
+ "links": [],
+ "modified": "2026-07-12 19:39:24.734208",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Admin Unit",
  "number_cards": [
   {
-   "label": "Murid Aktif",
-   "number_card_name": "Murid Aktif"
+   "label": "Sesi Hari Ini",
+   "number_card_name": "Sesi Hari Ini"
   },
   {
-   "label": "Murid Baru Bulan Ini",
-   "number_card_name": "Murid Baru Bulan Ini"
+   "label": "Sesi Belum Terlaksana",
+   "number_card_name": "Sesi Belum Terlaksana"
   },
   {
-   "label": "Murid Berhenti",
-   "number_card_name": "Murid Berhenti"
+   "label": "Pembayaran Masuk Hari Ini",
+   "number_card_name": "Pembayaran Masuk Hari Ini"
   },
   {
-   "label": "Kelas Berjalan",
-   "number_card_name": "Kelas Berjalan"
+   "label": "Lead Baru Hari Ini",
+   "number_card_name": "Lead Baru Hari Ini"
+  },
+  {
+   "label": "Kelas Reguler Kurang dari 4 Murid",
+   "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
   }
  ],
  "owner": "Administrator",
  "parent_page": "RUMBA",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Rumba Lead",
+   "label": "Lead Belum Ditindaklanjuti",
+   "quick_list_filter": "[[\"Rumba Lead\",\"status_lead\",\"=\",\"Baru\"]]"
+  },
+  {
+   "document_type": "Rumba Pendaftaran",
+   "label": "Pendaftaran Menunggu Persetujuan",
+   "quick_list_filter": "[[\"Rumba Pendaftaran\",\"status_pendaftaran\",\"=\",\"Menunggu\"]]"
+  },
+  {
+   "document_type": "Rumba Sesi Kelas",
+   "label": "Sesi Kemarin Tanpa Presensi",
+   "quick_list_filter": "[[\"Rumba Sesi Kelas\",\"status_sesi\",\"is\",\"not set\"],[\"Rumba Sesi Kelas\",\"tanggal_sesi\",\"Timespan\",\"yesterday\"]]"
+  },
+  {
+   "document_type": "Sales Invoice",
+   "label": "Invoice Belum Dibayar",
+   "quick_list_filter": "[[\"Sales Invoice\",\"status\",\"in\",[\"Unpaid\",\"Overdue\"]],[\"Sales Invoice\",\"docstatus\",\"=\",\"1\"]]"
+  }
+ ],
  "roles": [
   {
    "role": "Rumba Founder"
@@ -359,111 +86,7 @@
   }
  ],
  "sequence_id": 0.5,
- "shortcuts": [
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "format": "{} baru",
-   "label": "Lead Baru",
-   "link_to": "Rumba Lead",
-   "stats_filter": "{\"status_lead\":\"Baru\"}",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "format": "{} menunggu",
-   "label": "Pendaftaran Baru",
-   "link_to": "Rumba Pendaftaran",
-   "stats_filter": "{\"status_pendaftaran\":\"Menunggu\"}",
-   "type": "DocType"
-  },
-  {
-   "color": "Red",
-   "doc_view": "",
-   "format": "{} invoice",
-   "label": "SPP Belum Dibayar",
-   "link_to": "Sales Invoice",
-   "stats_filter": "{\"outstanding_amount\":[\">\",0],\"docstatus\":1}",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "doc_view": "",
-   "format": "{} kelas",
-   "label": "Kelas Kritis",
-   "link_to": "Rumba Kelas",
-   "stats_filter": "{\"jenis_kelas\":\"Reguler\",\"status_kelas\":\"Aktif\",\"jumlah_anggota\":[\"<\",4]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "doc_view": "",
-   "format": "{} sesi",
-   "label": "Sesi Perlu Disetujui",
-   "link_to": "Rumba Sesi Kelas",
-   "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "doc_view": "",
-   "format": "{} BKM",
-   "label": "BKM Perlu Disetujui",
-   "link_to": "Rumba BKM Entry",
-   "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Pendaftaran",
-   "type": "URL",
-   "url": "/app/rumba-pendaftaran/new"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Murid",
-   "type": "URL",
-   "url": "/app/rumba-murid/new"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Kelas",
-   "type": "URL",
-   "url": "/app/rumba-kelas/new"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Sesi",
-   "type": "URL",
-   "url": "/app/rumba-sesi-kelas/new"
-  },
-  {
-   "color": "Green",
-   "doc_view": "",
-   "label": "+ Invoice",
-   "type": "URL",
-   "url": "/app/sales-invoice/new"
-  },
-  {
-   "color": "Green",
-   "doc_view": "",
-   "label": "+ Pengeluaran",
-   "type": "URL",
-   "url": "/app/payment-entry/new?payment_type=Pay"
-  },
-  {
-   "color": "Green",
-   "doc_view": "",
-   "label": "+ Setor Kas",
-   "type": "URL",
-   "url": "/app/payment-entry/new?payment_type=Internal%20Transfer"
-  }
- ],
+ "shortcuts": [],
  "title": "Admin Unit",
  "type": "Workspace"
 }

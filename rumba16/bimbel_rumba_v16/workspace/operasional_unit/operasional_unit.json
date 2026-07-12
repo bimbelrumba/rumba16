@@ -103,7 +103,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-11 08:38:11.822982",
+ "modified": "2026-07-11 18:26:32.556163",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Operasional Unit",
@@ -129,9 +129,6 @@
  "roles": [
   {
    "role": "Rumba Founder"
-  },
-  {
-   "role": "Rumba Admin Unit"
   },
   {
    "role": "Rumba Kepala Unit"

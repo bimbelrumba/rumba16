@@ -17,7 +17,7 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "education",
+ "icon": "milestone",
  "idx": 0,
  "indicator_color": "orange",
  "is_hidden": 0,
@@ -93,7 +93,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-11 08:38:12.932291",
+ "modified": "2026-07-11 18:26:56.191360",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Akademik",

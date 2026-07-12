@@ -116,36 +116,6 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-18 19:42:32.617379",
-  "module": "Bimbel Rumba v16",
-  "name": "Daftar Tunggu (FIFO)",
-  "prepared_report": 0,
-  "query": "SELECT\n    name AS \"Lead:Link/Rumba Lead:140\",\n    nama_calon AS \"Nama Calon:Data:160\",\n    nomor_handphone AS \"No. HP:Data:120\",\n    nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    program_diminati AS \"Program:Link/Rumba Program Belajar:130\",\n    tanggal_masuk_tunggu AS \"Masuk Tunggu:Date:120\",\n    catatan_tunggu AS \"Catatan:Data:240\"\nFROM `tabRumba Lead`\nWHERE status_lead = 'Daftar Tunggu'\nORDER BY tanggal_masuk_tunggu ASC, creation ASC",
-  "ref_doctype": "Rumba Lead",
-  "reference_report": null,
-  "report_name": "Daftar Tunggu (FIFO)",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
   "modified": "2026-06-18 20:46:22.380427",
   "module": "Bimbel Rumba v16",
   "name": "Pengunduran Diri Murid",
@@ -347,45 +317,6 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:48.011205",
-  "module": "Bimbel Rumba v16",
-  "name": "Pembayaran Peserta Event",
-  "prepared_report": 0,
-  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:180\",\n  p.nama_murid AS \"Nama:Data:150\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.sales_invoice AS \"Invoice:Link/Sales Invoice:150\",\n  p.status_pembayaran AS \"Status Bayar:Data:110\",\n  si.grand_total AS \"Tagihan:Currency:110\",\n  si.outstanding_amount AS \"Sisa:Currency:110\",\n  si.due_date AS \"Jatuh Tempo:Date:110\",\n  CASE WHEN si.outstanding_amount > 0 AND si.due_date < CURDATE() THEN DATEDIFF(CURDATE(), si.due_date) ELSE 0 END AS \"Umur Tunggakan (hari):Int:130\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nLEFT JOIN `tabSales Invoice` si ON si.name = p.sales_invoice AND si.docstatus = 1\nWHERE p.parenttype = 'Rumba Event' AND ev.berbayar = 1\nORDER BY si.due_date",
-  "ref_doctype": "Rumba Event",
-  "reference_report": null,
-  "report_name": "Pembayaran Peserta Event",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
   "modified": "2026-06-30 20:22:48.130577",
   "module": "Bimbel Rumba v16",
   "name": "Rekap Event Tahunan",
@@ -545,19 +476,22 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-18 20:21:49.396949",
+  "modified": "2026-06-22 12:49:56.822788",
   "module": "Bimbel Rumba v16",
-  "name": "Mutasi Murid",
+  "name": "Piutang SPP per Unit (Aging)",
   "prepared_report": 0,
-  "query": "SELECT\n    name AS \"Mutasi:Link/Rumba Mutasi:130\",\n    nama_murid AS \"Murid:Data:160\",\n    unit_asal AS \"Unit Asal:Link/Rumba Unit:130\",\n    unit_tujuan AS \"Unit Tujuan:Link/Rumba Unit:130\",\n    status_mutasi AS \"Status:Data:100\",\n    tanggal_mutasi AS \"Tanggal:Date:100\",\n    tunggakan_unit_asal AS \"Tunggakan:Currency:120\",\n    rekap_bintang AS \"Bintang:Int:80\"\nFROM `tabRumba Mutasi`\nORDER BY tanggal_mutasi DESC, creation DESC",
-  "ref_doctype": "Rumba Mutasi",
+  "query": "SELECT\n    si.rumba_unit AS \"Unit:Link/Rumba Unit:140\",\n    si.rumba_murid AS \"Murid:Link/Rumba Murid:150\",\n    si.customer AS \"Customer:Link/Customer:170\",\n    si.spp_periode AS \"Periode SPP:Data:90\",\n    si.name AS \"Invoice:Link/Sales Invoice:150\",\n    si.due_date AS \"Jatuh Tempo:Date:100\",\n    si.outstanding_amount AS \"Outstanding:Currency:120\",\n    DATEDIFF(CURDATE(), si.due_date) AS \"Umur (hari):Int:90\",\n    CASE\n        WHEN DATEDIFF(CURDATE(), si.due_date) < 0 THEN 'Belum jatuh tempo'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 6 THEN 'Pantau (H+0-6)'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 13 THEN 'Pengingat 1 (H+7)'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 20 THEN 'Pengingat 2 (H+14)'\n        ELSE 'Eskalasi (H+21)'\n    END AS \"Tahap (SOP-FIN-009):Data:160\"\nFROM `tabSales Invoice` si\nWHERE si.docstatus = 1 AND si.outstanding_amount > 0\nORDER BY si.rumba_unit ASC, si.due_date ASC",
+  "ref_doctype": "Sales Invoice",
   "reference_report": null,
-  "report_name": "Mutasi Murid",
+  "report_name": "Piutang SPP per Unit (Aging)",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
    {
-    "role": "System Manager"
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Accounts User"
    }
   ],
   "timeout": 0
@@ -575,22 +509,19 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-22 12:49:56.822788",
+  "modified": "2026-06-18 19:42:32.617379",
   "module": "Bimbel Rumba v16",
-  "name": "Piutang SPP per Unit (Aging)",
+  "name": "Daftar Tunggu (FIFO)",
   "prepared_report": 0,
-  "query": "SELECT\n    si.rumba_unit AS \"Unit:Link/Rumba Unit:140\",\n    si.rumba_murid AS \"Murid:Link/Rumba Murid:150\",\n    si.customer AS \"Customer:Link/Customer:170\",\n    si.spp_periode AS \"Periode SPP:Data:90\",\n    si.name AS \"Invoice:Link/Sales Invoice:150\",\n    si.due_date AS \"Jatuh Tempo:Date:100\",\n    si.outstanding_amount AS \"Outstanding:Currency:120\",\n    DATEDIFF(CURDATE(), si.due_date) AS \"Umur (hari):Int:90\",\n    CASE\n        WHEN DATEDIFF(CURDATE(), si.due_date) < 0 THEN 'Belum jatuh tempo'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 6 THEN 'Pantau (H+0-6)'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 13 THEN 'Pengingat 1 (H+7)'\n        WHEN DATEDIFF(CURDATE(), si.due_date) <= 20 THEN 'Pengingat 2 (H+14)'\n        ELSE 'Eskalasi (H+21)'\n    END AS \"Tahap (SOP-FIN-009):Data:160\"\nFROM `tabSales Invoice` si\nWHERE si.docstatus = 1 AND si.outstanding_amount > 0\nORDER BY si.rumba_unit ASC, si.due_date ASC",
-  "ref_doctype": "Sales Invoice",
+  "query": "SELECT\n    name AS \"Lead:Link/Rumba Lead:140\",\n    nama_calon AS \"Nama Calon:Data:160\",\n    nomor_handphone AS \"No. HP:Data:120\",\n    nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    program_diminati AS \"Program:Link/Rumba Program Belajar:130\",\n    tanggal_masuk_tunggu AS \"Masuk Tunggu:Date:120\",\n    catatan_tunggu AS \"Catatan:Data:240\"\nFROM `tabRumba Lead`\nWHERE status_lead = 'Daftar Tunggu'\nORDER BY tanggal_masuk_tunggu ASC, creation ASC",
+  "ref_doctype": "Rumba Lead",
   "reference_report": null,
-  "report_name": "Piutang SPP per Unit (Aging)",
+  "report_name": "Daftar Tunggu (FIFO)",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
    {
-    "role": "Accounts Manager"
-   },
-   {
-    "role": "Accounts User"
+    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -667,6 +598,75 @@
    {
     "role": "Rumba Finance"
    },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-30 20:22:48.011205",
+  "module": "Bimbel Rumba v16",
+  "name": "Pembayaran Peserta Event",
+  "prepared_report": 0,
+  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:180\",\n  p.nama_murid AS \"Nama:Data:150\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.sales_invoice AS \"Invoice:Link/Sales Invoice:150\",\n  p.status_pembayaran AS \"Status Bayar:Data:110\",\n  si.grand_total AS \"Tagihan:Currency:110\",\n  si.outstanding_amount AS \"Sisa:Currency:110\",\n  si.due_date AS \"Jatuh Tempo:Date:110\",\n  CASE WHEN si.outstanding_amount > 0 AND si.due_date < CURDATE() THEN DATEDIFF(CURDATE(), si.due_date) ELSE 0 END AS \"Umur Tunggakan (hari):Int:130\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nLEFT JOIN `tabSales Invoice` si ON si.name = p.sales_invoice AND si.docstatus = 1\nWHERE p.parenttype = 'Rumba Event' AND ev.berbayar = 1\nORDER BY si.due_date",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Pembayaran Peserta Event",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-18 20:21:49.396949",
+  "module": "Bimbel Rumba v16",
+  "name": "Mutasi Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    name AS \"Mutasi:Link/Rumba Mutasi:130\",\n    nama_murid AS \"Murid:Data:160\",\n    unit_asal AS \"Unit Asal:Link/Rumba Unit:130\",\n    unit_tujuan AS \"Unit Tujuan:Link/Rumba Unit:130\",\n    status_mutasi AS \"Status:Data:100\",\n    tanggal_mutasi AS \"Tanggal:Date:100\",\n    tunggakan_unit_asal AS \"Tunggakan:Currency:120\",\n    rekap_bintang AS \"Bintang:Int:80\"\nFROM `tabRumba Mutasi`\nORDER BY tanggal_mutasi DESC, creation DESC",
+  "ref_doctype": "Rumba Mutasi",
+  "reference_report": null,
+  "report_name": "Mutasi Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
    {
     "role": "System Manager"
    }

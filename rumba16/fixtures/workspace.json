@@ -80,7 +80,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-09 19:15:07.291072",
+  "modified": "2026-07-11 18:26:31.358998",
   "module": "Bimbel Rumba v16",
   "name": "CRM & Pendaftaran",
   "number_cards": [
@@ -118,9 +118,6 @@
   "roles": [
    {
     "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Admin Unit"
    },
    {
     "role": "Rumba Kepala Unit"
@@ -408,7 +405,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-11 08:38:11.822982",
+  "modified": "2026-07-11 18:26:32.556163",
   "module": "Bimbel Rumba v16",
   "name": "Operasional Unit",
   "number_cards": [
@@ -434,9 +431,6 @@
   "roles": [
    {
     "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Admin Unit"
    },
    {
     "role": "Rumba Kepala Unit"
@@ -523,7 +517,7 @@
   "external_link": null,
   "for_user": "",
   "hide_custom": 0,
-  "icon": "education",
+  "icon": "milestone",
   "indicator_color": "orange",
   "is_hidden": 0,
   "label": "Akademik",
@@ -636,7 +630,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-11 08:38:12.932291",
+  "modified": "2026-07-11 18:26:56.191360",
   "module": "Bimbel Rumba v16",
   "name": "Akademik",
   "number_cards": [
@@ -734,754 +728,6 @@
    }
   ],
   "title": "Akademik",
-  "type": "Workspace"
- },
- {
-  "app": "rumba16",
-  "charts": [
-   {
-    "chart_name": "Employees by Branch",
-    "label": "Employees by Branch"
-   }
-  ],
-  "content": "[{\"id\":\"sdm1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🔎 Info Cepat SDM</b></span>\",\"col\":12}},{\"id\":\"sdm2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"sdm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"sdm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sdm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"sdm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"sdm7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"sdm8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡ Tambah Baru</b></span>\",\"col\":12}},{\"id\":\"sdm10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":4}},{\"id\":\"sdm11\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":4}},{\"id\":\"sdm12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Interview\",\"col\":4}},{\"id\":\"sdm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Cuti\",\"col\":4}},{\"id\":\"sdm14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":4}},{\"id\":\"sdm15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Offboarding\",\"col\":4}},{\"id\":\"sdm16\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp101\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🧑‍🏫 Penempatan Tutor</b></span>\",\"col\":12}},{\"id\":\"sdmp102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sdmp103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor Pengampu\",\"col\":4}},{\"id\":\"sdmp104\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp105\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"sdmp106\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"sdmp107\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmttk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas (Pengampu)\",\"col\":12}},{\"id\":\"sdm17\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📂 Menu</b></span>\",\"col\":12}},{\"id\":\"sdm18\",\"type\":\"card\",\"data\":{\"card_name\":\"Rekrutmen\",\"col\":4}},{\"id\":\"sdm19\",\"type\":\"card\",\"data\":{\"card_name\":\"Karyawan & Lifecycle\",\"col\":4}},{\"id\":\"sdm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Kehadiran\",\"col\":4}},{\"id\":\"sdm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Cuti\",\"col\":4}},{\"id\":\"sdm22\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":4}},{\"id\":\"sdm23\",\"type\":\"card\",\"data\":{\"card_name\":\"Master SDM\",\"col\":4}},{\"id\":\"sdm24\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm25\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📊 Ringkasan</b></span>\",\"col\":12}},{\"id\":\"sdm26\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Karyawan Baru Bulan Ini\",\"col\":4}},{\"id\":\"sdm27\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employees by Branch\",\"col\":8}},{\"id\":\"sdm28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Cuti\",\"col\":6}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "Tutor Tanpa Kelas (Pengampu)",
-    "label": "Tutor Tanpa Kelas (Pengampu)"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "external_link": null,
-  "for_user": "",
-  "hide_custom": 0,
-  "icon": "hr",
-  "indicator_color": "pink",
-  "is_hidden": 0,
-  "label": "SDM",
-  "link_to": null,
-  "link_type": "DocType",
-  "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Rekrutmen",
-    "link_count": 6,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Job Opening",
-    "link_count": 0,
-    "link_to": "Job Opening",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Job Applicant",
-    "link_count": 0,
-    "link_to": "Job Applicant",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Interview",
-    "link_count": 0,
-    "link_to": "Interview",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Interview Feedback",
-    "link_count": 0,
-    "link_to": "Interview Feedback",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Job Offer",
-    "link_count": 0,
-    "link_to": "Job Offer",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Interview Type",
-    "link_count": 0,
-    "link_to": "Interview Type",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Karyawan & Lifecycle",
-    "link_count": 4,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Employee",
-    "link_count": 0,
-    "link_to": "Employee",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Employee Onboarding",
-    "link_count": 0,
-    "link_to": "Employee Onboarding",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Employee Separation",
-    "link_count": 0,
-    "link_to": "Employee Separation",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Exit Interview",
-    "link_count": 0,
-    "link_to": "Exit Interview",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Kehadiran",
-    "link_count": 4,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Attendance",
-    "link_count": 0,
-    "link_to": "Attendance",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Employee Checkin",
-    "link_count": 0,
-    "link_to": "Employee Checkin",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Shift Type",
-    "link_count": 0,
-    "link_to": "Shift Type",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Shift Assignment",
-    "link_count": 0,
-    "link_to": "Shift Assignment",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Cuti",
-    "link_count": 8,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Application",
-    "link_count": 0,
-    "link_to": "Leave Application",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Allocation",
-    "link_count": 0,
-    "link_to": "Leave Allocation",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Type",
-    "link_count": 0,
-    "link_to": "Leave Type",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Period",
-    "link_count": 0,
-    "link_to": "Leave Period",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Policy",
-    "link_count": 0,
-    "link_to": "Leave Policy",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Leave Policy Assignment",
-    "link_count": 0,
-    "link_to": "Leave Policy Assignment",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Holiday List",
-    "link_count": 0,
-    "link_to": "Holiday List",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Holiday List Assignment",
-    "link_count": 0,
-    "link_to": "Holiday List Assignment",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Payroll (Monitor)",
-    "link_count": 5,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Salary Structure",
-    "link_count": 0,
-    "link_to": "Salary Structure",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Salary Structure Assignment",
-    "link_count": 0,
-    "link_to": "Salary Structure Assignment",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Additional Salary",
-    "link_count": 0,
-    "link_to": "Additional Salary",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Payroll Entry",
-    "link_count": 0,
-    "link_to": "Payroll Entry",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Salary Slip",
-    "link_count": 0,
-    "link_to": "Salary Slip",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Master SDM",
-    "link_count": 3,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Designation",
-    "link_count": 0,
-    "link_to": "Designation",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Employment Type",
-    "link_count": 0,
-    "link_to": "Employment Type",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Branch",
-    "link_count": 0,
-    "link_to": "Branch",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   }
-  ],
-  "modified": "2026-07-11 13:30:06.362253",
-  "module": "Bimbel Rumba v16",
-  "name": "SDM",
-  "number_cards": [
-   {
-    "label": "Pelamar Belum Diproses",
-    "number_card_name": "Pelamar Belum Diproses"
-   },
-   {
-    "label": "Interview Terjadwal",
-    "number_card_name": "Interview Terjadwal"
-   },
-   {
-    "label": "Cuti Menunggu Persetujuan",
-    "number_card_name": "Cuti Menunggu Persetujuan"
-   },
-   {
-    "label": "Onboarding Berjalan",
-    "number_card_name": "Onboarding Berjalan"
-   },
-   {
-    "label": "Offboarding Berjalan",
-    "number_card_name": "Offboarding Berjalan"
-   },
-   {
-    "label": "Total Employees",
-    "number_card_name": "Total Employees"
-   },
-   {
-    "label": "Karyawan Baru Bulan Ini",
-    "number_card_name": "Karyawan Baru Bulan Ini"
-   },
-   {
-    "label": "Kelas Berjalan",
-    "number_card_name": "Kelas Berjalan"
-   },
-   {
-    "label": "Kelas Tanpa Tutor Pengampu",
-    "number_card_name": "Kelas Tanpa Tutor Pengampu"
-   }
-  ],
-  "parent_page": "RUMBA",
-  "public": 1,
-  "quick_lists": [
-   {
-    "document_type": "Leave Application",
-    "label": "Cuti",
-    "quick_list_filter": null
-   }
-  ],
-  "restrict_to_domain": null,
-  "roles": [
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Personalia"
-   },
-   {
-    "role": "Rumba Kepala Unit"
-   }
-  ],
-  "sequence_id": 5.0,
-  "shortcuts": [
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Karyawan",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/employee/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Lowongan",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/job-opening/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Interview",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/interview/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Cuti",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/leave-application/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Onboarding",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/employee-onboarding/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Offboarding",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/employee-separation/new"
-   },
-   {
-    "color": null,
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Kelas",
-    "link_to": "Rumba Kelas",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Sesi Kelas",
-    "link_to": "Rumba Sesi Kelas",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   }
-  ],
-  "title": "SDM",
   "type": "Workspace"
  },
  {
@@ -1637,7 +883,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-06-30 05:59:44.540163",
+  "modified": "2026-07-11 18:26:33.567121",
   "module": "Bimbel Rumba v16",
   "name": "Data Induk & Master",
   "number_cards": [],
@@ -1648,9 +894,6 @@
   "roles": [
    {
     "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Admin Unit"
    },
    {
     "role": "Rumba Akademik"
@@ -1666,29 +909,16 @@
  },
  {
   "app": "rumba16",
-  "charts": [
-   {
-    "chart_name": "Tren Murid Aktif per Bulan",
-    "label": "Tren Murid Aktif per Bulan"
-   },
-   {
-    "chart_name": "Sesi Terlaksana per Bulan",
-    "label": "Sesi Terlaksana per Bulan"
-   },
-   {
-    "chart_name": "Kelas Aktif per Bulan",
-    "label": "Kelas Aktif per Bulan"
-   }
-  ],
-  "content": "[{\"id\":\"hqi\",\"type\":\"header\",\"data\":{\"text\":\"🔎 Info Cepat\",\"col\":12}},{\"id\":\"i1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Baru\",\"col\":4}},{\"id\":\"i2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran Baru\",\"col\":4}},{\"id\":\"i3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPP Belum Dibayar\",\"col\":4}},{\"id\":\"i4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas Kritis\",\"col\":4}},{\"id\":\"i5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"i6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Perlu Disetujui\",\"col\":4}},{\"id\":\"mk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":12}},{\"id\":\"sp0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"htb\",\"type\":\"header\",\"data\":{\"text\":\"⚡ Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":3}},{\"id\":\"q5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Invoice\",\"col\":3}},{\"id\":\"q6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengeluaran\",\"col\":3}},{\"id\":\"q7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Setor Kas\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hm\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"k1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendaftaran\",\"col\":4}},{\"id\":\"k2\",\"type\":\"card\",\"data\":{\"card_name\":\"Murid\",\"col\":4}},{\"id\":\"k3\",\"type\":\"card\",\"data\":{\"card_name\":\"Kelas & Jadwal\",\"col\":4}},{\"id\":\"k4\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":4}},{\"id\":\"k5\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory\",\"col\":4}},{\"id\":\"k6\",\"type\":\"card\",\"data\":{\"card_name\":\"Report\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hr\",\"type\":\"header\",\"data\":{\"text\":\"📊 Ringkasan\",\"col\":12}},{\"id\":\"r1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"r2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"r3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"r4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"cb1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":8}},{\"id\":\"r5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":4}},{\"id\":\"r6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"r7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}}]",
+  "charts": [],
+  "content": "[{\"id\":\"r591\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r592\",\"type\":\"header\",\"data\":{\"text\":\"📅 Info Hari Ini\",\"col\":12}},{\"id\":\"r593\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"r594\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Belum Terlaksana\",\"col\":6}},{\"id\":\"r595\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pembayaran Masuk Hari Ini\",\"col\":6}},{\"id\":\"r596\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Hari Ini\",\"col\":6}},{\"id\":\"r597\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r598\",\"type\":\"header\",\"data\":{\"text\":\"⚠️ Perlu Tindakan\",\"col\":12}},{\"id\":\"r599\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"r5100\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":4}},{\"id\":\"r5101\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kemarin Tanpa Presensi\",\"col\":4}},{\"id\":\"r5102\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Invoice Belum Dibayar\",\"col\":4}},{\"id\":\"r5103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"r5104\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":4}}]",
   "custom_blocks": [
-   {
-    "custom_block_name": "Distribusi Murid per Program (Donut)",
-    "label": "Distribusi Murid per Program (Donut)"
-   },
    {
     "custom_block_name": "Murid Sering Absen (Alpa)",
     "label": "Murid Sering Absen (Alpa)"
+   },
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
    }
   ],
   "docstatus": 0,
@@ -1702,467 +932,56 @@
   "label": "Admin Unit",
   "link_to": null,
   "link_type": "DocType",
-  "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pendaftaran",
-    "link_count": 2,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Lead",
-    "link_count": 0,
-    "link_to": "Rumba Lead",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pendaftaran",
-    "link_count": 0,
-    "link_to": "Rumba Pendaftaran",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Murid",
-    "link_count": 4,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Murid",
-    "link_count": 0,
-    "link_to": "Rumba Murid",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Mutasi",
-    "link_count": 0,
-    "link_to": "Rumba Mutasi",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pengunduran Diri",
-    "link_count": 0,
-    "link_to": "Rumba Pengunduran Diri",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Sertifikat",
-    "link_count": 0,
-    "link_to": "Rumba Sertifikat",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Kelas & Jadwal",
-    "link_count": 2,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Kelas",
-    "link_count": 0,
-    "link_to": "Rumba Kelas",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Sesi Kelas",
-    "link_count": 0,
-    "link_to": "Rumba Sesi Kelas",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Keuangan",
-    "link_count": 2,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Invoice (SPP)",
-    "link_count": 0,
-    "link_to": "Sales Invoice",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pembayaran / Pengeluaran / Setor Kas",
-    "link_count": 0,
-    "link_to": "Payment Entry",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Inventory",
-    "link_count": 4,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Inventory (Modul & Merchandise)",
-    "link_count": 0,
-    "link_to": "Item",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pesanan Pembelian",
-    "link_count": 0,
-    "link_to": "Purchase Order",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Penerimaan Barang",
-    "link_count": 0,
-    "link_to": "Purchase Receipt",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pengeluaran Barang",
-    "link_count": 0,
-    "link_to": "Stock Entry",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Report",
-    "link_count": 9,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Laba Rugi",
-    "link_count": 0,
-    "link_to": "Profit and Loss Statement",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Neraca",
-    "link_count": 0,
-    "link_to": "Balance Sheet",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Aliran Kas",
-    "link_count": 0,
-    "link_to": "Cash Flow",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Kesiswaan: Kehadiran Murid",
-    "link_count": 0,
-    "link_to": "Rekap Kehadiran Murid",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Kesiswaan: Mutasi",
-    "link_count": 0,
-    "link_to": "Mutasi Murid",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Kesiswaan: Pengunduran Diri",
-    "link_count": 0,
-    "link_to": "Pengunduran Diri Murid",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Kesiswaan: Daftar Tunggu",
-    "link_count": 0,
-    "link_to": "Daftar Tunggu (FIFO)",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Kehadiran Tutor (F-GAJ-01)",
-    "link_count": 0,
-    "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Inventory: Stok",
-    "link_count": 0,
-    "link_to": "Stock Balance",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   }
-  ],
-  "modified": "2026-07-09 22:54:57.507756",
+  "links": [],
+  "modified": "2026-07-12 19:39:24.734208",
   "module": "Bimbel Rumba v16",
   "name": "Admin Unit",
   "number_cards": [
    {
-    "label": "Murid Aktif",
-    "number_card_name": "Murid Aktif"
+    "label": "Sesi Hari Ini",
+    "number_card_name": "Sesi Hari Ini"
    },
    {
-    "label": "Murid Baru Bulan Ini",
-    "number_card_name": "Murid Baru Bulan Ini"
+    "label": "Sesi Belum Terlaksana",
+    "number_card_name": "Sesi Belum Terlaksana"
    },
    {
-    "label": "Murid Berhenti",
-    "number_card_name": "Murid Berhenti"
+    "label": "Pembayaran Masuk Hari Ini",
+    "number_card_name": "Pembayaran Masuk Hari Ini"
    },
    {
-    "label": "Kelas Berjalan",
-    "number_card_name": "Kelas Berjalan"
+    "label": "Lead Baru Hari Ini",
+    "number_card_name": "Lead Baru Hari Ini"
+   },
+   {
+    "label": "Kelas Reguler Kurang dari 4 Murid",
+    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
    }
   ],
   "parent_page": "RUMBA",
   "public": 1,
-  "quick_lists": [],
+  "quick_lists": [
+   {
+    "document_type": "Rumba Lead",
+    "label": "Lead Belum Ditindaklanjuti",
+    "quick_list_filter": "[[\"Rumba Lead\",\"status_lead\",\"=\",\"Baru\"]]"
+   },
+   {
+    "document_type": "Rumba Pendaftaran",
+    "label": "Pendaftaran Menunggu Persetujuan",
+    "quick_list_filter": "[[\"Rumba Pendaftaran\",\"status_pendaftaran\",\"=\",\"Menunggu\"]]"
+   },
+   {
+    "document_type": "Rumba Sesi Kelas",
+    "label": "Sesi Kemarin Tanpa Presensi",
+    "quick_list_filter": "[[\"Rumba Sesi Kelas\",\"status_sesi\",\"is\",\"not set\"],[\"Rumba Sesi Kelas\",\"tanggal_sesi\",\"Timespan\",\"yesterday\"]]"
+   },
+   {
+    "document_type": "Sales Invoice",
+    "label": "Invoice Belum Dibayar",
+    "quick_list_filter": "[[\"Sales Invoice\",\"status\",\"in\",[\"Unpaid\",\"Overdue\"]],[\"Sales Invoice\",\"docstatus\",\"=\",\"1\"]]"
+   }
+  ],
   "restrict_to_domain": null,
   "roles": [
    {
@@ -2176,190 +995,7 @@
    }
   ],
   "sequence_id": 0.5,
-  "shortcuts": [
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": "{} baru",
-    "icon": null,
-    "kanban_board": null,
-    "label": "Lead Baru",
-    "link_to": "Rumba Lead",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"status_lead\":\"Baru\"}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": "{} menunggu",
-    "icon": null,
-    "kanban_board": null,
-    "label": "Pendaftaran Baru",
-    "link_to": "Rumba Pendaftaran",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"status_pendaftaran\":\"Menunggu\"}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Red",
-    "doc_view": "",
-    "format": "{} invoice",
-    "icon": null,
-    "kanban_board": null,
-    "label": "SPP Belum Dibayar",
-    "link_to": "Sales Invoice",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"outstanding_amount\":[\">\",0],\"docstatus\":1}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Orange",
-    "doc_view": "",
-    "format": "{} kelas",
-    "icon": null,
-    "kanban_board": null,
-    "label": "Kelas Kritis",
-    "link_to": "Rumba Kelas",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"jenis_kelas\":\"Reguler\",\"status_kelas\":\"Aktif\",\"jumlah_anggota\":[\"<\",4]}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Orange",
-    "doc_view": "",
-    "format": "{} sesi",
-    "icon": null,
-    "kanban_board": null,
-    "label": "Sesi Perlu Disetujui",
-    "link_to": "Rumba Sesi Kelas",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Orange",
-    "doc_view": "",
-    "format": "{} BKM",
-    "icon": null,
-    "kanban_board": null,
-    "label": "BKM Perlu Disetujui",
-    "link_to": "Rumba BKM Entry",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Pendaftaran",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-pendaftaran/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Murid",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-murid/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Kelas",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-kelas/new"
-   },
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Sesi",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-sesi-kelas/new"
-   },
-   {
-    "color": "Green",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Invoice",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/sales-invoice/new"
-   },
-   {
-    "color": "Green",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Pengeluaran",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/payment-entry/new?payment_type=Pay"
-   },
-   {
-    "color": "Green",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Setor Kas",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/payment-entry/new?payment_type=Internal%20Transfer"
-   }
-  ],
+  "shortcuts": [],
   "title": "Admin Unit",
   "type": "Workspace"
  },
@@ -3197,6 +1833,1721 @@
    }
   ],
   "title": "Keuangan",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [
+   {
+    "chart_name": "Tren Murid Aktif per Bulan",
+    "label": "Tren Murid Aktif per Bulan"
+   }
+  ],
+  "content": "[{\"id\":\"sm1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"sm2\",\"type\":\"header\",\"data\":{\"text\":\"🧒 Siklus Murid\",\"col\":12}},{\"id\":\"sm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"sm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"sm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Cuti\",\"col\":3}},{\"id\":\"sm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"sm7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"sm8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"sm9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm10\",\"type\":\"header\",\"data\":{\"text\":\"⚠️ Perlu Tindakan\",\"col\":12}},{\"id\":\"sm11\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":6}},{\"id\":\"sm12\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":6}},{\"id\":\"sm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Perlu Disetujui\",\"col\":4}},{\"id\":\"sm14\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm15\",\"type\":\"header\",\"data\":{\"text\":\"📊 Tren & Distribusi\",\"col\":12}},{\"id\":\"sm16\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":6}},{\"id\":\"sm17\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":6}},{\"id\":\"sm18\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm19\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"sm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendaftaran\",\"col\":4}},{\"id\":\"sm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Murid\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Distribusi Murid per Program (Donut)",
+    "label": "Distribusi Murid per Program (Donut)"
+   },
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "project",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Siklus Murid",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pendaftaran",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Lead",
+    "link_count": 0,
+    "link_to": "Rumba Lead",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pendaftaran",
+    "link_count": 0,
+    "link_to": "Rumba Pendaftaran",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Murid",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Murid",
+    "link_count": 0,
+    "link_to": "Rumba Murid",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Mutasi",
+    "link_count": 0,
+    "link_to": "Rumba Mutasi",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pengunduran Diri",
+    "link_count": 0,
+    "link_to": "Rumba Pengunduran Diri",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Sertifikat",
+    "link_count": 0,
+    "link_to": "Rumba Sertifikat",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-12 21:17:58.350119",
+  "module": "Bimbel Rumba v16",
+  "name": "Siklus Murid",
+  "number_cards": [
+   {
+    "label": "Murid Aktif",
+    "number_card_name": "Murid Aktif"
+   },
+   {
+    "label": "Murid Baru Bulan Ini",
+    "number_card_name": "Murid Baru Bulan Ini"
+   },
+   {
+    "label": "Murid Cuti",
+    "number_card_name": "Murid Cuti"
+   },
+   {
+    "label": "Murid Berhenti",
+    "number_card_name": "Murid Berhenti"
+   }
+  ],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [
+   {
+    "document_type": "Rumba Lead",
+    "label": "Lead Belum Ditindaklanjuti",
+    "quick_list_filter": "[[\"Rumba Lead\",\"status_lead\",\"=\",\"Baru\"]]"
+   },
+   {
+    "document_type": "Rumba Pendaftaran",
+    "label": "Pendaftaran Menunggu Persetujuan",
+    "quick_list_filter": "[[\"Rumba Pendaftaran\",\"status_pendaftaran\",\"=\",\"Menunggu\"]]"
+   }
+  ],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 0.51,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Pendaftaran",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-pendaftaran/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Murid",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-murid/new"
+   },
+   {
+    "color": "Orange",
+    "doc_view": "",
+    "format": "{} BKM",
+    "icon": null,
+    "kanban_board": null,
+    "label": "BKM Perlu Disetujui",
+    "link_to": "Rumba BKM Entry",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Siklus Murid",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [
+   {
+    "chart_name": "Sesi Terlaksana per Bulan",
+    "label": "Sesi Terlaksana per Bulan"
+   },
+   {
+    "chart_name": "Kelas Aktif per Bulan",
+    "label": "Kelas Aktif per Bulan"
+   }
+  ],
+  "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"🏫 Kelas & Jadwal\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":3}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":3}},{\"id\":\"kj5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":3}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"📊 Tren\",\"col\":12}},{\"id\":\"kj11\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"kj12\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Kelas & Jadwal\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Kelas & Jadwal",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Kelas & Jadwal",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Kelas",
+    "link_count": 0,
+    "link_to": "Rumba Kelas",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Sesi Kelas",
+    "link_count": 0,
+    "link_to": "Rumba Sesi Kelas",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Ruangan",
+    "link_count": 0,
+    "link_to": "Rumba Ruangan",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Program Belajar",
+    "link_count": 0,
+    "link_to": "Rumba Program Belajar",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-12 21:10:00.617208",
+  "module": "Bimbel Rumba v16",
+  "name": "Kelas & Jadwal",
+  "number_cards": [
+   {
+    "label": "Kelas Berjalan",
+    "number_card_name": "Kelas Berjalan"
+   },
+   {
+    "label": "Kelas Reguler Kurang dari 4 Murid",
+    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+   },
+   {
+    "label": "Sesi Minggu Ini",
+    "number_card_name": "Sesi Minggu Ini"
+   },
+   {
+    "label": "Kelas Tanpa Tutor",
+    "number_card_name": "Kelas Tanpa Tutor"
+   }
+  ],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 0.52,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Kelas",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-kelas/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Sesi",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-sesi-kelas/new"
+   },
+   {
+    "color": "Orange",
+    "doc_view": "",
+    "format": "{} sesi",
+    "icon": null,
+    "kanban_board": null,
+    "label": "Sesi Perlu Disetujui",
+    "link_to": "Rumba Sesi Kelas",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Kelas & Jadwal",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [],
+  "content": "[{\"id\":\"r558\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r559\",\"type\":\"header\",\"data\":{\"text\":\"📊 Laporan\",\"col\":12}},{\"id\":\"r560\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Keuangan\",\"col\":4}},{\"id\":\"r561\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Murid & Akademik\",\"col\":4}},{\"id\":\"r562\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Persediaan\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "file",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Laporan",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Laporan Keuangan",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Laba Rugi",
+    "link_count": 0,
+    "link_to": "Profit and Loss Statement",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "GL Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Neraca",
+    "link_count": 0,
+    "link_to": "Balance Sheet",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "GL Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Aliran Kas",
+    "link_count": 0,
+    "link_to": "Cash Flow",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "GL Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Penerimaan (Kas Masuk)",
+    "link_count": 0,
+    "link_to": "Penerimaan (Kas Masuk)",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Payment Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pembayaran (Kas Keluar)",
+    "link_count": 0,
+    "link_to": "Pembayaran (Kas Keluar)",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Payment Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Laporan Murid & Akademik",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rekap Kehadiran Murid",
+    "link_count": 0,
+    "link_to": "Rekap Kehadiran Murid",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Sesi Kelas",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rekap Bintang Murid",
+    "link_count": 0,
+    "link_to": "Rekap Bintang Murid",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba BKM Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Riwayat Ujian Kenaikan Level",
+    "link_count": 0,
+    "link_to": "Riwayat Ujian Kenaikan Level",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Ujian Kenaikan Level",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Mutasi Murid",
+    "link_count": 0,
+    "link_to": "Mutasi Murid",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Mutasi",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pengunduran Diri Murid",
+    "link_count": 0,
+    "link_to": "Pengunduran Diri Murid",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Pengunduran Diri",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Daftar Tunggu (FIFO)",
+    "link_count": 0,
+    "link_to": "Daftar Tunggu (FIFO)",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Lead",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Kehadiran Tutor (F-GAJ-01)",
+    "link_count": 0,
+    "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Sesi Kelas",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Laporan Persediaan",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Stok Barang",
+    "link_count": 0,
+    "link_to": "Stock Balance",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Stock Ledger Entry",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Penjualan Barang",
+    "link_count": 0,
+    "link_to": "Penjualan Barang",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Sales Invoice",
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-11 19:19:06.551482",
+  "module": "Bimbel Rumba v16",
+  "name": "Laporan",
+  "number_cards": [],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 0.54,
+  "shortcuts": [],
+  "title": "Laporan",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [],
+  "content": "[{\"id\":\"ak1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"ak2\",\"type\":\"header\",\"data\":{\"text\":\"💰 Keuangan (SPP)\",\"col\":12}},{\"id\":\"ak3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":3}},{\"id\":\"ak4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":3}},{\"id\":\"ak5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Invoice\",\"col\":4}},{\"id\":\"ak8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengeluaran\",\"col\":4}},{\"id\":\"ak9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Setor Kas\",\"col\":4}},{\"id\":\"ak10\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ak11\",\"type\":\"header\",\"data\":{\"text\":\"📦 Menu & Persediaan\",\"col\":12}},{\"id\":\"ak12\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":4}},{\"id\":\"ak13\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan Barang\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "accounting",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Akuntansi",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Keuangan",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Invoice (SPP)",
+    "link_count": 0,
+    "link_to": "Sales Invoice",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pembayaran",
+    "link_count": 0,
+    "link_to": "Payment Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Persediaan Barang",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Inventory (Modul & Merchandise)",
+    "link_count": 0,
+    "link_to": "Item",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pesanan Pembelian",
+    "link_count": 0,
+    "link_to": "Purchase Order",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Penerimaan Barang",
+    "link_count": 0,
+    "link_to": "Purchase Receipt",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pengeluaran Barang",
+    "link_count": 0,
+    "link_to": "Stock Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-12 20:42:46.447407",
+  "module": "Bimbel Rumba v16",
+  "name": "Akuntansi",
+  "number_cards": [
+   {
+    "label": "Nominal SPP Terbit Bulan Ini",
+    "number_card_name": "Nominal SPP Terbit Bulan Ini"
+   },
+   {
+    "label": "Nominal SPP Terbayar Bulan Ini",
+    "number_card_name": "Nominal SPP Terbayar Bulan Ini"
+   },
+   {
+    "label": "Nominal SPP Belum Dibayar",
+    "number_card_name": "Nominal SPP Belum Dibayar"
+   },
+   {
+    "label": "Invoice SPP Belum Dibayar",
+    "number_card_name": "Invoice SPP Belum Dibayar"
+   }
+  ],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 0.53,
+  "shortcuts": [
+   {
+    "color": "Green",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Invoice",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/sales-invoice/new"
+   },
+   {
+    "color": "Green",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Pengeluaran",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/payment-entry/new?payment_type=Pay"
+   },
+   {
+    "color": "Green",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Setor Kas",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/payment-entry/new?payment_type=Internal%20Transfer"
+   }
+  ],
+  "title": "Akuntansi",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [
+   {
+    "chart_name": "Employees by Branch",
+    "label": "Employees by Branch"
+   }
+  ],
+  "content": "[{\"id\":\"sdm1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🔎 Info Cepat SDM</b></span>\",\"col\":12}},{\"id\":\"sdm2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"sdm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"sdm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sdm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"sdm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"sdm7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"sdm8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡ Tambah Baru</b></span>\",\"col\":12}},{\"id\":\"sdm10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":4}},{\"id\":\"sdm11\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":4}},{\"id\":\"sdm12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Interview\",\"col\":4}},{\"id\":\"sdm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Cuti\",\"col\":4}},{\"id\":\"sdm14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":4}},{\"id\":\"sdm15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Offboarding\",\"col\":4}},{\"id\":\"sdm16\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp101\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🧑‍🏫 Penempatan Tutor</b></span>\",\"col\":12}},{\"id\":\"sdmp102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sdmp103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor Pengampu\",\"col\":4}},{\"id\":\"sdmp104\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp105\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"sdmp106\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"sdmp107\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmttk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas (Pengampu)\",\"col\":12}},{\"id\":\"sdm17\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📂 Menu</b></span>\",\"col\":12}},{\"id\":\"sdm18\",\"type\":\"card\",\"data\":{\"card_name\":\"Rekrutmen\",\"col\":4}},{\"id\":\"sdm19\",\"type\":\"card\",\"data\":{\"card_name\":\"Karyawan & Lifecycle\",\"col\":4}},{\"id\":\"sdm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Kehadiran\",\"col\":4}},{\"id\":\"sdm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Cuti\",\"col\":4}},{\"id\":\"sdm22\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":4}},{\"id\":\"sdm23\",\"type\":\"card\",\"data\":{\"card_name\":\"Master SDM\",\"col\":4}},{\"id\":\"sdm24\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm25\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📊 Ringkasan</b></span>\",\"col\":12}},{\"id\":\"sdm26\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Karyawan Baru Bulan Ini\",\"col\":4}},{\"id\":\"sdm27\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employees by Branch\",\"col\":8}},{\"id\":\"sdm28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Cuti\",\"col\":6}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Tutor Tanpa Kelas (Pengampu)",
+    "label": "Tutor Tanpa Kelas (Pengampu)"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "hr",
+  "indicator_color": "pink",
+  "is_hidden": 0,
+  "label": "SDM",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rekrutmen",
+    "link_count": 6,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Job Opening",
+    "link_count": 0,
+    "link_to": "Job Opening",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Job Applicant",
+    "link_count": 0,
+    "link_to": "Job Applicant",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Interview",
+    "link_count": 0,
+    "link_to": "Interview",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Interview Feedback",
+    "link_count": 0,
+    "link_to": "Interview Feedback",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Job Offer",
+    "link_count": 0,
+    "link_to": "Job Offer",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Interview Type",
+    "link_count": 0,
+    "link_to": "Interview Type",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Karyawan & Lifecycle",
+    "link_count": 4,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Employee",
+    "link_count": 0,
+    "link_to": "Employee",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Employee Onboarding",
+    "link_count": 0,
+    "link_to": "Employee Onboarding",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Employee Separation",
+    "link_count": 0,
+    "link_to": "Employee Separation",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Exit Interview",
+    "link_count": 0,
+    "link_to": "Exit Interview",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Kehadiran",
+    "link_count": 4,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Attendance",
+    "link_count": 0,
+    "link_to": "Attendance",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Employee Checkin",
+    "link_count": 0,
+    "link_to": "Employee Checkin",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Shift Type",
+    "link_count": 0,
+    "link_to": "Shift Type",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Shift Assignment",
+    "link_count": 0,
+    "link_to": "Shift Assignment",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Cuti",
+    "link_count": 8,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Application",
+    "link_count": 0,
+    "link_to": "Leave Application",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Allocation",
+    "link_count": 0,
+    "link_to": "Leave Allocation",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Type",
+    "link_count": 0,
+    "link_to": "Leave Type",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Period",
+    "link_count": 0,
+    "link_to": "Leave Period",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Policy",
+    "link_count": 0,
+    "link_to": "Leave Policy",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Leave Policy Assignment",
+    "link_count": 0,
+    "link_to": "Leave Policy Assignment",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Holiday List",
+    "link_count": 0,
+    "link_to": "Holiday List",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Holiday List Assignment",
+    "link_count": 0,
+    "link_to": "Holiday List Assignment",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Payroll (Monitor)",
+    "link_count": 5,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Salary Structure",
+    "link_count": 0,
+    "link_to": "Salary Structure",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Salary Structure Assignment",
+    "link_count": 0,
+    "link_to": "Salary Structure Assignment",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Additional Salary",
+    "link_count": 0,
+    "link_to": "Additional Salary",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Payroll Entry",
+    "link_count": 0,
+    "link_to": "Payroll Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Salary Slip",
+    "link_count": 0,
+    "link_to": "Salary Slip",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Master SDM",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Designation",
+    "link_count": 0,
+    "link_to": "Designation",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Employment Type",
+    "link_count": 0,
+    "link_to": "Employment Type",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Branch",
+    "link_count": 0,
+    "link_to": "Branch",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-11 13:30:06.362253",
+  "module": "Bimbel Rumba v16",
+  "name": "SDM",
+  "number_cards": [
+   {
+    "label": "Pelamar Belum Diproses",
+    "number_card_name": "Pelamar Belum Diproses"
+   },
+   {
+    "label": "Interview Terjadwal",
+    "number_card_name": "Interview Terjadwal"
+   },
+   {
+    "label": "Cuti Menunggu Persetujuan",
+    "number_card_name": "Cuti Menunggu Persetujuan"
+   },
+   {
+    "label": "Onboarding Berjalan",
+    "number_card_name": "Onboarding Berjalan"
+   },
+   {
+    "label": "Offboarding Berjalan",
+    "number_card_name": "Offboarding Berjalan"
+   },
+   {
+    "label": "Total Employees",
+    "number_card_name": "Total Employees"
+   },
+   {
+    "label": "Karyawan Baru Bulan Ini",
+    "number_card_name": "Karyawan Baru Bulan Ini"
+   },
+   {
+    "label": "Kelas Berjalan",
+    "number_card_name": "Kelas Berjalan"
+   },
+   {
+    "label": "Kelas Tanpa Tutor Pengampu",
+    "number_card_name": "Kelas Tanpa Tutor Pengampu"
+   }
+  ],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [
+   {
+    "document_type": "Leave Application",
+    "label": "Cuti",
+    "quick_list_filter": null
+   }
+  ],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 5.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Karyawan",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/employee/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Lowongan",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/job-opening/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Interview",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/interview/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Cuti",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/leave-application/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Onboarding",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/employee-onboarding/new"
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Offboarding",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/employee-separation/new"
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Kelas",
+    "link_to": "Rumba Kelas",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Sesi Kelas",
+    "link_to": "Rumba Sesi Kelas",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "SDM",
   "type": "Workspace"
  },
  {

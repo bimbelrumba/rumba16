@@ -1,0 +1,186 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Murid Aktif per Bulan",
+   "label": "Tren Murid Aktif per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"sm1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"sm2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83e\uddd2 Siklus Murid\",\"col\":12}},{\"id\":\"sm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":3}},{\"id\":\"sm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":3}},{\"id\":\"sm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Cuti\",\"col\":3}},{\"id\":\"sm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti\",\"col\":3}},{\"id\":\"sm7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":3}},{\"id\":\"sm8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Murid\",\"col\":3}},{\"id\":\"sm9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm10\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"sm11\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":6}},{\"id\":\"sm12\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":6}},{\"id\":\"sm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Perlu Disetujui\",\"col\":4}},{\"id\":\"sm14\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm15\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Tren & Distribusi\",\"col\":12}},{\"id\":\"sm16\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Murid Aktif per Bulan\",\"col\":6}},{\"id\":\"sm17\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Distribusi Murid per Program (Donut)\",\"col\":6}},{\"id\":\"sm18\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sm19\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc2 Menu\",\"col\":12}},{\"id\":\"sm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendaftaran\",\"col\":4}},{\"id\":\"sm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Murid\",\"col\":4}}]",
+ "creation": "2026-07-11 19:10:23.749967",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Distribusi Murid per Program (Donut)",
+   "label": "Distribusi Murid per Program (Donut)"
+  },
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "project",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Siklus Murid",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendaftaran",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Rumba Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendaftaran",
+   "link_count": 0,
+   "link_to": "Rumba Pendaftaran",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Murid",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Murid",
+   "link_count": 0,
+   "link_to": "Rumba Murid",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mutasi",
+   "link_count": 0,
+   "link_to": "Rumba Mutasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengunduran Diri",
+   "link_count": 0,
+   "link_to": "Rumba Pengunduran Diri",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sertifikat",
+   "link_count": 0,
+   "link_to": "Rumba Sertifikat",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-12 21:17:58.350119",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Siklus Murid",
+ "number_cards": [
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Murid Baru Bulan Ini",
+   "number_card_name": "Murid Baru Bulan Ini"
+  },
+  {
+   "label": "Murid Cuti",
+   "number_card_name": "Murid Cuti"
+  },
+  {
+   "label": "Murid Berhenti",
+   "number_card_name": "Murid Berhenti"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Rumba Lead",
+   "label": "Lead Belum Ditindaklanjuti",
+   "quick_list_filter": "[[\"Rumba Lead\",\"status_lead\",\"=\",\"Baru\"]]"
+  },
+  {
+   "document_type": "Rumba Pendaftaran",
+   "label": "Pendaftaran Menunggu Persetujuan",
+   "quick_list_filter": "[[\"Rumba Pendaftaran\",\"status_pendaftaran\",\"=\",\"Menunggu\"]]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.51,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Pendaftaran",
+   "type": "URL",
+   "url": "/app/rumba-pendaftaran/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Murid",
+   "type": "URL",
+   "url": "/app/rumba-murid/new"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "format": "{} BKM",
+   "label": "BKM Perlu Disetujui",
+   "link_to": "Rumba BKM Entry",
+   "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Siklus Murid",
+ "type": "Workspace"
+}

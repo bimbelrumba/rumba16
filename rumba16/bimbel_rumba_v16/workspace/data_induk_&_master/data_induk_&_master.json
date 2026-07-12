@@ -2,7 +2,7 @@
  "app": "rumba16",
  "charts": [],
  "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Data Induk & Master\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Geografi & Unit\",\"col\":4}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Akademik Master\",\"col\":4}}]",
- "creation": "2026-06-26 21:09:57.134591",
+ "creation": "2026-07-10 13:42:02.906573",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -104,7 +104,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-30 05:59:44.540163",
+ "modified": "2026-07-11 18:26:33.567121",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Data Induk & Master",
@@ -116,9 +116,6 @@
  "roles": [
   {
    "role": "Rumba Founder"
-  },
-  {
-   "role": "Rumba Admin Unit"
   },
   {
    "role": "Rumba Akademik"
