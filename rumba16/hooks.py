@@ -304,7 +304,6 @@ fixtures = [
     "Exit Interview-ei_nilai_juara", "Exit Interview-ei_kepuasan_keseluruhan",
     "Exit Interview-ei_masukan_disukai", "Exit Interview-ei_masukan_perbaikan",
     "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali",
-    "Rumba Kelas-tutor_pengampu",
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -368,7 +367,7 @@ fixtures = [
         ["name", "in", [
             "Sales Invoice-write_off_cost_center-ignore_user_permissions",
             "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
-            "Employee-naming_series-hidden","Rumba Kelas-tutor_pengampu",
+            "Employee-naming_series-hidden",
         ]]
     ],
 },
