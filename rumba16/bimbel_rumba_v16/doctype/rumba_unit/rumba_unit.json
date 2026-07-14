@@ -30,7 +30,9 @@
   "section_relasi_internal",
   "cost_center",
   "column_break_aysc",
-  "warehouse"
+  "warehouse",
+  "target_section",
+  "target_murid_minimal"
  ],
  "fields": [
   {
@@ -188,12 +190,23 @@
   {
    "fieldname": "column_break_aysc",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_section",
+   "fieldtype": "Section Break",
+   "label": "TARGET KESISWAAN"
+  },
+  {
+   "description": "Target murid aktif minimal (diisi Pusat). 0 atau kosong = unit belum ditarget.",
+   "fieldname": "target_murid_minimal",
+   "fieldtype": "Int",
+   "label": "Target Murid Minimal"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:30:01.361800",
+ "modified": "2026-07-14 11:36:29.251108",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Unit",

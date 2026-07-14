@@ -41,7 +41,11 @@
   "column_break_mild",
   "nomor_handphone",
   "alamat_email",
-  "alamat"
+  "alamat",
+  "cuti_section",
+  "tanggal_mulai_cuti",
+  "tanggal_selesai_cuti",
+  "biaya_cuti_lunas"
  ],
  "fields": [
   {
@@ -270,12 +274,36 @@
    "fieldtype": "Int",
    "label": "Saldo Bintang",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.status_murid=='Cuti' || doc.tanggal_mulai_cuti",
+   "fieldname": "cuti_section",
+   "fieldtype": "Section Break",
+   "label": "CUTI"
+  },
+  {
+   "fieldname": "tanggal_mulai_cuti",
+   "fieldtype": "Date",
+   "label": "Tanggal Mulai Cuti"
+  },
+  {
+   "description": "Rencana kembali aktif.",
+   "fieldname": "tanggal_selesai_cuti",
+   "fieldtype": "Date",
+   "label": "Tanggal Selesai Cuti"
+  },
+  {
+   "default": "0",
+   "description": "Centang bila orang tua sudah membayar biaya cuti. Tidak tercentang + status Cuti = CUTI (P) / cuti berpiutang.",
+   "fieldname": "biaya_cuti_lunas",
+   "fieldtype": "Check",
+   "label": "Biaya Cuti Lunas"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-26 23:18:23.171593",
+ "modified": "2026-07-14 11:37:02.939685",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",

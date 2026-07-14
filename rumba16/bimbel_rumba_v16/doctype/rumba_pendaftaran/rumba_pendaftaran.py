@@ -26,6 +26,46 @@ from frappe.utils import add_days, flt, getdate, nowdate, today
 
 
 class RumbaPendaftaran(Document):
+	def advisory_deteksi_masuk_lagi(self):
+		"""ERP-KES-001 K4: bila jenis_pendaftaran='Siswa Baru' tapi ada murid
+		berstatus Berhenti dengan nomor HP ortu sama ATAU nama lengkap sama,
+		ingatkan Admin agar mempertimbangkan 'Masuk Lagi' (SML) — non-blok."""
+		if self.get("jenis_pendaftaran") != "Siswa Baru":
+			return
+		if not (self.get("nomor_handphone") or self.get("nama_lengkap")):
+			return
+
+		kandidat = []
+		if self.get("nomor_handphone"):
+			kandidat = frappe.get_all(
+				"Rumba Murid",
+				filters={"status_murid": "Berhenti", "nomor_handphone": self.nomor_handphone},
+				fields=["name", "nama_lengkap", "nama_unit"],
+				limit=3,
+			)
+		if not kandidat and self.get("nama_lengkap"):
+			kandidat = frappe.get_all(
+				"Rumba Murid",
+				filters={"status_murid": "Berhenti", "nama_lengkap": ("like", self.nama_lengkap.strip())},
+				fields=["name", "nama_lengkap", "nama_unit"],
+				limit=3,
+			)
+ 
+		if kandidat:
+			daftar = "<br>".join(
+				"- {0} ({1}, unit {2})".format(k.nama_lengkap, k.name, k.nama_unit or "-")
+				for k in kandidat
+			)
+			frappe.msgprint(
+				msg=(
+					"Ditemukan murid berstatus <b>Berhenti</b> dengan data mirip:<br>{0}<br><br>"
+					"Bila ini murid yang sama, pertimbangkan mengubah <b>Jenis Pendaftaran</b> "
+					"menjadi <b>Masuk Lagi</b> agar terhitung SML (bukan SBA) di laporan kesiswaan."
+				).format(daftar),
+				title="Kemungkinan Siswa Masuk Lagi",
+				indicator="orange",
+			)
+
     def autoname(self):
         self.set_kode_unit()
         self.validate_kode_unit()
@@ -46,6 +86,7 @@ class RumbaPendaftaran(Document):
         self.set_duplicate_check_key()
         self.validate_duplicate_pendaftaran()
         self.validate_persetujuan_harus_lunas()
+        self.advisory_deteksi_masuk_lagi()
 
     def set_kode_unit(self):
         if self.kode_unit:
