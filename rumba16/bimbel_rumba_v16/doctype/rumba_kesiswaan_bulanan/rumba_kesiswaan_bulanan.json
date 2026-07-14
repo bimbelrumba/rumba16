@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-14 18:41:49.474250",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_periode",
+  "unit",
+  "periode",
+  "cb0",
+  "tanggal_cutoff",
+  "status_snapshot",
+  "sec_angka",
+  "murid_aktif",
+  "sba",
+  "sml",
+  "pu",
+  "bd",
+  "cb1",
+  "off",
+  "lulus",
+  "cuti",
+  "cuti_p",
+  "sec_target",
+  "target_murid",
+  "btm",
+  "target_tercapai",
+  "cb2",
+  "estimasi_bulan_depan",
+  "sec_catatan",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_periode",
+   "fieldtype": "Section Break",
+   "label": "PERIODE"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit",
+   "options": "Rumba Unit",
+   "reqd": 1
+  },
+  {
+   "description": "Format YYYY-MM, contoh 2026-07",
+   "fieldname": "periode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Periode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanggal_cutoff",
+   "fieldtype": "Date",
+   "label": "Tanggal Cut-off",
+   "reqd": 1
+  },
+  {
+   "default": "Final",
+   "description": "Final = hasil generator (beku). Manual = input tangan (saldo awal pra-go-live).",
+   "fieldname": "status_snapshot",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status Snapshot",
+   "options": "Final\nManual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_angka",
+   "fieldtype": "Section Break",
+   "label": "ANGKA KESISWAAN (BEKU SETELAH TERSIMPAN UNTUK STATUS FINAL)"
+  },
+  {
+   "fieldname": "murid_aktif",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Murid Aktif"
+  },
+  {
+   "fieldname": "sba",
+   "fieldtype": "Int",
+   "label": "SBA (Siswa Baru Aktif)"
+  },
+  {
+   "fieldname": "sml",
+   "fieldtype": "Int",
+   "label": "SML (Siswa Masuk Lagi)"
+  },
+  {
+   "fieldname": "pu",
+   "fieldtype": "Int",
+   "label": "PU (Pindah Unit Masuk)"
+  },
+  {
+   "fieldname": "bd",
+   "fieldtype": "Int",
+   "label": "BD (Bayar Dulu)"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "off",
+   "fieldtype": "Int",
+   "label": "OFF (Keluar)"
+  },
+  {
+   "fieldname": "lulus",
+   "fieldtype": "Int",
+   "label": "LULUS"
+  },
+  {
+   "fieldname": "cuti",
+   "fieldtype": "Int",
+   "label": "CUTI (Lunas)"
+  },
+  {
+   "fieldname": "cuti_p",
+   "fieldtype": "Int",
+   "label": "CUTI (P) (Berpiutang)"
+  },
+  {
+   "fieldname": "sec_target",
+   "fieldtype": "Section Break",
+   "label": "TARGET"
+  },
+  {
+   "fieldname": "target_murid",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Target Murid (beku)"
+  },
+  {
+   "fieldname": "btm",
+   "fieldtype": "Int",
+   "label": "BTM (Aktif \u2212 Target)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "target_tercapai",
+   "fieldtype": "Check",
+   "label": "Target Tercapai",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimasi_bulan_depan",
+   "fieldtype": "Int",
+   "label": "Estimasi Bulan Depan"
+  },
+  {
+   "fieldname": "sec_catatan",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-14 18:41:49.474250",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Kesiswaan Bulanan",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Kepala Unit",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
