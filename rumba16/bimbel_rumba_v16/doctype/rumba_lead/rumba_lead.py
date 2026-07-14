@@ -4,10 +4,32 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
+from frappe.model.naming import make_autoname
 from frappe.utils import getdate, today
 
 
 class RumbaLead(Document):
+    def autoname(self):
+        """Nama Lead 10 karakter: L + YY + kode_unit (4 angka) + urutan 3 digit.
+        Contoh: L261901001. Counter tersimpan di tabSeries dengan kunci
+        'L{YY}{kode_unit}' sehingga reset otomatis per unit per tahun.
+        Lead lama format RL-YYYY-##### dibiarkan (tidak di-rename).
+        """
+        kode_unit = self.kode_unit
+        if not kode_unit and self.nama_unit:
+            # Web form publik tidak mengirim field fetch_from — ambil langsung.
+            kode_unit = frappe.db.get_value("Rumba Unit", self.nama_unit, "kode_unit")
+        if not kode_unit:
+            frappe.throw(
+                _(
+                    "Kode Unit tidak ditemukan untuk unit {0}. "
+                    "Pastikan master Rumba Unit sudah punya Kode Unit (4 angka)."
+                ).format(frappe.bold(self.nama_unit or "-"))
+            )
+        self.kode_unit = kode_unit
+        tahun = getdate(self.tanggal_lead or today()).strftime("%y")
+        self.name = make_autoname(f"L{tahun}{kode_unit}.###")
+
     def validate(self):
         self.validasi_trial()
         self.validasi_daftar_tunggu()
