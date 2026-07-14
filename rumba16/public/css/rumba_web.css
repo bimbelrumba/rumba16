@@ -1,7 +1,7 @@
 /* ============================================================
    RUMBA THEME — WEB (login + web form publik)
    File   : rumba_web.css
-   Dok    : ERP-THEME-001 — v2.0 (14 Jul 2026)
+   Dok    : ERP-THEME-001 — v2.1 (14 Jul 2026)
    Muat   : hooks.py → web_include_css = "/assets/rumba16/css/rumba_web.css"
    Lingkup: Halaman login, /kelas-gratis, /pendaftaran-murid-baru,
             /daftar-event, /lamaran, dan web form publik lain.
@@ -17,6 +17,16 @@
    - Palet Elementor website = palet resmi RUMBA (identik)
    Keputusan 10 Jul 2026 tetap berlaku: halaman login memakai
    DESAIN BAWAAN ERPNext, hanya recolor + font.
+
+   v2.1 — hasil verifikasi visual live di dev (14 Jul 2026):
+   - Tombol Next (multi-halaman) ikut gaya primer solid;
+     Discard/Previous jadi outline abu netral
+   - Spacer kosong 3rem atas/bawah kartu dihilangkan
+   - Border bawaan web-form-header/web-form dilebur ke kartu
+     v2.0 (hilangkan efek "kartu dalam kartu")
+   PENTING: /assets di-cache browser 1 tahun (max-age=31536000).
+   Setiap update file ini, naikkan query string di hooks.py:
+   web_include_css = "/assets/rumba16/css/rumba_web.css?v=21"
    ============================================================ */
 
 /* Font sesuai website (Raleway = teks/judul, Poppins = tombol) */
@@ -110,6 +120,24 @@ body:has(.web-form-container) {
   margin-bottom: 3rem;
 }
 
+/* v2.1: lebur border bawaan ke kartu (hilangkan kartu-dalam-kartu)
+   + hilangkan spacer kosong 3rem atas/bawah */
+.web-form-container > div[style="height: 3rem"] { height: 0 !important; }
+.web-form-container .web-form-header {
+  border: none !important;
+  border-bottom: 1px solid #ececec !important;
+  border-radius: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.web-form-container .web-form {
+  border: none !important;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Judul & intro web form: gaya judul seksi website */
 .web-form-header .title,
 .web-form-head .title {
@@ -164,6 +192,30 @@ body:has(.web-form-container) {
 .page-card .btn-primary:hover,
 .btn-login:hover {
   background: var(--rumba-hijau-gelap) !important;
+}
+
+/* Next (web form multi-halaman) = aksi utama: ikut gaya primer */
+.web-form-container .btn-next {
+  background: var(--rumba-gradasi-hijau) !important;
+  border: 1px solid var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.web-form-container .btn-next:hover {
+  background: var(--rumba-hijau-gelap) !important;
+}
+
+/* Discard & Previous: outline abu netral, hover tint hijau */
+.web-form-container .discard-btn,
+.web-form-container .btn-previous {
+  background: transparent !important;
+  border: 2px solid #cfcfcf !important;
+  color: #555 !important;
+}
+.web-form-container .discard-btn:hover,
+.web-form-container .btn-previous:hover {
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: var(--rumba-hijau-gelap) !important;
+  background: var(--rumba-hijau-tint) !important;
 }
 
 /* Sekunder: outline 2px hijau gelap (gaya CTA outline website) */
@@ -245,5 +297,5 @@ body:has(.web-form-container) {
 .rumba-kuning { color: var(--rumba-kuning) !important; }
 
 /* ============================================================
-   SELESAI — rumba_web.css v2.0
+   SELESAI — rumba_web.css v2.1
    ============================================================ */
