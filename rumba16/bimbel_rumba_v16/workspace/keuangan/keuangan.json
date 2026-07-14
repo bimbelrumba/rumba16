@@ -7,7 +7,7 @@
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
- "hide_custom": 0,
+ "hide_custom": 1,
  "icon": "accounting",
  "idx": 0,
  "indicator_color": "green",
@@ -366,7 +366,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-15 01:51:47.316046",
+ "modified": "2026-07-15 01:56:24.275259",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Keuangan",
