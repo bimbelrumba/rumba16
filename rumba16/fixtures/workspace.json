@@ -1163,7 +1163,7 @@
  {
   "app": "rumba16",
   "charts": [],
-  "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"⚡ Aksi Cepat — Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Tagihan\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Penerimaan\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pembayaran\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jurnal\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hk\",\"type\":\"header\",\"data\":{\"text\":\"💰 Info Cepat Keuangan — SPP\",\"col\":12}},{\"id\":\"k1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"k3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"k5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":4}},{\"id\":\"k2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"k4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"k6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":4}},{\"id\":\"k7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Aging per Unit\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hm\",\"type\":\"header\",\"data\":{\"text\":\"🎓 Info Cepat Murid\",\"col\":12}},{\"id\":\"m1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"m2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":4}},{\"id\":\"m3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Lulus Bulan Ini\",\"col\":4}},{\"id\":\"m4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti & Keluar Bulan Ini\",\"col\":4}},{\"id\":\"m5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Menunggu\",\"col\":4}},{\"id\":\"m6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Cuti\",\"col\":4}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hc\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan Master\",\"col\":3}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":3}},{\"id\":\"cd3\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan Barang\",\"col\":3}},{\"id\":\"cd4\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan\",\"col\":3}}]",
+  "content": "[{\"id\":\"hq\",\"type\":\"header\",\"data\":{\"text\":\"⚡ Aksi Cepat — Tambah Baru\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Tagihan\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Penerimaan\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pembayaran\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jurnal\",\"col\":3}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hk\",\"type\":\"header\",\"data\":{\"text\":\"💰 Info Cepat Keuangan — SPP\",\"col\":12}},{\"id\":\"k1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"k3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"k5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":4}},{\"id\":\"k2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"k4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"k6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":4}},{\"id\":\"k7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Aging per Unit\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hm\",\"type\":\"header\",\"data\":{\"text\":\"🎓 Info Cepat Murid\",\"col\":12}},{\"id\":\"m1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"m2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Baru Bulan Ini\",\"col\":4}},{\"id\":\"m3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Lulus Bulan Ini\",\"col\":4}},{\"id\":\"m4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Berhenti & Keluar Bulan Ini\",\"col\":4}},{\"id\":\"m5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Menunggu\",\"col\":4}},{\"id\":\"m6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Cuti\",\"col\":4}},{\"id\":\"m7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Unit Belum Capai Target\",\"col\":4}},{\"id\":\"m8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kesiswaan per Unit\",\"col\":4}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hc\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan Master\",\"col\":3}},{\"id\":\"cd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":3}},{\"id\":\"cd3\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan Barang\",\"col\":3}},{\"id\":\"cd4\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -1662,6 +1662,21 @@
     "description": null,
     "hidden": 0,
     "icon": null,
+    "is_query_report": 0,
+    "label": "Kesiswaan: Rekap per Unit (Target)",
+    "link_count": 0,
+    "link_to": "Kesiswaan per Unit",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
     "is_query_report": 1,
     "label": "Persediaan: Stok",
     "link_count": 0,
@@ -1688,7 +1703,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-09 22:57:13.849501",
+  "modified": "2026-07-15 01:51:47.316046",
   "module": "Bimbel Rumba v16",
   "name": "Keuangan",
   "number_cards": [
@@ -1739,6 +1754,10 @@
    {
     "label": "Murid Cuti",
     "number_card_name": "Murid Cuti"
+   },
+   {
+    "label": "Unit Belum Capai Target",
+    "number_card_name": "Unit Belum Capai Target"
    }
   ],
   "parent_page": "RUMBA",
@@ -1826,6 +1845,20 @@
     "label": "Aging per Unit",
     "link_to": "Piutang SPP per Unit (Aging)",
     "report_ref_doctype": "Sales Invoice",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Kesiswaan per Unit",
+    "link_to": "Kesiswaan per Unit",
+    "report_ref_doctype": "Rumba Kesiswaan Bulanan",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -2511,6 +2544,21 @@
     "hidden": 0,
     "icon": null,
     "is_query_report": 0,
+    "label": "Kesiswaan per Unit",
+    "link_count": 0,
+    "link_to": "Kesiswaan per Unit",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
     "label": "Laporan Persediaan",
     "link_count": 0,
     "link_to": null,
@@ -2551,7 +2599,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-11 19:19:06.551482",
+  "modified": "2026-07-15 01:43:53.125128",
   "module": "Bimbel Rumba v16",
   "name": "Laporan",
   "number_cards": [],

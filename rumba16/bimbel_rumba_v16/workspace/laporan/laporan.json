@@ -2,7 +2,7 @@
  "app": "rumba16",
  "charts": [],
  "content": "[{\"id\":\"r558\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r559\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Laporan\",\"col\":12}},{\"id\":\"r560\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Keuangan\",\"col\":4}},{\"id\":\"r561\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Murid & Akademik\",\"col\":4}},{\"id\":\"r562\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Persediaan\",\"col\":4}}]",
- "creation": "2026-07-11 19:12:06.959570",
+ "creation": "2026-07-14 08:38:50.351596",
  "custom_blocks": [
   {
    "custom_block_name": "Kepala Halaman Unit",
@@ -172,6 +172,17 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Kesiswaan per Unit",
+   "link_count": 0,
+   "link_to": "Kesiswaan per Unit",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Laporan Persediaan",
    "link_count": 0,
    "link_type": "DocType",
@@ -201,7 +212,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-11 19:19:06.551482",
+ "modified": "2026-07-15 01:43:53.125128",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Laporan",
