@@ -1,8 +1,8 @@
 {
  "app": "rumba16",
  "charts": [],
- "content": "[{\"id\":\"r591\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r592\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc5 Info Hari Ini\",\"col\":12}},{\"id\":\"r593\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"r594\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Belum Terlaksana\",\"col\":6}},{\"id\":\"r595\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pembayaran Masuk Hari Ini\",\"col\":6}},{\"id\":\"r596\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Hari Ini\",\"col\":6}},{\"id\":\"r597\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r598\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"r599\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"r5100\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":4}},{\"id\":\"r5101\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kemarin Tanpa Presensi\",\"col\":4}},{\"id\":\"r5102\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Invoice Belum Dibayar\",\"col\":4}},{\"id\":\"r5103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"r5104\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":4}}]",
- "creation": "2026-07-10 13:42:03.620581",
+ "content": "[{\"id\":\"r591\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"r592\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc5 Info Hari Ini\",\"col\":12}},{\"id\":\"r593\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"r594\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Belum Terlaksana\",\"col\":6}},{\"id\":\"r595\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pembayaran Masuk Hari Ini\",\"col\":6}},{\"id\":\"r596\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Hari Ini\",\"col\":6}},{\"id\":\"r597\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"r598\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"r599\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Lead Belum Ditindaklanjuti\",\"col\":4}},{\"id\":\"r5100\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Menunggu Persetujuan\",\"col\":4}},{\"id\":\"r5101\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kemarin Tanpa Presensi\",\"col\":4}},{\"id\":\"r5102\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Invoice Belum Dibayar\",\"col\":4}},{\"id\":\"r5103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":4}},{\"id\":\"r5104\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Murid Sering Absen (Alpa)\",\"col\":4}},{\"id\":\"au_pm_sp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"au_pm_h\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udce3 Aktivitas Pemasaran (Kunjungan Sekolah dll.)\",\"col\":12}},{\"id\":\"au_pm_s1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Aktivitas Pemasaran\",\"col\":3}},{\"id\":\"au_pm_s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Aktivitas Pemasaran\",\"col\":3}}]",
+ "creation": "2026-07-14 08:38:49.563721",
  "custom_blocks": [
   {
    "custom_block_name": "Murid Sering Absen (Alpa)",
@@ -23,7 +23,7 @@
  "label": "Admin Unit",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-07-12 19:39:24.734208",
+ "modified": "2026-07-16 15:27:37.613378",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Admin Unit",
@@ -86,7 +86,21 @@
   }
  ],
  "sequence_id": 0.5,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Aktivitas Pemasaran",
+   "type": "URL",
+   "url": "/app/rumba-aktivitas-pemasaran/new"
+  },
+  {
+   "doc_view": "List",
+   "label": "Daftar Aktivitas Pemasaran",
+   "link_to": "Rumba Aktivitas Pemasaran",
+   "type": "DocType"
+  }
+ ],
  "title": "Admin Unit",
  "type": "Workspace"
 }

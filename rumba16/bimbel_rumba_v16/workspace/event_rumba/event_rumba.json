@@ -1,0 +1,189 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"rb36\",\"type\":\"header\",\"data\":{\"text\":\"\ud83c\udfaa Event RUMBA\",\"col\":12}},{\"id\":\"rbev_papan\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Papan Event Aktif\",\"col\":12}},{\"id\":\"rb37\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Event Aktif\",\"col\":6}},{\"id\":\"rb38\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Event Baru\",\"col\":6}},{\"id\":\"rb39\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb40\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Event\",\"col\":3}},{\"id\":\"rb41\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Event\",\"col\":3}},{\"id\":\"rb42\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran Event\",\"col\":3}},{\"id\":\"rb43\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitabilitas Event\",\"col\":3}},{\"id\":\"rbev_sc_ringkas\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ringkasan Pelaksanaan\",\"col\":3}},{\"id\":\"rb44\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb45\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"rb46\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Event Perlu Diproses (oleh Admin Unit)\",\"col\":6}},{\"id\":\"rb47\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb48\",\"type\":\"card\",\"data\":{\"card_name\":\"Event\",\"col\":4}},{\"id\":\"rb49\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Event\",\"col\":4}}]",
+ "creation": "2026-07-16 14:44:48.906396",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Papan Event Aktif",
+   "label": "Papan Event Aktif"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "calendar",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Event RUMBA",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Event",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Event",
+   "link_count": 0,
+   "link_to": "Rumba Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendaftaran Event (Intake)",
+   "link_count": 0,
+   "link_to": "Rumba Pendaftaran Event",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Event",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Profitabilitas Event",
+   "link_count": 0,
+   "link_to": "Profitabilitas Event",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Event",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daftar Peserta Event",
+   "link_count": 0,
+   "link_to": "Daftar Peserta Event",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Event",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembayaran Peserta Event",
+   "link_count": 0,
+   "link_to": "Pembayaran Peserta Event",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Event",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rekap Event Tahunan",
+   "link_count": 0,
+   "link_to": "Rekap Event Tahunan",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Event",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ringkasan Pelaksanaan",
+   "link_count": 0,
+   "link_to": "Event - Ringkasan Pelaksanaan",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Event",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-16 15:07:06.384853",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Event RUMBA",
+ "number_cards": [
+  {
+   "label": "Event Aktif",
+   "number_card_name": "Event Aktif"
+  },
+  {
+   "label": "Pendaftaran Event Baru",
+   "number_card_name": "Pendaftaran Event Baru"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Rumba Pendaftaran Event",
+   "label": "Pendaftaran Event Perlu Diproses (oleh Admin Unit)",
+   "quick_list_filter": "[[\"Rumba Pendaftaran Event\",\"status_intake\",\"=\",\"Baru\"]]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Bisnis"
+  },
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  }
+ ],
+ "sequence_id": 0.62,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Event",
+   "type": "URL",
+   "url": "/app/rumba-event/new"
+  },
+  {
+   "doc_view": "List",
+   "label": "Daftar Event",
+   "link_to": "Rumba Event",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pendaftaran Event",
+   "link_to": "Rumba Pendaftaran Event",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Profitabilitas Event",
+   "link_to": "Profitabilitas Event",
+   "report_ref_doctype": "Rumba Event",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Ringkasan Pelaksanaan",
+   "link_to": "Event - Ringkasan Pelaksanaan",
+   "report_ref_doctype": "Rumba Event",
+   "type": "Report"
+  }
+ ],
+ "title": "Event RUMBA",
+ "type": "Workspace"
+}

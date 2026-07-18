@@ -1,0 +1,157 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Leads per Bulan",
+   "label": "Tren Leads per Bulan"
+  },
+  {
+   "chart_name": "Biaya Pemasaran per Kanal",
+   "label": "Biaya Pemasaran per Kanal"
+  },
+  {
+   "chart_name": "Leads per Unit",
+   "label": "Leads per Unit"
+  }
+ ],
+ "content": "[{\"id\":\"rb50\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udce3 Pemasaran\",\"col\":12}},{\"id\":\"rb51\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Bulan Ini\",\"col\":3}},{\"id\":\"rb52\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Leads\",\"col\":3}},{\"id\":\"rb53\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Terdaftar\",\"col\":3}},{\"id\":\"rb54\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Aktivitas Pemasaran Bulan Ini\",\"col\":3}},{\"id\":\"rb55\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb56\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Aktivitas Pemasaran\",\"col\":3}},{\"id\":\"rb57\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Aktivitas\",\"col\":3}},{\"id\":\"rb58\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Efektivitas Kanal\",\"col\":3}},{\"id\":\"rb59\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Konversi per Cabang\",\"col\":3}},{\"id\":\"rb60\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb61\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Grafik\",\"col\":12}},{\"id\":\"rb62\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Leads per Bulan\",\"col\":6}},{\"id\":\"rb63\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Biaya Pemasaran per Kanal\",\"col\":6}},{\"id\":\"rb64\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leads per Unit\",\"col\":6}},{\"id\":\"rb65\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb66\",\"type\":\"card\",\"data\":{\"card_name\":\"Pemasaran\",\"col\":4}},{\"id\":\"rb67\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Pemasaran\",\"col\":4}}]",
+ "creation": "2026-07-16 14:45:06.290065",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "share-2",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Pemasaran",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pemasaran",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aktivitas Pemasaran",
+   "link_count": 0,
+   "link_to": "Rumba Aktivitas Pemasaran",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead Murid",
+   "link_count": 0,
+   "link_to": "Rumba Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Pemasaran",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Efektivitas Kanal",
+   "link_count": 0,
+   "link_to": "Pemasaran - Efektivitas Kanal",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Konversi Lead per Cabang",
+   "link_count": 0,
+   "link_to": "CRM - Konversi Lead per Cabang",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-16 14:45:06.290065",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Pemasaran",
+ "number_cards": [
+  {
+   "label": "Lead Baru Bulan Ini",
+   "number_card_name": "Lead Baru Bulan Ini"
+  },
+  {
+   "label": "Total Leads",
+   "number_card_name": "Total Leads"
+  },
+  {
+   "label": "Total Terdaftar",
+   "number_card_name": "Total Terdaftar"
+  },
+  {
+   "label": "Aktivitas Pemasaran Bulan Ini",
+   "number_card_name": "Aktivitas Pemasaran Bulan Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Bisnis"
+  },
+  {
+   "role": "Rumba Founder"
+  }
+ ],
+ "sequence_id": 0.63,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Aktivitas Pemasaran",
+   "type": "URL",
+   "url": "/app/rumba-aktivitas-pemasaran/new"
+  },
+  {
+   "doc_view": "List",
+   "label": "Daftar Aktivitas",
+   "link_to": "Rumba Aktivitas Pemasaran",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Efektivitas Kanal",
+   "link_to": "Pemasaran - Efektivitas Kanal",
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Konversi per Cabang",
+   "link_to": "CRM - Konversi Lead per Cabang",
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Report"
+  }
+ ],
+ "title": "Pemasaran",
+ "type": "Workspace"
+}

@@ -185,5 +185,27 @@
   "name": "Employee - Sembunyikan Series RUMBA",
   "script": "frappe.ui.form.on('Employee', {\n  onload(frm) { frm.toggle_display('naming_series', false); },\n  refresh(frm) {\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  },\n  onload_post_render(frm) {\n    // erpnext.toggle_naming_series() (dipanggil employee.js HRMS pasca-render) menampilkan ulang field ini;\n    // handler custom terdaftar terakhir -> jalan setelahnya -> kita menang.\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  }\n});\n// ID Employee dibentuk hook autoname rumba16 (ERP-HR-002, 10 angka) — field Series bawaan menyesatkan, disembunyikan.",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Mitra Lead",
+  "enabled": 1,
+  "modified": "2026-07-16 14:32:53.725853",
+  "module": "Bimbel Rumba v16",
+  "name": "Rumba Mitra Lead - Tombol Wujudkan Unit",
+  "script": "frappe.ui.form.on('Rumba Mitra Lead', {\n  refresh(frm) {\n    if (!frm.is_new() && frm.doc.status_mitra === 'Perjanjian') {\n      frm.add_custom_button(__('Wujudkan Unit dari Mitra'), () => {\n        const d = new frappe.ui.Dialog({\n          title: __('Wujudkan Unit dari Mitra'),\n          fields: [\n            {fieldname: 'nama_unit', fieldtype: 'Data', label: 'Nama Unit', reqd: 1},\n            {fieldname: 'telepon_unit', fieldtype: 'Data', label: 'Telepon Unit', default: frm.doc.nomor_handphone, reqd: 1},\n            {fieldname: 'email_unit', fieldtype: 'Data', label: 'Email Unit', default: frm.doc.alamat_email, reqd: 1},\n            {fieldname: 'jumlah_ruang_kelas', fieldtype: 'Int', label: 'Jumlah Ruang Kelas', default: 1, reqd: 1}\n          ],\n          primary_action_label: __('Buat Unit'),\n          primary_action(values) {\n            d.hide();\n            frappe.call({\n              method: 'rumba16.bimbel_rumba_v16.doctype.rumba_mitra_lead.rumba_mitra_lead.wujudkan_unit_dari_mitra',\n              args: Object.assign({mitra_lead: frm.doc.name}, values),\n              freeze: true,\n              freeze_message: __('Membuat Rumba Unit...'),\n              callback(r) {\n                if (!r.exc) {\n                  frappe.show_alert({message: __('Unit {0} terbentuk', [r.message]), indicator: 'green'});\n                  frm.reload_doc();\n                }\n              }\n            });\n          }\n        });\n        d.show();\n      }).addClass('btn-primary');\n    }\n    if (frm.doc.status_mitra === 'Deal' && frm.doc.unit_terbentuk) {\n      frm.add_custom_button(__('Lihat Unit'), () => frappe.set_route('Form', 'Rumba Unit', frm.doc.unit_terbentuk));\n    }\n  }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Mitra Lead",
+  "enabled": 1,
+  "modified": "2026-07-16 14:32:54.515854",
+  "module": "Bimbel Rumba v16",
+  "name": "Rumba Mitra Lead - Warna Status List",
+  "script": "frappe.listview_settings['Rumba Mitra Lead'] = {\n  get_indicator(doc) {\n    const warna = {\n      'Baru': 'blue',\n      'Dikualifikasi': 'light-blue',\n      'Presentasi': 'purple',\n      'Due Diligence': 'yellow',\n      'Negosiasi': 'orange',\n      'Perjanjian': 'cyan',\n      'Deal': 'green',\n      'Tidak Jadi': 'red'\n    };\n    return [__(doc.status_mitra), warna[doc.status_mitra] || 'gray', 'status_mitra,=,' + doc.status_mitra];\n  }\n};",
+  "view": "List"
  }
 ]

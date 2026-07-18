@@ -1,0 +1,160 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Prospek Mitra per Tahap",
+   "label": "Prospek Mitra per Tahap"
+  },
+  {
+   "chart_name": "Tren Prospek Mitra per Bulan",
+   "label": "Tren Prospek Mitra per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"rb16\",\"type\":\"header\",\"data\":{\"text\":\"\ud83e\udd1d Funnel Kemitraan\",\"col\":12}},{\"id\":\"rb17\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prospek Mitra Baru Bulan Ini\",\"col\":4}},{\"id\":\"rb18\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prospek Mitra Aktif\",\"col\":4}},{\"id\":\"rb19\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Deal Mitra Tahun Ini\",\"col\":4}},{\"id\":\"rb20\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb21\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Prospek Mitra\",\"col\":3}},{\"id\":\"rb22\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Prospek Mitra\",\"col\":3}},{\"id\":\"rb23\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Funnel Mitra\",\"col\":3}},{\"id\":\"rb24\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Nilai Pipeline\",\"col\":3}},{\"id\":\"rb25\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb26\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"rb27\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Prospek Baru (Belum Dikualifikasi)\",\"col\":6}},{\"id\":\"rb28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Perjanjian (Siap Konversi Unit)\",\"col\":6}},{\"id\":\"rb29\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb30\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Grafik\",\"col\":12}},{\"id\":\"rb31\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Prospek Mitra per Tahap\",\"col\":6}},{\"id\":\"rb32\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Prospek Mitra per Bulan\",\"col\":6}},{\"id\":\"rb33\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb34\",\"type\":\"card\",\"data\":{\"card_name\":\"Kemitraan\",\"col\":4}},{\"id\":\"rb35\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Kemitraan\",\"col\":4}}]",
+ "creation": "2026-07-16 14:44:30.403372",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Kemitraan",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kemitraan",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Prospek Mitra",
+   "link_count": 0,
+   "link_to": "Rumba Mitra Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit",
+   "link_count": 0,
+   "link_to": "Rumba Unit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Kemitraan",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Funnel Mitra",
+   "link_count": 0,
+   "link_to": "Kemitraan - Funnel Mitra",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Mitra Lead",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nilai Pipeline",
+   "link_count": 0,
+   "link_to": "Kemitraan - Nilai Pipeline",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Mitra Lead",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-16 14:44:30.403372",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Kemitraan",
+ "number_cards": [
+  {
+   "label": "Prospek Mitra Baru Bulan Ini",
+   "number_card_name": "Prospek Mitra Baru Bulan Ini"
+  },
+  {
+   "label": "Prospek Mitra Aktif",
+   "number_card_name": "Prospek Mitra Aktif"
+  },
+  {
+   "label": "Deal Mitra Tahun Ini",
+   "number_card_name": "Deal Mitra Tahun Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Rumba Mitra Lead",
+   "label": "Prospek Baru (Belum Dikualifikasi)",
+   "quick_list_filter": "[[\"Rumba Mitra Lead\",\"status_mitra\",\"=\",\"Baru\"]]"
+  },
+  {
+   "document_type": "Rumba Mitra Lead",
+   "label": "Perjanjian (Siap Konversi Unit)",
+   "quick_list_filter": "[[\"Rumba Mitra Lead\",\"status_mitra\",\"=\",\"Perjanjian\"]]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Bisnis"
+  },
+  {
+   "role": "Rumba Founder"
+  }
+ ],
+ "sequence_id": 0.61,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Prospek Mitra",
+   "type": "URL",
+   "url": "/app/rumba-mitra-lead/new"
+  },
+  {
+   "doc_view": "List",
+   "label": "Daftar Prospek Mitra",
+   "link_to": "Rumba Mitra Lead",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Funnel Mitra",
+   "link_to": "Kemitraan - Funnel Mitra",
+   "report_ref_doctype": "Rumba Mitra Lead",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Nilai Pipeline",
+   "link_to": "Kemitraan - Nilai Pipeline",
+   "report_ref_doctype": "Rumba Mitra Lead",
+   "type": "Report"
+  }
+ ],
+ "title": "Kemitraan",
+ "type": "Workspace"
+}
