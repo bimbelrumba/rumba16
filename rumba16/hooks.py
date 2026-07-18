@@ -346,7 +346,7 @@ fixtures = [
     {"dt": "Custom HTML Block", "filters": [["name", "in", [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
     "Sesi Saya Hari Ini", "Sumber Informasi Lead",
-    "Tutor Tanpa Kelas (Pengampu)", "Papan Event Aktif",
+    "Tutor Tanpa Kelas (Pengampu)",
     ]]]},
     {
     "dt": "Custom Role",
