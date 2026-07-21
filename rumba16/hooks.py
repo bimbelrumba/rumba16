@@ -14,11 +14,13 @@ app_license = "mit"
 add_to_apps_screen = [
  	{
  		"name": "rumba16",
- 		"logo": "/assets/rumba16/logo.png",
+ 		"logo": "/assets/rumba16/images/splash-singa.png",
  		"title": "Bimbel RUMBA",
  		"route": "/masuk",
  	}
  ]
+
+app_logo_url = "/assets/rumba16/images/splash-singa.png"
 
 # Includes in <head>
 # ------------------
