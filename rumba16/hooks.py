@@ -26,9 +26,7 @@ website_context = {
 }
 
 app_logo_url = "/assets/rumba16/images/splash-singa.png"
-<<<<<<< HEAD
-=======
->>>>>>> 2de97a2 (fixtures: contract naming.)
+
 # Includes in <head>
 # ------------------
 

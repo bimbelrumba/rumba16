@@ -27,7 +27,7 @@ def get_context(context):
         # Akun orang tua/portal: jangan dilempar ke desk.
         target = "/me"
     else:
-        roles = set(frappe.get_roles())
+        roles = set(frappe.get_roles(frappe.session.user))
         if roles & UNIT_ROLES:                 # BARU: blok if/elif ini
             target = "/app/admin-unit"         # menggantikan 1 baris lama:
         elif roles & TUTOR_ROLES:              # target = "/app/admin-unit" if (roles & UNIT_ROLES) else "/app/rumba"
