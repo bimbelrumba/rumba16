@@ -2470,7 +2470,7 @@
     "label": "Employees by Branch"
    }
   ],
-  "content": "[{\"id\":\"sdm1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🔎 Info Cepat SDM</b></span>\",\"col\":12}},{\"id\":\"sdm2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"sdm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"sdm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sdm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"sdm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"sdm7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"sdm8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡ Tambah Baru</b></span>\",\"col\":12}},{\"id\":\"sdm10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":4}},{\"id\":\"sdm11\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":4}},{\"id\":\"sdm12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Interview\",\"col\":4}},{\"id\":\"sdm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Cuti\",\"col\":4}},{\"id\":\"sdm14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":4}},{\"id\":\"sdm15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Offboarding\",\"col\":4}},{\"id\":\"sdm16\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp101\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🧑‍🏫 Penempatan Tutor</b></span>\",\"col\":12}},{\"id\":\"sdmp102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sdmp103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":4}},{\"id\":\"sdmp104\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp105\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"sdmp106\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"sdmp107\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmttk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas\",\"col\":12}},{\"id\":\"sdm17\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📂 Menu</b></span>\",\"col\":12}},{\"id\":\"sdm18\",\"type\":\"card\",\"data\":{\"card_name\":\"Rekrutmen\",\"col\":4}},{\"id\":\"sdm19\",\"type\":\"card\",\"data\":{\"card_name\":\"Karyawan & Lifecycle\",\"col\":4}},{\"id\":\"sdm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Kehadiran\",\"col\":4}},{\"id\":\"sdm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Cuti\",\"col\":4}},{\"id\":\"sdm22\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":4}},{\"id\":\"sdm23\",\"type\":\"card\",\"data\":{\"card_name\":\"Master SDM\",\"col\":4}},{\"id\":\"sdm24\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm25\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📊 Ringkasan</b></span>\",\"col\":12}},{\"id\":\"sdm26\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Karyawan Baru Bulan Ini\",\"col\":4}},{\"id\":\"sdm27\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employees by Branch\",\"col\":8}},{\"id\":\"sdm28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Cuti\",\"col\":6}}]",
+  "content": "[{\"id\":\"sdm1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🔎 Info Cepat SDM</b></span>\",\"col\":12}},{\"id\":\"sdm2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"sdm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"sdm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sdm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"sdm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"sdm7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"sdm8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡ Tambah Baru</b></span>\",\"col\":12}},{\"id\":\"sdm10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":4}},{\"id\":\"sdm11\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":4}},{\"id\":\"sdm12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Interview\",\"col\":4}},{\"id\":\"sdm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Cuti\",\"col\":4}},{\"id\":\"sdm14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":4}},{\"id\":\"sdm15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Offboarding\",\"col\":4}},{\"id\":\"sdm16\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp101\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>🧑‍🏫 Penempatan Tutor</b></span>\",\"col\":12}},{\"id\":\"sdmp102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sdmp103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":4}},{\"id\":\"sdmp104\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp105\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"sdmp106\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"sdmp107\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmttk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas\",\"col\":12}},{\"id\":\"sdmk201\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📄 Kontrak Kerja</b></span>\",\"col\":12}},{\"id\":\"sdmk202\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Berakhir Bulan Ini\",\"col\":4}},{\"id\":\"sdmk203\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Belum Ditandatangani\",\"col\":4}},{\"id\":\"sdmk204\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmk205\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontrak\",\"col\":4}},{\"id\":\"sdmk206\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kontrak\",\"col\":4}},{\"id\":\"sdmk207\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm17\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📂 Menu</b></span>\",\"col\":12}},{\"id\":\"sdm18\",\"type\":\"card\",\"data\":{\"card_name\":\"Rekrutmen\",\"col\":4}},{\"id\":\"sdm19\",\"type\":\"card\",\"data\":{\"card_name\":\"Karyawan & Lifecycle\",\"col\":4}},{\"id\":\"sdm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Kehadiran\",\"col\":4}},{\"id\":\"sdm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Cuti\",\"col\":4}},{\"id\":\"sdm22\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":4}},{\"id\":\"sdm23\",\"type\":\"card\",\"data\":{\"card_name\":\"Master SDM\",\"col\":4}},{\"id\":\"sdm24\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm25\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>📊 Ringkasan</b></span>\",\"col\":12}},{\"id\":\"sdm26\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Karyawan Baru Bulan Ini\",\"col\":4}},{\"id\":\"sdm27\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employees by Branch\",\"col\":8}},{\"id\":\"sdm28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Cuti\",\"col\":6}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Tutor Tanpa Kelas",
@@ -2976,7 +2976,7 @@
     "icon": null,
     "is_query_report": 0,
     "label": "Master SDM",
-    "link_count": 3,
+    "link_count": 4,
     "link_to": null,
     "link_type": "DocType",
     "onboard": 0,
@@ -3028,9 +3028,24 @@
     "only_for": null,
     "report_ref_doctype": null,
     "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Contract Template",
+    "link_count": 0,
+    "link_to": "Contract Template",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
    }
   ],
-  "modified": "2026-07-13 20:27:10.056024",
+  "modified": "2026-07-21 09:28:29.560619",
   "module": "Bimbel Rumba v16",
   "name": "SDM",
   "number_cards": [
@@ -3069,6 +3084,14 @@
    {
     "label": "Kelas Tanpa Tutor",
     "number_card_name": "Kelas Tanpa Tutor"
+   },
+   {
+    "label": "Kontrak Berakhir Bulan Ini",
+    "number_card_name": "Kontrak Berakhir Bulan Ini"
+   },
+   {
+    "label": "Kontrak Belum Ditandatangani",
+    "number_card_name": "Kontrak Belum Ditandatangani"
    }
   ],
   "parent_page": "RUMBA",
@@ -3205,6 +3228,34 @@
     "stats_filter": null,
     "type": "DocType",
     "url": null
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Kontrak",
+    "link_to": "Contract",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Kontrak",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/contract/new"
    }
   ],
   "title": "SDM",

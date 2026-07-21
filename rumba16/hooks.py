@@ -371,6 +371,7 @@ fixtures = [
         ]]
     ],
 },
+{"dt": "Print Format", "filters": [["name", "in", ["PMK RUMBA"]]]},
 ]
 
 doc_events = {
@@ -388,5 +389,8 @@ doc_events = {
     },
     "Job Applicant": {
         "before_insert": "rumba16.recruitment.set_job_applicant_source",
+    },
+    "Contract": {
+        "autoname": "rumba16.contract_naming.contract_autoname",
     },
 }
