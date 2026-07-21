@@ -20,6 +20,11 @@ add_to_apps_screen = [
  	}
  ]
 
+website_context = {
+    "favicon": "/assets/rumba16/images/splash-singa.png",
+    "splash_image": "/assets/rumba16/images/splash-singa.png",
+}
+
 app_logo_url = "/assets/rumba16/images/splash-singa.png"
 
 # Includes in <head>
