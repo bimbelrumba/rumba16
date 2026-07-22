@@ -384,6 +384,18 @@ input[type="checkbox"]:checked {
 .rumba-bg-kuning-tint { background: var(--rumba-kuning-tint) !important; }
 .rumba-bg-merah-tint  { background: var(--rumba-merah-tint) !important; }
 
+/* ------------------------------------------------------------
+   SPLASH SCREEN — perkecil logo loading (v1.5, 21 Jul 2026)
+   Markup v16: <div class="centered splash"><img style="width:auto;
+   max-width:200px" ...> — batas inline, wajib !important.
+   Scoped ke .splash agar logo login/navbar TIDAK ikut berubah.
+   ------------------------------------------------------------ */
+.splash img {
+  width: 100px !important;
+  max-width: 100px !important;
+  height: auto !important;
+}
+
 /* ============================================================
-   SELESAI — rumba_theme.css v1.0
+   SELESAI — rumba_theme.css v1.5
    ============================================================ */
