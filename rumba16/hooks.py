@@ -401,3 +401,5 @@ doc_events = {
         "autoname": "rumba16.contract_naming.contract_autoname",
     },
 }
+
+after_migrate = ["rumba16.maintenance.remove_unused_standard_dashboards"]
