@@ -74,3 +74,55 @@ def _delete(name):
         ignore_permissions=True,
         delete_permanently=True,
     )
+
+# ── Sembunyikan workspace bawaan yang tak dipakai RUMBA dari /desk ──────────────
+# Modul bisnis/setup bawaan ERPNext/HRMS/Frappe yang tidak relevan operasional
+# Bimbel RUMBA. Accounting (Invoicing, Financial Reports), Stock, Selling, dan
+# paket Frappe HR/Payroll SENGAJA dibiarkan tampil (lihat ERP-WS-003 §2.2).
+HIDDEN_STANDARD_WORKSPACES = [
+    "Buying",
+    "Assets",
+    "Manufacturing",
+    "Subcontracting",
+    "Quality",
+    "Projects",
+    "Support",
+    "CRM",
+    "Build",
+    "Welcome Workspace",
+    "Home",
+    "Users",
+    "Integrations",
+    "ERPNext Settings",
+    "Website",
+]
+
+
+def hide_unused_standard_workspaces():
+    """Set is_hidden=1 pada workspace bawaan yang tak dipakai RUMBA.
+
+    Dipanggil dari after_migrate: `bench migrate` mengimpor ulang definisi
+    Workspace bawaan (is_hidden=0), jadi kita set ulang di akhir migrate.
+    Pola sama dengan remove_unused_standard_dashboards. Idempotent.
+    Memakai db.set_value (bukan doc.save) agar melewati validasi — record
+    "Welcome Workspace" bawaan punya field `type` kosong yang memicu
+    MandatoryError bila disimpan lewat ORM biasa.
+    """
+    changed = 0
+    for name in HIDDEN_STANDARD_WORKSPACES:
+        if not frappe.db.exists("Workspace", name):
+            continue
+        values = {}
+        if not frappe.db.get_value("Workspace", name, "is_hidden"):
+            values["is_hidden"] = 1
+        # rapikan field wajib yang kosong pada Welcome Workspace bawaan
+        if not frappe.db.get_value("Workspace", name, "type"):
+            values["type"] = "Workspace"
+        if values:
+            frappe.db.set_value("Workspace", name, values)
+            changed += 1
+    if changed:
+        frappe.clear_cache()
+    frappe.logger().info(
+        f"[rumba16] hide_unused_standard_workspaces: {changed} workspace disembunyikan"
+    )

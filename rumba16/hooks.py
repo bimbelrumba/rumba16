@@ -402,4 +402,10 @@ doc_events = {
     },
 }
 
-after_migrate = ["rumba16.maintenance.remove_unused_standard_dashboards"]
+after_migrate = [
+    "rumba16.maintenance.remove_unused_standard_dashboards",
+    "rumba16.maintenance.hide_unused_standard_workspaces",
+]
+
+extend_bootinfo = "rumba16.boot.extend_bootinfo"
+
