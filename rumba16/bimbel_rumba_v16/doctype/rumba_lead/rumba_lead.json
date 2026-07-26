@@ -167,7 +167,7 @@
   {
    "fieldname": "kelas_trial",
    "fieldtype": "Link",
-   "label": "Kelas Trial",
+   "label": "Rombel Trial",
    "options": "Rumba Kelas"
   },
   {
@@ -314,7 +314,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-09 10:41:05.239310",
+ "modified": "2026-07-26 16:30:28.667056",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Lead",

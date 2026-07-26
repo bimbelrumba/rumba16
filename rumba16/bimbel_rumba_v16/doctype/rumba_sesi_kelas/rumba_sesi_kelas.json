@@ -24,7 +24,7 @@
    "fieldname": "kelas",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Kelas",
+   "label": "Rombel",
    "options": "Rumba Kelas",
    "reqd": 1
   },
@@ -108,7 +108,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-09 21:22:54.407740",
+ "modified": "2026-07-26 16:28:34.025027",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",
