@@ -10,6 +10,7 @@
   "pendaftaran",
   "tanggal_pendaftaran",
   "status_murid",
+  "tanggal_mulai_belajar_aktual",
   "level_saat_ini",
   "saldo_bintang",
   "identitas_murid_section",
@@ -109,11 +110,19 @@
    "read_only": 1
   },
   {
+   "description": "Belum Mulai = terdaftar, belum ada presensi Hadir (default murid baru). Menjadi Aktif otomatis saat kehadiran pertama disetujui (ERP-LIFE-001b).",
    "fieldname": "status_murid",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status Murid",
-   "options": "Aktif\nCuti\nLulus\nBerhenti"
+   "options": "Belum Mulai\nAktif\nCuti\nLulus\nBerhenti"
+  },
+  {
+   "description": "Tanggal presensi Hadir pertama yang disetujui (kenyataan mulai belajar). Distempel otomatis oleh controller Sesi Kelas; read-only. Anchor SBA & pengaman murid_aktif (ERP-KES-001 v0.2). Berbeda dari Pendaftaran.tanggal_mulai_belajar yang bersifat rencana.",
+   "fieldname": "tanggal_mulai_belajar_aktual",
+   "fieldtype": "Date",
+   "label": "Tanggal Mulai Belajar Aktual",
+   "read_only": 1
   },
   {
    "fieldname": "asal_pendaftaran_section",
@@ -303,7 +312,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-26 16:47:34.949904",
+ "modified": "2026-07-14 11:37:02.939685",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Murid",

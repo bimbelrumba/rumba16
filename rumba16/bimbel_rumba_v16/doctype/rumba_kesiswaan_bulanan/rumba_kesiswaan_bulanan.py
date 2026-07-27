@@ -1,5 +1,8 @@
 # Copyright (c) 2026, RUMBA
 # ERP-KES-001 / B2 — Controller & generator snapshot kesiswaan bulanan.
+# REVISI v0.2 (ERP-KES-001 v0.2 + ERP-LIFE-001b): SBA/SML/murid_aktif di-anchor
+#   ke tanggal_mulai_belajar_aktual (presensi Hadir pertama), bukan
+#   tanggal_persetujuan. Lihat _hitung_angka_unit.
 # GANTIKAN stub rumba_kesiswaan_bulanan.py di
 #   apps/rumba16/rumba16/bimbel_rumba_v16/doctype/rumba_kesiswaan_bulanan/
 # Indentasi file ini SPASI (4) — aman ditimpa utuh (jangan tempel sebagian).
@@ -131,19 +134,70 @@ def _hitung_angka_unit(u, periode, cutoff):
     unit = u.name
     w_start, w_end = _window(unit, periode, cutoff)
 
-    murid_aktif = frappe.db.count("Rumba Murid", {"status_murid": "Aktif", "nama_unit": unit})
-
-    # SBA / SML — pendaftaran Disetujui dalam window (basis tanggal_persetujuan)
-    pendaftaran_window = {
-        "status_pendaftaran": "Disetujui",
-        "nama_unit": unit,
-        "tanggal_persetujuan": ("between", [str(w_start), str(w_end) + " 23:59:59"]),
-    }
-    total_disetujui = frappe.db.count("Rumba Pendaftaran", pendaftaran_window)
-    sml = frappe.db.count(
-        "Rumba Pendaftaran", dict(pendaftaran_window, jenis_pendaftaran="Masuk Lagi")
+    # murid_aktif (ERP-KES-001 v0.2) — status Aktif + sudah punya tanggal mulai
+    # belajar aktual. Dengan model ERP-LIFE-001b "Aktif" sudah menyiratkan
+    # sudah-hadir; klausa IS NOT NULL = jaring pengaman bila ada override status
+    # manual tanpa kehadiran.
+    murid_aktif = frappe.db.count(
+        "Rumba Murid",
+        {
+            "status_murid": "Aktif",
+            "nama_unit": unit,
+            "tanggal_mulai_belajar_aktual": ["is", "set"],
+        },
     )
-    sba = total_disetujui - sml  # jenis kosong (record lama) terhitung Siswa Baru
+
+    # SBA (ERP-KES-001 v0.2) — murid yang MULAI BELAJAR pertama kali di window.
+    # tanggal_mulai_belajar_aktual distempel SEKALI (kehadiran pertama seumur
+    # hidup), sehingga filter window otomatis bersih dari SML (tanggal historis)
+    # & PU (ter-stempel dari unit asal) tanpa pengurangan manual.
+    sba = frappe.db.count(
+        "Rumba Murid",
+        {
+            "nama_unit": unit,
+            "tanggal_mulai_belajar_aktual": ("between", [str(w_start), str(w_end)]),
+        },
+    )
+
+    # SML (ERP-KES-001 v0.2) — Masuk Lagi yang re-start (Hadir pertama pasca-
+    # persetujuan) jatuh di window. Query bertarget per pendaftaran Masuk Lagi
+    # Disetujui (volume kecil); anchor = MIN(tanggal_sesi Hadir) dengan
+    # tanggal_sesi >= tanggal_persetujuan. Tidak memakai field stempel-sekali
+    # (itu menyimpan tanggal spell pertama, bukan re-entry).
+    sml = 0
+    masuk_lagi = frappe.get_all(
+        "Rumba Pendaftaran",
+        filters={
+            "jenis_pendaftaran": "Masuk Lagi",
+            "status_pendaftaran": "Disetujui",
+            "nama_unit": unit,
+        },
+        fields=["name", "murid_rumba", "tanggal_persetujuan"],
+    )
+    for p in masuk_lagi:
+        if not p.tanggal_persetujuan:
+            continue
+        murid = p.murid_rumba or frappe.db.get_value(
+            "Rumba Murid", {"pendaftaran": p.name}, "name"
+        )
+        if not murid:
+            continue
+        re_start = frappe.db.sql(
+            """
+            SELECT MIN(s.tanggal_sesi)
+            FROM `tabRumba Sesi Kelas` s
+            INNER JOIN `tabRumba Kelas` k
+                ON k.name = s.kelas AND k.nama_unit = %(unit)s
+            INNER JOIN `tabRumba Presensi Murid` pm
+                ON pm.parent = s.name AND pm.parenttype = 'Rumba Sesi Kelas'
+            WHERE s.workflow_state = 'Disetujui' AND s.status_sesi != 'Batal'
+              AND pm.murid = %(murid)s AND pm.status_kehadiran = 'Hadir'
+              AND s.tanggal_sesi >= %(tgl_setuju)s
+            """,
+            {"unit": unit, "murid": murid, "tgl_setuju": getdate(p.tanggal_persetujuan)},
+        )[0][0]
+        if re_start and w_start <= getdate(re_start) <= w_end:
+            sml += 1
 
     # PU masuk — mutasi Selesai ke unit ini
     pu = frappe.db.count(

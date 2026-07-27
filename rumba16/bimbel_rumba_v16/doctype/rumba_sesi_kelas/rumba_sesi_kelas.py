@@ -43,6 +43,10 @@ class RumbaSesiKelas(Document):
         self.validasi_status_sesi()
         self.validasi_kelengkapan_saat_ajukan()
 
+    def on_update(self):
+        # ERP-LIFE-001b — aktivasi murid dari presensi Hadir pada sesi Disetujui.
+        self.aktivasi_murid_dari_presensi()
+
     def set_default_awal(self):
         if not self.tanggal_sesi:
             self.tanggal_sesi = nowdate()
@@ -135,3 +139,42 @@ class RumbaSesiKelas(Document):
                 ).format(len(kosong)),
                 title=_("Presensi Belum Lengkap"),
             )
+
+    # --- ERP-LIFE-001b: aktivasi murid dari kehadiran pertama ---
+    def aktivasi_murid_dari_presensi(self):
+        """Saat sesi berada di workflow_state 'Disetujui' dan benar-benar
+        berlangsung (status_sesi != 'Batal'), untuk tiap baris presensi 'Hadir':
+          1. Stempel Rumba Murid.tanggal_mulai_belajar_aktual = MIN(nilai lama,
+             tanggal_sesi) — tanggal mulai belajar sesungguhnya.
+          2. Bila status_murid == 'Belum Mulai' → set 'Aktif'.
+
+        Idempoten & aman: memakai MIN (stabil bila sesi lama baru disetujui
+        belakangan); pembalikan status HANYA 'Belum Mulai' → 'Aktif' (tidak
+        pernah menyentuh Cuti/Lulus/Berhenti/Aktif). Ditulis via frappe.db
+        (tanpa memicu ulang siklus dokumen). Aturan sama menangani murid baru
+        (SBA) maupun Masuk Lagi (SML: Admin men-set 'Belum Mulai' saat
+        re-enroll → Hadir pertama membalik ke Aktif)."""
+        state = (self.get("workflow_state") or "").strip()
+        if state != "Disetujui" or self.status_sesi == "Batal":
+            return
+
+        tgl_sesi = getdate(self.tanggal_sesi)
+        for r in self.presensi:
+            if r.status_kehadiran != "Hadir" or not r.murid:
+                continue
+            info = frappe.db.get_value(
+                "Rumba Murid",
+                r.murid,
+                ["status_murid", "tanggal_mulai_belajar_aktual"],
+                as_dict=True,
+            )
+            if not info:
+                continue
+            updates = {}
+            lama = info.tanggal_mulai_belajar_aktual
+            if not lama or getdate(lama) > tgl_sesi:
+                updates["tanggal_mulai_belajar_aktual"] = tgl_sesi
+            if info.status_murid == "Belum Mulai":
+                updates["status_murid"] = "Aktif"
+            if updates:
+                frappe.db.set_value("Rumba Murid", r.murid, updates)
