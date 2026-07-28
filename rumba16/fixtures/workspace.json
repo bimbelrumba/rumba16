@@ -1729,17 +1729,8 @@
  },
  {
   "app": "rumba16",
-  "charts": [
-   {
-    "chart_name": "Sesi Terlaksana per Bulan",
-    "label": "Sesi Terlaksana per Bulan"
-   },
-   {
-    "chart_name": "Kelas Aktif per Bulan",
-    "label": "Kelas Aktif per Bulan"
-   }
-  ],
-  "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"🏫 Kelas & Jadwal\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":3}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Reguler Kurang dari 4 Murid\",\"col\":3}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":3}},{\"id\":\"kj5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":3}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Kelas\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"📊 Tren\",\"col\":12}},{\"id\":\"kj11\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"kj12\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Kelas Aktif per Bulan\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"📂 Menu\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Kelas & Jadwal\",\"col\":4}}]",
+  "charts": [],
+  "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">⚡️ Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">🗂️ Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Kepala Halaman Unit",
@@ -1754,25 +1745,10 @@
   "icon": "calendar",
   "indicator_color": "green",
   "is_hidden": 0,
-  "label": "Kelas & Jadwal",
+  "label": "Rombel & Jadwal",
   "link_to": null,
   "link_type": "DocType",
   "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Kelas & Jadwal",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
    {
     "dependencies": null,
     "description": null,
@@ -1832,26 +1808,135 @@
     "only_for": null,
     "report_ref_doctype": null,
     "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rombel & Jadwal",
+    "link_count": 4,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rombel",
+    "link_count": 0,
+    "link_to": "Rumba Kelas",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Sesi Rombel",
+    "link_count": 0,
+    "link_to": "Rumba Sesi Kelas",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Ruangan",
+    "link_count": 0,
+    "link_to": "Rumba Ruangan",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Program Belajar",
+    "link_count": 0,
+    "link_to": "Rumba Program Belajar",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "BKM (Buku Kegiatan Murid)",
+    "link_count": 1,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "BKM",
+    "link_count": 0,
+    "link_to": "Rumba BKM Entry",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
    }
   ],
-  "modified": "2026-07-12 21:10:00.617208",
+  "modified": "2026-07-28 15:45:10.062739",
   "module": "Bimbel Rumba v16",
-  "name": "Kelas & Jadwal",
+  "name": "Rombel & Jadwal",
   "number_cards": [
-   {
-    "label": "Kelas Berjalan",
-    "number_card_name": "Kelas Berjalan"
-   },
-   {
-    "label": "Kelas Reguler Kurang dari 4 Murid",
-    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
-   },
    {
     "label": "Sesi Minggu Ini",
     "number_card_name": "Sesi Minggu Ini"
    },
    {
-    "label": "Kelas Tanpa Tutor",
+    "label": "Rombel Aktif",
+    "number_card_name": "Kelas Berjalan"
+   },
+   {
+    "label": "Sesi Terlaksana (Bulan Ini)",
+    "number_card_name": "Sesi Terlaksana (Bulan Ini)"
+   },
+   {
+    "label": "Rombel Kritis",
+    "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+   },
+   {
+    "label": "Rombel Tanpa Tutor",
     "number_card_name": "Kelas Tanpa Tutor"
    }
   ],
@@ -1878,7 +1963,7 @@
     "format": null,
     "icon": null,
     "kanban_board": null,
-    "label": "+ Kelas",
+    "label": "+ Rombel",
     "link_to": null,
     "report_ref_doctype": null,
     "restrict_to_domain": null,
@@ -1892,7 +1977,7 @@
     "format": null,
     "icon": null,
     "kanban_board": null,
-    "label": "+ Sesi",
+    "label": "+ Sesi Rombel",
     "link_to": null,
     "report_ref_doctype": null,
     "restrict_to_domain": null,
@@ -1915,7 +2000,7 @@
     "url": null
    }
   ],
-  "title": "Kelas & Jadwal",
+  "title": "Rombel & Jadwal",
   "type": "Workspace"
  },
  {
@@ -4672,6 +4757,125 @@
   "sequence_id": 0.0,
   "shortcuts": [],
   "title": "RUMBA",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [
+   {
+    "chart_name": "Okupansi Kelas",
+    "label": "Okupansi Kelas"
+   }
+  ],
+  "content": "[{\"id\":\"PN2jqS9til\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"aWe4djv8Bk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 RINGKASAN UNIT</span>\",\"col\":12}},{\"id\":\"vVUxxkeW3k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":6}},{\"id\":\"pggjt35Wiu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"1hx5J1jUj0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JURFtOHBNJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚠️ PERLU TINDAKAN</b></span>\",\"col\":12}},{\"id\":\"w2Lb8SUs6E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead belum ditindaklanjuti\",\"col\":6}},{\"id\":\"iaqhD_0LxR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi menunggu persetujuan\",\"col\":6}},{\"id\":\"GXha6XdoL6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP belum dibayar\",\"col\":6}},{\"id\":\"bHOrLe_C0k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel tanpa Tutor\",\"col\":6}},{\"id\":\"0mI3R4JWWj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TFHhAR85R0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡️ AKSI CEPAT</b></span>\",\"col\":12}},{\"id\":\"ctFver_Wfs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":4}},{\"id\":\"cLf-h1ETFL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jadwalkan Sesi\",\"col\":4}},{\"id\":\"1scb-7Ql1U\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Catat Penerimaan Uang\",\"col\":4}},{\"id\":\"pSbxD4rIiT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tM7zChRLek\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Okupansi Kelas\",\"col\":12}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 0,
+  "icon": "monitor-check",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Operasional",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [],
+  "modified": "2026-07-28 09:17:14.509140",
+  "module": "Bimbel Rumba v16",
+  "name": "Operasional",
+  "number_cards": [
+   {
+    "label": "Murid Aktif",
+    "number_card_name": "Murid Aktif"
+   },
+   {
+    "label": "Sesi Hari Ini",
+    "number_card_name": "Sesi Hari Ini"
+   },
+   {
+    "label": "Lead belum ditindaklanjuti",
+    "number_card_name": "Lead Belum Ditindaklanjuti"
+   },
+   {
+    "label": "Presensi menunggu persetujuan",
+    "number_card_name": "Presensi Menunggu Persetujuan"
+   },
+   {
+    "label": "Invoice SPP belum dibayar",
+    "number_card_name": "Invoice SPP Belum Dibayar"
+   },
+   {
+    "label": "Rombel tanpa Tutor",
+    "number_card_name": "Kelas Tanpa Tutor"
+   }
+  ],
+  "parent_page": null,
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 0.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Pendaftaran",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-pendaftaran/new"
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Jadwalkan Sesi",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-sesi-kelas/new"
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Catat Penerimaan Uang",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/payment-entry/new"
+   }
+  ],
+  "title": "Operasional",
   "type": "Workspace"
  }
 ]
