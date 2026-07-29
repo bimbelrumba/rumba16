@@ -45,6 +45,22 @@
     "icon": "wallpaper",
     "indent": 0,
     "keep_closed": 0,
+    "label": "Dashboard",
+    "link_to": "Dashboard Unit",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
+    "child": 1,
+    "collapsible": 1,
+    "filters": null,
+    "icon": "wallpaper",
+    "indent": 0,
+    "keep_closed": 0,
     "label": "Siklus Murid",
     "link_to": "Siklus Murid",
     "link_type": "Workspace",
@@ -599,7 +615,7 @@
     "url": null
    }
   ],
-  "modified": "2026-07-28 22:34:16.068725",
+  "modified": "2026-07-29 19:45:55.340049",
   "module": "Bimbel Rumba v16",
   "module_onboarding": null,
   "name": "Bimbel Rumba v16",

@@ -1,0 +1,75 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Murid Aktif",
+   "label": "Tren Murid Aktif"
+  },
+  {
+   "chart_name": "Tren Rombel Aktif",
+   "label": "Tren Rombel Aktif"
+  },
+  {
+   "chart_name": "Tren Cuti",
+   "label": "Tren Cuti"
+  }
+ ],
+ "content": "[{\"id\": \"db1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"db2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc8 Tren Kesiswaan (KSW)\", \"col\": 12}}, {\"id\": \"db3\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Tren Murid Aktif\", \"col\": 6}}, {\"id\": \"db4\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Tren Rombel Aktif\", \"col\": 6}}, {\"id\": \"db5\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Tren Cuti\", \"col\": 6}}, {\"id\": \"db6\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Analisis Kesiswaan & Keuangan\", \"col\": 12}}, {\"id\": \"db7\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Dashboard Masuk vs Keluar\", \"col\": 6}}, {\"id\": \"db8\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Dashboard Murid Masuk per Sumber\", \"col\": 6}}, {\"id\": \"db9\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Dashboard Penerimaan SPP dan Tunggakan\", \"col\": 6}}, {\"id\": \"db10\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Dashboard Pencapaian Target\", \"col\": 6}}]",
+ "creation": "2026-07-29 19:45:19.956791",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  },
+  {
+   "custom_block_name": "Dashboard Masuk vs Keluar",
+   "label": "Dashboard Masuk vs Keluar"
+  },
+  {
+   "custom_block_name": "Dashboard Murid Masuk per Sumber",
+   "label": "Dashboard Murid Masuk per Sumber"
+  },
+  {
+   "custom_block_name": "Dashboard Penerimaan SPP dan Tunggakan",
+   "label": "Dashboard Penerimaan SPP dan Tunggakan"
+  },
+  {
+   "custom_block_name": "Dashboard Pencapaian Target",
+   "label": "Dashboard Pencapaian Target"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "dashboard",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Dashboard Unit",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-29 19:58:27.559541",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Dashboard Unit",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Operasional",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 1.5,
+ "shortcuts": [],
+ "title": "Dashboard Unit",
+ "type": "Workspace"
+}

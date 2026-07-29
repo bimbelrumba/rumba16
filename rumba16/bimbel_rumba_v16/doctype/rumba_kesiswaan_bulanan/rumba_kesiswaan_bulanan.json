@@ -133,6 +133,11 @@
    "label": "CUTI (P) (Berpiutang)"
   },
   {
+   "fieldname": "jumlah_kelas_aktif",
+   "fieldtype": "Int",
+   "label": "Jumlah Rombel Aktif"
+  },
+  {
    "fieldname": "sec_target",
    "fieldtype": "Section Break",
    "label": "TARGET"

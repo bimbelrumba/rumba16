@@ -18,7 +18,7 @@ from frappe.utils import add_days, add_months, get_last_day, getdate, today
 # Field angka yang dibekukan untuk snapshot Final (guard_beku)
 ANGKA_FIELDS = [
     "murid_aktif", "sba", "sml", "pu", "bd", "off", "lulus",
-    "cuti", "cuti_p", "target_murid", "estimasi_bulan_depan",
+    "cuti", "cuti_p", "jumlah_kelas_aktif", "target_murid", "estimasi_bulan_depan",
 ]
 
 
@@ -251,6 +251,10 @@ def _hitung_angka_unit(u, periode, cutoff):
     cuti_p = frappe.db.count(
         "Rumba Murid", {"status_murid": "Cuti", "nama_unit": unit, "biaya_cuti_lunas": 0}
     )
+    # Jumlah Rombel Aktif — potret kelas berstatus Aktif di unit saat snapshot
+    jumlah_kelas_aktif = frappe.db.count(
+        "Rumba Kelas", {"status_kelas": "Aktif", "nama_unit": unit}
+    )
 
     # Estimasi bulan depan = aktif + BD yang mulai bulan depan - pengunduran Diajukan efektif s.d. akhir bulan depan
     akhir_bulan_depan = get_last_day(add_months(w_end, 1))
@@ -282,6 +286,7 @@ def _hitung_angka_unit(u, periode, cutoff):
         "lulus": lulus,
         "cuti": cuti,
         "cuti_p": cuti_p,
+        "jumlah_kelas_aktif": jumlah_kelas_aktif,
         "target_murid": u.target_murid_minimal or 0,
         "estimasi_bulan_depan": murid_aktif + bd_bulan_depan - off_diajukan,
     }
