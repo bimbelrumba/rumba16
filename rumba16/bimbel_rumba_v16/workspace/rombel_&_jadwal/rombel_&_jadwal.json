@@ -22,46 +22,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Kelas",
-   "link_count": 0,
-   "link_to": "Rumba Kelas",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sesi Kelas",
-   "link_count": 0,
-   "link_to": "Rumba Sesi Kelas",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Ruangan",
-   "link_count": 0,
-   "link_to": "Rumba Ruangan",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Program Belajar",
-   "link_count": 0,
-   "link_to": "Rumba Program Belajar",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Rombel & Jadwal",
    "link_count": 4,
    "link_type": "DocType",
@@ -128,7 +88,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-28 15:45:10.062739",
+ "modified": "2026-07-28 21:05:31.196922",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rombel & Jadwal",
@@ -155,7 +115,7 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "RUMBA",
+ "parent_page": "Operasional",
  "public": 1,
  "quick_lists": [],
  "roles": [
@@ -169,7 +129,7 @@
    "role": "Rumba Kepala Unit"
   }
  ],
- "sequence_id": 0.52,
+ "sequence_id": 3.0,
  "shortcuts": [
   {
    "color": "Blue",

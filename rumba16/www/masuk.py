@@ -15,7 +15,7 @@ def get_context(context):
 
     - Belum login        -> /login
     - Akun portal ortu   -> /me (Website User, tidak punya akses desk)
-    - Admin/Kepala Unit  -> /app/admin-unit (quick links unit)
+    - Admin/Kepala Unit  -> /app/operasional (quick links unit)
     - Tutor/Lead Tutor   -> /app/tutor (sesi saya & presensi)
     - Role lain (desk)   -> /app/rumba (landing bersama RUMBA)
     """
@@ -29,7 +29,7 @@ def get_context(context):
     else:
         roles = set(frappe.get_roles(frappe.session.user))
         if roles & UNIT_ROLES:                 # BARU: blok if/elif ini
-            target = "/app/admin-unit"         # menggantikan 1 baris lama:
+            target = "/app/operasional"         # menggantikan 1 baris lama:
         elif roles & TUTOR_ROLES:              # target = "/app/admin-unit" if (roles & UNIT_ROLES) else "/app/rumba"
             target = "/app/tutor"
         elif "Rumba Personalia" in roles:

@@ -1,8 +1,8 @@
 {
  "app": "rumba16",
  "charts": [],
- "content": "[{\"id\":\"ak1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"ak2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcb0 Keuangan (SPP)\",\"col\":12}},{\"id\":\"ak3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":3}},{\"id\":\"ak4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":3}},{\"id\":\"ak5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":3}},{\"id\":\"ak7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Invoice\",\"col\":4}},{\"id\":\"ak8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengeluaran\",\"col\":4}},{\"id\":\"ak9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Setor Kas\",\"col\":4}},{\"id\":\"ak10\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ak11\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udce6 Menu & Persediaan\",\"col\":12}},{\"id\":\"ak12\",\"type\":\"card\",\"data\":{\"card_name\":\"Keuangan\",\"col\":4}},{\"id\":\"ak13\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan Barang\",\"col\":4}}]",
- "creation": "2026-07-11 19:12:04.875323",
+ "content": "[{\"id\": \"ak1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"ak2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcb3 SPP\", \"col\": 12}}, {\"id\": \"ak3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Invoice SPP Belum Dibayar\", \"col\": 4}}, {\"id\": \"ak4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Nominal SPP Terbayar Bulan Ini\", \"col\": 4}}, {\"id\": \"ak5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Nominal SPP Belum Dibayar\", \"col\": 4}}, {\"id\": \"ak6\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83e\\uddfe Kas & Persediaan\", \"col\": 12}}, {\"id\": \"ak7\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pengeluaran (Bulan Ini)\", \"col\": 6}}, {\"id\": \"ak8\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Nilai Persediaan\", \"col\": 6}}, {\"id\": \"ak9\", \"type\": \"header\", \"data\": {\"text\": \"\\u26a1 Aksi Cepat\", \"col\": 12}}, {\"id\": \"ak10\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Invoice SPP\", \"col\": 4}}, {\"id\": \"ak11\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Catat Pembayaran\", \"col\": 4}}, {\"id\": \"ak12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Pengeluaran\", \"col\": 4}}, {\"id\": \"ak13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Aset Tetap\", \"col\": 4}}, {\"id\": \"ak14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Beli Barang\", \"col\": 4}}, {\"id\": \"ak15\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"ak16\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar & Dokumen\", \"col\": 12}}, {\"id\": \"ak17\", \"type\": \"card\", \"data\": {\"card_name\": \"SPP\", \"col\": 4}}, {\"id\": \"ak18\", \"type\": \"card\", \"data\": {\"card_name\": \"Pengeluaran & Aset Tetap\", \"col\": 4}}, {\"id\": \"ak19\", \"type\": \"card\", \"data\": {\"card_name\": \"Persediaan\", \"col\": 4}}]",
+ "creation": "2026-07-27 20:52:29.888623",
  "custom_blocks": [
   {
    "custom_block_name": "Kepala Halaman Unit",
@@ -13,7 +13,7 @@
  "doctype": "Workspace",
  "hide_custom": 1,
  "icon": "accounting",
- "idx": 1,
+ "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Akuntansi",
@@ -22,7 +22,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Keuangan",
+   "label": "SPP",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -31,7 +31,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Invoice (SPP)",
+   "label": "Invoice SPP",
    "link_count": 0,
    "link_to": "Sales Invoice",
    "link_type": "DocType",
@@ -41,7 +41,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Pembayaran",
+   "label": "Pembayaran SPP",
    "link_count": 0,
    "link_to": "Payment Entry",
    "link_type": "DocType",
@@ -50,8 +50,18 @@
   },
   {
    "hidden": 0,
+   "is_query_report": 1,
+   "label": "Piutang SPP per Unit",
+   "link_count": 0,
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 0,
-   "label": "Persediaan Barang",
+   "label": "Pengeluaran & Aset Tetap",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -60,7 +70,46 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Inventory (Modul & Merchandise)",
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Persediaan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
    "link_count": 0,
    "link_to": "Item",
    "link_type": "DocType",
@@ -70,17 +119,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Pesanan Pembelian",
-   "link_count": 0,
-   "link_to": "Purchase Order",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Penerimaan Barang",
+   "label": "Purchase Receipt",
    "link_count": 0,
    "link_to": "Purchase Receipt",
    "link_type": "DocType",
@@ -90,22 +129,44 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Pengeluaran Barang",
+   "label": "Stock Entry",
    "link_count": 0,
    "link_to": "Stock Entry",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Balance",
+   "link_count": 0,
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Stock Ledger Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penjualan Barang",
+   "link_count": 0,
+   "link_to": "Penjualan Barang",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Link"
   }
  ],
- "modified": "2026-07-12 20:42:46.447407",
+ "modified": "2026-07-28 21:16:44.359632",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Akuntansi",
  "number_cards": [
   {
-   "label": "Nominal SPP Terbit Bulan Ini",
-   "number_card_name": "Nominal SPP Terbit Bulan Ini"
+   "label": "Invoice SPP Belum Dibayar",
+   "number_card_name": "Invoice SPP Belum Dibayar"
   },
   {
    "label": "Nominal SPP Terbayar Bulan Ini",
@@ -116,12 +177,16 @@
    "number_card_name": "Nominal SPP Belum Dibayar"
   },
   {
-   "label": "Invoice SPP Belum Dibayar",
-   "number_card_name": "Invoice SPP Belum Dibayar"
+   "label": "Pengeluaran (Bulan Ini)",
+   "number_card_name": "Pengeluaran (Bulan Ini)"
+  },
+  {
+   "label": "Nilai Persediaan",
+   "number_card_name": "Nilai Persediaan"
   }
  ],
  "owner": "Administrator",
- "parent_page": "RUMBA",
+ "parent_page": "Operasional",
  "public": 1,
  "quick_lists": [],
  "roles": [
@@ -135,28 +200,42 @@
    "role": "Rumba Kepala Unit"
   }
  ],
- "sequence_id": 0.53,
+ "sequence_id": 4.0,
  "shortcuts": [
   {
    "color": "Green",
    "doc_view": "",
-   "label": "+ Invoice",
+   "label": "+ Invoice SPP",
    "type": "URL",
    "url": "/app/sales-invoice/new"
   },
   {
    "color": "Green",
    "doc_view": "",
-   "label": "+ Pengeluaran",
+   "label": "Catat Pembayaran",
    "type": "URL",
-   "url": "/app/payment-entry/new?payment_type=Pay"
+   "url": "/app/payment-entry/new"
   },
   {
    "color": "Green",
    "doc_view": "",
-   "label": "+ Setor Kas",
+   "label": "+ Pengeluaran",
    "type": "URL",
-   "url": "/app/payment-entry/new?payment_type=Internal%20Transfer"
+   "url": "/app/purchase-invoice/new"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Aset Tetap",
+   "type": "URL",
+   "url": "/app/asset/new"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Beli Barang",
+   "type": "URL",
+   "url": "/app/purchase-receipt/new"
   }
  ],
  "title": "Akuntansi",
