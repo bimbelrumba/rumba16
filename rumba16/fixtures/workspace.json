@@ -1090,249 +1090,6 @@
  {
   "app": "rumba16",
   "charts": [],
-  "content": "[{\"id\": \"km1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"km2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83e\\uddd2 Siklus Murid\", \"col\": 12}}, {\"id\": \"km3\", \"type\": \"header\", \"data\": {\"text\": \"Calon Murid\", \"col\": 12}}, {\"id\": \"km4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Lead Belum Ditindaklanjuti\", \"col\": 3}}, {\"id\": \"km5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Trial\", \"col\": 3}}, {\"id\": \"km6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Daftar Tunggu\", \"col\": 3}}, {\"id\": \"km7\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pendaftaran Menunggu\", \"col\": 3}}, {\"id\": \"km8\", \"type\": \"header\", \"data\": {\"text\": \"Murid\", \"col\": 12}}, {\"id\": \"km9\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Aktif\", \"col\": 3}}, {\"id\": \"km10\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Cuti\", \"col\": 3}}, {\"id\": \"km11\", \"type\": \"header\", \"data\": {\"text\": \"\\u26a1 Aksi Cepat\", \"col\": 12}}, {\"id\": \"km12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Pendaftaran Murid Baru\", \"col\": 4}}, {\"id\": \"km13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Lead\", \"col\": 4}}, {\"id\": \"km14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Jadwalkan Trial\", \"col\": 4}}, {\"id\": \"km15\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km16\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Distribusi Murid\", \"col\": 12}}, {\"id\": \"km18\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Distribusi Murid per Program (Donut)\", \"col\": 6}}, {\"id\": \"kmAbsen\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Murid Sering Absen (Alpa)\", \"col\": 6}}, {\"id\": \"km19\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km20\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar & Dokumen\", \"col\": 12}}, {\"id\": \"km21\", \"type\": \"card\", \"data\": {\"card_name\": \"Data Murid\", \"col\": 6}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "Distribusi Murid per Program (Donut)",
-    "label": "Distribusi Murid per Program (Donut)"
-   },
-   {
-    "custom_block_name": "Kepala Halaman Unit",
-    "label": "Kepala Halaman Unit"
-   },
-   {
-    "custom_block_name": "Murid Sering Absen (Alpa)",
-    "label": "Murid Sering Absen (Alpa)"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "external_link": null,
-  "for_user": null,
-  "hide_custom": 1,
-  "icon": "project",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "Siklus Murid",
-  "link_to": null,
-  "link_type": "DocType",
-  "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Data Murid",
-    "link_count": 0,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Lead",
-    "link_count": 0,
-    "link_to": "Rumba Lead",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pendaftaran",
-    "link_count": 0,
-    "link_to": "Rumba Pendaftaran",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Murid",
-    "link_count": 0,
-    "link_to": "Rumba Murid",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 1,
-    "label": "Daftar Tunggu (FIFO)",
-    "link_count": 0,
-    "link_to": "Daftar Tunggu (FIFO)",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Mutasi",
-    "link_count": 0,
-    "link_to": "Rumba Mutasi",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pengunduran Diri",
-    "link_count": 0,
-    "link_to": "Rumba Pengunduran Diri",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Alumni",
-    "link_count": 0,
-    "link_to": "Alumni",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Murid",
-    "type": "Link"
-   }
-  ],
-  "modified": "2026-07-29 00:33:16.663767",
-  "module": "Bimbel Rumba v16",
-  "name": "Siklus Murid",
-  "number_cards": [
-   {
-    "label": "Lead Belum Ditindaklanjuti",
-    "number_card_name": "Lead Belum Ditindaklanjuti"
-   },
-   {
-    "label": "Trial",
-    "number_card_name": "Trial"
-   },
-   {
-    "label": "Daftar Tunggu",
-    "number_card_name": "Daftar Tunggu"
-   },
-   {
-    "label": "Pendaftaran Menunggu",
-    "number_card_name": "Pendaftaran Menunggu"
-   },
-   {
-    "label": "Murid Aktif",
-    "number_card_name": "Murid Aktif"
-   },
-   {
-    "label": "Murid Cuti",
-    "number_card_name": "Murid Cuti"
-   }
-  ],
-  "parent_page": "Operasional",
-  "public": 1,
-  "quick_lists": [],
-  "restrict_to_domain": null,
-  "roles": [
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Admin Unit"
-   },
-   {
-    "role": "Rumba Kepala Unit"
-   }
-  ],
-  "sequence_id": 2.0,
-  "shortcuts": [
-   {
-    "color": "Green",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Pendaftaran Murid Baru",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-pendaftaran/new"
-   },
-   {
-    "color": "Green",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Lead",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-lead/new"
-   },
-   {
-    "color": null,
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Jadwalkan Trial",
-    "link_to": "Rumba Lead",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   }
-  ],
-  "title": "Siklus Murid",
-  "type": "Workspace"
- },
- {
-  "app": "rumba16",
-  "charts": [],
   "content": "[{\"id\": \"lp1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"lp2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Laporan Unit\", \"col\": 12}}, {\"id\": \"lp3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Kesiswaan per Unit\", \"col\": 6}}, {\"id\": \"lp4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Piutang SPP per Unit (Aging)\", \"col\": 6}}, {\"id\": \"lp5\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"lp6\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar Laporan\", \"col\": 12}}, {\"id\": \"lp7\", \"type\": \"card\", \"data\": {\"card_name\": \"Laporan Kesiswaan\", \"col\": 4}}, {\"id\": \"lp8\", \"type\": \"card\", \"data\": {\"card_name\": \"Laporan Keuangan\", \"col\": 4}}, {\"id\": \"lp9\", \"type\": \"card\", \"data\": {\"card_name\": \"Akademik & Tutor (baca)\", \"col\": 4}}]",
   "custom_blocks": [
    {
@@ -2163,274 +1920,6 @@
    }
   ],
   "title": "Rumba Bisnis",
-  "type": "Workspace"
- },
- {
-  "app": "rumba16",
-  "charts": [],
-  "content": "[{\"id\":\"rb36\",\"type\":\"header\",\"data\":{\"text\":\"🎪 Event RUMBA\",\"col\":12}},{\"id\":\"rbev_papan\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Papan Event Aktif\",\"col\":12}},{\"id\":\"rb37\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Event Aktif\",\"col\":6}},{\"id\":\"rb38\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Event Baru\",\"col\":6}},{\"id\":\"rb39\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb40\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Event\",\"col\":3}},{\"id\":\"rb41\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Event\",\"col\":3}},{\"id\":\"rb42\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran Event\",\"col\":3}},{\"id\":\"rb43\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitabilitas Event\",\"col\":3}},{\"id\":\"rbev_sc_ringkas\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ringkasan Pelaksanaan\",\"col\":3}},{\"id\":\"rb44\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb45\",\"type\":\"header\",\"data\":{\"text\":\"⚠️ Perlu Tindakan\",\"col\":12}},{\"id\":\"rb46\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Event Perlu Diproses (oleh Admin Unit)\",\"col\":6}},{\"id\":\"rb47\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb48\",\"type\":\"card\",\"data\":{\"card_name\":\"Event\",\"col\":4}},{\"id\":\"rb49\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Event\",\"col\":4}}]",
-  "custom_blocks": [
-   {
-    "custom_block_name": "Papan Event Aktif",
-    "label": "Papan Event Aktif"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Workspace",
-  "external_link": null,
-  "for_user": null,
-  "hide_custom": 1,
-  "icon": "calendar",
-  "indicator_color": "green",
-  "is_hidden": 0,
-  "label": "Event RUMBA",
-  "link_to": null,
-  "link_type": "DocType",
-  "links": [
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Event",
-    "link_count": 2,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Event",
-    "link_count": 0,
-    "link_to": "Rumba Event",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pendaftaran Event (Intake)",
-    "link_count": 0,
-    "link_to": "Rumba Pendaftaran Event",
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Laporan Event",
-    "link_count": 5,
-    "link_to": null,
-    "link_type": "DocType",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": null,
-    "type": "Card Break"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Profitabilitas Event",
-    "link_count": 0,
-    "link_to": "Profitabilitas Event",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Event",
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Daftar Peserta Event",
-    "link_count": 0,
-    "link_to": "Daftar Peserta Event",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Event",
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Pembayaran Peserta Event",
-    "link_count": 0,
-    "link_to": "Pembayaran Peserta Event",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Event",
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Rekap Event Tahunan",
-    "link_count": 0,
-    "link_to": "Rekap Event Tahunan",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Event",
-    "type": "Link"
-   },
-   {
-    "dependencies": null,
-    "description": null,
-    "hidden": 0,
-    "icon": null,
-    "is_query_report": 0,
-    "label": "Ringkasan Pelaksanaan",
-    "link_count": 0,
-    "link_to": "Event - Ringkasan Pelaksanaan",
-    "link_type": "Report",
-    "onboard": 0,
-    "only_for": null,
-    "report_ref_doctype": "Rumba Event",
-    "type": "Link"
-   }
-  ],
-  "modified": "2026-07-16 15:07:06.384853",
-  "module": "Bimbel Rumba v16",
-  "name": "Event RUMBA",
-  "number_cards": [
-   {
-    "label": "Event Aktif",
-    "number_card_name": "Event Aktif"
-   },
-   {
-    "label": "Pendaftaran Event Baru",
-    "number_card_name": "Pendaftaran Event Baru"
-   }
-  ],
-  "parent_page": "RUMBA",
-  "public": 1,
-  "quick_lists": [
-   {
-    "document_type": "Rumba Pendaftaran Event",
-    "label": "Pendaftaran Event Perlu Diproses (oleh Admin Unit)",
-    "quick_list_filter": "[[\"Rumba Pendaftaran Event\",\"status_intake\",\"=\",\"Baru\"]]"
-   }
-  ],
-  "restrict_to_domain": null,
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Admin Unit"
-   }
-  ],
-  "sequence_id": 0.62,
-  "shortcuts": [
-   {
-    "color": "Blue",
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "+ Event",
-    "link_to": null,
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "URL",
-    "url": "/app/rumba-event/new"
-   },
-   {
-    "color": null,
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Daftar Event",
-    "link_to": "Rumba Event",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Pendaftaran Event",
-    "link_to": "Rumba Pendaftaran Event",
-    "report_ref_doctype": null,
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Profitabilitas Event",
-    "link_to": "Profitabilitas Event",
-    "report_ref_doctype": "Rumba Event",
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "Report",
-    "url": null
-   },
-   {
-    "color": null,
-    "doc_view": "",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Ringkasan Pelaksanaan",
-    "link_to": "Event - Ringkasan Pelaksanaan",
-    "report_ref_doctype": "Rumba Event",
-    "restrict_to_domain": null,
-    "stats_filter": null,
-    "type": "Report",
-    "url": null
-   }
-  ],
-  "title": "Event RUMBA",
   "type": "Workspace"
  },
  {
@@ -4429,6 +3918,517 @@
    }
   ],
   "title": "Tutor",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [],
+  "content": "[{\"id\": \"km1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"km2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83e\\uddd2 Siklus Murid\", \"col\": 12}}, {\"id\": \"km3\", \"type\": \"header\", \"data\": {\"text\": \"Calon Murid\", \"col\": 12}}, {\"id\": \"km4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Lead Belum Ditindaklanjuti\", \"col\": 3}}, {\"id\": \"km5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Trial\", \"col\": 3}}, {\"id\": \"km6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Daftar Tunggu\", \"col\": 3}}, {\"id\": \"km7\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pendaftaran Menunggu\", \"col\": 3}}, {\"id\": \"km8\", \"type\": \"header\", \"data\": {\"text\": \"Murid\", \"col\": 12}}, {\"id\": \"km9\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Aktif\", \"col\": 3}}, {\"id\": \"km10\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Cuti\", \"col\": 3}}, {\"id\": \"km11\", \"type\": \"header\", \"data\": {\"text\": \"\\u26a1 Aksi Cepat\", \"col\": 12}}, {\"id\": \"km12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Pendaftaran Murid Baru\", \"col\": 4}}, {\"id\": \"km13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Lead\", \"col\": 4}}, {\"id\": \"km14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Jadwalkan Trial\", \"col\": 4}}, {\"id\": \"km15\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km16\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Distribusi Murid\", \"col\": 12}}, {\"id\": \"km18\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Distribusi Murid per Program (Donut)\", \"col\": 6}}, {\"id\": \"kmAbsen\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Murid Sering Absen (Alpa)\", \"col\": 6}}, {\"id\": \"km19\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km20\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar & Dokumen\", \"col\": 12}}, {\"id\": \"km21\", \"type\": \"card\", \"data\": {\"card_name\": \"Data Murid\", \"col\": 6}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Distribusi Murid per Program (Donut)",
+    "label": "Distribusi Murid per Program (Donut)"
+   },
+   {
+    "custom_block_name": "Kepala Halaman Unit",
+    "label": "Kepala Halaman Unit"
+   },
+   {
+    "custom_block_name": "Murid Sering Absen (Alpa)",
+    "label": "Murid Sering Absen (Alpa)"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "project",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Siklus Murid",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Data Murid",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Lead",
+    "link_count": 0,
+    "link_to": "Rumba Lead",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pendaftaran",
+    "link_count": 0,
+    "link_to": "Rumba Pendaftaran",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Murid",
+    "link_count": 0,
+    "link_to": "Rumba Murid",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 1,
+    "label": "Daftar Tunggu (FIFO)",
+    "link_count": 0,
+    "link_to": "Daftar Tunggu (FIFO)",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Mutasi",
+    "link_count": 0,
+    "link_to": "Rumba Mutasi",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pengunduran Diri",
+    "link_count": 0,
+    "link_to": "Rumba Pengunduran Diri",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Alumni",
+    "link_count": 0,
+    "link_to": "Alumni",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Murid",
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-29 00:33:16.663767",
+  "module": "Bimbel Rumba v16",
+  "name": "Siklus Murid",
+  "number_cards": [
+   {
+    "label": "Lead Belum Ditindaklanjuti",
+    "number_card_name": "Lead Belum Ditindaklanjuti"
+   },
+   {
+    "label": "Trial",
+    "number_card_name": "Trial"
+   },
+   {
+    "label": "Daftar Tunggu",
+    "number_card_name": "Daftar Tunggu"
+   },
+   {
+    "label": "Pendaftaran Menunggu",
+    "number_card_name": "Pendaftaran Menunggu"
+   },
+   {
+    "label": "Murid Aktif",
+    "number_card_name": "Murid Aktif"
+   },
+   {
+    "label": "Murid Cuti",
+    "number_card_name": "Murid Cuti"
+   }
+  ],
+  "parent_page": "Operasional",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "sequence_id": 2.0,
+  "shortcuts": [
+   {
+    "color": "Green",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Pendaftaran Murid Baru",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-pendaftaran/new"
+   },
+   {
+    "color": "Green",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Lead",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-lead/new"
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Jadwalkan Trial",
+    "link_to": "Rumba Lead",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Siklus Murid",
+  "type": "Workspace"
+ },
+ {
+  "app": "rumba16",
+  "charts": [],
+  "content": "[{\"id\":\"rb36\",\"type\":\"header\",\"data\":{\"text\":\"🎪 Event RUMBA\",\"col\":12}},{\"id\":\"rbev_papan\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Papan Event Aktif\",\"col\":12}},{\"id\":\"rb37\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Event Aktif\",\"col\":6}},{\"id\":\"rb38\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Event Baru\",\"col\":6}},{\"id\":\"rb39\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb40\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Event\",\"col\":3}},{\"id\":\"rb41\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daftar Event\",\"col\":3}},{\"id\":\"rb42\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pendaftaran Event\",\"col\":3}},{\"id\":\"rb43\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitabilitas Event\",\"col\":3}},{\"id\":\"rbev_sc_ringkas\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ringkasan Pelaksanaan\",\"col\":3}},{\"id\":\"rb44\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb45\",\"type\":\"header\",\"data\":{\"text\":\"⚠️ Perlu Tindakan\",\"col\":12}},{\"id\":\"rb46\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pendaftaran Event Perlu Diproses (oleh Admin Unit)\",\"col\":6}},{\"id\":\"rb47\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb48\",\"type\":\"card\",\"data\":{\"card_name\":\"Event\",\"col\":4}},{\"id\":\"rb49\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Event\",\"col\":4}}]",
+  "custom_blocks": [
+   {
+    "custom_block_name": "Papan Event Aktif",
+    "label": "Papan Event Aktif"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "external_link": null,
+  "for_user": null,
+  "hide_custom": 1,
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Event RUMBA",
+  "link_to": null,
+  "link_type": "DocType",
+  "links": [
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Event",
+    "link_count": 2,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Event",
+    "link_count": 0,
+    "link_to": "Rumba Event",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pendaftaran Event (Intake)",
+    "link_count": 0,
+    "link_to": "Rumba Pendaftaran Event",
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Laporan Event",
+    "link_count": 5,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Profitabilitas Event",
+    "link_count": 0,
+    "link_to": "Profitabilitas Event",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Event",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Daftar Peserta Event",
+    "link_count": 0,
+    "link_to": "Daftar Peserta Event",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Event",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Pembayaran Peserta Event",
+    "link_count": 0,
+    "link_to": "Pembayaran Peserta Event",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Event",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Rekap Event Tahunan",
+    "link_count": 0,
+    "link_to": "Rekap Event Tahunan",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Event",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Ringkasan Pelaksanaan",
+    "link_count": 0,
+    "link_to": "Event - Ringkasan Pelaksanaan",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": "Rumba Event",
+    "type": "Link"
+   }
+  ],
+  "modified": "2026-07-16 15:07:06.384853",
+  "module": "Bimbel Rumba v16",
+  "name": "Event RUMBA",
+  "number_cards": [
+   {
+    "label": "Event Aktif",
+    "number_card_name": "Event Aktif"
+   },
+   {
+    "label": "Pendaftaran Event Baru",
+    "number_card_name": "Pendaftaran Event Baru"
+   }
+  ],
+  "parent_page": "RUMBA",
+  "public": 1,
+  "quick_lists": [
+   {
+    "document_type": "Rumba Pendaftaran Event",
+    "label": "Pendaftaran Event Perlu Diproses (oleh Admin Unit)",
+    "quick_list_filter": "[[\"Rumba Pendaftaran Event\",\"status_intake\",\"=\",\"Baru\"]]"
+   }
+  ],
+  "restrict_to_domain": null,
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   }
+  ],
+  "sequence_id": 0.62,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "+ Event",
+    "link_to": null,
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "URL",
+    "url": "/app/rumba-event/new"
+   },
+   {
+    "color": null,
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Daftar Event",
+    "link_to": "Rumba Event",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": null,
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Pendaftaran Event",
+    "link_to": "Rumba Pendaftaran Event",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Profitabilitas Event",
+    "link_to": "Profitabilitas Event",
+    "report_ref_doctype": "Rumba Event",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
+   {
+    "color": null,
+    "doc_view": "",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Ringkasan Pelaksanaan",
+    "link_to": "Event - Ringkasan Pelaksanaan",
+    "report_ref_doctype": "Rumba Event",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   }
+  ],
+  "title": "Event RUMBA",
   "type": "Workspace"
  },
  {

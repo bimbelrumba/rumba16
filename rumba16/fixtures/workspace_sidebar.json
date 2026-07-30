@@ -35,7 +35,7 @@
     "navigate_to_tab": null,
     "route_options": null,
     "show_arrow": 1,
-    "type": "Sidebar Item Group",
+    "type": "Link",
     "url": null
    },
    {
@@ -615,7 +615,7 @@
     "url": null
    }
   ],
-  "modified": "2026-07-29 19:45:55.340049",
+  "modified": "2026-07-30 15:06:27.657836",
   "module": "Bimbel Rumba v16",
   "module_onboarding": null,
   "name": "Bimbel Rumba v16",
