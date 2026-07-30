@@ -32,7 +32,7 @@ app_logo_url = "/assets/rumba16/images/splash-singa.png"
 
 # include js, css files in header of desk.html
 app_include_css = "rumba_theme.bundle.css"
-# app_include_js = "/assets/rumba16/js/rumba16.js"
+app_include_js = "/assets/rumba16/js/rumba_desk_landing.js"
 
 # include js, css files in header of web template
 web_include_css = "rumba_web.bundle.css"
