@@ -6,7 +6,7 @@
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
- "hide_custom": 0,
+ "hide_custom": 1,
  "icon": "setting",
  "idx": 0,
  "indicator_color": "green",
@@ -46,15 +46,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Branch",
+   "label": "Rumba Unit",
    "link_count": 0,
-   "link_to": "Branch",
+   "link_to": "Rumba Unit",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2026-07-31 11:57:02.558748",
+ "modified": "2026-07-31 18:43:53.410316",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Master SDM",

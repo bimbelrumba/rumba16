@@ -314,45 +314,6 @@
   "filters": [],
   "is_standard": "No",
   "javascript": null,
-  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Pay\"]]}",
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-09 22:43:09.144474",
-  "module": "Bimbel Rumba v16",
-  "name": "Pembayaran (Kas Keluar)",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Payment Entry",
-  "reference_report": null,
-  "report_name": "Pembayaran (Kas Keluar)",
-  "report_script": null,
-  "report_type": "Report Builder",
-  "roles": [
-   {
-    "role": "Accounts User"
-   },
-   {
-    "role": "Accounts Manager"
-   },
-   {
-    "role": "Rumba Admin Unit"
-   },
-   {
-    "role": "Rumba Kepala Unit"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
   "modified": "2026-07-31 10:51:04.140579",
@@ -383,6 +344,45 @@
   "add_translate_data": 0,
   "columns": [],
   "disable_prepared_report_automation": 0,
+  "disabled": 1,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 22:57:45.187973",
+  "module": "Bimbel Rumba v16",
+  "name": "Peta Pemakaian Ruang & Guru",
+  "prepared_report": 0,
+  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
+  "ref_doctype": "Rumba Kelas",
+  "reference_report": null,
+  "report_name": "Peta Pemakaian Ruang & Guru",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
@@ -391,19 +391,22 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-31 13:34:40.661999",
+  "modified": "2026-07-31 22:57:10.676795",
   "module": "Bimbel Rumba v16",
-  "name": "Presensi di Luar Lokasi",
+  "name": "Alokasi Rombel",
   "prepared_report": 0,
-  "query": "SELECT\n  ec.employee AS \"Karyawan:Link/Employee:200\",\n  ec.time AS \"Waktu:Datetime:160\",\n  ec.log_type AS \"Jenis:Data:70\",\n  ec.rumba_status_lokasi AS \"Status Lokasi:Data:120\",\n  ec.rumba_jarak_meter AS \"Jarak (m):Int:90\",\n  ec.latitude AS \"Lat:Float:110\",\n  ec.longitude AS \"Long:Float:110\"\nFROM `tabEmployee Checkin` ec\nWHERE ec.rumba_status_lokasi IN ('Di Luar Lokasi','Tanpa GPS')\nORDER BY ec.time DESC",
-  "ref_doctype": "Employee Checkin",
+  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
+  "ref_doctype": "Rumba Kelas",
   "reference_report": null,
-  "report_name": "Presensi di Luar Lokasi",
+  "report_name": "Alokasi Rombel",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
    {
     "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Admin Unit"
    },
    {
     "role": "Rumba Founder"
@@ -486,48 +489,6 @@
   "filters": [],
   "is_standard": "No",
   "javascript": null,
-  "json": "{\"filters\":[[\"Sales Invoice\",\"update_stock\",\"=\",1]]}",
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-09 22:43:09.943490",
-  "module": "Bimbel Rumba v16",
-  "name": "Penjualan Barang",
-  "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Sales Invoice",
-  "reference_report": null,
-  "report_name": "Penjualan Barang",
-  "report_script": null,
-  "report_type": "Report Builder",
-  "roles": [
-   {
-    "role": "Accounts User"
-   },
-   {
-    "role": "Accounts Manager"
-   },
-   {
-    "role": "Employee Self Service"
-   },
-   {
-    "role": "Rumba Admin Unit"
-   },
-   {
-    "role": "Rumba Kepala Unit"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
   "modified": "2026-06-30 20:22:47.632669",
@@ -582,64 +543,6 @@
   "roles": [
    {
     "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [
-   {
-    "default": null,
-    "fieldname": "from_date",
-    "fieldtype": "Date",
-    "label": "Dari Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   },
-   {
-    "default": null,
-    "fieldname": "to_date",
-    "fieldtype": "Date",
-    "label": "Sampai Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   }
-  ],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-16 14:37:17.294492",
-  "module": "Bimbel Rumba v16",
-  "name": "Pemasaran - Efektivitas Kanal",
-  "prepared_report": 0,
-  "query": "SELECT\n    x.kanal AS \"Kanal:Data:200\",\n    x.leads AS \"Lead:Int:80\",\n    x.trial AS \"Trial:Int:80\",\n    x.terdaftar AS \"Terdaftar:Int:100\",\n    CONCAT(REPLACE(CAST(ROUND(x.terdaftar * 100.0 / NULLIF(x.leads, 0), 1) AS CHAR), '.', ','), '%%') AS \"Konversi:Data:100\",\n    x.biaya AS \"Biaya:Currency:140\",\n    ROUND(x.biaya / NULLIF(x.leads, 0)) AS \"CPL (Biaya/Lead):Currency:150\",\n    ROUND(x.biaya / NULLIF(x.terdaftar, 0)) AS \"CAC (Biaya/Murid):Currency:150\"\nFROM (\n    SELECT 0 AS sortkey, 1 AS urut, 'Kunjungan Sekolah' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Kunjungan Sekolah' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (sekolah = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 2 AS urut, 'Event RUMBA' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Event RUMBA' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kegiatan_rumba = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 3 AS urut, 'Online (IG/FB/Web/Cari)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Online' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 1 OR facebook = 1 OR website_bimbelrumba = 1 OR pencarian_di_internet = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 4 AS urut, 'Rujukan (Kawan/Keluarga)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kawan = 1 OR keluarga = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 5 AS urut, 'Spanduk/Brosur' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Spanduk/Brosur' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (spanduk_di_jalan = 1 OR brosur_selebaran = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 6 AS urut, 'Lainnya' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Lainnya' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (lainnya = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 7 AS urut, '(Tanpa Sumber Tercatat)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 0 AND facebook = 0 AND website_bimbelrumba = 0 AND pencarian_di_internet = 0 AND kawan = 0 AND keluarga = 0 AND sekolah = 0 AND kegiatan_rumba = 0 AND spanduk_di_jalan = 0 AND brosur_selebaran = 0 AND lainnya = 0) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 1 AS sortkey, 99 AS urut, 'TOTAL (lead unik)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
-  "ref_doctype": "Rumba Lead",
-  "reference_report": null,
-  "report_name": "Pemasaran - Efektivitas Kanal",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "System Manager"
-   },
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
    }
   ],
   "timeout": 0
@@ -748,64 +651,6 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-16 14:34:40.528285",
-  "module": "Bimbel Rumba v16",
-  "name": "Kemitraan - Funnel Mitra",
-  "prepared_report": 0,
-  "query": "SELECT\n    x.status AS \"Tahap:Data:180\",\n    x.jumlah AS \"Jumlah Prospek:Int:140\",\n    x.keterangan AS \"Keterangan:Data:240\"\nFROM (\n    SELECT 0 AS sortkey,\n        FIELD(status_mitra,'Baru','Dikualifikasi','Presentasi','Due Diligence','Negosiasi','Perjanjian','Deal','Tidak Jadi') AS urut,\n        status_mitra AS status,\n        COUNT(*) AS jumlah,\n        CONCAT(REPLACE(CAST(ROUND(COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM `tabRumba Mitra Lead` t WHERE t.tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s), 0), 1) AS CHAR), '.', ','), '%% dari total') AS keterangan\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY status_mitra\n    UNION ALL\n    SELECT 1, 99, 'TOTAL PROSPEK', COUNT(*),\n        CONCAT('Konversi Deal: ', REPLACE(CAST(ROUND(SUM(CASE WHEN status_mitra = 'Deal' THEN 1 ELSE 0 END) * 100.0 / NULLIF(COUNT(*), 0), 1) AS CHAR), '.', ','), '%%')\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
-  "ref_doctype": "Rumba Mitra Lead",
-  "reference_report": null,
-  "report_name": "Kemitraan - Funnel Mitra",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "System Manager"
-   },
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [
-   {
-    "default": null,
-    "fieldname": "from_date",
-    "fieldtype": "Date",
-    "label": "Dari Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   },
-   {
-    "default": null,
-    "fieldname": "to_date",
-    "fieldtype": "Date",
-    "label": "Sampai Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   }
-  ],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
   "modified": "2026-07-11 08:38:14.125719",
   "module": "Bimbel Rumba v16",
   "name": "Riwayat Ujian Kenaikan Level",
@@ -846,21 +691,33 @@
   "filters": [],
   "is_standard": "No",
   "javascript": null,
-  "json": null,
+  "json": "{\"filters\":[[\"Sales Invoice\",\"update_stock\",\"=\",1]]}",
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-18 19:42:32.617379",
+  "modified": "2026-07-09 22:43:09.943490",
   "module": "Bimbel Rumba v16",
-  "name": "Daftar Tunggu (FIFO)",
+  "name": "Penjualan Barang",
   "prepared_report": 0,
-  "query": "SELECT\n    name AS \"Lead:Link/Rumba Lead:140\",\n    nama_calon AS \"Nama Calon:Data:160\",\n    nomor_handphone AS \"No. HP:Data:120\",\n    nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    program_diminati AS \"Program:Link/Rumba Program Belajar:130\",\n    tanggal_masuk_tunggu AS \"Masuk Tunggu:Date:120\",\n    catatan_tunggu AS \"Catatan:Data:240\"\nFROM `tabRumba Lead`\nWHERE status_lead = 'Daftar Tunggu'\nORDER BY tanggal_masuk_tunggu ASC, creation ASC",
-  "ref_doctype": "Rumba Lead",
+  "query": null,
+  "ref_doctype": "Sales Invoice",
   "reference_report": null,
-  "report_name": "Daftar Tunggu (FIFO)",
+  "report_name": "Penjualan Barang",
   "report_script": null,
-  "report_type": "Query Report",
+  "report_type": "Report Builder",
   "roles": [
    {
-    "role": "System Manager"
+    "role": "Accounts User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Employee Self Service"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
    }
   ],
   "timeout": 0
@@ -873,22 +730,44 @@
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
-  "filters": [],
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
   "is_standard": "No",
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:23.679616",
+  "modified": "2026-07-16 14:37:17.294492",
   "module": "Bimbel Rumba v16",
-  "name": "Profitabilitas Event",
+  "name": "Pemasaran - Efektivitas Kanal",
   "prepared_report": 0,
-  "query": "SELECT\n  ev.name AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:200\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  ev.status AS \"Status:Data:120\",\n  ev.tanggal_mulai AS \"Tanggal Mulai:Datetime:150\",\n  ev.jumlah_peserta AS \"Peserta:Int:80\",\n  ev.total_pendapatan AS \"Pendapatan:Currency:120\",\n  ev.total_pengeluaran AS \"Pengeluaran:Currency:120\",\n  ev.surplus_defisit AS \"Surplus/Defisit:Currency:130\"\nFROM `tabRumba Event` ev\nORDER BY ev.tanggal_mulai DESC",
-  "ref_doctype": "Rumba Event",
+  "query": "SELECT\n    x.kanal AS \"Kanal:Data:200\",\n    x.leads AS \"Lead:Int:80\",\n    x.trial AS \"Trial:Int:80\",\n    x.terdaftar AS \"Terdaftar:Int:100\",\n    CONCAT(REPLACE(CAST(ROUND(x.terdaftar * 100.0 / NULLIF(x.leads, 0), 1) AS CHAR), '.', ','), '%%') AS \"Konversi:Data:100\",\n    x.biaya AS \"Biaya:Currency:140\",\n    ROUND(x.biaya / NULLIF(x.leads, 0)) AS \"CPL (Biaya/Lead):Currency:150\",\n    ROUND(x.biaya / NULLIF(x.terdaftar, 0)) AS \"CAC (Biaya/Murid):Currency:150\"\nFROM (\n    SELECT 0 AS sortkey, 1 AS urut, 'Kunjungan Sekolah' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Kunjungan Sekolah' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (sekolah = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 2 AS urut, 'Event RUMBA' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Event RUMBA' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kegiatan_rumba = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 3 AS urut, 'Online (IG/FB/Web/Cari)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Online' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 1 OR facebook = 1 OR website_bimbelrumba = 1 OR pencarian_di_internet = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 4 AS urut, 'Rujukan (Kawan/Keluarga)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kawan = 1 OR keluarga = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 5 AS urut, 'Spanduk/Brosur' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Spanduk/Brosur' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (spanduk_di_jalan = 1 OR brosur_selebaran = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 6 AS urut, 'Lainnya' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Lainnya' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (lainnya = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 7 AS urut, '(Tanpa Sumber Tercatat)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 0 AND facebook = 0 AND website_bimbelrumba = 0 AND pencarian_di_internet = 0 AND kawan = 0 AND keluarga = 0 AND sekolah = 0 AND kegiatan_rumba = 0 AND spanduk_di_jalan = 0 AND brosur_selebaran = 0 AND lainnya = 0) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 1 AS sortkey, 99 AS urut, 'TOTAL (lead unik)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
+  "ref_doctype": "Rumba Lead",
   "reference_report": null,
-  "report_name": "Profitabilitas Event",
+  "report_name": "Pemasaran - Efektivitas Kanal",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
+   {
+    "role": "System Manager"
+   },
    {
     "role": "Rumba Bisnis"
    },
@@ -897,9 +776,6 @@
    },
    {
     "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -970,22 +846,164 @@
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-16 14:34:40.528285",
+  "module": "Bimbel Rumba v16",
+  "name": "Kemitraan - Funnel Mitra",
+  "prepared_report": 0,
+  "query": "SELECT\n    x.status AS \"Tahap:Data:180\",\n    x.jumlah AS \"Jumlah Prospek:Int:140\",\n    x.keterangan AS \"Keterangan:Data:240\"\nFROM (\n    SELECT 0 AS sortkey,\n        FIELD(status_mitra,'Baru','Dikualifikasi','Presentasi','Due Diligence','Negosiasi','Perjanjian','Deal','Tidak Jadi') AS urut,\n        status_mitra AS status,\n        COUNT(*) AS jumlah,\n        CONCAT(REPLACE(CAST(ROUND(COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM `tabRumba Mitra Lead` t WHERE t.tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s), 0), 1) AS CHAR), '.', ','), '%% dari total') AS keterangan\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY status_mitra\n    UNION ALL\n    SELECT 1, 99, 'TOTAL PROSPEK', COUNT(*),\n        CONCAT('Konversi Deal: ', REPLACE(CAST(ROUND(SUM(CASE WHEN status_mitra = 'Deal' THEN 1 ELSE 0 END) * 100.0 / NULLIF(COUNT(*), 0), 1) AS CHAR), '.', ','), '%%')\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
+  "ref_doctype": "Rumba Mitra Lead",
+  "reference_report": null,
+  "report_name": "Kemitraan - Funnel Mitra",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Pay\"]]}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-09 22:43:09.144474",
+  "module": "Bimbel Rumba v16",
+  "name": "Pembayaran (Kas Keluar)",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Payment Entry",
+  "reference_report": null,
+  "report_name": "Pembayaran (Kas Keluar)",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "role": "Accounts User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
   "filters": [],
   "is_standard": "No",
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-18 20:46:22.380427",
+  "modified": "2026-06-30 20:22:23.679616",
   "module": "Bimbel Rumba v16",
-  "name": "Pengunduran Diri Murid",
+  "name": "Profitabilitas Event",
   "prepared_report": 0,
-  "query": "SELECT\n    name AS \"No.:Link/Rumba Pengunduran Diri:140\",\n    nama_murid AS \"Murid:Data:160\",\n    nama_unit AS \"Unit:Link/Rumba Unit:120\",\n    kategori AS \"Kategori:Data:90\",\n    tanggal_pemberitahuan AS \"Diberitahu:Date:100\",\n    tanggal_efektif AS \"Efektif:Date:100\",\n    notice_terpenuhi AS \"Notice H-14:Check:90\",\n    status_pengunduran AS \"Status:Data:90\",\n    tunggakan AS \"Tunggakan:Currency:110\"\nFROM `tabRumba Pengunduran Diri`\nORDER BY tanggal_efektif DESC, creation DESC",
-  "ref_doctype": "Rumba Pengunduran Diri",
+  "query": "SELECT\n  ev.name AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:200\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  ev.status AS \"Status:Data:120\",\n  ev.tanggal_mulai AS \"Tanggal Mulai:Datetime:150\",\n  ev.jumlah_peserta AS \"Peserta:Int:80\",\n  ev.total_pendapatan AS \"Pendapatan:Currency:120\",\n  ev.total_pengeluaran AS \"Pengeluaran:Currency:120\",\n  ev.surplus_defisit AS \"Surplus/Defisit:Currency:130\"\nFROM `tabRumba Event` ev\nORDER BY ev.tanggal_mulai DESC",
+  "ref_doctype": "Rumba Event",
   "reference_report": null,
-  "report_name": "Pengunduran Diri Murid",
+  "report_name": "Profitabilitas Event",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 13:34:40.661999",
+  "module": "Bimbel Rumba v16",
+  "name": "Presensi di Luar Lokasi",
+  "prepared_report": 0,
+  "query": "SELECT\n  ec.employee AS \"Karyawan:Link/Employee:200\",\n  ec.time AS \"Waktu:Datetime:160\",\n  ec.log_type AS \"Jenis:Data:70\",\n  ec.rumba_status_lokasi AS \"Status Lokasi:Data:120\",\n  ec.rumba_jarak_meter AS \"Jarak (m):Int:90\",\n  ec.latitude AS \"Lat:Float:110\",\n  ec.longitude AS \"Long:Float:110\"\nFROM `tabEmployee Checkin` ec\nWHERE ec.rumba_status_lokasi IN ('Di Luar Lokasi','Tanpa GPS')\nORDER BY ec.time DESC",
+  "ref_doctype": "Employee Checkin",
+  "reference_report": null,
+  "report_name": "Presensi di Luar Lokasi",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Founder"
+   },
    {
     "role": "System Manager"
    }
@@ -1043,6 +1061,66 @@
    },
    {
     "role": "Rumba Admin Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-18 20:46:22.380427",
+  "module": "Bimbel Rumba v16",
+  "name": "Pengunduran Diri Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    name AS \"No.:Link/Rumba Pengunduran Diri:140\",\n    nama_murid AS \"Murid:Data:160\",\n    nama_unit AS \"Unit:Link/Rumba Unit:120\",\n    kategori AS \"Kategori:Data:90\",\n    tanggal_pemberitahuan AS \"Diberitahu:Date:100\",\n    tanggal_efektif AS \"Efektif:Date:100\",\n    notice_terpenuhi AS \"Notice H-14:Check:90\",\n    status_pengunduran AS \"Status:Data:90\",\n    tunggakan AS \"Tunggakan:Currency:110\"\nFROM `tabRumba Pengunduran Diri`\nORDER BY tanggal_efektif DESC, creation DESC",
+  "ref_doctype": "Rumba Pengunduran Diri",
+  "reference_report": null,
+  "report_name": "Pengunduran Diri Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-18 19:42:32.617379",
+  "module": "Bimbel Rumba v16",
+  "name": "Daftar Tunggu (FIFO)",
+  "prepared_report": 0,
+  "query": "SELECT\n    name AS \"Lead:Link/Rumba Lead:140\",\n    nama_calon AS \"Nama Calon:Data:160\",\n    nomor_handphone AS \"No. HP:Data:120\",\n    nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    program_diminati AS \"Program:Link/Rumba Program Belajar:130\",\n    tanggal_masuk_tunggu AS \"Masuk Tunggu:Date:120\",\n    catatan_tunggu AS \"Catatan:Data:240\"\nFROM `tabRumba Lead`\nWHERE status_lead = 'Daftar Tunggu'\nORDER BY tanggal_masuk_tunggu ASC, creation ASC",
+  "ref_doctype": "Rumba Lead",
+  "reference_report": null,
+  "report_name": "Daftar Tunggu (FIFO)",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
    }
   ],
   "timeout": 0

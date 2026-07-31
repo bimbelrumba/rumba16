@@ -10,7 +10,7 @@
  ],
  "docstatus": 0,
  "doctype": "Workspace",
- "hide_custom": 0,
+ "hide_custom": 1,
  "icon": "stopwatch",
  "idx": 0,
  "indicator_color": "green",
@@ -97,7 +97,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-31 10:54:50.372359",
+ "modified": "2026-07-31 16:39:24.829402",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Presensi & Kehadiran",

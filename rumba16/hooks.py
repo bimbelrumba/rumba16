@@ -304,7 +304,7 @@ fixtures = [
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp", "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
     "Sales Invoice-rumba_event",
-    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch",
+    "Employee-rumba_unit", "Employee-kategori_karyawan",
     "Employee-tarif_honor_per_pertemuan", "Rumba Kelas-tanggal_mulai", "Rumba Murid-kode_program",
     "Job Opening-rumba_unit", "Job Applicant-sumber", "Job Applicant-rumba_unit",
     "Employee Separation-jenis_pemberhentian", "Employee Separation-rumba_unit",
@@ -380,6 +380,7 @@ fixtures = [
             "Sales Invoice-write_off_cost_center-ignore_user_permissions",
             "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
             "Employee-naming_series-hidden",
+            "Employee-branch-hidden",
         ]]
     ],
 },

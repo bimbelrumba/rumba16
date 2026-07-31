@@ -6,7 +6,7 @@
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
- "hide_custom": 0,
+ "hide_custom": 1,
  "icon": "organization",
  "idx": 0,
  "indicator_color": "green",
@@ -201,7 +201,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-31 10:54:44.558911",
+ "modified": "2026-07-31 16:39:23.831160",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Siklus Tenaga Kerja",
