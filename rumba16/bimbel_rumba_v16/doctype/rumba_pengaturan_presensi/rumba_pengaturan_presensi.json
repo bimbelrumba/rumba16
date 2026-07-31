@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-31 13:34:20.385718",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_umum",
+  "radius_default_meter",
+  "sec_pusat",
+  "pusat_latitude",
+  "pusat_longitude",
+  "cb_pusat",
+  "pusat_radius_meter"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_umum",
+   "fieldtype": "Section Break",
+   "label": "Umum"
+  },
+  {
+   "default": "150",
+   "description": "Dipakai bila unit tidak punya radius sendiri.",
+   "fieldname": "radius_default_meter",
+   "fieldtype": "Int",
+   "label": "Radius Default (meter)"
+  },
+  {
+   "fieldname": "sec_pusat",
+   "fieldtype": "Section Break",
+   "label": "Kantor Pusat (untuk Staf Pusat)"
+  },
+  {
+   "fieldname": "pusat_latitude",
+   "fieldtype": "Float",
+   "label": "Latitude Pusat",
+   "precision": "6"
+  },
+  {
+   "fieldname": "pusat_longitude",
+   "fieldtype": "Float",
+   "label": "Longitude Pusat",
+   "precision": "6"
+  },
+  {
+   "fieldname": "cb_pusat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "150",
+   "fieldname": "pusat_radius_meter",
+   "fieldtype": "Int",
+   "label": "Radius Pusat (meter)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-31 13:36:38.706418",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Pengaturan Presensi",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Rumba Personalia",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

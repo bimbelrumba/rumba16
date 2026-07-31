@@ -192,9 +192,9 @@ scheduler_events = {
  	"monthly": [
  		"rumba16.tasks.generate_spp_bulanan"
  	],
-        "cron": { 
+        "cron": {
             "30 0 1 * *": [
-                "rumba16.rumba16.hr_snapshot.generate_hr_snapshot"
+                "rumba16.hr_snapshot.generate_hr_snapshot"
             ],  # tiap tgl 1, snapshot bulan lalu
         },
  }
