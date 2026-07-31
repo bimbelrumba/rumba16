@@ -316,6 +316,8 @@ fixtures = [
     "Exit Interview-ei_nilai_juara", "Exit Interview-ei_kepuasan_keseluruhan",
     "Exit Interview-ei_masukan_disukai", "Exit Interview-ei_masukan_perbaikan",
     "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali",
+    "Rumba Unit-latitude", "Rumba Unit-longitude", "Rumba Unit-radius_meter",
+    "Employee Checkin-rumba_jarak_meter", "Employee Checkin-rumba_status_lokasi",
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -341,7 +343,7 @@ fixtures = [
     "Pengelolaan Kelas","Kesesuaian dengan Gaya RUMBA"
     ]]]},
     {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
-    {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
+    {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA", "Shift Pusat"]]]},
     {"dt": "Employee Onboarding Template", "filters": [["title", "in", [
     "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA",
     "Onboarding Admin Unit RUMBA", "Onboarding Pendukung RUMBA"
@@ -359,6 +361,7 @@ fixtures = [
     "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
     "Sesi Saya Hari Ini", "Sumber Informasi Lead",
     "Tutor Tanpa Kelas (Pengampu)","Papan Event Aktif",
+    "Presensi Saya",
     ]]]},
     {
     "dt": "Custom Role",
