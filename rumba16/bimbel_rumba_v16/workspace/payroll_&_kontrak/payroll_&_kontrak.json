@@ -1,0 +1,136 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"y1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udcb5 Payroll & Kontrak</b></span>\",\"col\":12}},{\"id\":\"y2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Eksekusi payroll di workspace Keuangan; di sini pantau + siapkan Additional Salary insentif.</span>\",\"col\":12}},{\"id\":\"y3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Belum Ditandatangani\",\"col\":4}},{\"id\":\"y4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Berakhir Bulan Ini\",\"col\":4}},{\"id\":\"y5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"y6\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":6}},{\"id\":\"y7\",\"type\":\"card\",\"data\":{\"card_name\":\"Kontrak (PMK/PKWT)\",\"col\":6}}]",
+ "creation": "2026-07-31 10:54:54.699763",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "money",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Payroll & Kontrak",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payroll (Monitor)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Structure",
+   "link_count": 0,
+   "link_to": "Salary Structure",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Structure Assignment",
+   "link_count": 0,
+   "link_to": "Salary Structure Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Additional Salary",
+   "link_count": 0,
+   "link_to": "Additional Salary",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payroll Entry",
+   "link_count": 0,
+   "link_to": "Payroll Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Slip",
+   "link_count": 0,
+   "link_to": "Salary Slip",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kontrak (PMK/PKWT)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract",
+   "link_count": 0,
+   "link_to": "Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Template",
+   "link_count": 0,
+   "link_to": "Contract Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-31 10:54:54.699763",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Payroll & Kontrak",
+ "number_cards": [
+  {
+   "label": "Kontrak Belum Ditandatangani",
+   "number_card_name": "Kontrak Belum Ditandatangani"
+  },
+  {
+   "label": "Kontrak Berakhir Bulan Ini",
+   "number_card_name": "Kontrak Berakhir Bulan Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "SDM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Personalia"
+  }
+ ],
+ "sequence_id": 5.0,
+ "shortcuts": [],
+ "title": "Payroll & Kontrak",
+ "type": "Workspace"
+}

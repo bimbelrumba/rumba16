@@ -1,0 +1,57 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"ps1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udd52 Presensi Saya</b></span>\",\"col\":12}},{\"id\":\"ps2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Catat kehadiran masuk & pulang Anda.</span>\",\"col\":12}},{\"id\":\"ps3\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Presensi Saya\",\"col\":12}}]",
+ "creation": "2026-07-31 13:20:50.329299",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Presensi Saya"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "stopwatch",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Presensi Saya",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-31 13:20:50.329299",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Presensi Saya",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Tutor"
+  },
+  {
+   "role": "Rumba Finance"
+  },
+  {
+   "role": "Rumba Akademik"
+  },
+  {
+   "role": "Rumba Bisnis"
+  },
+  {
+   "role": "Rumba Personalia"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.65,
+ "shortcuts": [],
+ "title": "Presensi Saya",
+ "type": "Workspace"
+}

@@ -1,386 +1,21 @@
 {
  "app": "rumba16",
- "charts": [
-  {
-   "chart_name": "Employees by Branch",
-   "label": "Employees by Branch"
-  }
- ],
- "content": "[{\"id\":\"sdm1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udd0e Info Cepat SDM</b></span>\",\"col\":12}},{\"id\":\"sdm2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"sdm3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"sdm4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sdm5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"sdm6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"sdm7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Employees\",\"col\":4}},{\"id\":\"sdm8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u26a1 Tambah Baru</b></span>\",\"col\":12}},{\"id\":\"sdm10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":4}},{\"id\":\"sdm11\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":4}},{\"id\":\"sdm12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Interview\",\"col\":4}},{\"id\":\"sdm13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Cuti\",\"col\":4}},{\"id\":\"sdm14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":4}},{\"id\":\"sdm15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Offboarding\",\"col\":4}},{\"id\":\"sdm16\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp101\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83e\uddd1\u200d\ud83c\udfeb Penempatan Tutor</b></span>\",\"col\":12}},{\"id\":\"sdmp102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Berjalan\",\"col\":4}},{\"id\":\"sdmp103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":4}},{\"id\":\"sdmp104\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmp105\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kelas\",\"col\":4}},{\"id\":\"sdmp106\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Kelas\",\"col\":4}},{\"id\":\"sdmp107\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdmttk1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas\",\"col\":12}},{\"id\":\"sdm17\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udcc2 Menu</b></span>\",\"col\":12}},{\"id\":\"sdm18\",\"type\":\"card\",\"data\":{\"card_name\":\"Rekrutmen\",\"col\":4}},{\"id\":\"sdm19\",\"type\":\"card\",\"data\":{\"card_name\":\"Karyawan & Lifecycle\",\"col\":4}},{\"id\":\"sdm20\",\"type\":\"card\",\"data\":{\"card_name\":\"Kehadiran\",\"col\":4}},{\"id\":\"sdm21\",\"type\":\"card\",\"data\":{\"card_name\":\"Cuti\",\"col\":4}},{\"id\":\"sdm22\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll (Monitor)\",\"col\":4}},{\"id\":\"sdm23\",\"type\":\"card\",\"data\":{\"card_name\":\"Master SDM\",\"col\":4}},{\"id\":\"sdm24\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sdm25\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udcca Ringkasan</b></span>\",\"col\":12}},{\"id\":\"sdm26\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Karyawan Baru Bulan Ini\",\"col\":4}},{\"id\":\"sdm27\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employees by Branch\",\"col\":8}},{\"id\":\"sdm28\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Cuti\",\"col\":6}}]",
- "creation": "2026-07-10 13:42:02.706592",
- "custom_blocks": [
-  {
-   "custom_block_name": "Tutor Tanpa Kelas",
-   "label": "Tutor Tanpa Kelas (Pengampu)"
-  }
- ],
+ "charts": [],
+ "content": "[{\"id\":\"b1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83e\uddd1\u200d\ud83d\udcbc SDM \u2014 Personalia & Umum</b></span>\",\"col\":12}},{\"id\":\"b2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">\u26a0\ufe0f Perlu Tindakan</span>\",\"col\":12}},{\"id\":\"b3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pelamar Belum Diproses\",\"col\":4}},{\"id\":\"b4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Interview Terjadwal\",\"col\":4}},{\"id\":\"b5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cuti Menunggu Persetujuan\",\"col\":4}},{\"id\":\"b6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Onboarding Berjalan\",\"col\":4}},{\"id\":\"b7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Offboarding Berjalan\",\"col\":4}},{\"id\":\"b8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Belum Ditandatangani\",\"col\":4}},{\"id\":\"b9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"b13\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">\u26a1 Tambah Baru</span>\",\"col\":12}},{\"id\":\"b14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Karyawan\",\"col\":3}},{\"id\":\"b15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Lowongan\",\"col\":3}},{\"id\":\"b16\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pengajuan Cuti\",\"col\":3}},{\"id\":\"b17\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Onboarding\",\"col\":3}}]",
+ "creation": "2026-07-29 18:43:57.896997",
+ "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "hr",
- "idx": 2,
+ "icon": "users",
+ "idx": 1,
  "indicator_color": "pink",
  "is_hidden": 0,
  "label": "SDM",
  "link_type": "DocType",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Rekrutmen",
-   "link_count": 6,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Job Opening",
-   "link_count": 0,
-   "link_to": "Job Opening",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Job Applicant",
-   "link_count": 0,
-   "link_to": "Job Applicant",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Interview",
-   "link_count": 0,
-   "link_to": "Interview",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Interview Feedback",
-   "link_count": 0,
-   "link_to": "Interview Feedback",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Job Offer",
-   "link_count": 0,
-   "link_to": "Job Offer",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Interview Type",
-   "link_count": 0,
-   "link_to": "Interview Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Karyawan & Lifecycle",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Employee",
-   "link_count": 0,
-   "link_to": "Employee",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Employee Onboarding",
-   "link_count": 0,
-   "link_to": "Employee Onboarding",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Employee Separation",
-   "link_count": 0,
-   "link_to": "Employee Separation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Exit Interview",
-   "link_count": 0,
-   "link_to": "Exit Interview",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Kehadiran",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Attendance",
-   "link_count": 0,
-   "link_to": "Attendance",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Employee Checkin",
-   "link_count": 0,
-   "link_to": "Employee Checkin",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Shift Type",
-   "link_count": 0,
-   "link_to": "Shift Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Shift Assignment",
-   "link_count": 0,
-   "link_to": "Shift Assignment",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Cuti",
-   "link_count": 8,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Application",
-   "link_count": 0,
-   "link_to": "Leave Application",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Allocation",
-   "link_count": 0,
-   "link_to": "Leave Allocation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Type",
-   "link_count": 0,
-   "link_to": "Leave Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Period",
-   "link_count": 0,
-   "link_to": "Leave Period",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Policy",
-   "link_count": 0,
-   "link_to": "Leave Policy",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Policy Assignment",
-   "link_count": 0,
-   "link_to": "Leave Policy Assignment",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Holiday List",
-   "link_count": 0,
-   "link_to": "Holiday List",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Holiday List Assignment",
-   "link_count": 0,
-   "link_to": "Holiday List Assignment",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Payroll (Monitor)",
-   "link_count": 5,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Salary Structure",
-   "link_count": 0,
-   "link_to": "Salary Structure",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Salary Structure Assignment",
-   "link_count": 0,
-   "link_to": "Salary Structure Assignment",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Additional Salary",
-   "link_count": 0,
-   "link_to": "Additional Salary",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Payroll Entry",
-   "link_count": 0,
-   "link_to": "Payroll Entry",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Salary Slip",
-   "link_count": 0,
-   "link_to": "Salary Slip",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Master SDM",
-   "link_count": 3,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Designation",
-   "link_count": 0,
-   "link_to": "Designation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Employment Type",
-   "link_count": 0,
-   "link_to": "Employment Type",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Branch",
-   "link_count": 0,
-   "link_to": "Branch",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2026-07-13 20:27:10.056024",
+ "links": [],
+ "modified": "2026-07-31 13:21:32.270024",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "SDM",
@@ -406,24 +41,12 @@
    "number_card_name": "Offboarding Berjalan"
   },
   {
-   "label": "Total Employees",
-   "number_card_name": "Total Employees"
-  },
-  {
-   "label": "Karyawan Baru Bulan Ini",
-   "number_card_name": "Karyawan Baru Bulan Ini"
-  },
-  {
-   "label": "Kelas Berjalan",
-   "number_card_name": "Kelas Berjalan"
-  },
-  {
-   "label": "Kelas Tanpa Tutor",
-   "number_card_name": "Kelas Tanpa Tutor"
+   "label": "Kontrak Belum Ditandatangani",
+   "number_card_name": "Kontrak Belum Ditandatangani"
   }
  ],
  "owner": "Administrator",
- "parent_page": "RUMBA",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [
   {
@@ -437,12 +60,9 @@
   },
   {
    "role": "Rumba Personalia"
-  },
-  {
-   "role": "Rumba Kepala Unit"
   }
  ],
- "sequence_id": 5.0,
+ "sequence_id": 0.0,
  "shortcuts": [
   {
    "color": "Blue",
@@ -461,14 +81,7 @@
   {
    "color": "Blue",
    "doc_view": "",
-   "label": "+ Interview",
-   "type": "URL",
-   "url": "/app/interview/new"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Cuti",
+   "label": "+ Pengajuan Cuti",
    "type": "URL",
    "url": "/app/leave-application/new"
   },
@@ -478,25 +91,6 @@
    "label": "+ Onboarding",
    "type": "URL",
    "url": "/app/employee-onboarding/new"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "",
-   "label": "+ Offboarding",
-   "type": "URL",
-   "url": "/app/employee-separation/new"
-  },
-  {
-   "doc_view": "",
-   "label": "Kelas",
-   "link_to": "Rumba Kelas",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "",
-   "label": "Sesi Kelas",
-   "link_to": "Rumba Sesi Kelas",
-   "type": "DocType"
   }
  ],
  "title": "SDM",

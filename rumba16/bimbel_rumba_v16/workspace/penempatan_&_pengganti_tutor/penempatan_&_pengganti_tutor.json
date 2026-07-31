@@ -1,0 +1,96 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"p1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83e\uddd1\u200d\ud83c\udfeb Penempatan & Pengganti Tutor</b></span>\",\"col\":12}},{\"id\":\"p2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kelas Tanpa Tutor\",\"col\":4}},{\"id\":\"p3\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Tutor Tanpa Kelas\",\"col\":12}},{\"id\":\"p4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"p5\",\"type\":\"card\",\"data\":{\"card_name\":\"Penempatan Tutor\",\"col\":6}},{\"id\":\"p6\",\"type\":\"card\",\"data\":{\"card_name\":\"Izin & Penggantian\",\"col\":6}}]",
+ "creation": "2026-07-31 10:54:49.662123",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Tutor Tanpa Kelas"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "education",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Penempatan & Pengganti Tutor",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penempatan Tutor",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Sesi Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Izin & Penggantian",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Izin & Penggantian Tutor",
+   "link_count": 0,
+   "link_to": "Rekap Izin & Penggantian Tutor",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-31 10:54:49.662123",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Penempatan & Pengganti Tutor",
+ "number_cards": [
+  {
+   "label": "Kelas Tanpa Tutor",
+   "number_card_name": "Kelas Tanpa Tutor"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "SDM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Personalia"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Penempatan & Pengganti Tutor",
+ "type": "Workspace"
+}
