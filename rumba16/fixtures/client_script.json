@@ -207,5 +207,16 @@
   "name": "Rumba Mitra Lead - Warna Status List",
   "script": "frappe.listview_settings['Rumba Mitra Lead'] = {\n  get_indicator(doc) {\n    const warna = {\n      'Baru': 'blue',\n      'Dikualifikasi': 'light-blue',\n      'Presentasi': 'purple',\n      'Due Diligence': 'yellow',\n      'Negosiasi': 'orange',\n      'Perjanjian': 'cyan',\n      'Deal': 'green',\n      'Tidak Jadi': 'red'\n    };\n    return [__(doc.status_mitra), warna[doc.status_mitra] || 'gray', 'status_mitra,=,' + doc.status_mitra];\n  }\n};",
   "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Sesi Kelas",
+  "enabled": 1,
+  "modified": "2026-08-01 15:35:50.941973",
+  "module": null,
+  "name": "Rumba Sesi Kelas - Kunci Tanggal Hari Ini (Tutor)",
+  "script": "frappe.ui.form.on('Rumba Sesi Kelas', {\n  onload_post_render: function(frm){ rumba_lock_tanggal_sesi(frm); },\n  refresh: function(frm){ rumba_lock_tanggal_sesi(frm); }\n});\nfunction rumba_lock_tanggal_sesi(frm){\n  var roles = frappe.user_roles || [];\n  var exempt = roles.indexOf('System Manager') > -1 || roles.indexOf('Administrator') > -1 || roles.indexOf('Rumba Admin Unit') > -1 || roles.indexOf('Rumba Kepala Unit') > -1;\n  var is_tutor = roles.indexOf('Rumba Tutor') > -1;\n  if (frm.is_new() && !frm.doc.tanggal_sesi) { frm.set_value('tanggal_sesi', frappe.datetime.get_today()); }\n  if (is_tutor && !exempt) {\n    if (frm.is_new()) { frm.set_value('tanggal_sesi', frappe.datetime.get_today()); }\n    frm.set_df_property('tanggal_sesi', 'read_only', 1);\n    frm.set_df_property('tanggal_sesi', 'description', 'Terkunci ke hari ini untuk Tutor. Koreksi tanggal lewat Admin Unit.');\n  }\n}",
+  "view": "Form"
  }
 ]

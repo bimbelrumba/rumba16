@@ -10,7 +10,7 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 from frappe.model.naming import getseries
-from frappe.utils import getdate, nowdate
+from frappe.utils import getdate, today
 
 
 class RumbaSesiKelas(Document):
@@ -42,6 +42,7 @@ class RumbaSesiKelas(Document):
         self.hitung_rekap()
         self.validasi_status_sesi()
         self.validasi_kelengkapan_saat_ajukan()
+        self._kunci_tanggal_sesi_untuk_tutor()
 
     def on_update(self):
         # ERP-LIFE-001b — aktivasi murid dari presensi Hadir pada sesi Disetujui.
@@ -178,3 +179,21 @@ class RumbaSesiKelas(Document):
                 updates["status_murid"] = "Aktif"
             if updates:
                 frappe.db.set_value("Rumba Murid", r.murid, updates)
+
+    def _kunci_tanggal_sesi_untuk_tutor(self):
+        # Default hari ini bila kosong (jaring pengaman selain Property Setter)
+        if not self.tanggal_sesi:
+            self.tanggal_sesi = today()
+
+        # Tutor murni tak boleh mencatat Sesi Kelas untuk tanggal selain hari ini.
+        # Admin Unit / Kepala Unit (approver) dibebaskan agar bisa mengoreksi.
+        roles = set(frappe.get_roles(frappe.session.user))
+        EXEMPT = {"System Manager", "Administrator",
+                  "Rumba Admin Unit", "Rumba Kepala Unit"}
+        if "Rumba Tutor" in roles and roles.isdisjoint(EXEMPT):
+            if getdate(self.tanggal_sesi) != getdate(today()):
+                frappe.throw(
+                    "Tutor hanya boleh mencatat Sesi Kelas untuk hari ini "
+                    "({0}). Untuk koreksi tanggal, hubungi Admin Unit.".format(today())
+                )
+

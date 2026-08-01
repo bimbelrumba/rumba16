@@ -1216,7 +1216,7 @@
   "link_to": null,
   "link_type": "DocType",
   "links": [],
-  "modified": "2026-07-31 16:39:27.659203",
+  "modified": "2026-08-01 14:40:39.857909",
   "module": "Bimbel Rumba v16",
   "name": "Presensi Saya",
   "number_cards": [],
@@ -1225,9 +1225,6 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [
-   {
-    "role": "Rumba Tutor"
-   },
    {
     "role": "Rumba Finance"
    },

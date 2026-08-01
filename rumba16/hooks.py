@@ -384,6 +384,7 @@ fixtures = [
             "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
             "Employee-naming_series-hidden",
             "Employee-branch-hidden",
+            "Rumba Sesi Kelas-tanggal_sesi-default",
         ]]
     ],
 },

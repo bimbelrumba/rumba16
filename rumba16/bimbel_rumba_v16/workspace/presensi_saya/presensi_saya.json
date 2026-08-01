@@ -2,7 +2,7 @@
  "app": "rumba16",
  "charts": [],
  "content": "[{\"id\":\"ps1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udd52 Presensi Saya</b></span>\",\"col\":12}},{\"id\":\"ps2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Catat kehadiran masuk & pulang Anda.</span>\",\"col\":12}},{\"id\":\"ps3\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Presensi Saya\",\"col\":12}}]",
- "creation": "2026-07-31 13:20:50.329299",
+ "creation": "2026-08-01 11:06:55.327055",
  "custom_blocks": [
   {
    "custom_block_name": "Presensi Saya"
@@ -18,7 +18,7 @@
  "label": "Presensi Saya",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-07-31 16:39:27.659203",
+ "modified": "2026-08-01 14:40:39.857909",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Presensi Saya",
@@ -28,9 +28,6 @@
  "public": 1,
  "quick_lists": [],
  "roles": [
-  {
-   "role": "Rumba Tutor"
-  },
   {
    "role": "Rumba Finance"
   },
