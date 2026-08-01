@@ -151,6 +151,22 @@
     "url": null
    },
    {
+    "child": 1,
+    "collapsible": 1,
+    "filters": null,
+    "icon": "wallpaper",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Rombel & Sesi Saya",
+    "link_to": "Rombel & Sesi Saya",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
     "child": 0,
     "collapsible": 1,
     "filters": null,
@@ -167,6 +183,22 @@
     "url": null
    },
    {
+    "child": 1,
+    "collapsible": 1,
+    "filters": null,
+    "icon": "wallpaper",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Akademik Saya",
+    "link_to": "Akademik Saya",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
     "child": 0,
     "collapsible": 1,
     "filters": null,
@@ -175,6 +207,22 @@
     "keep_closed": 0,
     "label": "CRM & Pendaftaran",
     "link_to": "CRM & Pendaftaran",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   },
+   {
+    "child": 1,
+    "collapsible": 1,
+    "filters": null,
+    "icon": "wallpaper",
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Izin & Guru Pengganti",
+    "link_to": "Izin & Guru Pengganti",
     "link_type": "Workspace",
     "navigate_to_tab": null,
     "route_options": null,
@@ -823,7 +871,7 @@
     "url": null
    }
   ],
-  "modified": "2026-07-31 22:57:24.791792",
+  "modified": "2026-08-01 13:41:41.184196",
   "module": "Bimbel Rumba v16",
   "module_onboarding": null,
   "name": "Bimbel Rumba v16",
