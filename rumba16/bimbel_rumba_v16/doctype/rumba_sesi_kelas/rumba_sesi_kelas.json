@@ -108,7 +108,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-26 16:28:34.025027",
+ "modified": "2026-08-01 17:27:50.770202",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sesi Kelas",
@@ -183,6 +183,7 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "search_fields": "tanggal_sesi,kelas",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
