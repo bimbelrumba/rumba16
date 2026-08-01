@@ -1,10 +1,18 @@
 # Copyright (c) 2026, Yayasan Rumba Kita Indonesia and contributors
 # For license information, please see license.txt
 #
-# TARUH FILE INI DI SERVER:
+# TARUH FILE INI DI SERVER (menimpa yang lama):
 #   ~/frappe-bench/apps/rumba16/rumba16/bimbel_rumba_v16/doctype/rumba_sesi_kelas/rumba_sesi_kelas.py
-# (menimpa controller default class-pass). Lalu `bench --site dev.bimbelrumba.id migrate`
-# atau cukup restart; controller langsung aktif.
+# Lalu: bench --site dev.bimbelrumba.id clear-cache && bench restart
+# (tidak perlu migrate; naming_rule DocType tetap "By script").
+#
+# PERUBAHAN 1 Agu 2026:
+#  (1) autoname baru: SES-{YYMM}-{kode_unit}-{####}. Nomor #### reset ke 1 tiap
+#      pergantian TAHUN, per unit (deret independen tiap unit). Nama menampilkan
+#      bulan (YYMM), tetapi KUNCI SERI hanya memakai tahun+unit (tanpa bulan)
+#      supaya nomor berlanjut lintas bulan dalam satu tahun & reset saat tahun ganti.
+#  (2) validate: kunci tanggal_sesi = hari ini untuk Tutor murni (Admin Unit/
+#      Kepala Unit boleh koreksi) — penegak sisi server pendamping Client Script.
 
 import frappe
 from frappe import _
@@ -22,9 +30,33 @@ class RumbaSesiKelas(Document):
     """
 
     def autoname(self):
-        tahun = getdate(self.tanggal_sesi or nowdate()).strftime("%Y")
-        prefix = f"SES-{tahun}-"
-        self.name = prefix + getseries(prefix, 5)
+        d = getdate(self.tanggal_sesi or today())
+        yy = d.strftime("%y")        # 2 digit tahun, mis. "26"
+        mm = d.strftime("%m")        # 2 digit bulan, mis. "07"
+        kode_unit = self._get_kode_unit()
+
+        # Kunci seri = tahun + unit, TANPA bulan → nomor lanjut lintas bulan dalam
+        # satu tahun, dan reset ke 1 saat tahun (atau unit) berganti.
+        # Untuk counter GLOBAL per-tahun (lintas unit), ganti baris di bawah jadi:
+        #     seri_key = f"SES-{yy}-"
+        seri_key = f"SES-{yy}-{kode_unit}-"
+        nomor = getseries(seri_key, 4)   # "0001", "0002", ...
+
+        # Nama tampil memuat bulan (YYMM):
+        self.name = f"SES-{yy}{mm}-{kode_unit}-{nomor}"
+
+    def _get_kode_unit(self):
+        """Kode unit (Rumba Unit.kode_unit, mis. '7501') untuk penamaan.
+
+        Sumber utama: Rumba Kelas.kode_unit (fetch_from nama_unit.kode_unit).
+        Fallback: dari nama_unit sesi langsung. Terakhir 'XXXX' bila tak ada.
+        """
+        kode = None
+        if self.kelas:
+            kode = frappe.db.get_value("Rumba Kelas", self.kelas, "kode_unit")
+        if not kode and self.get("nama_unit"):
+            kode = frappe.db.get_value("Rumba Unit", self.nama_unit, "kode_unit")
+        return kode or "XXXX"
 
     def before_insert(self):
         self.set_default_awal()
@@ -35,6 +67,7 @@ class RumbaSesiKelas(Document):
 
     def validate(self):
         self.set_default_awal()
+        self.kunci_tanggal_sesi_untuk_tutor()
         self.set_guru_default()
         self.set_durasi_menit()
         self.cegah_duplikat_sesi()
@@ -42,7 +75,6 @@ class RumbaSesiKelas(Document):
         self.hitung_rekap()
         self.validasi_status_sesi()
         self.validasi_kelengkapan_saat_ajukan()
-        self._kunci_tanggal_sesi_untuk_tutor()
 
     def on_update(self):
         # ERP-LIFE-001b — aktivasi murid dari presensi Hadir pada sesi Disetujui.
@@ -50,9 +82,26 @@ class RumbaSesiKelas(Document):
 
     def set_default_awal(self):
         if not self.tanggal_sesi:
-            self.tanggal_sesi = nowdate()
+            self.tanggal_sesi = today()
         if not self.status_sesi:
             self.status_sesi = "Terlaksana"
+
+    # --- Kunci tanggal = hari ini untuk Tutor murni (Admin Unit boleh koreksi) ---
+    # Penegak sisi server (Client Script bisa dilewati via API). Admin Unit /
+    # Kepala Unit / System Manager dibebaskan agar bisa mengoreksi tanggal.
+    def kunci_tanggal_sesi_untuk_tutor(self):
+        roles = set(frappe.get_roles(frappe.session.user))
+        EXEMPT = {"System Manager", "Administrator",
+                  "Rumba Admin Unit", "Rumba Kepala Unit"}
+        if "Rumba Tutor" in roles and roles.isdisjoint(EXEMPT):
+            if getdate(self.tanggal_sesi) != getdate(today()):
+                frappe.throw(
+                    _(
+                        "Tutor hanya boleh mencatat Sesi Kelas untuk hari ini "
+                        "({0}). Untuk koreksi tanggal, hubungi Admin Unit."
+                    ).format(today()),
+                    title=_("Tanggal Sesi Terkunci"),
+                )
 
     # --- Durasi menit deterministik dari jenis kelas (read-only, auto) ---
     # Reguler & Semi-Private = 75 menit; Private = 60 menit (aturan RUMBA).
@@ -179,21 +228,3 @@ class RumbaSesiKelas(Document):
                 updates["status_murid"] = "Aktif"
             if updates:
                 frappe.db.set_value("Rumba Murid", r.murid, updates)
-
-    def _kunci_tanggal_sesi_untuk_tutor(self):
-        # Default hari ini bila kosong (jaring pengaman selain Property Setter)
-        if not self.tanggal_sesi:
-            self.tanggal_sesi = today()
-
-        # Tutor murni tak boleh mencatat Sesi Kelas untuk tanggal selain hari ini.
-        # Admin Unit / Kepala Unit (approver) dibebaskan agar bisa mengoreksi.
-        roles = set(frappe.get_roles(frappe.session.user))
-        EXEMPT = {"System Manager", "Administrator",
-                  "Rumba Admin Unit", "Rumba Kepala Unit"}
-        if "Rumba Tutor" in roles and roles.isdisjoint(EXEMPT):
-            if getdate(self.tanggal_sesi) != getdate(today()):
-                frappe.throw(
-                    "Tutor hanya boleh mencatat Sesi Kelas untuk hari ini "
-                    "({0}). Untuk koreksi tanggal, hubungi Admin Unit.".format(today())
-                )
-
