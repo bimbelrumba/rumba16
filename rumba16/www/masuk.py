@@ -7,7 +7,7 @@ no_cache = 1
 UNIT_ROLES = {"Rumba Admin Unit", "Rumba Kepala Unit"}
 
 # BARU: role pengajar yang mendarat di workspace "Tutor" (sesi & presensi harian).
-TUTOR_ROLES = {"Rumba Tutor", "Rumba Lead Tutor"}
+TUTOR_ROLES = {"Rumba Tutor"}
 
 
 def get_context(context):

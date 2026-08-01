@@ -1,0 +1,63 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u2b50 Akademik Saya</span>\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1 Aksi Cepat</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Akademik Saya\",\"col\":4}}]",
+ "creation": "2026-08-01 13:39:32.403504",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "star",
+ "idx": 0,
+ "indicator_color": "yellow",
+ "is_hidden": 0,
+ "label": "Akademik Saya",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Akademik Saya",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BKM (Bintang)",
+   "link_count": 0,
+   "link_to": "Rumba BKM Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-01 13:39:32.403504",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Akademik Saya",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Tutor",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Tutor"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ BKM",
+   "type": "URL",
+   "url": "/app/rumba-bkm-entry/new"
+  }
+ ],
+ "title": "Akademik Saya",
+ "type": "Workspace"
+}
