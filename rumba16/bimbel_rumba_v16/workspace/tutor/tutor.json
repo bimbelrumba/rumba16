@@ -1,7 +1,7 @@
 {
  "app": "rumba16",
  "charts": [],
- "content": "[{\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a0\ufe0f Perlu Tindakan</span>\",\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Belum Terlaksana\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi Menunggu Persetujuan\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1 Aksi Cepat</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Kelas\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Ajukan Izin/Cuti\",\"col\":4}}]",
+ "content": "[{\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Sesi Saya Hari Ini\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udccb Ringkasan</span>\",\"col\":12}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi Menunggu Persetujuan\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1 Aksi Cepat</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ BKM\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Ajukan Izin\",\"col\":4}}]",
  "creation": "2026-08-01 11:06:56.469281",
  "custom_blocks": [
   {
@@ -23,18 +23,18 @@
  "label": "Tutor",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-08-01 13:41:19.708590",
+ "modified": "2026-08-02 06:42:37.571796",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Tutor",
  "number_cards": [
   {
-   "label": "Sesi Hari Ini",
-   "number_card_name": "Sesi Hari Ini"
+   "label": "Rombel Aktif",
+   "number_card_name": "Kelas Berjalan"
   },
   {
-   "label": "Sesi Belum Terlaksana",
-   "number_card_name": "Sesi Belum Terlaksana"
+   "label": "Sesi Minggu Ini",
+   "number_card_name": "Sesi Minggu Ini"
   },
   {
    "label": "Presensi Menunggu Persetujuan",
@@ -55,7 +55,7 @@
   {
    "color": "Blue",
    "doc_view": "",
-   "label": "+ Sesi Kelas",
+   "label": "+ Sesi Rombel",
    "type": "URL",
    "url": "/app/rumba-sesi-kelas/new"
   },
@@ -69,7 +69,7 @@
   {
    "color": "Blue",
    "doc_view": "",
-   "label": "+ Ajukan Izin/Cuti",
+   "label": "+ Ajukan Izin",
    "type": "URL",
    "url": "/app/leave-application/new"
   }
