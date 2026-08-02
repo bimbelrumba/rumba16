@@ -386,45 +386,6 @@
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-31 22:57:10.676795",
-  "module": "Bimbel Rumba v16",
-  "name": "Alokasi Rombel",
-  "prepared_report": 0,
-  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
-  "ref_doctype": "Rumba Kelas",
-  "reference_report": null,
-  "report_name": "Alokasi Rombel",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Personalia"
-   },
-   {
-    "role": "Rumba Admin Unit"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
   "filters": [
    {
     "default": null,
@@ -848,45 +809,6 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:23.679616",
-  "module": "Bimbel Rumba v16",
-  "name": "Profitabilitas Event",
-  "prepared_report": 0,
-  "query": "SELECT\n  ev.name AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:200\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  ev.status AS \"Status:Data:120\",\n  ev.tanggal_mulai AS \"Tanggal Mulai:Datetime:150\",\n  ev.jumlah_peserta AS \"Peserta:Int:80\",\n  ev.total_pendapatan AS \"Pendapatan:Currency:120\",\n  ev.total_pengeluaran AS \"Pengeluaran:Currency:120\",\n  ev.surplus_defisit AS \"Surplus/Defisit:Currency:130\"\nFROM `tabRumba Event` ev\nORDER BY ev.tanggal_mulai DESC",
-  "ref_doctype": "Rumba Event",
-  "reference_report": null,
-  "report_name": "Profitabilitas Event",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
   "modified": "2026-07-31 13:34:40.661999",
   "module": "Bimbel Rumba v16",
   "name": "Presensi di Luar Lokasi",
@@ -1036,30 +958,30 @@
   "filters": [],
   "is_standard": "No",
   "javascript": null,
-  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Receive\"]]}",
+  "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-07-09 22:43:07.453244",
+  "modified": "2026-07-31 22:57:10.676795",
   "module": "Bimbel Rumba v16",
-  "name": "Penerimaan (Kas Masuk)",
+  "name": "Alokasi Rombel",
   "prepared_report": 0,
-  "query": null,
-  "ref_doctype": "Payment Entry",
+  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
+  "ref_doctype": "Rumba Kelas",
   "reference_report": null,
-  "report_name": "Penerimaan (Kas Masuk)",
+  "report_name": "Alokasi Rombel",
   "report_script": null,
-  "report_type": "Report Builder",
+  "report_type": "Query Report",
   "roles": [
    {
-    "role": "Accounts User"
-   },
-   {
-    "role": "Accounts Manager"
+    "role": "Rumba Personalia"
    },
    {
     "role": "Rumba Admin Unit"
    },
    {
-    "role": "Rumba Kepala Unit"
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -1121,6 +1043,138 @@
    },
    {
     "role": "Rumba Founder"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-30 20:22:23.679616",
+  "module": "Bimbel Rumba v16",
+  "name": "Profitabilitas Event",
+  "prepared_report": 0,
+  "query": "SELECT\n  ev.name AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:200\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  ev.status AS \"Status:Data:120\",\n  ev.tanggal_mulai AS \"Tanggal Mulai:Datetime:150\",\n  ev.jumlah_peserta AS \"Peserta:Int:80\",\n  ev.total_pendapatan AS \"Pendapatan:Currency:120\",\n  ev.total_pengeluaran AS \"Pengeluaran:Currency:120\",\n  ev.surplus_defisit AS \"Surplus/Defisit:Currency:130\"\nFROM `tabRumba Event` ev\nORDER BY ev.tanggal_mulai DESC",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Profitabilitas Event",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-08-02 11:03:01.769394",
+  "module": "Bimbel Rumba v16",
+  "name": "Progres Kenaikan Level Murid",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Murid",
+  "reference_report": null,
+  "report_name": "Progres Kenaikan Level Murid",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Akademik"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Receive\"]]}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-09 22:43:07.453244",
+  "module": "Bimbel Rumba v16",
+  "name": "Penerimaan (Kas Masuk)",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Payment Entry",
+  "reference_report": null,
+  "report_name": "Penerimaan (Kas Masuk)",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "role": "Accounts User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
    }
   ],
   "timeout": 0
