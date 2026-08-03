@@ -1,0 +1,150 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pembayaran\",\"col\":4}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jurnal\",\"col\":4}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Beli Barang\",\"col\":4}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udccb Daftar\",\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pengeluaran & Aset\",\"col\":6}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Persediaan\",\"col\":6}}]",
+ "creation": "2026-08-02 17:32:44.532505",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "accounting",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Pengeluaran & Persediaan",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengeluaran & Aset",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice Pembelian",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jurnal Umum",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Persediaan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daftar Barang",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pesanan Pembelian",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penerimaan Barang",
+   "link_count": 0,
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengeluaran Barang (Stock Entry)",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penjualan Barang",
+   "link_count": 0,
+   "link_to": "Penjualan Barang",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-02 17:32:44.532505",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Pengeluaran & Persediaan",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Keuangan",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Pembayaran",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Pay"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Jurnal",
+   "type": "URL",
+   "url": "/app/journal-entry/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Beli Barang",
+   "type": "URL",
+   "url": "/app/purchase-order/new"
+  }
+ ],
+ "title": "Pengeluaran & Persediaan",
+ "type": "Workspace"
+}

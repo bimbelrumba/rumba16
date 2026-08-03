@@ -1,0 +1,78 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udc40 Payroll \u2014 Baca Saja\",\"col\":12}},{\"id\":\"hn\",\"type\":\"header\",\"data\":{\"text\":\"Input tetap wewenang Personalia (workspace SDM \u2192 Payroll & Kontrak). Finance hanya memantau, karena berkaitan dengan kas keluar & posting GL.\",\"col\":12}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hc\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udccb Daftar (Read-Only)\",\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Payroll\",\"col\":12}}]",
+ "creation": "2026-08-02 17:33:20.612051",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "salary",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Payroll (Read-Only)",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payroll",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Salary Slip",
+   "link_count": 0,
+   "link_to": "Salary Slip",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payroll Entry",
+   "link_count": 0,
+   "link_to": "Payroll Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Additional Salary (Insentif TSM/SBA/BTM)",
+   "link_count": 0,
+   "link_to": "Additional Salary",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-02 17:33:20.612051",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Payroll (Read-Only)",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Keuangan",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  }
+ ],
+ "sequence_id": 4.0,
+ "shortcuts": [],
+ "title": "Payroll (Read-Only)",
+ "type": "Workspace"
+}
