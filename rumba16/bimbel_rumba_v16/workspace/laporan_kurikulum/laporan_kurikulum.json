@@ -1,0 +1,91 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Laporan Kurikulum\",\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Laporan\",\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan\",\"col\":4}}]",
+ "creation": "2026-08-04 08:20:00.897389",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Laporan Kurikulum",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Bintang Murid",
+   "link_count": 0,
+   "link_to": "Rekap Bintang Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Riwayat Ujian Kenaikan Level",
+   "link_count": 0,
+   "link_to": "Riwayat Ujian Kenaikan Level",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Kenaikan & Kelulusan Calistung",
+   "link_count": 0,
+   "link_to": "Kenaikan & Kelulusan Calistung",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Durasi Penyelesaian Level Calistung",
+   "link_count": 0,
+   "link_to": "Durasi Penyelesaian Level Calistung",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-04 08:20:00.897389",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Laporan Kurikulum",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Kurikulum",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Kurikulum"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [],
+ "title": "Laporan Kurikulum",
+ "type": "Workspace"
+}
