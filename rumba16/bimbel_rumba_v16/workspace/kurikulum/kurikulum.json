@@ -8,9 +8,15 @@
   {
    "chart_name": "Distribusi Level Murid",
    "label": "Distribusi Level Murid"
+  },
+  {
+   "chart_name": "Murid per Unit"
+  },
+  {
+   "chart_name": "Distribusi Murid per Program Belajar"
   }
  ],
- "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Kurikulum\",\"col\":12}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ujian Kenaikan Level\",\"col\":4}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":4}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sertifikat\",\"col\":4}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hr\",\"type\":\"header\",\"data\":{\"text\":\"Ringkasan\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Lulus Bulan Ini\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hpt\",\"type\":\"header\",\"data\":{\"text\":\"Perlu Tindakan\",\"col\":12}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BKM Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribusi Level Murid\",\"col\":6}},{\"id\":\"sp4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pembelajaran (baca)\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kelas\",\"label\":\"Sesi Kelas\",\"col\":4}}]",
+ "content": "[{\"id\":\"h0\",\"type\":\"header\",\"data\":{\"text\":\"Kurikulum\",\"col\":12}},{\"id\":\"s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ujian Kenaikan Level\",\"col\":4}},{\"id\":\"s3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BKM Entry\",\"col\":4}},{\"id\":\"s4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sertifikat\",\"col\":4}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hr\",\"type\":\"header\",\"data\":{\"text\":\"Ringkasan\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Lulus Bulan Ini\",\"col\":4}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hpt\",\"type\":\"header\",\"data\":{\"text\":\"Perlu Tindakan\",\"col\":12}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BKM Menunggu Persetujuan\",\"col\":4}},{\"id\":\"sp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hv\",\"type\":\"header\",\"data\":{\"text\":\"Visual\",\"col\":12}},{\"id\":\"c1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sesi Terlaksana per Bulan\",\"col\":6}},{\"id\":\"c2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribusi Level Murid\",\"col\":6}},{\"id\":\"c3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Murid per Unit\",\"col\":6}},{\"id\":\"c4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribusi Murid per Program Belajar\",\"col\":6}},{\"id\":\"sp4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hd\",\"type\":\"header\",\"data\":{\"text\":\"Data\",\"col\":12}},{\"id\":\"cd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Pembelajaran (baca)\",\"col\":4}},{\"id\":\"ql\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Sesi Kelas\",\"label\":\"Sesi Kelas\",\"col\":4}}]",
  "creation": "2026-08-02 15:58:12.892569",
  "custom_blocks": [],
  "docstatus": 0,
@@ -54,7 +60,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-04 08:20:08.167007",
+ "modified": "2026-08-04 11:00:43.094116",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Kurikulum",
@@ -74,6 +80,9 @@
   {
    "label": "BKM Menunggu Persetujuan",
    "number_card_name": "BKM Menunggu Persetujuan"
+  },
+  {
+   "number_card_name": "Murid Aktif"
   }
  ],
  "owner": "Administrator",

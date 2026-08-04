@@ -62,9 +62,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Performa Tutor Calistung",
+   "link_count": 0,
+   "link_to": "Performa Tutor Calistung",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-08-04 08:20:00.897389",
+ "modified": "2026-08-04 17:04:20.206744",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Laporan Kurikulum",
