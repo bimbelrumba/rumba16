@@ -188,6 +188,7 @@ def _resolve_tarif(m):
 
 def _buat_invoice_spp(m, company, posting_date, jatuh_tempo, periode, submit):
     rate, item = _resolve_tarif(m)
+    cost_center = frappe.db.get_value("Rumba Unit", m["nama_unit"], "cost_center") if m.get("nama_unit") else None
 
     inv = frappe.new_doc("Sales Invoice")
     inv.customer = m["customer"]
@@ -199,12 +200,15 @@ def _buat_invoice_spp(m, company, posting_date, jatuh_tempo, periode, submit):
     inv.rumba_unit = m.get("nama_unit")
     inv.rumba_murid = m["name"]
     inv.spp_periode = periode
+    if cost_center:
+        inv.cost_center = cost_center
     inv.append(
         "items",
         {
             "item_code": item,
             "qty": 1,
             "rate": rate,
+            "cost_center": cost_center,
             "description": _("SPP {0} - {1}").format(
                 periode, m.get("nama_lengkap") or m["name"]
             ),

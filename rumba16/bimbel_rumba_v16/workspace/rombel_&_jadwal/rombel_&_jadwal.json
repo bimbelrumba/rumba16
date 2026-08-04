@@ -1,0 +1,160 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udccc Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1\ufe0f Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\uddc2\ufe0f Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
+ "creation": "2026-07-27 20:52:29.442241",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "calendar",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Rombel & Jadwal",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rombel & Jadwal",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rombel",
+   "link_count": 0,
+   "link_to": "Rumba Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sesi Rombel",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ruangan",
+   "link_count": 0,
+   "link_to": "Rumba Ruangan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Program Belajar",
+   "link_count": 0,
+   "link_to": "Rumba Program Belajar",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BKM (Buku Kegiatan Murid)",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BKM",
+   "link_count": 0,
+   "link_to": "Rumba BKM Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-28 21:05:31.196922",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rombel & Jadwal",
+ "number_cards": [
+  {
+   "label": "Sesi Minggu Ini",
+   "number_card_name": "Sesi Minggu Ini"
+  },
+  {
+   "label": "Rombel Aktif",
+   "number_card_name": "Kelas Berjalan"
+  },
+  {
+   "label": "Sesi Terlaksana (Bulan Ini)",
+   "number_card_name": "Sesi Terlaksana (Bulan Ini)"
+  },
+  {
+   "label": "Rombel Kritis",
+   "number_card_name": "Kelas Reguler Kurang dari 4 Murid"
+  },
+  {
+   "label": "Rombel Tanpa Tutor",
+   "number_card_name": "Kelas Tanpa Tutor"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Operasional",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Rombel",
+   "type": "URL",
+   "url": "/app/rumba-kelas/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Sesi Rombel",
+   "type": "URL",
+   "url": "/app/rumba-sesi-kelas/new"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "format": "{} sesi",
+   "label": "Sesi Perlu Disetujui",
+   "link_to": "Rumba Sesi Kelas",
+   "stats_filter": "{\"workflow_state\":\"Diajukan\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "Rombel & Jadwal",
+ "type": "Workspace"
+}

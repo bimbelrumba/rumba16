@@ -174,5 +174,60 @@
   "name": "Attendance List - Generator Pendidik RUMBA",
   "script": "frappe.listview_settings['Attendance'] = frappe.listview_settings['Attendance'] || {};\nfrappe.listview_settings['Attendance'].onload = function(listview) {\n  listview.page.add_inner_button('Generate Attendance Pendidik (RUMBA)', () => {\n    frappe.prompt([\n      {fieldname:'bulan', label:'Bulan (YYYY-MM)', fieldtype:'Data', reqd:1},\n      {fieldname:'unit', label:'Unit (opsional)', fieldtype:'Link', options:'Rumba Unit'}\n    ], (v) => {\n      frappe.call({method:'rumba16.attendance.generate_pendidik_attendance', args:{bulan:v.bulan, unit:v.unit||null}, freeze:true, freeze_message:'Membuat attendance pendidik...'})\n      .then(r => { const d=r.message||{}; frappe.msgprint('Dibuat: '+(d.created||[]).length+' - Dilewati: '+(d.skipped||[]).length); listview.refresh(); });\n    }, 'Generate Attendance Pendidik', 'Buat');\n  });\n};",
   "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee",
+  "enabled": 1,
+  "modified": "2026-07-11 10:58:53.976844",
+  "module": "Bimbel Rumba v16",
+  "name": "Employee - Sembunyikan Series RUMBA",
+  "script": "frappe.ui.form.on('Employee', {\n  onload(frm) { frm.toggle_display('naming_series', false); },\n  refresh(frm) {\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  },\n  onload_post_render(frm) {\n    // erpnext.toggle_naming_series() (dipanggil employee.js HRMS pasca-render) menampilkan ulang field ini;\n    // handler custom terdaftar terakhir -> jalan setelahnya -> kita menang.\n    frm.toggle_display('naming_series', false);\n    setTimeout(() => frm.toggle_display('naming_series', false), 400);\n  }\n});\n// ID Employee dibentuk hook autoname rumba16 (ERP-HR-002, 10 angka) — field Series bawaan menyesatkan, disembunyikan.",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Mitra Lead",
+  "enabled": 1,
+  "modified": "2026-07-18 15:11:35.316004",
+  "module": "Bimbel Rumba v16",
+  "name": "Rumba Mitra Lead - Tombol Wujudkan Unit",
+  "script": "function rapikanTeleponRumba(no) {\n  no = (no || '').toString().replace(/[\\s.]/g, '').replace(/-/g, '');\n  if (no.startsWith('+62')) return '+62-' + no.slice(3);\n  if (no.startsWith('62')) return '+62-' + no.slice(2);\n  if (no.startsWith('0')) return '+62-' + no.slice(1);\n  return no;\n}\n\nfrappe.ui.form.on('Rumba Mitra Lead', {\n  refresh(frm) {\n    if (!frm.is_new() && frm.doc.status_mitra === 'Perjanjian') {\n      frm.add_custom_button(__('Wujudkan Unit dari Mitra'), () => {\n        const d = new frappe.ui.Dialog({\n          title: __('Wujudkan Unit dari Mitra'),\n          fields: [\n            {fieldname: 'nama_unit', fieldtype: 'Data', label: 'Nama Unit', reqd: 1},\n            {fieldname: 'telepon_unit', fieldtype: 'Data', label: 'Telepon Unit', default: rapikanTeleponRumba(frm.doc.nomor_handphone), reqd: 1, description: 'Format +62-8xxxx (otomatis dirapikan)'},\n            {fieldname: 'email_unit', fieldtype: 'Data', label: 'Email Unit', default: frm.doc.alamat_email, reqd: 1},\n            {fieldname: 'jumlah_ruang_kelas', fieldtype: 'Int', label: 'Jumlah Ruang Kelas', default: 1, reqd: 1}\n          ],\n          primary_action_label: __('Buat Unit'),\n          primary_action(values) {\n            values.telepon_unit = rapikanTeleponRumba(values.telepon_unit);\n            d.hide();\n            frappe.call({\n              method: 'rumba16.bimbel_rumba_v16.doctype.rumba_mitra_lead.rumba_mitra_lead.wujudkan_unit_dari_mitra',\n              args: Object.assign({mitra_lead: frm.doc.name}, values),\n              freeze: true,\n              freeze_message: __('Membuat Rumba Unit...'),\n              callback(r) {\n                if (!r.exc) {\n                  frappe.show_alert({message: __('Unit {0} terbentuk', [r.message]), indicator: 'green'});\n                  frm.reload_doc();\n                }\n              }\n            });\n          }\n        });\n        d.show();\n      }).addClass('btn-primary');\n    }\n    if (frm.doc.status_mitra === 'Deal' && frm.doc.unit_terbentuk) {\n      frm.add_custom_button(__('Lihat Unit'), () => frappe.set_route('Form', 'Rumba Unit', frm.doc.unit_terbentuk));\n    }\n  }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Mitra Lead",
+  "enabled": 1,
+  "modified": "2026-07-16 14:32:54.515854",
+  "module": "Bimbel Rumba v16",
+  "name": "Rumba Mitra Lead - Warna Status List",
+  "script": "frappe.listview_settings['Rumba Mitra Lead'] = {\n  get_indicator(doc) {\n    const warna = {\n      'Baru': 'blue',\n      'Dikualifikasi': 'light-blue',\n      'Presentasi': 'purple',\n      'Due Diligence': 'yellow',\n      'Negosiasi': 'orange',\n      'Perjanjian': 'cyan',\n      'Deal': 'green',\n      'Tidak Jadi': 'red'\n    };\n    return [__(doc.status_mitra), warna[doc.status_mitra] || 'gray', 'status_mitra,=,' + doc.status_mitra];\n  }\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Sesi Kelas",
+  "enabled": 1,
+  "modified": "2026-08-01 15:35:50.941973",
+  "module": null,
+  "name": "Rumba Sesi Kelas - Kunci Tanggal Hari Ini (Tutor)",
+  "script": "frappe.ui.form.on('Rumba Sesi Kelas', {\n  onload_post_render: function(frm){ rumba_lock_tanggal_sesi(frm); },\n  refresh: function(frm){ rumba_lock_tanggal_sesi(frm); }\n});\nfunction rumba_lock_tanggal_sesi(frm){\n  var roles = frappe.user_roles || [];\n  var exempt = roles.indexOf('System Manager') > -1 || roles.indexOf('Administrator') > -1 || roles.indexOf('Rumba Admin Unit') > -1 || roles.indexOf('Rumba Kepala Unit') > -1;\n  var is_tutor = roles.indexOf('Rumba Tutor') > -1;\n  if (frm.is_new() && !frm.doc.tanggal_sesi) { frm.set_value('tanggal_sesi', frappe.datetime.get_today()); }\n  if (is_tutor && !exempt) {\n    if (frm.is_new()) { frm.set_value('tanggal_sesi', frappe.datetime.get_today()); }\n    frm.set_df_property('tanggal_sesi', 'read_only', 1);\n    frm.set_df_property('tanggal_sesi', 'description', 'Terkunci ke hari ini untuk Tutor. Koreksi tanggal lewat Admin Unit.');\n  }\n}",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Rumba Sesi Kelas",
+  "enabled": 1,
+  "modified": "2026-08-01 17:28:43.085870",
+  "module": null,
+  "name": "Rumba Sesi Kelas - Tombol Buat BKM",
+  "script": "frappe.ui.form.on('Rumba Sesi Kelas', {\n    refresh: function (frm) {\n        if (frm.is_new()) return;\n        frm.add_custom_button('Buat BKM Murid', function () {\n            frappe.new_doc('Rumba BKM Entry', { sesi_kelas: frm.doc.name });\n        });\n    }\n});",
+  "view": "Form"
  }
 ]

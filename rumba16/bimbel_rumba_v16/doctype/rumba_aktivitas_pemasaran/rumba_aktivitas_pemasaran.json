@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-16 14:35:42.740828",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_utama",
+  "tanggal",
+  "kanal",
+  "nama_kegiatan",
+  "col_utama",
+  "nama_unit",
+  "event",
+  "biaya",
+  "sec_detail",
+  "deskripsi"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_utama",
+   "fieldtype": "Section Break",
+   "label": "Aktivitas Pemasaran"
+  },
+  {
+   "default": "Today",
+   "fieldname": "tanggal",
+   "fieldtype": "Date",
+   "label": "Tanggal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kanal",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Kanal",
+   "options": "Kunjungan Sekolah\nEvent RUMBA\nOnline\nSpanduk/Brosur\nLainnya",
+   "reqd": 1
+  },
+  {
+   "description": "Contoh: Kunjungan SD Negeri 5 Pangkalpinang, Iklan IG Juli, Konten Reels mingguan",
+   "fieldname": "nama_kegiatan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Kegiatan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_utama",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Kosongkan bila kegiatan pusat / lintas unit",
+   "fieldname": "nama_unit",
+   "fieldtype": "Link",
+   "label": "Unit Terkait",
+   "options": "Rumba Unit"
+  },
+  {
+   "depends_on": "eval:doc.kanal==\"Event RUMBA\"",
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event Terkait",
+   "options": "Rumba Event"
+  },
+  {
+   "description": "Untuk kanal Event RUMBA: biaya penyelenggaraan dicatat di Rumba Event (tab Pengeluaran); isi di sini hanya biaya promosi di luar event agar tidak dobel hitung.",
+   "fieldname": "biaya",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Biaya",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_detail",
+   "fieldtype": "Section Break",
+   "label": "Detail"
+  },
+  {
+   "description": "Catat hasil nyata: jumlah brosur dibagikan, jangkauan ads, respon sekolah, dll.",
+   "fieldname": "deskripsi",
+   "fieldtype": "Small Text",
+   "label": "Deskripsi / Hasil"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-16 15:28:21.922892",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Aktivitas Pemasaran",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Bisnis",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Founder",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Finance",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Rumba Admin Unit",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "nama_kegiatan,kanal",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nama_kegiatan",
+ "track_changes": 1
+}

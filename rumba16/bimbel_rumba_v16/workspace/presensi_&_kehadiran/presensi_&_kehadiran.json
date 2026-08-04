@@ -1,0 +1,121 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"k1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udd52 Presensi & Kehadiran</b></span>\",\"col\":12}},{\"id\":\"k2\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Presensi Saya\",\"col\":12}},{\"id\":\"k3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"k4\",\"type\":\"card\",\"data\":{\"card_name\":\"Non-Pendidik (Check-in)\",\"col\":6}},{\"id\":\"k5\",\"type\":\"card\",\"data\":{\"card_name\":\"Pendidik (dari Sesi)\",\"col\":6}}]",
+ "creation": "2026-07-31 10:54:50.372359",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Presensi Saya"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "stopwatch",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Presensi & Kehadiran",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Non-Pendidik (Check-in)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Checkin",
+   "link_count": 0,
+   "link_to": "Employee Checkin",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance",
+   "link_count": 0,
+   "link_to": "Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shift Type",
+   "link_count": 0,
+   "link_to": "Shift Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shift Assignment",
+   "link_count": 0,
+   "link_to": "Shift Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendidik (dari Sesi)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rumba Sesi Kelas",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Jam Mengajar (F-GAJ-01)",
+   "link_count": 0,
+   "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-31 16:39:24.829402",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Presensi & Kehadiran",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "SDM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Personalia"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [],
+ "title": "Presensi & Kehadiran",
+ "type": "Workspace"
+}

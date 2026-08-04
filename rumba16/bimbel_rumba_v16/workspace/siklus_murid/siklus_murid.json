@@ -1,0 +1,181 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\": \"km1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"km2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83e\\uddd2 Siklus Murid\", \"col\": 12}}, {\"id\": \"km3\", \"type\": \"header\", \"data\": {\"text\": \"Calon Murid\", \"col\": 12}}, {\"id\": \"km4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Lead Belum Ditindaklanjuti\", \"col\": 3}}, {\"id\": \"km5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Trial\", \"col\": 3}}, {\"id\": \"km6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Daftar Tunggu\", \"col\": 3}}, {\"id\": \"km7\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pendaftaran Menunggu\", \"col\": 3}}, {\"id\": \"km8\", \"type\": \"header\", \"data\": {\"text\": \"Murid\", \"col\": 12}}, {\"id\": \"km9\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Aktif\", \"col\": 3}}, {\"id\": \"km10\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Murid Cuti\", \"col\": 3}}, {\"id\": \"km11\", \"type\": \"header\", \"data\": {\"text\": \"\\u26a1 Aksi Cepat\", \"col\": 12}}, {\"id\": \"km12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Pendaftaran Murid Baru\", \"col\": 4}}, {\"id\": \"km13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Lead\", \"col\": 4}}, {\"id\": \"km14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"+ Jadwalkan Trial\", \"col\": 4}}, {\"id\": \"km15\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km16\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Distribusi Murid\", \"col\": 12}}, {\"id\": \"km18\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Distribusi Murid per Program (Donut)\", \"col\": 6}}, {\"id\": \"kmAbsen\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Murid Sering Absen (Alpa)\", \"col\": 6}}, {\"id\": \"km19\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"km20\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar & Dokumen\", \"col\": 12}}, {\"id\": \"km21\", \"type\": \"card\", \"data\": {\"card_name\": \"Data Murid\", \"col\": 6}}]",
+ "creation": "2026-07-29 00:26:14.539601",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Distribusi Murid per Program (Donut)",
+   "label": "Distribusi Murid per Program (Donut)"
+  },
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  },
+  {
+   "custom_block_name": "Murid Sering Absen (Alpa)",
+   "label": "Murid Sering Absen (Alpa)"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "project",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Siklus Murid",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Murid",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Rumba Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pendaftaran",
+   "link_count": 0,
+   "link_to": "Rumba Pendaftaran",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Murid",
+   "link_count": 0,
+   "link_to": "Rumba Murid",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daftar Tunggu (FIFO)",
+   "link_count": 0,
+   "link_to": "Daftar Tunggu (FIFO)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mutasi",
+   "link_count": 0,
+   "link_to": "Rumba Mutasi",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengunduran Diri",
+   "link_count": 0,
+   "link_to": "Rumba Pengunduran Diri",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alumni",
+   "link_count": 0,
+   "link_to": "Alumni",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Murid",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-29 00:33:16.663767",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Siklus Murid",
+ "number_cards": [
+  {
+   "label": "Lead Belum Ditindaklanjuti",
+   "number_card_name": "Lead Belum Ditindaklanjuti"
+  },
+  {
+   "label": "Trial",
+   "number_card_name": "Trial"
+  },
+  {
+   "label": "Daftar Tunggu",
+   "number_card_name": "Daftar Tunggu"
+  },
+  {
+   "label": "Pendaftaran Menunggu",
+   "number_card_name": "Pendaftaran Menunggu"
+  },
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Murid Cuti",
+   "number_card_name": "Murid Cuti"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Operasional",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Pendaftaran Murid Baru",
+   "type": "URL",
+   "url": "/app/rumba-pendaftaran/new"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "+ Lead",
+   "type": "URL",
+   "url": "/app/rumba-lead/new"
+  },
+  {
+   "doc_view": "",
+   "label": "+ Jadwalkan Trial",
+   "link_to": "Rumba Lead",
+   "type": "DocType"
+  }
+ ],
+ "title": "Siklus Murid",
+ "type": "Workspace"
+}

@@ -7,7 +7,7 @@
     "description": null,
     "duration": 1,
     "required_for_employee_creation": 0,
-    "role": "Rumba Lead Tutor",
+    "role": "Rumba Kepala Unit",
     "task": null,
     "task_weight": 0.0,
     "user": null
@@ -18,7 +18,7 @@
     "description": null,
     "duration": 1,
     "required_for_employee_creation": 0,
-    "role": "Rumba Lead Tutor",
+    "role": "Rumba Kepala Unit",
     "task": null,
     "task_weight": 0.0,
     "user": null
@@ -63,7 +63,7 @@
   "docstatus": 0,
   "doctype": "Employee Separation Template",
   "employee_grade": null,
-  "modified": "2026-06-25 17:34:05.014228",
+  "modified": "2026-07-08 13:47:34.171449",
   "name": "HR-EMP-STP-00001",
   "title": "Offboarding Tutor RUMBA"
  },
@@ -202,63 +202,6 @@
   "modified": "2026-06-25 17:37:11.883734",
   "name": "HR-EMP-STP-00003",
   "title": "Offboarding Kepala Unit RUMBA"
- },
- {
-  "activities": [
-   {
-    "activity_name": "Tahap 3–4 — Serah-Terima Akademik & Mentoring",
-    "begin_on": 0,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Kepala Unit",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   },
-   {
-    "activity_name": "Tahap 5 — Pengembalian Aset & Turun/Nonaktif Akun",
-    "begin_on": 1,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Personalia",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   },
-   {
-    "activity_name": "Tahap 6 — Full & Final (honor mengajar)",
-    "begin_on": 2,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Finance",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   },
-   {
-    "activity_name": "Tahap 7 — Exit Interview",
-    "begin_on": 3,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Personalia",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   }
-  ],
-  "company": "Bimbel Rumba",
-  "department": null,
-  "designation": "Lead Tutor",
-  "docstatus": 0,
-  "doctype": "Employee Separation Template",
-  "employee_grade": null,
-  "modified": "2026-06-25 17:37:12.145421",
-  "name": "HR-EMP-STP-00004",
-  "title": "Offboarding Lead Tutor RUMBA"
  },
  {
   "activities": [

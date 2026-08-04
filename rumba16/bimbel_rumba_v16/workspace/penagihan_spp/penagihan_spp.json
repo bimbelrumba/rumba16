@@ -1,0 +1,151 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcb0 Info Cepat SPP\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":4}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"n6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":4}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi & Laporan\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Tagihan SPP\",\"col\":4}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Penerimaan\",\"col\":4}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Aging per Unit\",\"col\":4}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udccb Daftar\",\"col\":6}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"\u2699\ufe0f Proses Bulanan\",\"col\":6}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Daftar SPP\",\"col\":6}},{\"id\":\"c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Proses Bulanan\",\"col\":6}}]",
+ "creation": "2026-08-02 17:30:47.871488",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "accounting",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Penagihan SPP",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daftar SPP",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice (SPP & Lainnya)",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pengakuan SPP di Muka",
+   "link_count": 0,
+   "link_to": "Process Deferred Accounting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Piutang SPP per Unit (Aging)",
+   "link_count": 0,
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Proses Bulanan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kesiswaan Bulanan (Generate Snapshot)",
+   "link_count": 0,
+   "link_to": "Rumba Kesiswaan Bulanan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Kesiswaan per Unit (Target)",
+   "link_count": 0,
+   "link_to": "Kesiswaan per Unit",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-03 12:09:16.285962",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Penagihan SPP",
+ "number_cards": [
+  {
+   "number_card_name": "Invoice SPP Terbit Bulan Ini"
+  },
+  {
+   "number_card_name": "Invoice SPP Terbayar Bulan Ini"
+  },
+  {
+   "number_card_name": "Invoice SPP Belum Dibayar"
+  },
+  {
+   "number_card_name": "Nominal SPP Terbit Bulan Ini"
+  },
+  {
+   "number_card_name": "Nominal SPP Terbayar Bulan Ini"
+  },
+  {
+   "number_card_name": "Nominal SPP Belum Dibayar"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Keuangan",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Tagihan SPP",
+   "type": "URL",
+   "url": "/app/sales-invoice/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Penerimaan",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Receive"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Aging per Unit",
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Report"
+  }
+ ],
+ "title": "Penagihan SPP",
+ "type": "Workspace"
+}

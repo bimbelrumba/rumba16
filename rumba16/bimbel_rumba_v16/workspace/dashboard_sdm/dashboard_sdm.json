@@ -1,0 +1,67 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Karyawan Aktif",
+   "label": "Tren Karyawan Aktif"
+  },
+  {
+   "chart_name": "Karyawan Masuk per Bulan",
+   "label": "Karyawan Masuk per Bulan"
+  },
+  {
+   "chart_name": "Karyawan Keluar per Bulan",
+   "label": "Karyawan Keluar per Bulan"
+  },
+  {
+   "chart_name": "Pelamar Masuk per Bulan",
+   "label": "Pelamar Masuk per Bulan"
+  },
+  {
+   "chart_name": "Pelamar per Sumber",
+   "label": "Pelamar per Sumber"
+  },
+  {
+   "chart_name": "Tren Pengajuan Cuti per Bulan",
+   "label": "Tren Pengajuan Cuti per Bulan"
+  },
+  {
+   "chart_name": "Penggantian Tutor (Izin) per Bulan",
+   "label": "Penggantian Tutor (Izin) per Bulan"
+  }
+ ],
+ "content": "[{\"id\":\"d1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udcca Dashboard SDM</b></span>\",\"col\":12}},{\"id\":\"d2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Tren historis ketenagakerjaan (org-wide)</span>\",\"col\":12}},{\"id\":\"d3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">\ud83d\udc65 Tenaga Kerja</span>\",\"col\":12}},{\"id\":\"d4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Karyawan Aktif\",\"col\":12}},{\"id\":\"d5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Karyawan Masuk per Bulan\",\"col\":6}},{\"id\":\"d6\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Karyawan Keluar per Bulan\",\"col\":6}},{\"id\":\"d7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">\ud83d\udce5 Rekrutmen</span>\",\"col\":12}},{\"id\":\"d8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Pelamar Masuk per Bulan\",\"col\":6}},{\"id\":\"d9\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Pelamar per Sumber\",\"col\":6}},{\"id\":\"d10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">\ud83c\udf34 Cuti & Penggantian</span>\",\"col\":12}},{\"id\":\"d11\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Pengajuan Cuti per Bulan\",\"col\":6}},{\"id\":\"d12\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Penggantian Tutor (Izin) per Bulan\",\"col\":6}}]",
+ "creation": "2026-07-31 12:23:06.741624",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "dashboard",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Dashboard SDM",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-31 16:39:23.476535",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Dashboard SDM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "SDM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Personalia"
+  }
+ ],
+ "sequence_id": 0.5,
+ "shortcuts": [],
+ "title": "Dashboard SDM",
+ "type": "Workspace"
+}

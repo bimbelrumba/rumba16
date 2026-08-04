@@ -1,0 +1,143 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:30.758322",
+  "name": "act8jrk5ft",
+  "page": null,
+  "ref_doctype": "Stock Ledger Entry",
+  "report": "Stock Balance",
+  "roles": [
+   {
+    "role": "Stock User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:31.501070",
+  "name": "ad3a319ji0",
+  "page": null,
+  "ref_doctype": "Stock Ledger Entry",
+  "report": "Stock Ledger",
+  "roles": [
+   {
+    "role": "Stock User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:31.889448",
+  "name": "ad7jm4mcli",
+  "page": null,
+  "ref_doctype": "Rumba Mutasi",
+  "report": "Mutasi Murid",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:32.493691",
+  "name": "addd81v75f",
+  "page": null,
+  "ref_doctype": "Rumba Pengunduran Diri",
+  "report": "Pengunduran Diri Murid",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:32.910219",
+  "name": "adhbmad1ff",
+  "page": null,
+  "ref_doctype": "Rumba Lead",
+  "report": "Daftar Tunggu (FIFO)",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Role",
+  "modified": "2026-07-10 00:43:33.207860",
+  "name": "adkvd3kv8q",
+  "page": null,
+  "ref_doctype": "Rumba Sesi Kelas",
+  "report": "Rekap Kehadiran Murid",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ]
+ }
+]

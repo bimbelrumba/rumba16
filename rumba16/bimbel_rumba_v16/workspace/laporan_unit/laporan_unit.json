@@ -1,0 +1,248 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\": \"lp1\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Kepala Halaman Unit\", \"col\": 12}}, {\"id\": \"lp2\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcca Laporan Unit\", \"col\": 12}}, {\"id\": \"lp3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Kesiswaan per Unit\", \"col\": 6}}, {\"id\": \"lp4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Piutang SPP per Unit (Aging)\", \"col\": 6}}, {\"id\": \"lp5\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"lp6\", \"type\": \"header\", \"data\": {\"text\": \"\\ud83d\\udcc2 Daftar Laporan\", \"col\": 12}}, {\"id\": \"lp7\", \"type\": \"card\", \"data\": {\"card_name\": \"Laporan Kesiswaan\", \"col\": 4}}, {\"id\": \"lp8\", \"type\": \"card\", \"data\": {\"card_name\": \"Laporan Keuangan\", \"col\": 4}}, {\"id\": \"lp9\", \"type\": \"card\", \"data\": {\"card_name\": \"Kurikulum & Tutor (baca)\", \"col\": 4}}]",
+ "creation": "2026-08-02 15:58:13.490723",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Laporan Unit",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Kesiswaan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Kesiswaan per Unit",
+   "link_count": 0,
+   "link_to": "Kesiswaan per Unit",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Kehadiran Murid",
+   "link_count": 0,
+   "link_to": "Rekap Kehadiran Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Mutasi Murid",
+   "link_count": 0,
+   "link_to": "Mutasi Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Pengunduran Diri Murid",
+   "link_count": 0,
+   "link_to": "Pengunduran Diri Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daftar Tunggu (FIFO)",
+   "link_count": 0,
+   "link_to": "Daftar Tunggu (FIFO)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Keuangan",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Piutang SPP per Unit",
+   "link_count": 0,
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penerimaan (Kas Masuk)",
+   "link_count": 0,
+   "link_to": "Penerimaan (Kas Masuk)",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Payment Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembayaran (Kas Keluar)",
+   "link_count": 0,
+   "link_to": "Pembayaran (Kas Keluar)",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Payment Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Laba Rugi",
+   "link_count": 0,
+   "link_to": "Profit and Loss Statement",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "GL Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Aliran Kas",
+   "link_count": 0,
+   "link_to": "Cash Flow",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "GL Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stok Barang",
+   "link_count": 0,
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Stock Ledger Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penjualan Barang",
+   "link_count": 0,
+   "link_to": "Penjualan Barang",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kurikulum & Tutor (baca)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Bintang Murid",
+   "link_count": 0,
+   "link_to": "Rekap Bintang Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Riwayat Ujian Kenaikan Level",
+   "link_count": 0,
+   "link_to": "Riwayat Ujian Kenaikan Level",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Kehadiran Tutor (F-GAJ-01)",
+   "link_count": 0,
+   "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-04 06:34:59.571534",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Laporan Unit",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Operasional",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 5.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Kesiswaan per Unit",
+   "link_to": "Kesiswaan per Unit",
+   "report_ref_doctype": "Rumba Kesiswaan Bulanan",
+   "type": "Report"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Piutang SPP per Unit (Aging)",
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Report"
+  }
+ ],
+ "title": "Laporan Unit",
+ "type": "Workspace"
+}

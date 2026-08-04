@@ -48,52 +48,6 @@
  {
   "activities": [
    {
-    "activity_name": "Hari 1 — Orientasi Peran & Transisi Mindset (Pusat)",
-    "begin_on": 0,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Personalia",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   },
-   {
-    "activity_name": "Hari 2 — Supervisi Kelas & Koordinasi Tim (Unit)",
-    "begin_on": 1,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 0,
-    "role": "Rumba Kepala Unit",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   },
-   {
-    "activity_name": "Hari 3 — Pelaporan, Administrasi Tim & Evaluasi (Unit)",
-    "begin_on": 2,
-    "description": null,
-    "duration": 1,
-    "required_for_employee_creation": 1,
-    "role": "Rumba Kepala Unit",
-    "task": null,
-    "task_weight": 0.0,
-    "user": null
-   }
-  ],
-  "company": "Bimbel Rumba",
-  "department": null,
-  "designation": "Lead Tutor",
-  "docstatus": 0,
-  "doctype": "Employee Onboarding Template",
-  "employee_grade": null,
-  "modified": "2026-06-25 16:38:26.766523",
-  "name": "HR-EMP-ONT-00003",
-  "title": "Onboarding Lead Tutor RUMBA"
- },
- {
-  "activities": [
-   {
     "activity_name": "Hari 1 — Orientasi RUMBA (Pusat/Daring)",
     "begin_on": 0,
     "description": null,
@@ -213,7 +167,7 @@
     "description": null,
     "duration": 1,
     "required_for_employee_creation": 0,
-    "role": "Rumba Lead Tutor",
+    "role": "Rumba Kepala Unit",
     "task": null,
     "task_weight": 0.0,
     "user": null
@@ -224,7 +178,7 @@
     "description": null,
     "duration": 1,
     "required_for_employee_creation": 0,
-    "role": "Rumba Lead Tutor",
+    "role": "Rumba Kepala Unit",
     "task": null,
     "task_weight": 0.0,
     "user": null
@@ -235,7 +189,7 @@
     "description": null,
     "duration": 1,
     "required_for_employee_creation": 0,
-    "role": "Rumba Lead Tutor",
+    "role": "Rumba Kepala Unit",
     "task": null,
     "task_weight": 0.0,
     "user": null
@@ -258,7 +212,7 @@
   "docstatus": 0,
   "doctype": "Employee Onboarding Template",
   "employee_grade": null,
-  "modified": "2026-06-25 06:56:26.530064",
+  "modified": "2026-07-08 13:47:33.662219",
   "name": "HR-EMP-ONT-00001",
   "title": "Onboarding Tutor RUMBA"
  }

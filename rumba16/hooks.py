@@ -14,21 +14,28 @@ app_license = "mit"
 add_to_apps_screen = [
  	{
  		"name": "rumba16",
- 		"logo": "/assets/rumba16/logo.png",
+ 		"logo": "/assets/rumba16/images/splash-singa.png",
  		"title": "Bimbel RUMBA",
  		"route": "/masuk",
  	}
  ]
 
+website_context = {
+    "favicon": "/assets/rumba16/images/splash-singa.png",
+    "splash_image": "/assets/rumba16/images/splash-singa.png",
+}
+
+app_logo_url = "/assets/rumba16/images/splash-singa.png"
+
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/rumba16/css/rumba16.css"
-# app_include_js = "/assets/rumba16/js/rumba16.js"
+app_include_css = "rumba_theme.bundle.css"
+app_include_js = "/assets/rumba16/js/rumba_desk_landing.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/rumba16/css/rumba16.css"
+web_include_css = "rumba_web.bundle.css"
 # web_include_js = "/assets/rumba16/js/rumba16.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -66,7 +73,6 @@ home_page = "masuk"
 role_home_page = {
     "Rumba Admin Unit": "masuk",
     "Rumba Kepala Unit": "masuk",
-    "Rumba Lead Tutor": "masuk",
     "Rumba Tutor": "masuk",
     "Rumba Akademik": "masuk",
     "Rumba Finance": "masuk",
@@ -142,10 +148,16 @@ role_home_page = {
 
 permission_query_conditions = {
     "Rumba Mutasi": "rumba16.permissions.mutasi_query_conditions",
+    "Rumba Kelas": "rumba16.permissions.kelas_query_conditions",
+    "Rumba Sesi Kelas": "rumba16.permissions.sesi_query_conditions",
+    "Rumba BKM Entry": "rumba16.permissions.bkm_query_conditions",
 }
 
 has_permission = {
     "Rumba Mutasi": "rumba16.permissions.mutasi_has_permission",
+    "Rumba Kelas": "rumba16.permissions.kelas_has_permission",
+    "Rumba Sesi Kelas": "rumba16.permissions.sesi_has_permission",
+    "Rumba BKM Entry": "rumba16.permissions.bkm_has_permission",
 }
 
 # Document Events
@@ -180,6 +192,11 @@ scheduler_events = {
  	"monthly": [
  		"rumba16.tasks.generate_spp_bulanan"
  	],
+        "cron": {
+            "30 0 1 * *": [
+                "rumba16.hr_snapshot.generate_hr_snapshot"
+            ],  # tiap tgl 1, snapshot bulan lalu
+        },
  }
 
 # Testing
@@ -272,13 +289,13 @@ scheduler_events = {
 # ignore_translatable_strings_from = []
 
 fixtures = [
-    {"dt": "Client Script"},
+    {"dt": "Client Script",},
     {"dt": "Server Script", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Notification", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Report", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Number Card", "filters": [["module", "=", "Bimbel Rumba v16"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Bimbel Rumba v16"]]},
-    {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
+    {"dt": "Role", "filters": [["name", "in", ["Rumba Kepala Unit","Rumba Admin Unit","Rumba Tutor","Rumba Finance","Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"]]]},
     {"dt": "Workflow", "filters": [["name","in",["Persetujuan Presensi Sesi","Persetujuan BKM","Alur Event RUMBA"]]]},
     {"dt": "Workflow State", "filters": [["name", "in", ["Draft","Diajukan","Disetujui","Revisi","Draf","Pendaftaran Dibuka","Pendaftaran Ditutup","Berlangsung","Selesai","Dibatalkan"]]]},
     {"dt": "Workflow Action Master", "filters": [["name", "in", ["Ajukan","Setujui","Minta Revisi","Ajukan Ulang","Buka Pendaftaran","Tutup Pendaftaran","Buka Kembali Pendaftaran","Mulai Event","Selesaikan","Batalkan"]]]},
@@ -287,8 +304,8 @@ fixtures = [
     "Rumba Murid-nominal_spp", "Rumba Murid-tanggal_mulai_spp", "Rumba Murid-tanggal_spp_dimuka_sampai",
     "Sales Invoice-rumba_unit", "Sales Invoice-rumba_murid", "Sales Invoice-spp_periode",
     "Sales Invoice-rumba_event",
-    "Employee-rumba_unit", "Employee-kategori_karyawan", "Rumba Unit-branch",
-    "Employee-tarif_honor_per_pertemuan",
+    "Employee-rumba_unit", "Employee-kategori_karyawan",
+    "Employee-tarif_honor_per_pertemuan", "Rumba Kelas-tanggal_mulai", "Rumba Murid-kode_program",
     "Job Opening-rumba_unit", "Job Applicant-sumber", "Job Applicant-rumba_unit",
     "Employee Separation-jenis_pemberhentian", "Employee Separation-rumba_unit",
     "Exit Interview-section_penilaian_rumba",
@@ -298,7 +315,9 @@ fixtures = [
     "Exit Interview-ei_sarana_lingkungan", "Exit Interview-ei_kesempatan_berkembang",
     "Exit Interview-ei_nilai_juara", "Exit Interview-ei_kepuasan_keseluruhan",
     "Exit Interview-ei_masukan_disukai", "Exit Interview-ei_masukan_perbaikan",
-    "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali"
+    "Exit Interview-ei_saran_penerus", "Exit Interview-ei_rekomendasi_kembali",
+    "Rumba Unit-latitude", "Rumba Unit-longitude", "Rumba Unit-radius_meter",
+    "Employee Checkin-rumba_jarak_meter", "Employee Checkin-rumba_status_lokasi",
     ]]]},
     {"dt": "Salary Component", "filters": [["name", "in", [
     "Gaji Pokok", "Honor Mengajar", "PPh 21", "Potongan BPJS",
@@ -306,14 +325,14 @@ fixtures = [
     "Insentif Kunjungan", "Insentif Kegiatan Bersama", "Tunjangan Hari Raya"
     ]]]},
     {"dt": "Designation", "filters": [["name", "in", [
-    "Kepala Unit","Lead Tutor","Tutor","Admin Unit","Staf Pendukung",
+    "Kepala Unit","Tutor","Admin Unit","Staf Pendukung",
     "Manajer Operasional","Koordinator Personalia & Umum","Koordinator Kurikulum & Akademik",
     "Koordinator Keuangan","Koordinator Teknologi & Sistem","Koordinator Pengembangan Usaha",
     "Staf Keuangan","Staf Pemasaran & Pengembangan Usaha"
     ]]]},
     {"dt": "Employment Type", "filters": [["name", "in", ["Tetap","Kontrak","Paruh Waktu"]]]},
     {"dt": "Custom DocPerm", "filters": [["role", "in", [
-    "Rumba Kepala Unit","Rumba Admin Unit","Rumba Lead Tutor","Rumba Tutor","Rumba Finance",
+    "Rumba Kepala Unit","Rumba Admin Unit","Rumba Tutor","Rumba Finance",
     "Rumba Personalia","Rumba Akademik","Rumba Bisnis","Rumba Mitra","Rumba Founder"
     ]]]},
     {"dt": "Web Form", "filters": [["name", "in", ["kerja-di-rumba", "exit-interview-rumba"]]]},
@@ -324,9 +343,9 @@ fixtures = [
     "Pengelolaan Kelas","Kesesuaian dengan Gaya RUMBA"
     ]]]},
     {"dt": "Interview Type", "filters": [["name", "in", ["Wawancara Tutor","Demo Mengajar Tutor"]]]},
-    {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA"]]]},
+    {"dt": "Shift Type", "filters": [["name", "in", ["Shift Reguler RUMBA", "Shift Pusat"]]]},
     {"dt": "Employee Onboarding Template", "filters": [["title", "in", [
-    "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA", "Onboarding Lead Tutor RUMBA",
+    "Onboarding Tutor RUMBA", "Onboarding Kepala Unit RUMBA",
     "Onboarding Admin Unit RUMBA", "Onboarding Pendukung RUMBA"
     ]]]},
     {"dt": "Leave Type", "filters": [["name", "in", [
@@ -334,8 +353,42 @@ fixtures = [
     ]]]},
     {"dt": "Employee Separation Template", "filters": [["title", "in", [
     "Offboarding Tutor RUMBA", "Offboarding Admin Unit RUMBA", "Offboarding Kepala Unit RUMBA",
-    "Offboarding Lead Tutor RUMBA", "Offboarding Pendukung RUMBA"
+    "Offboarding Pendukung RUMBA"
     ]]]},
+    {"dt": "Workspace", "filters": [["module", "=", "Bimbel Rumba v16"]]},
+    {"dt": "Workspace Sidebar", "filters": [["name", "in", ["Bimbel Rumba v16"]]]},
+    {"dt": "Custom HTML Block", "filters": [["name", "in", [
+    "Distribusi Murid per Program (Donut)", "Murid Sering Absen (Alpa)",
+    "Sesi Saya Hari Ini", "Sumber Informasi Lead",
+    "Tutor Tanpa Kelas (Pengampu)","Papan Event Aktif",
+    "Presensi Saya",
+    ]]]},
+    {
+    "dt": "Custom Role",
+    "filters": [
+        ["report", "in", [
+            "Stock Balance",
+            "Stock Ledger",
+            "Mutasi Murid",
+            "Pengunduran Diri Murid",
+            "Daftar Tunggu (FIFO)",
+            "Rekap Kehadiran Murid",
+        ]]
+    ],
+},
+{
+    "dt": "Property Setter",
+    "filters": [
+        ["name", "in", [
+            "Sales Invoice-write_off_cost_center-ignore_user_permissions",
+            "Sales Invoice-loyalty_redemption_cost_center-ignore_user_permissions",
+            "Employee-naming_series-hidden",
+            "Employee-branch-hidden",
+            "Rumba Sesi Kelas-tanggal_sesi-default",
+        ]]
+    ],
+},
+{"dt": "Print Format", "filters": [["name", "in", ["PMK RUMBA"]]]},
 ]
 
 doc_events = {
@@ -354,4 +407,15 @@ doc_events = {
     "Job Applicant": {
         "before_insert": "rumba16.recruitment.set_job_applicant_source",
     },
+    "Contract": {
+        "autoname": "rumba16.contract_naming.contract_autoname",
+    },
 }
+
+after_migrate = [
+    "rumba16.maintenance.remove_unused_standard_dashboards",
+    "rumba16.maintenance.hide_unused_standard_workspaces",
+]
+
+extend_bootinfo = "rumba16.boot.extend_bootinfo"
+

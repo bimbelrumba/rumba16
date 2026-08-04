@@ -1,0 +1,97 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Okupansi Kelas",
+   "label": "Okupansi Kelas"
+  }
+ ],
+ "content": "[{\"id\":\"PN2jqS9til\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"aWe4djv8Bk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udccc RINGKASAN UNIT</span>\",\"col\":12}},{\"id\":\"vVUxxkeW3k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":6}},{\"id\":\"pggjt35Wiu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"1hx5J1jUj0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JURFtOHBNJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u26a0\ufe0f PERLU TINDAKAN</b></span>\",\"col\":12}},{\"id\":\"w2Lb8SUs6E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead belum ditindaklanjuti\",\"col\":6}},{\"id\":\"iaqhD_0LxR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi menunggu persetujuan\",\"col\":6}},{\"id\":\"GXha6XdoL6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP belum dibayar\",\"col\":6}},{\"id\":\"bHOrLe_C0k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel tanpa Tutor\",\"col\":6}},{\"id\":\"0mI3R4JWWj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TFHhAR85R0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u26a1\ufe0f AKSI CEPAT</b></span>\",\"col\":12}},{\"id\":\"ctFver_Wfs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":4}},{\"id\":\"cLf-h1ETFL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jadwalkan Sesi\",\"col\":4}},{\"id\":\"1scb-7Ql1U\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Catat Penerimaan Uang\",\"col\":4}},{\"id\":\"pSbxD4rIiT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tM7zChRLek\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Okupansi Kelas\",\"col\":12}}]",
+ "creation": "2026-07-28 00:50:13.094467",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit",
+   "label": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "monitor-check",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Operasional",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-28 09:17:14.509140",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Operasional",
+ "number_cards": [
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Sesi Hari Ini",
+   "number_card_name": "Sesi Hari Ini"
+  },
+  {
+   "label": "Lead belum ditindaklanjuti",
+   "number_card_name": "Lead Belum Ditindaklanjuti"
+  },
+  {
+   "label": "Presensi menunggu persetujuan",
+   "number_card_name": "Presensi Menunggu Persetujuan"
+  },
+  {
+   "label": "Invoice SPP belum dibayar",
+   "number_card_name": "Invoice SPP Belum Dibayar"
+  },
+  {
+   "label": "Rombel tanpa Tutor",
+   "number_card_name": "Kelas Tanpa Tutor"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Admin Unit"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "+ Pendaftaran",
+   "type": "URL",
+   "url": "/app/rumba-pendaftaran/new"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "+ Jadwalkan Sesi",
+   "type": "URL",
+   "url": "/app/rumba-sesi-kelas/new"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Catat Penerimaan Uang",
+   "type": "URL",
+   "url": "/app/payment-entry/new"
+  }
+ ],
+ "title": "Operasional",
+ "type": "Workspace"
+}

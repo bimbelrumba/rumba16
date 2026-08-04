@@ -1,0 +1,77 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"kt1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\ud83d\udcc4 Kontrak (PMK/PKWT)</b></span>\",\"col\":12}},{\"id\":\"kt2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Belum Ditandatangani\",\"col\":4}},{\"id\":\"kt3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kontrak Berakhir Bulan Ini\",\"col\":4}},{\"id\":\"kt4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kt5\",\"type\":\"card\",\"data\":{\"card_name\":\"Kontrak (PMK/PKWT)\",\"col\":12}}]",
+ "creation": "2026-07-31 20:42:34.803642",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Kontrak",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kontrak (PMK/PKWT)",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract",
+   "link_count": 0,
+   "link_to": "Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Template",
+   "link_count": 0,
+   "link_to": "Contract Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-07-31 20:42:34.803642",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Kontrak",
+ "number_cards": [
+  {
+   "label": "Kontrak Belum Ditandatangani",
+   "number_card_name": "Kontrak Belum Ditandatangani"
+  },
+  {
+   "label": "Kontrak Berakhir Bulan Ini",
+   "number_card_name": "Kontrak Berakhir Bulan Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "SDM",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Personalia"
+  }
+ ],
+ "sequence_id": 5.5,
+ "shortcuts": [],
+ "title": "Kontrak",
+ "type": "Workspace"
+}

@@ -31,14 +31,137 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-20 10:59:06.048767",
+  "modified": "2026-06-18 12:02:29.582855",
   "module": "Bimbel Rumba v16",
-  "name": "Rekap Bintang Murid",
+  "name": "CRM - Konversi Lead per Cabang",
   "prepared_report": 0,
-  "query": "SELECT\n    b.murid AS \"Murid:Link/Rumba Murid:160\",\n    b.nama_murid AS \"Nama:Data:180\",\n    m.program_belajar AS \"Program:Link/Rumba Program Belajar:150\",\n    m.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    COUNT(*) AS \"Jumlah Sesi:Int:100\",\n    COALESCE(SUM(b.bintang),0) AS \"Total Bintang:Int:110\"\nFROM `tabRumba BKM Entry` b\nINNER JOIN `tabRumba Murid` m ON m.name = b.murid\nWHERE b.workflow_state = 'Disetujui'\n    AND b.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY b.murid, b.nama_murid, m.program_belajar, m.nama_unit\nORDER BY 6 DESC",
-  "ref_doctype": "Rumba BKM Entry",
+  "query": "SELECT\n    x.unit AS \"Unit:Data:220\",\n    x.total_leads AS \"Total Leads:Int:120\",\n    x.terdaftar AS \"Terdaftar:Int:120\",\n    CONCAT(REPLACE(CAST(x.konversi AS CHAR), '.', ','), '%%') AS \"Konversi:Data:110\"\nFROM (\n    SELECT nama_unit AS unit, 0 AS sortkey,\n        COUNT(*) AS total_leads,\n        SUM(status_lead='Terdaftar') AS terdaftar,\n        ROUND(100*SUM(status_lead='Terdaftar')/NULLIF(COUNT(*),0),1) AS konversi\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY nama_unit\n    UNION ALL\n    SELECT 'TOTAL (gabungan)' AS unit, 1 AS sortkey,\n        COUNT(*) AS total_leads,\n        SUM(status_lead='Terdaftar') AS terdaftar,\n        ROUND(100*SUM(status_lead='Terdaftar')/NULLIF(COUNT(*),0),1) AS konversi\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.unit",
+  "ref_doctype": "Rumba Lead",
   "reference_report": null,
-  "report_name": "Rekap Bintang Murid",
+  "report_name": "CRM - Konversi Lead per Cabang",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-30 20:22:48.011205",
+  "module": "Bimbel Rumba v16",
+  "name": "Pembayaran Peserta Event",
+  "prepared_report": 0,
+  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:180\",\n  p.nama_murid AS \"Nama:Data:150\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.sales_invoice AS \"Invoice:Link/Sales Invoice:150\",\n  p.status_pembayaran AS \"Status Bayar:Data:110\",\n  si.grand_total AS \"Tagihan:Currency:110\",\n  si.outstanding_amount AS \"Sisa:Currency:110\",\n  si.due_date AS \"Jatuh Tempo:Date:110\",\n  CASE WHEN si.outstanding_amount > 0 AND si.due_date < CURDATE() THEN DATEDIFF(CURDATE(), si.due_date) ELSE 0 END AS \"Umur Tunggakan (hari):Int:130\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nLEFT JOIN `tabSales Invoice` si ON si.name = p.sales_invoice AND si.docstatus = 1\nWHERE p.parenttype = 'Rumba Event' AND ev.berbayar = 1\nORDER BY si.due_date",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Pembayaran Peserta Event",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\": [[\"Rumba Murid\", \"status_murid\", \"=\", \"Lulus\"]], \"columns\": [[\"nomor_induk_murid\", \"Rumba Murid\"], [\"nama_lengkap\", \"Rumba Murid\"], [\"program_belajar\", \"Rumba Murid\"], [\"nama_unit\", \"Rumba Murid\"], [\"status_murid\", \"Rumba Murid\"]], \"sort_by\": \"nama_lengkap\", \"sort_order\": \"asc\", \"sort_by_next\": \"\", \"sort_order_next\": \"desc\"}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-28 18:53:13.041863",
+  "module": "Bimbel Rumba v16",
+  "name": "Alumni",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Murid",
+  "reference_report": null,
+  "report_name": "Alumni",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Kurikulum"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-16 15:05:40.786766",
+  "module": "Bimbel Rumba v16",
+  "name": "Event - Ringkasan Pelaksanaan",
+  "prepared_report": 0,
+  "query": "SELECT\n    e.name AS \"Event:Link/Rumba Event:130\",\n    e.judul_event AS \"Judul:Data:200\",\n    e.status AS \"Status:Data:140\",\n    DATE(e.tanggal_mulai) AS \"Tanggal Mulai:Date:110\",\n    DATEDIFF(DATE(e.tanggal_mulai), CURDATE()) AS \"H- (Hari):Int:90\",\n    DATE(e.batas_pendaftaran) AS \"Batas Daftar:Date:110\",\n    COALESCE(p.total, 0) AS \"Pendaftar:Int:100\",\n    CASE WHEN e.berbayar = 1 THEN COALESCE(p.lunas, 0) ELSE NULL END AS \"Sudah Bayar:Int:110\",\n    CASE WHEN e.berbayar = 1 THEN COALESCE(p.total, 0) - COALESCE(p.lunas, 0) ELSE NULL END AS \"Belum Bayar:Int:110\",\n    e.kuota AS \"Kuota:Int:80\",\n    CASE WHEN e.kuota > 0 THEN e.kuota - COALESCE(p.total, 0) ELSE NULL END AS \"Sisa Kuota:Int:100\",\n    e.total_pendapatan AS \"Pendapatan:Currency:130\",\n    e.total_pengeluaran AS \"Pengeluaran:Currency:130\",\n    e.surplus_defisit AS \"Surplus/Defisit:Currency:130\"\nFROM `tabRumba Event` e\nLEFT JOIN (\n    SELECT parent,\n        COUNT(*) AS total,\n        SUM(CASE WHEN status_pembayaran = 'Lunas' THEN 1 ELSE 0 END) AS lunas\n    FROM `tabRumba Event Peserta`\n    WHERE parenttype = 'Rumba Event' AND status_kehadiran != 'Batal'\n    GROUP BY parent\n) p ON p.parent = e.name\nORDER BY FIELD(e.status, 'Berlangsung', 'Pendaftaran Dibuka', 'Pendaftaran Ditutup', 'Draf', 'Selesai', 'Dibatalkan'), e.tanggal_mulai DESC",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Event - Ringkasan Pelaksanaan",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
@@ -46,10 +169,94 @@
     "role": "System Manager"
    },
    {
-    "role": "Rumba Tutor"
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
    },
    {
     "role": "Rumba Admin Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-30 20:22:48.130577",
+  "module": "Bimbel Rumba v16",
+  "name": "Rekap Event Tahunan",
+  "prepared_report": 0,
+  "query": "SELECT\n  YEAR(ev.tanggal_mulai) AS \"Tahun:Int:80\",\n  ev.jenis_event AS \"Jenis Event:Data:170\",\n  COUNT(*) AS \"Jumlah Event:Int:110\",\n  SUM(ev.jumlah_peserta) AS \"Total Peserta:Int:110\",\n  SUM(ev.total_pendapatan) AS \"Pendapatan:Currency:130\",\n  SUM(ev.total_pengeluaran) AS \"Pengeluaran:Currency:130\",\n  SUM(ev.surplus_defisit) AS \"Surplus/Defisit:Currency:140\"\nFROM `tabRumba Event` ev\nWHERE ev.status != 'Dibatalkan'\nGROUP BY YEAR(ev.tanggal_mulai), ev.jenis_event\nORDER BY YEAR(ev.tanggal_mulai) DESC, ev.jenis_event",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Rekap Event Tahunan",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 1,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 22:57:45.187973",
+  "module": "Bimbel Rumba v16",
+  "name": "Peta Pemakaian Ruang & Guru",
+  "prepared_report": 0,
+  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
+  "ref_doctype": "Rumba Kelas",
+  "reference_report": null,
+  "report_name": "Peta Pemakaian Ruang & Guru",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -86,19 +293,219 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-18 12:02:29.582855",
+  "modified": "2026-07-16 14:37:17.294492",
   "module": "Bimbel Rumba v16",
-  "name": "CRM - Konversi Lead per Cabang",
+  "name": "Pemasaran - Efektivitas Kanal",
   "prepared_report": 0,
-  "query": "SELECT\n    x.unit AS \"Unit:Data:220\",\n    x.total_leads AS \"Total Leads:Int:120\",\n    x.terdaftar AS \"Terdaftar:Int:120\",\n    CONCAT(REPLACE(CAST(x.konversi AS CHAR), '.', ','), '%%') AS \"Konversi:Data:110\"\nFROM (\n    SELECT nama_unit AS unit, 0 AS sortkey,\n        COUNT(*) AS total_leads,\n        SUM(status_lead='Terdaftar') AS terdaftar,\n        ROUND(100*SUM(status_lead='Terdaftar')/NULLIF(COUNT(*),0),1) AS konversi\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY nama_unit\n    UNION ALL\n    SELECT 'TOTAL (gabungan)' AS unit, 1 AS sortkey,\n        COUNT(*) AS total_leads,\n        SUM(status_lead='Terdaftar') AS terdaftar,\n        ROUND(100*SUM(status_lead='Terdaftar')/NULLIF(COUNT(*),0),1) AS konversi\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.unit",
+  "query": "SELECT\n    x.kanal AS \"Kanal:Data:200\",\n    x.leads AS \"Lead:Int:80\",\n    x.trial AS \"Trial:Int:80\",\n    x.terdaftar AS \"Terdaftar:Int:100\",\n    CONCAT(REPLACE(CAST(ROUND(x.terdaftar * 100.0 / NULLIF(x.leads, 0), 1) AS CHAR), '.', ','), '%%') AS \"Konversi:Data:100\",\n    x.biaya AS \"Biaya:Currency:140\",\n    ROUND(x.biaya / NULLIF(x.leads, 0)) AS \"CPL (Biaya/Lead):Currency:150\",\n    ROUND(x.biaya / NULLIF(x.terdaftar, 0)) AS \"CAC (Biaya/Murid):Currency:150\"\nFROM (\n    SELECT 0 AS sortkey, 1 AS urut, 'Kunjungan Sekolah' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Kunjungan Sekolah' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (sekolah = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 2 AS urut, 'Event RUMBA' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Event RUMBA' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kegiatan_rumba = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 3 AS urut, 'Online (IG/FB/Web/Cari)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Online' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 1 OR facebook = 1 OR website_bimbelrumba = 1 OR pencarian_di_internet = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 4 AS urut, 'Rujukan (Kawan/Keluarga)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (kawan = 1 OR keluarga = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 5 AS urut, 'Spanduk/Brosur' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Spanduk/Brosur' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (spanduk_di_jalan = 1 OR brosur_selebaran = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 6 AS urut, 'Lainnya' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.kanal='Lainnya' AND a.tanggal BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE (lainnya = 1) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 0 AS sortkey, 7 AS urut, '(Tanpa Sumber Tercatat)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        0 AS biaya\n    FROM `tabRumba Lead`\n    WHERE (instagram = 0 AND facebook = 0 AND website_bimbelrumba = 0 AND pencarian_di_internet = 0 AND kawan = 0 AND keluarga = 0 AND sekolah = 0 AND kegiatan_rumba = 0 AND spanduk_di_jalan = 0 AND brosur_selebaran = 0 AND lainnya = 0) AND tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n    UNION ALL\n\n    SELECT 1 AS sortkey, 99 AS urut, 'TOTAL (lead unik)' AS kanal,\n        COUNT(*) AS leads,\n        SUM(CASE WHEN tanggal_trial IS NOT NULL THEN 1 ELSE 0 END) AS trial,\n        SUM(CASE WHEN status_lead = 'Terdaftar' THEN 1 ELSE 0 END) AS terdaftar,\n        (SELECT COALESCE(SUM(a.biaya),0) FROM `tabRumba Aktivitas Pemasaran` a WHERE a.tanggal BETWEEN %(from_date)s AND %(to_date)s) + (SELECT COALESCE(SUM(p.jumlah),0) FROM `tabRumba Event Pengeluaran` p JOIN `tabRumba Event` e ON p.parent = e.name AND p.parenttype = 'Rumba Event' WHERE DATE(e.tanggal_mulai) BETWEEN %(from_date)s AND %(to_date)s) AS biaya\n    FROM `tabRumba Lead`\n    WHERE tanggal_lead BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
   "ref_doctype": "Rumba Lead",
   "reference_report": null,
-  "report_name": "CRM - Konversi Lead per Cabang",
+  "report_name": "Pemasaran - Efektivitas Kanal",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
    {
     "role": "System Manager"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-16 14:34:40.528285",
+  "module": "Bimbel Rumba v16",
+  "name": "Kemitraan - Funnel Mitra",
+  "prepared_report": 0,
+  "query": "SELECT\n    x.status AS \"Tahap:Data:180\",\n    x.jumlah AS \"Jumlah Prospek:Int:140\",\n    x.keterangan AS \"Keterangan:Data:240\"\nFROM (\n    SELECT 0 AS sortkey,\n        FIELD(status_mitra,'Baru','Dikualifikasi','Presentasi','Due Diligence','Negosiasi','Perjanjian','Deal','Tidak Jadi') AS urut,\n        status_mitra AS status,\n        COUNT(*) AS jumlah,\n        CONCAT(REPLACE(CAST(ROUND(COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM `tabRumba Mitra Lead` t WHERE t.tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s), 0), 1) AS CHAR), '.', ','), '%% dari total') AS keterangan\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY status_mitra\n    UNION ALL\n    SELECT 1, 99, 'TOTAL PROSPEK', COUNT(*),\n        CONCAT('Konversi Deal: ', REPLACE(CAST(ROUND(SUM(CASE WHEN status_mitra = 'Deal' THEN 1 ELSE 0 END) * 100.0 / NULLIF(COUNT(*), 0), 1) AS CHAR), '.', ','), '%%')\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n) x\nORDER BY x.sortkey, x.urut",
+  "ref_doctype": "Rumba Mitra Lead",
+  "reference_report": null,
+  "report_name": "Kemitraan - Funnel Mitra",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Pay\"]]}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-09 22:43:09.144474",
+  "module": "Bimbel Rumba v16",
+  "name": "Pembayaran (Kas Keluar)",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Payment Entry",
+  "reference_report": null,
+  "report_name": "Pembayaran (Kas Keluar)",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "role": "Accounts User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 13:34:40.661999",
+  "module": "Bimbel Rumba v16",
+  "name": "Presensi di Luar Lokasi",
+  "prepared_report": 0,
+  "query": "SELECT\n  ec.employee AS \"Karyawan:Link/Employee:200\",\n  ec.time AS \"Waktu:Datetime:160\",\n  ec.log_type AS \"Jenis:Data:70\",\n  ec.rumba_status_lokasi AS \"Status Lokasi:Data:120\",\n  ec.rumba_jarak_meter AS \"Jarak (m):Int:90\",\n  ec.latitude AS \"Lat:Float:110\",\n  ec.longitude AS \"Long:Float:110\"\nFROM `tabEmployee Checkin` ec\nWHERE ec.rumba_status_lokasi IN ('Di Luar Lokasi','Tanpa GPS')\nORDER BY ec.time DESC",
+  "ref_doctype": "Employee Checkin",
+  "reference_report": null,
+  "report_name": "Presensi di Luar Lokasi",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-04 10:57:59.807286",
+  "module": "Bimbel Rumba v16",
+  "name": "Rekap Bintang Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    b.murid AS \"Murid:Link/Rumba Murid:160\",\n    b.nama_murid AS \"Nama:Data:180\",\n    m.program_belajar AS \"Program:Link/Rumba Program Belajar:150\",\n    m.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    COUNT(*) AS \"Jumlah Sesi:Int:100\",\n    COALESCE(SUM(b.bintang),0) AS \"Total Bintang:Int:110\"\nFROM `tabRumba BKM Entry` b\nINNER JOIN `tabRumba Murid` m ON m.name = b.murid\nWHERE b.workflow_state = 'Disetujui'\n    AND b.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY b.murid, b.nama_murid, m.program_belajar, m.nama_unit\nORDER BY 6 DESC",
+  "ref_doctype": "Rumba BKM Entry",
+  "reference_report": null,
+  "report_name": "Rekap Bintang Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kurikulum"
    }
   ],
   "timeout": 0
@@ -127,6 +534,395 @@
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-08-02 11:03:01.769394",
+  "module": "Bimbel Rumba v16",
+  "name": "Progres Kenaikan Level Murid",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Murid",
+  "reference_report": null,
+  "report_name": "Progres Kenaikan Level Murid",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Kurikulum"
+   },
+   {
+    "role": "Rumba Finance"
+   },
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": "frappe.query_reports[\"Kenaikan & Kelulusan Calistung\"] = {\n    filters: [\n        { fieldname: \"dari_tanggal\", label: __(\"Dari Tanggal\"), fieldtype: \"Date\" },\n        { fieldname: \"sampai_tanggal\", label: __(\"Sampai Tanggal\"), fieldtype: \"Date\" },\n    ],\n};",
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-04 08:08:55.226249",
+  "module": "Bimbel Rumba v16",
+  "name": "Kenaikan & Kelulusan Calistung",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Ujian Kenaikan Level",
+  "reference_report": null,
+  "report_name": "Kenaikan & Kelulusan Calistung",
+  "report_script": "filters = filters or {}\n\ncodes = frappe.get_all(\n    \"Rumba Program Belajar\",\n    filters={\"program_belajar\": [\"like\", \"%alistung%\"]},\n    pluck=\"name\",\n) or [\"BMSK\"]\n\nujian_filters = {\n    \"hasil\": \"Lulus\",\n    \"status_ujian\": \"Final\",\n    \"program\": [\"in\", codes],\n}\ndari = filters.get(\"dari_tanggal\")\nsampai = filters.get(\"sampai_tanggal\")\nif dari and sampai:\n    ujian_filters[\"tanggal_ujian\"] = [\"between\", [dari, sampai]]\nelif dari:\n    ujian_filters[\"tanggal_ujian\"] = [\">=\", dari]\nelif sampai:\n    ujian_filters[\"tanggal_ujian\"] = [\"<=\", sampai]\n\nrows = frappe.get_list(\n    \"Rumba Ujian Kenaikan Level\",\n    filters=ujian_filters,\n    fields=[\"murid\", \"nama_unit\", \"level_diuji\"],\n    limit_page_length=0,\n)\n\nunits = {}\nfor r in rows:\n    unit = r.nama_unit or \"(Tanpa Unit)\"\n    u = units.setdefault(unit, {\"naik_l2\": set(), \"naik_l3\": set(), \"lulus\": set()})\n    if r.level_diuji == \"Level 1\":\n        u[\"naik_l2\"].add(r.murid)\n    elif r.level_diuji == \"Level 2\":\n        u[\"naik_l3\"].add(r.murid)\n    elif r.level_diuji == \"Level 3\":\n        u[\"lulus\"].add(r.murid)\n\ndata = []\ntot = {\"naik_l2\": 0, \"naik_l3\": 0, \"lulus\": 0}\nfor unit in sorted(units):\n    u = units[unit]\n    naik_l2, naik_l3, lulus = len(u[\"naik_l2\"]), len(u[\"naik_l3\"]), len(u[\"lulus\"])\n    data.append({\n        \"unit\": unit, \"naik_l2\": naik_l2, \"naik_l3\": naik_l3,\n        \"total_kenaikan\": naik_l2 + naik_l3, \"lulus\": lulus,\n    })\n    tot[\"naik_l2\"] = tot[\"naik_l2\"] + naik_l2\n    tot[\"naik_l3\"] = tot[\"naik_l3\"] + naik_l3\n    tot[\"lulus\"] = tot[\"lulus\"] + lulus\n\nif data:\n    data.append({\n        \"unit\": \"TOTAL\", \"naik_l2\": tot[\"naik_l2\"], \"naik_l3\": tot[\"naik_l3\"],\n        \"total_kenaikan\": tot[\"naik_l2\"] + tot[\"naik_l3\"], \"lulus\": tot[\"lulus\"],\n    })\n\ncolumns = [\n    {\"fieldname\": \"unit\", \"label\": \"Unit\", \"fieldtype\": \"Link\", \"options\": \"Rumba Unit\", \"width\": 180},\n    {\"fieldname\": \"naik_l2\", \"label\": \"Naik ke Level 2 (Binar)\", \"fieldtype\": \"Int\", \"width\": 160},\n    {\"fieldname\": \"naik_l3\", \"label\": \"Naik ke Level 3 (Lancar)\", \"fieldtype\": \"Int\", \"width\": 160},\n    {\"fieldname\": \"total_kenaikan\", \"label\": \"Total Naik Tingkat\", \"fieldtype\": \"Int\", \"width\": 140},\n    {\"fieldname\": \"lulus\", \"label\": \"Lulus Program (Level 3)\", \"fieldtype\": \"Int\", \"width\": 160},\n]\n\nif data:\n    report_summary = [\n        {\"value\": tot[\"naik_l2\"] + tot[\"naik_l3\"], \"label\": \"Total Naik Tingkat\", \"datatype\": \"Int\", \"indicator\": \"Blue\"},\n        {\"value\": tot[\"lulus\"], \"label\": \"Total Lulus Program\", \"datatype\": \"Int\", \"indicator\": \"Green\"},\n    ]\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Kurikulum"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": "frappe.query_reports[\"Durasi Penyelesaian Level Calistung\"] = {\n    filters: [\n        { fieldname: \"unit\", label: __(\"Unit\"), fieldtype: \"Link\", options: \"Rumba Unit\" },\n        { fieldname: \"tutor\", label: __(\"Tutor\"), fieldtype: \"Link\", options: \"Employee\" },\n        { fieldname: \"status_murid\", label: __(\"Status Murid\"), fieldtype: \"Select\", options: \"\nBelum Mulai\nAktif\nCuti\nLulus\nBerhenti\" },\n        { fieldname: \"dari_tanggal\", label: __(\"Mulai Belajar Dari Tanggal\"), fieldtype: \"Date\", description: __(\"Opsional - saring murid Calistung berdasar tanggal mulai belajar.\") },\n        { fieldname: \"sampai_tanggal\", label: __(\"Mulai Belajar Sampai Tanggal\"), fieldtype: \"Date\" },\n    ],\n};",
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-04 17:07:14.044039",
+  "module": "Bimbel Rumba v16",
+  "name": "Durasi Penyelesaian Level Calistung",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Ujian Kenaikan Level",
+  "reference_report": null,
+  "report_name": "Durasi Penyelesaian Level Calistung",
+  "report_script": "filters = filters or {}\n\ncodes = frappe.get_all(\n    \"Rumba Program Belajar\",\n    filters={\"program_belajar\": [\"like\", \"%alistung%\"]},\n    pluck=\"name\",\n) or [\"BMSK\"]\n\nkelas_list = frappe.get_all(\n    \"Rumba Kelas\",\n    filters={\"program_belajar\": [\"in\", codes]},\n    fields=[\"name\", \"wali_kelas\"],\n)\nkelas_tutor = {k.name: k.wali_kelas for k in kelas_list}\nkelas_names = list(kelas_tutor.keys())\n\nanggota_rows = frappe.get_all(\n    \"Rumba Anggota Kelas\",\n    filters={\"parent\": [\"in\", kelas_names]},\n    fields=[\"parent\", \"murid\", \"status\", \"tanggal_masuk\", \"tanggal_keluar\"],\n    limit_page_length=0,\n) if kelas_names else []\n\nkelas_history = {}\nfor a in anggota_rows:\n    if not a.murid:\n        continue\n    kelas_history.setdefault(a.murid, []).append(a)\n\ndef pick_tutor_and_start(murid):\n    rows = kelas_history.get(murid) or []\n    if not rows:\n        return None, None\n    aktif = [r for r in rows if r.status == \"Aktif\"]\n    chosen = aktif[0] if aktif else sorted(rows, key=lambda r: r.tanggal_masuk or \"\")[-1]\n    tutor = kelas_tutor.get(chosen.parent)\n    starts = [r.tanggal_masuk for r in rows if r.tanggal_masuk]\n    mulai = min(starts) if starts else None\n    return tutor, mulai\n\nexam_rows = frappe.get_list(\n    \"Rumba Ujian Kenaikan Level\",\n    filters={\"program\": [\"in\", codes]},\n    fields=[\"murid\", \"hasil\", \"status_ujian\", \"level_diuji\", \"tanggal_ujian\"],\n    order_by=\"tanggal_ujian asc\",\n    limit_page_length=0,\n)\n\nexam_murid = set()\nlevel_pass = {}\nfor e in exam_rows:\n    if not e.murid:\n        continue\n    exam_murid.add(e.murid)\n    if e.hasil == \"Lulus\" and e.status_ujian == \"Final\":\n        lv = level_pass.setdefault(e.murid, {})\n        if e.level_diuji not in lv:\n            lv[e.level_diuji] = e.tanggal_ujian\n\ndirect_murid = frappe.get_all(\"Rumba Murid\", filters={\"program_belajar\": [\"in\", codes]}, pluck=\"name\")\n\nall_murid_names = set(direct_murid) | exam_murid | set(kelas_history.keys())\n\ndata = []\ncolumns = [\n    {\"fieldname\": \"unit\", \"label\": \"Unit\", \"fieldtype\": \"Link\", \"options\": \"Rumba Unit\", \"width\": 140},\n    {\"fieldname\": \"murid\", \"label\": \"NIM\", \"fieldtype\": \"Link\", \"options\": \"Rumba Murid\", \"width\": 120},\n    {\"fieldname\": \"nama_murid\", \"label\": \"Nama Murid\", \"fieldtype\": \"Data\", \"width\": 150},\n    {\"fieldname\": \"status_murid\", \"label\": \"Status\", \"fieldtype\": \"Data\", \"width\": 90},\n    {\"fieldname\": \"tahap\", \"label\": \"Tahap Saat Ini\", \"fieldtype\": \"Data\", \"width\": 140},\n    {\"fieldname\": \"tutor\", \"label\": \"Tutor\", \"fieldtype\": \"Link\", \"options\": \"Employee\", \"width\": 120},\n    {\"fieldname\": \"nama_tutor\", \"label\": \"Nama Tutor\", \"fieldtype\": \"Data\", \"width\": 150},\n    {\"fieldname\": \"mulai_belajar\", \"label\": \"Mulai Belajar\", \"fieldtype\": \"Date\", \"width\": 110},\n    {\"fieldname\": \"lulus_l1\", \"label\": \"Lulus L1\", \"fieldtype\": \"Date\", \"width\": 95},\n    {\"fieldname\": \"durasi_l1\", \"label\": \"Durasi L1 (hari)\", \"fieldtype\": \"Int\", \"width\": 115},\n    {\"fieldname\": \"lulus_l2\", \"label\": \"Lulus L2\", \"fieldtype\": \"Date\", \"width\": 95},\n    {\"fieldname\": \"durasi_l2\", \"label\": \"Durasi L2 (hari)\", \"fieldtype\": \"Int\", \"width\": 115},\n    {\"fieldname\": \"lulus_l3\", \"label\": \"Lulus L3\", \"fieldtype\": \"Date\", \"width\": 95},\n    {\"fieldname\": \"durasi_l3\", \"label\": \"Durasi L3 (hari)\", \"fieldtype\": \"Int\", \"width\": 115},\n    {\"fieldname\": \"total_hari\", \"label\": \"Total Hari (berjalan/selesai)\", \"fieldtype\": \"Int\", \"width\": 160},\n]\n\nif all_murid_names:\n    murid_docs = frappe.get_all(\n        \"Rumba Murid\",\n        filters={\"name\": [\"in\", list(all_murid_names)]},\n        fields=[\"name\", \"nama_lengkap\", \"status_murid\", \"nama_unit\", \"pendaftaran\",\n                \"tanggal_mulai_belajar_aktual\", \"tanggal_pendaftaran\"],\n    )\n\n    pengunduran = frappe.get_all(\n        \"Rumba Pengunduran Diri\",\n        filters={\"murid\": [\"in\", list(all_murid_names)], \"status_pengunduran\": \"Final\"},\n        fields=[\"murid\", \"tanggal_efektif\"],\n        order_by=\"tanggal_efektif desc\",\n    )\n    exit_date = {}\n    for p in pengunduran:\n        if p.murid not in exit_date:\n            exit_date[p.murid] = p.tanggal_efektif\n\n    tutor_ids = {v for v in kelas_tutor.values() if v}\n    employee_names = {}\n    if tutor_ids:\n        for emp in frappe.get_all(\"Employee\", filters={\"name\": [\"in\", list(tutor_ids)]}, fields=[\"name\", \"employee_name\"]):\n            employee_names[emp.name] = emp.employee_name\n\n    def tahap_label(status_murid, l1, l2, l3):\n        if l3:\n            return \"Lulus\"\n        reached = \"Level 1\"\n        if l2:\n            reached = \"Level 3\"\n        elif l1:\n            reached = \"Level 2\"\n        if status_murid == \"Berhenti\":\n            return \"Berhenti di \" + reached\n        return \"Sedang \" + reached\n\n    f_unit = filters.get(\"unit\")\n    f_tutor = filters.get(\"tutor\")\n    f_status = filters.get(\"status_murid\")\n    dari = filters.get(\"dari_tanggal\")\n    sampai = filters.get(\"sampai_tanggal\")\n\n    acc = {\"d1\": [], \"d2\": [], \"d3\": [], \"total_lulus\": []}\n    jumlah = {\"lulus\": 0, \"berhenti\": 0, \"belajar\": 0}\n\n    for m in murid_docs:\n        lv = level_pass.get(m.name, {})\n        l1, l2, l3 = lv.get(\"Level 1\"), lv.get(\"Level 2\"), lv.get(\"Level 3\")\n\n        tutor, mulai_kelas = pick_tutor_and_start(m.name)\n\n        mulai = mulai_kelas or m.tanggal_mulai_belajar_aktual\n        if not mulai and m.pendaftaran:\n            mulai = frappe.db.get_value(\"Rumba Pendaftaran\", m.pendaftaran, \"tanggal_mulai_belajar\")\n        mulai = mulai or m.tanggal_pendaftaran\n\n        if f_unit and m.nama_unit != f_unit:\n            continue\n        if f_tutor and tutor != f_tutor:\n            continue\n        if f_status and m.status_murid != f_status:\n            continue\n        if dari and mulai and frappe.utils.date_diff(mulai, dari) < 0:\n            continue\n        if sampai and mulai and frappe.utils.date_diff(mulai, sampai) > 0:\n            continue\n\n        tahap = tahap_label(m.status_murid, l1, l2, l3)\n\n        if tahap == \"Lulus\":\n            akhir = l3\n            jumlah[\"lulus\"] = jumlah[\"lulus\"] + 1\n        elif m.status_murid == \"Berhenti\":\n            akhir = exit_date.get(m.name)\n            jumlah[\"berhenti\"] = jumlah[\"berhenti\"] + 1\n        else:\n            akhir = frappe.utils.today()\n            jumlah[\"belajar\"] = jumlah[\"belajar\"] + 1\n\n        d1 = frappe.utils.date_diff(l1, mulai) if (l1 and mulai) else None\n        d2 = frappe.utils.date_diff(l2, l1) if (l2 and l1) else None\n        d3 = frappe.utils.date_diff(l3, l2) if (l3 and l2) else None\n        total = frappe.utils.date_diff(akhir, mulai) if (akhir and mulai) else None\n\n        for key, val in ((\"d1\", d1), (\"d2\", d2), (\"d3\", d3)):\n            if val is not None and val >= 0:\n                acc[key].append(val)\n        if tahap == \"Lulus\" and total is not None and total >= 0:\n            acc[\"total_lulus\"].append(total)\n\n        data.append({\n            \"unit\": m.nama_unit,\n            \"murid\": m.name,\n            \"nama_murid\": m.nama_lengkap,\n            \"status_murid\": m.status_murid,\n            \"tahap\": tahap,\n            \"tutor\": tutor,\n            \"nama_tutor\": employee_names.get(tutor),\n            \"mulai_belajar\": mulai,\n            \"lulus_l1\": l1,\n            \"durasi_l1\": d1,\n            \"lulus_l2\": l2,\n            \"durasi_l2\": d2,\n            \"lulus_l3\": l3,\n            \"durasi_l3\": d3,\n            \"total_hari\": total,\n        })\n\n    data.sort(key=lambda r: (r.get(\"unit\") or \"\", r.get(\"nama_murid\") or \"\"))\n\n    def hitung_rata(lst):\n        if not lst:\n            return None\n        return round(frappe.utils.flt(sum(lst)) / len(lst), 1)\n\n    if data:\n        report_summary = [\n            {\"value\": len(data), \"label\": \"Total Murid Calistung\", \"datatype\": \"Int\", \"indicator\": \"Blue\"},\n            {\"value\": jumlah[\"lulus\"], \"label\": \"Lulus\", \"datatype\": \"Int\", \"indicator\": \"Green\"},\n            {\"value\": jumlah[\"belajar\"], \"label\": \"Masih Belajar\", \"datatype\": \"Int\", \"indicator\": \"Orange\"},\n            {\"value\": jumlah[\"berhenti\"], \"label\": \"Berhenti\", \"datatype\": \"Int\", \"indicator\": \"Red\"},\n            {\"value\": hitung_rata(acc[\"d1\"]), \"label\": \"Rata-rata Durasi L1 (hari)\", \"datatype\": \"Float\", \"indicator\": \"Blue\"},\n            {\"value\": hitung_rata(acc[\"d2\"]), \"label\": \"Rata-rata Durasi L2 (hari)\", \"datatype\": \"Float\", \"indicator\": \"Blue\"},\n            {\"value\": hitung_rata(acc[\"d3\"]), \"label\": \"Rata-rata Durasi L3 (hari)\", \"datatype\": \"Float\", \"indicator\": \"Blue\"},\n            {\"value\": hitung_rata(acc[\"total_lulus\"]), \"label\": \"Rata-rata Total Durasi (Lulus)\", \"datatype\": \"Float\", \"indicator\": \"Green\"},\n        ]\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Kurikulum"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": "frappe.query_reports[\"Performa Tutor Calistung\"] = {\n    filters: [\n        { fieldname: \"unit\", label: __(\"Unit\"), fieldtype: \"Link\", options: \"Rumba Unit\" },\n    ],\n};",
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-08-04 17:07:15.087691",
+  "module": "Bimbel Rumba v16",
+  "name": "Performa Tutor Calistung",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Murid",
+  "reference_report": null,
+  "report_name": "Performa Tutor Calistung",
+  "report_script": "filters = filters or {}\n\ncodes = frappe.get_all(\n    \"Rumba Program Belajar\",\n    filters={\"program_belajar\": [\"like\", \"%alistung%\"]},\n    pluck=\"name\",\n) or [\"BMSK\"]\n\nkelas_list = frappe.get_all(\n    \"Rumba Kelas\",\n    filters={\"program_belajar\": [\"in\", codes]},\n    fields=[\"name\", \"wali_kelas\", \"nama_unit\"],\n)\nkelas_tutor = {k.name: k.wali_kelas for k in kelas_list}\nkelas_unit = {k.name: k.nama_unit for k in kelas_list}\nkelas_names = list(kelas_tutor.keys())\n\nanggota_rows = frappe.get_all(\n    \"Rumba Anggota Kelas\",\n    filters={\"parent\": [\"in\", kelas_names]},\n    fields=[\"parent\", \"murid\", \"status\", \"tanggal_masuk\", \"tanggal_keluar\"],\n    limit_page_length=0,\n) if kelas_names else []\n\nkelas_history = {}\nfor a in anggota_rows:\n    if not a.murid:\n        continue\n    kelas_history.setdefault(a.murid, []).append(a)\n\ndef pick_tutor_and_start(murid):\n    rows = kelas_history.get(murid) or []\n    if not rows:\n        return None, None\n    aktif = [r for r in rows if r.status == \"Aktif\"]\n    chosen = aktif[0] if aktif else sorted(rows, key=lambda r: r.tanggal_masuk or \"\")[-1]\n    tutor = kelas_tutor.get(chosen.parent)\n    starts = [r.tanggal_masuk for r in rows if r.tanggal_masuk]\n    mulai = min(starts) if starts else None\n    return tutor, mulai\n\nexam_rows = frappe.get_list(\n    \"Rumba Ujian Kenaikan Level\",\n    filters={\"program\": [\"in\", codes]},\n    fields=[\"murid\", \"hasil\", \"status_ujian\", \"level_diuji\", \"tanggal_ujian\"],\n    order_by=\"tanggal_ujian asc\",\n    limit_page_length=0,\n)\n\nexam_murid = set()\nlevel_pass = {}\nfor e in exam_rows:\n    if not e.murid:\n        continue\n    exam_murid.add(e.murid)\n    if e.hasil == \"Lulus\" and e.status_ujian == \"Final\":\n        lv = level_pass.setdefault(e.murid, {})\n        if e.level_diuji not in lv:\n            lv[e.level_diuji] = e.tanggal_ujian\n\ndirect_murid = frappe.get_all(\"Rumba Murid\", filters={\"program_belajar\": [\"in\", codes]}, pluck=\"name\")\n\nall_murid_names = set(direct_murid) | exam_murid | set(kelas_history.keys())\n\ncolumns = [\n    {\"fieldname\": \"tutor\", \"label\": \"Tutor\", \"fieldtype\": \"Link\", \"options\": \"Employee\", \"width\": 130},\n    {\"fieldname\": \"nama_tutor\", \"label\": \"Nama Tutor\", \"fieldtype\": \"Data\", \"width\": 170},\n    {\"fieldname\": \"jumlah_murid\", \"label\": \"Jumlah Murid\", \"fieldtype\": \"Int\", \"width\": 100},\n    {\"fieldname\": \"lulus\", \"label\": \"Lulus\", \"fieldtype\": \"Int\", \"width\": 80},\n    {\"fieldname\": \"masih_belajar\", \"label\": \"Masih Belajar\", \"fieldtype\": \"Int\", \"width\": 100},\n    {\"fieldname\": \"berhenti\", \"label\": \"Berhenti\", \"fieldtype\": \"Int\", \"width\": 90},\n    {\"fieldname\": \"rata_durasi_l1\", \"label\": \"Rata-rata Durasi L1 (hari)\", \"fieldtype\": \"Float\", \"width\": 150},\n    {\"fieldname\": \"rata_durasi_l2\", \"label\": \"Rata-rata Durasi L2 (hari)\", \"fieldtype\": \"Float\", \"width\": 150},\n    {\"fieldname\": \"rata_durasi_l3\", \"label\": \"Rata-rata Durasi L3 (hari)\", \"fieldtype\": \"Float\", \"width\": 150},\n    {\"fieldname\": \"rata_total_lulus\", \"label\": \"Rata-rata Total Lulus (hari)\", \"fieldtype\": \"Float\", \"width\": 160},\n    {\"fieldname\": \"tercepat_hari\", \"label\": \"Tercepat (hari)\", \"fieldtype\": \"Int\", \"width\": 110},\n    {\"fieldname\": \"terlama_hari\", \"label\": \"Terlama (hari)\", \"fieldtype\": \"Int\", \"width\": 110},\n]\n\ndata = []\n\nif all_murid_names:\n    murid_docs = frappe.get_all(\n        \"Rumba Murid\",\n        filters={\"name\": [\"in\", list(all_murid_names)]},\n        fields=[\"name\", \"nama_lengkap\", \"status_murid\", \"nama_unit\", \"pendaftaran\",\n                \"tanggal_mulai_belajar_aktual\", \"tanggal_pendaftaran\"],\n    )\n\n    pengunduran = frappe.get_all(\n        \"Rumba Pengunduran Diri\",\n        filters={\"murid\": [\"in\", list(all_murid_names)], \"status_pengunduran\": \"Final\"},\n        fields=[\"murid\", \"tanggal_efektif\"],\n        order_by=\"tanggal_efektif desc\",\n    )\n    exit_date = {}\n    for p in pengunduran:\n        if p.murid not in exit_date:\n            exit_date[p.murid] = p.tanggal_efektif\n\n    tutor_ids = {v for v in kelas_tutor.values() if v}\n    employee_names = {}\n    if tutor_ids:\n        for emp in frappe.get_all(\"Employee\", filters={\"name\": [\"in\", list(tutor_ids)]}, fields=[\"name\", \"employee_name\"]):\n            employee_names[emp.name] = emp.employee_name\n\n    f_unit = filters.get(\"unit\")\n\n    per_tutor = {}\n    for m in murid_docs:\n        lv = level_pass.get(m.name, {})\n        l1, l2, l3 = lv.get(\"Level 1\"), lv.get(\"Level 2\"), lv.get(\"Level 3\")\n\n        tutor, mulai_kelas = pick_tutor_and_start(m.name)\n        if not tutor:\n            continue\n\n        if f_unit and m.nama_unit != f_unit:\n            continue\n\n        mulai = mulai_kelas or m.tanggal_mulai_belajar_aktual\n        if not mulai and m.pendaftaran:\n            mulai = frappe.db.get_value(\"Rumba Pendaftaran\", m.pendaftaran, \"tanggal_mulai_belajar\")\n        mulai = mulai or m.tanggal_pendaftaran\n\n        lulus = bool(l3)\n        if lulus:\n            akhir = l3\n        elif m.status_murid == \"Berhenti\":\n            akhir = exit_date.get(m.name)\n        else:\n            akhir = frappe.utils.today()\n\n        d1 = frappe.utils.date_diff(l1, mulai) if (l1 and mulai) else None\n        d2 = frappe.utils.date_diff(l2, l1) if (l2 and l1) else None\n        d3 = frappe.utils.date_diff(l3, l2) if (l3 and l2) else None\n        total = frappe.utils.date_diff(akhir, mulai) if (akhir and mulai) else None\n\n        t = per_tutor.setdefault(tutor, {\n            \"jumlah_murid\": 0, \"lulus\": 0, \"berhenti\": 0, \"belajar\": 0,\n            \"d1\": [], \"d2\": [], \"d3\": [], \"total_lulus\": [],\n        })\n        t[\"jumlah_murid\"] = t[\"jumlah_murid\"] + 1\n        if lulus:\n            t[\"lulus\"] = t[\"lulus\"] + 1\n            if total is not None and total >= 0:\n                t[\"total_lulus\"].append(total)\n        elif m.status_murid == \"Berhenti\":\n            t[\"berhenti\"] = t[\"berhenti\"] + 1\n        else:\n            t[\"belajar\"] = t[\"belajar\"] + 1\n\n        if d1 is not None and d1 >= 0:\n            t[\"d1\"].append(d1)\n        if d2 is not None and d2 >= 0:\n            t[\"d2\"].append(d2)\n        if d3 is not None and d3 >= 0:\n            t[\"d3\"].append(d3)\n\n    def hitung_rata(lst):\n        if not lst:\n            return None\n        return round(frappe.utils.flt(sum(lst)) / len(lst), 1)\n\n    for tutor, t in per_tutor.items():\n        data.append({\n            \"tutor\": tutor,\n            \"nama_tutor\": employee_names.get(tutor),\n            \"jumlah_murid\": t[\"jumlah_murid\"],\n            \"lulus\": t[\"lulus\"],\n            \"masih_belajar\": t[\"belajar\"],\n            \"berhenti\": t[\"berhenti\"],\n            \"rata_durasi_l1\": hitung_rata(t[\"d1\"]),\n            \"rata_durasi_l2\": hitung_rata(t[\"d2\"]),\n            \"rata_durasi_l3\": hitung_rata(t[\"d3\"]),\n            \"rata_total_lulus\": hitung_rata(t[\"total_lulus\"]),\n            \"tercepat_hari\": min(t[\"total_lulus\"]) if t[\"total_lulus\"] else None,\n            \"terlama_hari\": max(t[\"total_lulus\"]) if t[\"total_lulus\"] else None,\n        })\n\n    data.sort(key=lambda r: (r[\"rata_total_lulus\"] is None, r[\"rata_total_lulus\"] if r[\"rata_total_lulus\"] is not None else 0))\n\n    if data:\n        with_lulus = [r for r in data if r[\"rata_total_lulus\"] is not None]\n        report_summary = [\n            {\"value\": len(data), \"label\": \"Jumlah Tutor Calistung\", \"datatype\": \"Int\", \"indicator\": \"Blue\"},\n            {\"value\": sum(r[\"jumlah_murid\"] for r in data), \"label\": \"Total Murid Tertangani\", \"datatype\": \"Int\", \"indicator\": \"Blue\"},\n            {\"value\": len(with_lulus), \"label\": \"Tutor dengan Murid Lulus\", \"datatype\": \"Int\", \"indicator\": \"Green\"},\n        ]\n",
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Kurikulum"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Mitra"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-06-19 14:30:00",
+  "module": "Bimbel Rumba v16",
+  "name": "Rekap Kehadiran Murid",
+  "prepared_report": 0,
+  "query": "SELECT\n    p.murid AS \"Murid:Link/Rumba Murid:150\",\n    m.nama_lengkap AS \"Nama:Data:170\",\n    k.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    SUM(p.status_kehadiran='Hadir') AS \"Hadir:Int:70\",\n    SUM(p.status_kehadiran='Izin') AS \"Izin:Int:70\",\n    SUM(p.status_kehadiran='Sakit') AS \"Sakit:Int:70\",\n    SUM(p.status_kehadiran='Alpa') AS \"Alpa:Int:70\",\n    COUNT(*) AS \"Total Sesi:Int:90\",\n    CONCAT(REPLACE(CAST(ROUND(100*SUM(p.status_kehadiran='Hadir')/NULLIF(COUNT(*),0),1) AS CHAR),'.',','),'%%') AS \"%% Hadir:Data:90\"\nFROM `tabRumba Presensi Murid` p\nINNER JOIN `tabRumba Sesi Kelas` s ON s.name = p.parent\nINNER JOIN `tabRumba Kelas` k ON k.name = s.kelas\nLEFT JOIN `tabRumba Murid` m ON m.name = p.murid\nWHERE s.workflow_state = 'Disetujui'\n    AND s.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY p.murid, m.nama_lengkap, k.nama_unit\nORDER BY m.nama_lengkap",
+  "ref_doctype": "Rumba Sesi Kelas",
+  "reference_report": null,
+  "report_name": "Rekap Kehadiran Murid",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 10:51:04.140579",
+  "module": "Bimbel Rumba v16",
+  "name": "Rekap Izin & Penggantian Tutor",
+  "prepared_report": 0,
+  "query": "SELECT\n  s.nama_unit AS \"Unit:Link/Rumba Unit:160\",\n  s.guru AS \"Tutor Asli:Link/Employee:220\",\n  SUM(CASE WHEN s.status_sesi='Diganti' THEN 1 ELSE 0 END) AS \"Digantikan (Izin):Int:150\",\n  SUM(CASE WHEN s.status_sesi='Batal' THEN 1 ELSE 0 END) AS \"Sesi Batal:Int:120\"\nFROM `tabRumba Sesi Kelas` s\nWHERE s.status_sesi IN ('Diganti','Batal') AND IFNULL(s.guru,'')!=''\nGROUP BY s.nama_unit, s.guru\nORDER BY 3 DESC, 4 DESC",
+  "ref_doctype": "Rumba Sesi Kelas",
+  "reference_report": null,
+  "report_name": "Rekap Izin & Penggantian Tutor",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "from_date",
+    "fieldtype": "Date",
+    "label": "Dari Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "to_date",
+    "fieldtype": "Date",
+    "label": "Sampai Tanggal",
+    "mandatory": 1,
+    "options": null,
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-07-31 11:57:01.635045",
+  "module": "Bimbel Rumba v16",
+  "name": "Rekap Jam Mengajar (F-GAJ-01)",
+  "prepared_report": 0,
+  "query": "SELECT\n    CASE WHEN s.status_sesi='Diganti' AND s.guru_pengganti IS NOT NULL AND s.guru_pengganti<>'' THEN s.guru_pengganti ELSE s.guru END AS \"Guru:Link/Employee:160\",\n    k.program_belajar AS \"Program:Link/Rumba Program Belajar:150\",\n    k.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    COUNT(*) AS \"Total Pertemuan:Int:120\",\n    SUM(s.durasi_menit) AS \"Total Menit:Int:110\",\n    ROUND(SUM(s.durasi_menit)/60,2) AS \"Total Jam:Float:100\"\nFROM `tabRumba Sesi Kelas` s\nINNER JOIN `tabRumba Kelas` k ON k.name = s.kelas\nWHERE s.status_sesi = 'Terlaksana'\n    AND s.workflow_state = 'Disetujui'\n    AND s.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY CASE WHEN s.status_sesi='Diganti' AND s.guru_pengganti IS NOT NULL AND s.guru_pengganti<>'' THEN s.guru_pengganti ELSE s.guru END, k.program_belajar, k.nama_unit\nORDER BY 1",
+  "ref_doctype": "Rumba Sesi Kelas",
+  "reference_report": null,
+  "report_name": "Rekap Jam Mengajar (F-GAJ-01)",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "System Manager"
+   },
+   {
+    "role": "Rumba Tutor"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Personalia"
+   },
+   {
+    "role": "Rumba Founder"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-06-30 20:22:47.632669",
+  "module": "Bimbel Rumba v16",
+  "name": "Daftar Peserta Event",
+  "prepared_report": 0,
+  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:190\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  p.murid AS \"Murid:Link/Rumba Murid:110\",\n  p.nama_murid AS \"Nama:Data:160\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.program_belajar AS \"Program:Link/Rumba Program Belajar:130\",\n  p.status_kehadiran AS \"Kehadiran:Data:100\",\n  p.status_pembayaran AS \"Pembayaran:Data:110\",\n  p.keterangan_hasil AS \"Hasil/Predikat:Data:140\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nWHERE p.parenttype = 'Rumba Event'\nORDER BY ev.tanggal_mulai DESC, p.idx",
+  "ref_doctype": "Rumba Event",
+  "reference_report": null,
+  "report_name": "Daftar Peserta Event",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   },
    {
     "role": "System Manager"
    }
@@ -224,15 +1020,15 @@
   "is_standard": "No",
   "javascript": null,
   "json": null,
-  "letter_head": null,
-  "modified": "2026-06-19 14:30:00",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-11 08:38:14.125719",
   "module": "Bimbel Rumba v16",
-  "name": "Rekap Kehadiran Murid",
+  "name": "Riwayat Ujian Kenaikan Level",
   "prepared_report": 0,
-  "query": "SELECT\n    p.murid AS \"Murid:Link/Rumba Murid:150\",\n    m.nama_lengkap AS \"Nama:Data:170\",\n    k.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    SUM(p.status_kehadiran='Hadir') AS \"Hadir:Int:70\",\n    SUM(p.status_kehadiran='Izin') AS \"Izin:Int:70\",\n    SUM(p.status_kehadiran='Sakit') AS \"Sakit:Int:70\",\n    SUM(p.status_kehadiran='Alpa') AS \"Alpa:Int:70\",\n    COUNT(*) AS \"Total Sesi:Int:90\",\n    CONCAT(REPLACE(CAST(ROUND(100*SUM(p.status_kehadiran='Hadir')/NULLIF(COUNT(*),0),1) AS CHAR),'.',','),'%%') AS \"%% Hadir:Data:90\"\nFROM `tabRumba Presensi Murid` p\nINNER JOIN `tabRumba Sesi Kelas` s ON s.name = p.parent\nINNER JOIN `tabRumba Kelas` k ON k.name = s.kelas\nLEFT JOIN `tabRumba Murid` m ON m.name = p.murid\nWHERE s.workflow_state = 'Disetujui'\n    AND s.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY p.murid, m.nama_lengkap, k.nama_unit\nORDER BY m.nama_lengkap",
-  "ref_doctype": "Rumba Sesi Kelas",
+  "query": "SELECT\n    u.name AS \"Ujian:Link/Rumba Ujian Kenaikan Level:140\",\n    u.tanggal_ujian AS \"Tanggal:Date:100\",\n    u.murid AS \"Murid:Link/Rumba Murid:130\",\n    m.nama_lengkap AS \"Nama:Data:170\",\n    m.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    u.program AS \"Program:Data:130\",\n    u.level_diuji AS \"Level Diuji:Data:100\",\n    e.employee_name AS \"Penguji:Data:160\",\n    u.hasil AS \"Hasil:Data:100\",\n    u.status_ujian AS \"Status:Data:80\"\nFROM `tabRumba Ujian Kenaikan Level` u\nINNER JOIN `tabRumba Murid` m ON m.name = u.murid\nLEFT JOIN `tabEmployee` e ON e.name = u.penguji\nWHERE u.tanggal_ujian BETWEEN %(from_date)s AND %(to_date)s\nORDER BY u.tanggal_ujian DESC, u.name DESC",
+  "ref_doctype": "Rumba Ujian Kenaikan Level",
   "reference_report": null,
-  "report_name": "Rekap Kehadiran Murid",
+  "report_name": "Riwayat Ujian Kenaikan Level",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
@@ -240,10 +1036,16 @@
     "role": "System Manager"
    },
    {
-    "role": "Rumba Tutor"
+    "role": "Rumba Kurikulum"
    },
    {
     "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   },
+   {
+    "role": "Rumba Founder"
    }
   ],
   "timeout": 0
@@ -256,49 +1058,101 @@
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Report",
-  "filters": [
-   {
-    "default": null,
-    "fieldname": "from_date",
-    "fieldtype": "Date",
-    "label": "Dari Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   },
-   {
-    "default": null,
-    "fieldname": "to_date",
-    "fieldtype": "Date",
-    "label": "Sampai Tanggal",
-    "mandatory": 1,
-    "options": null,
-    "wildcard_filter": 0
-   }
-  ],
+  "filters": [],
   "is_standard": "No",
   "javascript": null,
-  "json": null,
-  "letter_head": null,
-  "modified": "2026-06-19 14:30:00",
+  "json": "{\"filters\":[[\"Payment Entry\",\"payment_type\",\"=\",\"Receive\"]]}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-09 22:43:07.453244",
   "module": "Bimbel Rumba v16",
-  "name": "Rekap Jam Mengajar (F-GAJ-01)",
+  "name": "Penerimaan (Kas Masuk)",
   "prepared_report": 0,
-  "query": "SELECT\n    CASE WHEN s.status_sesi='Diganti' AND s.guru_pengganti IS NOT NULL AND s.guru_pengganti<>'' THEN s.guru_pengganti ELSE s.guru END AS \"Guru:Link/Employee:160\",\n    k.program_belajar AS \"Program:Link/Rumba Program Belajar:150\",\n    k.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    COUNT(*) AS \"Total Pertemuan:Int:120\",\n    SUM(s.durasi_menit) AS \"Total Menit:Int:110\",\n    ROUND(SUM(s.durasi_menit)/60,2) AS \"Total Jam:Float:100\"\nFROM `tabRumba Sesi Kelas` s\nINNER JOIN `tabRumba Kelas` k ON k.name = s.kelas\nWHERE s.status_sesi = 'Terlaksana'\n    AND s.workflow_state = 'Disetujui'\n    AND s.tanggal_sesi BETWEEN %(from_date)s AND %(to_date)s\nGROUP BY CASE WHEN s.status_sesi='Diganti' AND s.guru_pengganti IS NOT NULL AND s.guru_pengganti<>'' THEN s.guru_pengganti ELSE s.guru END, k.program_belajar, k.nama_unit\nORDER BY 1",
-  "ref_doctype": "Rumba Sesi Kelas",
+  "query": null,
+  "ref_doctype": "Payment Entry",
   "reference_report": null,
-  "report_name": "Rekap Jam Mengajar (F-GAJ-01)",
+  "report_name": "Penerimaan (Kas Masuk)",
   "report_script": null,
-  "report_type": "Query Report",
+  "report_type": "Report Builder",
   "roles": [
    {
-    "role": "System Manager"
+    "role": "Accounts User"
    },
    {
-    "role": "Rumba Tutor"
+    "role": "Accounts Manager"
    },
    {
     "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2026-07-15 00:56:57.420912",
+  "module": "Bimbel Rumba v16",
+  "name": "Kesiswaan per Unit",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Rumba Kesiswaan Bulanan",
+  "reference_report": null,
+  "report_name": "Kesiswaan per Unit",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": "{\"filters\":[[\"Sales Invoice\",\"update_stock\",\"=\",1]]}",
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-09 22:43:09.943490",
+  "module": "Bimbel Rumba v16",
+  "name": "Penjualan Barang",
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Sales Invoice",
+  "reference_report": null,
+  "report_name": "Penjualan Barang",
+  "report_script": null,
+  "report_type": "Report Builder",
+  "roles": [
+   {
+    "role": "Accounts User"
+   },
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Employee Self Service"
+   },
+   {
+    "role": "Rumba Admin Unit"
+   },
+   {
+    "role": "Rumba Kepala Unit"
    }
   ],
   "timeout": 0
@@ -335,14 +1189,14 @@
   "javascript": null,
   "json": null,
   "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-20 07:07:00.139575",
+  "modified": "2026-07-16 14:49:28.538957",
   "module": "Bimbel Rumba v16",
-  "name": "Riwayat Ujian Kenaikan Level",
+  "name": "Kemitraan - Nilai Pipeline",
   "prepared_report": 0,
-  "query": "SELECT\n    u.name AS \"Ujian:Link/Rumba Ujian Kenaikan Level:140\",\n    u.tanggal_ujian AS \"Tanggal:Date:100\",\n    u.murid AS \"Murid:Link/Rumba Murid:130\",\n    m.nama_lengkap AS \"Nama:Data:170\",\n    m.nama_unit AS \"Unit:Link/Rumba Unit:140\",\n    u.program AS \"Program:Data:130\",\n    u.level_diuji AS \"Level Diuji:Data:100\",\n    e.employee_name AS \"Penguji:Data:160\",\n    u.hasil AS \"Hasil:Data:100\",\n    u.status_ujian AS \"Status:Data:80\"\nFROM `tabRumba Ujian Kenaikan Level` u\nINNER JOIN `tabRumba Murid` m ON m.name = u.murid\nLEFT JOIN `tabEmployee` e ON e.name = u.penguji\nWHERE u.tanggal_ujian BETWEEN %(from_date)s AND %(to_date)s\nORDER BY u.tanggal_ujian DESC, u.name DESC",
-  "ref_doctype": "Rumba Ujian Kenaikan Level",
+  "query": "SELECT\n    x.status AS \"Tahap:Data:200\",\n    x.jumlah AS \"Jumlah Prospek:Int:140\",\n    x.total_fee AS \"Total Franchise Fee:Currency:200\"\nFROM (\n    SELECT 0 AS sortkey,\n        FIELD(status_mitra,'Baru','Dikualifikasi','Presentasi','Due Diligence','Negosiasi','Perjanjian','Deal','Tidak Jadi') AS urut,\n        status_mitra AS status,\n        COUNT(*) AS jumlah,\n        SUM(COALESCE(franchise_fee, 0)) AS total_fee\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n    GROUP BY status_mitra\n    UNION ALL\n    SELECT 1, 98, 'TOTAL PIPELINE AKTIF', COUNT(*), COALESCE(SUM(COALESCE(franchise_fee, 0)), 0)\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n      AND status_mitra NOT IN ('Deal', 'Tidak Jadi')\n    UNION ALL\n    SELECT 1, 99, 'FEE TEREALISASI (DEAL)', COUNT(*), COALESCE(SUM(COALESCE(franchise_fee, 0)), 0)\n    FROM `tabRumba Mitra Lead`\n    WHERE tanggal_prospek BETWEEN %(from_date)s AND %(to_date)s\n      AND status_mitra = 'Deal'\n) x\nORDER BY x.sortkey, x.urut",
+  "ref_doctype": "Rumba Mitra Lead",
   "reference_report": null,
-  "report_name": "Riwayat Ujian Kenaikan Level",
+  "report_name": "Kemitraan - Nilai Pipeline",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [
@@ -350,13 +1204,52 @@
     "role": "System Manager"
    },
    {
-    "role": "Rumba Akademik"
+    "role": "Rumba Bisnis"
+   },
+   {
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "Rumba Finance"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Company Letterhead - Grey",
+  "modified": "2026-07-31 22:57:10.676795",
+  "module": "Bimbel Rumba v16",
+  "name": "Alokasi Rombel",
+  "prepared_report": 0,
+  "query": "SELECT\n  r.nama_unit AS \"Unit:Link/Rumba Unit:150\",\n  r.nama_ruangan AS \"Ruang:Data:120\",\n  s.jam AS \"Jam:Data:105\",\n  GROUP_CONCAT(CASE WHEN k.senin=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Senin:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.selasa=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Selasa:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.rabu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Rabu:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.kamis=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Kamis:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.jumat=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Jumat:Data:165\",\n  GROUP_CONCAT(CASE WHEN k.sabtu=1 THEN CONCAT(k.nama_kelas, IF(IFNULL(k.wali_kelas,'')='', ' ⚠', CONCAT(' — ', IFNULL(e.employee_name, k.wali_kelas)))) END SEPARATOR ' / ') AS \"Sabtu:Data:165\"\nFROM `tabRumba Ruangan` r\nCROSS JOIN (\n  SELECT '09.30 - 10.45' AS jam UNION ALL SELECT '11.00 - 12.15' UNION ALL SELECT '12.30 - 13.45'\n  UNION ALL SELECT '14.00 - 15.15' UNION ALL SELECT '15.30 - 16.45' UNION ALL SELECT '17.00 - 18.15'\n  UNION ALL SELECT '18.45 - 20.00'\n) s\nLEFT JOIN `tabRumba Kelas` k ON k.nama_ruangan = r.name AND k.jam_belajar = s.jam AND k.status_kelas = 'Aktif'\nLEFT JOIN `tabEmployee` e ON e.name = k.wali_kelas\nWHERE r.status_ruangan = 'Aktif'\nGROUP BY r.name, s.jam\nORDER BY r.nama_unit, r.nama_ruangan, s.jam",
+  "ref_doctype": "Rumba Kelas",
+  "reference_report": null,
+  "report_name": "Alokasi Rombel",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "role": "Rumba Personalia"
    },
    {
     "role": "Rumba Admin Unit"
    },
    {
-    "role": "Rumba Tutor"
+    "role": "Rumba Founder"
+   },
+   {
+    "role": "System Manager"
    }
   ],
   "timeout": 0
@@ -415,123 +1308,6 @@
   "ref_doctype": "Rumba Event",
   "reference_report": null,
   "report_name": "Profitabilitas Event",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:47.632669",
-  "module": "Bimbel Rumba v16",
-  "name": "Daftar Peserta Event",
-  "prepared_report": 0,
-  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:190\",\n  ev.jenis_event AS \"Jenis:Data:130\",\n  p.murid AS \"Murid:Link/Rumba Murid:110\",\n  p.nama_murid AS \"Nama:Data:160\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.program_belajar AS \"Program:Link/Rumba Program Belajar:130\",\n  p.status_kehadiran AS \"Kehadiran:Data:100\",\n  p.status_pembayaran AS \"Pembayaran:Data:110\",\n  p.keterangan_hasil AS \"Hasil/Predikat:Data:140\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nWHERE p.parenttype = 'Rumba Event'\nORDER BY ev.tanggal_mulai DESC, p.idx",
-  "ref_doctype": "Rumba Event",
-  "reference_report": null,
-  "report_name": "Daftar Peserta Event",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:48.011205",
-  "module": "Bimbel Rumba v16",
-  "name": "Pembayaran Peserta Event",
-  "prepared_report": 0,
-  "query": "SELECT\n  p.parent AS \"Event:Link/Rumba Event:120\",\n  ev.judul_event AS \"Judul Event:Data:180\",\n  p.nama_murid AS \"Nama:Data:150\",\n  p.unit_murid AS \"Unit:Link/Rumba Unit:130\",\n  p.sales_invoice AS \"Invoice:Link/Sales Invoice:150\",\n  p.status_pembayaran AS \"Status Bayar:Data:110\",\n  si.grand_total AS \"Tagihan:Currency:110\",\n  si.outstanding_amount AS \"Sisa:Currency:110\",\n  si.due_date AS \"Jatuh Tempo:Date:110\",\n  CASE WHEN si.outstanding_amount > 0 AND si.due_date < CURDATE() THEN DATEDIFF(CURDATE(), si.due_date) ELSE 0 END AS \"Umur Tunggakan (hari):Int:130\"\nFROM `tabRumba Event Peserta` p\nINNER JOIN `tabRumba Event` ev ON ev.name = p.parent\nLEFT JOIN `tabSales Invoice` si ON si.name = p.sales_invoice AND si.docstatus = 1\nWHERE p.parenttype = 'Rumba Event' AND ev.berbayar = 1\nORDER BY si.due_date",
-  "ref_doctype": "Rumba Event",
-  "reference_report": null,
-  "report_name": "Pembayaran Peserta Event",
-  "report_script": null,
-  "report_type": "Query Report",
-  "roles": [
-   {
-    "role": "Rumba Bisnis"
-   },
-   {
-    "role": "Rumba Founder"
-   },
-   {
-    "role": "Rumba Finance"
-   },
-   {
-    "role": "System Manager"
-   }
-  ],
-  "timeout": 0
- },
- {
-  "add_total_row": 0,
-  "add_translate_data": 0,
-  "columns": [],
-  "disable_prepared_report_automation": 0,
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Report",
-  "filters": [],
-  "is_standard": "No",
-  "javascript": null,
-  "json": null,
-  "letter_head": "Company Letterhead - Grey",
-  "modified": "2026-06-30 20:22:48.130577",
-  "module": "Bimbel Rumba v16",
-  "name": "Rekap Event Tahunan",
-  "prepared_report": 0,
-  "query": "SELECT\n  YEAR(ev.tanggal_mulai) AS \"Tahun:Int:80\",\n  ev.jenis_event AS \"Jenis Event:Data:170\",\n  COUNT(*) AS \"Jumlah Event:Int:110\",\n  SUM(ev.jumlah_peserta) AS \"Total Peserta:Int:110\",\n  SUM(ev.total_pendapatan) AS \"Pendapatan:Currency:130\",\n  SUM(ev.total_pengeluaran) AS \"Pengeluaran:Currency:130\",\n  SUM(ev.surplus_defisit) AS \"Surplus/Defisit:Currency:140\"\nFROM `tabRumba Event` ev\nWHERE ev.status != 'Dibatalkan'\nGROUP BY YEAR(ev.tanggal_mulai), ev.jenis_event\nORDER BY YEAR(ev.tanggal_mulai) DESC, ev.jenis_event",
-  "ref_doctype": "Rumba Event",
-  "reference_report": null,
-  "report_name": "Rekap Event Tahunan",
   "report_script": null,
   "report_type": "Query Report",
   "roles": [

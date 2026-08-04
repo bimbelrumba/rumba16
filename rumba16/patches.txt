@@ -4,3 +4,4 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+rumba16.patches.v0_2.migrasi_status_murid_belum_mulai

@@ -163,7 +163,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:50.012616",
+ "modified": "2026-08-04 08:11:54.662376",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Sertifikat",
@@ -183,16 +183,11 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Rumba Admin Unit",
-   "share": 1,
-   "write": 1
+   "role": "Rumba Admin Unit"
   },
   {
    "export": 1,
@@ -210,12 +205,6 @@
    "export": 1,
    "read": 1,
    "report": 1,
-   "role": "Rumba Lead Tutor"
-  },
-  {
-   "export": 1,
-   "read": 1,
-   "report": 1,
    "role": "Rumba Tutor"
   },
   {
@@ -224,7 +213,7 @@
    "export": 1,
    "read": 1,
    "report": 1,
-   "role": "Rumba Akademik",
+   "role": "Rumba Kurikulum",
    "write": 1
   },
   {

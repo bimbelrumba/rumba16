@@ -1,0 +1,301 @@
+/* ============================================================
+   RUMBA THEME — WEB (login + web form publik)
+   File   : rumba_web.css
+   Dok    : ERP-THEME-001 — v2.1 (14 Jul 2026)
+   Muat   : hooks.py → web_include_css = "/assets/rumba16/css/rumba_web.css"
+   Lingkup: Halaman login, /kelas-gratis, /pendaftaran-murid-baru,
+            /daftar-event, /lamaran, dan web form publik lain.
+
+   v2.0 — "Nuansa bimbelrumba.com":
+   Token desain diekstrak langsung dari bimbelrumba.com
+   (WordPress + Elementor) pada 14 Jul 2026:
+   - Teks & judul : Raleway (body 500, judul 700; judul seksi
+                    26px warna hijau gelap #09601B)
+   - Tombol/CTA   : Poppins 600 16px UPPERCASE, radius 9px,
+                    padding 12px 24px (gaya "Daftar Sekarang")
+   - Kartu        : radius 10–16px, latar lembut #F9F9F9
+   - Palet Elementor website = palet resmi RUMBA (identik)
+   Keputusan 10 Jul 2026 tetap berlaku: halaman login memakai
+   DESAIN BAWAAN ERPNext, hanya recolor + font.
+
+   v2.1 — hasil verifikasi visual live di dev (14 Jul 2026):
+   - Tombol Next (multi-halaman) ikut gaya primer solid;
+     Discard/Previous jadi outline abu netral
+   - Spacer kosong 3rem atas/bawah kartu dihilangkan
+   - Border bawaan web-form-header/web-form dilebur ke kartu
+     v2.0 (hilangkan efek "kartu dalam kartu")
+   PENTING: /assets di-cache browser 1 tahun (max-age=31536000).
+   Setiap update file ini, naikkan query string di hooks.py:
+   web_include_css = "/assets/rumba16/css/rumba_web.css?v=21"
+   ============================================================ */
+
+/* Font sesuai website (Raleway = teks/judul, Poppins = tombol) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* ------------------------------------------------------------
+   1. PALET RESMI RUMBA + TOKEN WEBSITE
+   ------------------------------------------------------------ */
+:root {
+  --rumba-hijau:          #288f3d;
+  --rumba-hijau-gelap:    #09601B;
+  --rumba-kuning:         #EDCA0D;
+  --rumba-kuning-terang:  #F9E788;
+  --rumba-merah:          #E31E1E;
+  --rumba-merah-gelap:    #780909;
+  --rumba-hijau-tint:     #e6f4e9;
+  --rumba-kuning-tint:    #fdf7dc;
+  --rumba-merah-tint:     #fdeaea;
+  --rumba-gradasi-hijau:  linear-gradient(135deg, #288f3d 0%, #09601B 100%);
+
+  /* Token dari bimbelrumba.com */
+  --rumba-font-teks:      'Raleway', sans-serif;
+  --rumba-font-tombol:    'Poppins', sans-serif;
+  --rumba-teks:           #303030;   /* --e-global-color-text */
+  --rumba-latar-lembut:   #f9f9f9;   /* latar seksi website */
+  --rumba-radius-tombol:  9px;
+  --rumba-radius-kartu:   15px;
+
+  /* Variabel yang dipakai template web Frappe */
+  --primary:       var(--rumba-hijau);
+  --primary-color: var(--rumba-hijau);
+  --btn-primary:   var(--rumba-hijau);
+  --font-stack:    var(--rumba-font-teks);
+}
+
+/* ------------------------------------------------------------
+   2. TIPOGRAFI GLOBAL (nuansa terbesar website)
+   ------------------------------------------------------------ */
+body {
+  font-family: var(--rumba-font-teks) !important;
+  color: var(--rumba-teks);
+  letter-spacing: 0.2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--rumba-font-teks) !important;
+  font-weight: 700;
+  color: var(--rumba-hijau-gelap);
+}
+
+/* ------------------------------------------------------------
+   3. BINGKAI HALAMAN: NAVBAR & FOOTER (putih bersih ala website)
+   ------------------------------------------------------------ */
+.navbar,
+.navbar-light {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--rumba-hijau-tint);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.navbar .nav-link,
+.navbar-light .nav-link {
+  font-family: var(--rumba-font-teks);
+  font-weight: 600;
+  color: var(--rumba-teks) !important;
+}
+.navbar .nav-link:hover,
+.navbar-light .nav-link:hover { color: var(--rumba-hijau) !important; }
+
+.web-footer {
+  background-color: var(--rumba-latar-lembut);
+  border-top: 1px solid var(--rumba-hijau-tint);
+}
+
+a { color: var(--rumba-hijau); }
+a:hover { color: var(--rumba-hijau-gelap); }
+
+/* ------------------------------------------------------------
+   4. LATAR HALAMAN + KARTU FORM (ala kartu website)
+   ------------------------------------------------------------ */
+body:has(.web-form-container) {
+  background-color: var(--rumba-latar-lembut);
+}
+
+.web-form-container {
+  background: #ffffff;
+  border-radius: var(--rumba-radius-kartu);
+  box-shadow: 0 6px 24px rgba(9, 96, 27, 0.08);
+  border-top: 4px solid var(--rumba-hijau);
+  padding: 2rem 2rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* v2.1: lebur border bawaan ke kartu (hilangkan kartu-dalam-kartu)
+   + hilangkan spacer kosong 3rem atas/bawah */
+.web-form-container > div[style="height: 3rem"] { height: 0 !important; }
+.web-form-container .web-form-header {
+  border: none !important;
+  border-bottom: 1px solid #ececec !important;
+  border-radius: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.web-form-container .web-form {
+  border: none !important;
+  box-shadow: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Judul & intro web form: gaya judul seksi website */
+.web-form-header .title,
+.web-form-head .title {
+  font-family: var(--rumba-font-teks) !important;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--rumba-hijau-gelap);
+}
+.web-form-header .web-form-introduction,
+.web-form-header p {
+  color: var(--rumba-teks);
+}
+
+/* Label field */
+.web-form .control-label,
+.web-form-container .control-label {
+  font-weight: 600;
+  color: var(--rumba-teks);
+}
+
+/* ------------------------------------------------------------
+   5. TOMBOL (gaya "Daftar Sekarang" website: Poppins,
+      uppercase, radius 9px, padding 12px 24px)
+   ------------------------------------------------------------ */
+.web-form-container .btn,
+.web-form-actions .btn,
+.page-card .btn,
+.btn-login {
+  font-family: var(--rumba-font-tombol) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--rumba-radius-tombol) !important;
+  padding: 10px 24px;
+}
+
+/* Primer: solid gradasi hijau (aksi utama form) */
+.web-form-container .btn-primary,
+.web-form .btn-primary,
+.web-form-actions .btn-primary,
+.for-login .btn-primary,
+.for-signup .btn-primary,
+.for-forgot .btn-primary,
+.page-card .btn-primary,
+.btn-login {
+  background: var(--rumba-gradasi-hijau) !important;
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.web-form-container .btn-primary:hover,
+.for-login .btn-primary:hover,
+.page-card .btn-primary:hover,
+.btn-login:hover {
+  background: var(--rumba-hijau-gelap) !important;
+}
+
+/* Next (web form multi-halaman) = aksi utama: ikut gaya primer */
+.web-form-container .btn-next {
+  background: var(--rumba-gradasi-hijau) !important;
+  border: 1px solid var(--rumba-hijau-gelap) !important;
+  color: #fff !important;
+}
+.web-form-container .btn-next:hover {
+  background: var(--rumba-hijau-gelap) !important;
+}
+
+/* Discard & Previous: outline abu netral, hover tint hijau */
+.web-form-container .discard-btn,
+.web-form-container .btn-previous {
+  background: transparent !important;
+  border: 2px solid #cfcfcf !important;
+  color: #555 !important;
+}
+.web-form-container .discard-btn:hover,
+.web-form-container .btn-previous:hover {
+  border-color: var(--rumba-hijau-gelap) !important;
+  color: var(--rumba-hijau-gelap) !important;
+  background: var(--rumba-hijau-tint) !important;
+}
+
+/* Sekunder: outline 2px hijau gelap (gaya CTA outline website) */
+.web-form-container .btn-secondary,
+.web-form-container .btn-default,
+.web-form-actions .btn-secondary {
+  background: transparent !important;
+  border: 2px solid var(--rumba-hijau-gelap) !important;
+  color: var(--rumba-hijau-gelap) !important;
+}
+.web-form-container .btn-secondary:hover,
+.web-form-container .btn-default:hover {
+  background: var(--rumba-hijau-tint) !important;
+}
+
+/* ------------------------------------------------------------
+   6. INPUT & KONTROL FORM
+   ------------------------------------------------------------ */
+.web-form .form-control,
+.web-form-container .form-control {
+  border-radius: var(--rumba-radius-tombol);
+  font-family: var(--rumba-font-teks);
+}
+.web-form-container .form-control:focus,
+.web-form .form-control:focus,
+.for-login .form-control:focus,
+.page-card .form-control:focus {
+  border-color: var(--rumba-hijau) !important;
+  box-shadow: 0 0 0 2px var(--rumba-hijau-tint) !important;
+}
+
+/* Checkbox (mis. 11 checkbox sumber info di /kelas-gratis) */
+.web-form input[type="checkbox"]:checked,
+.web-form-container input[type="checkbox"]:checked {
+  background-color: var(--rumba-hijau) !important;
+  border-color: var(--rumba-hijau) !important;
+}
+
+/* Progress web form multi-halaman */
+.web-form-container .progress-bar {
+  background-color: var(--rumba-hijau) !important;
+}
+
+/* Pesan sukses setelah submit */
+.web-form-container .alert-success,
+.success-page {
+  background: var(--rumba-hijau-tint);
+  border-color: var(--rumba-hijau);
+  color: var(--rumba-hijau-gelap);
+  border-radius: var(--rumba-radius-kartu);
+}
+
+/* ------------------------------------------------------------
+   7. HALAMAN LOGIN (recolor desain bawaan + font website)
+   ------------------------------------------------------------ */
+.for-login .page-card,
+.for-signup .page-card,
+.for-forgot .page-card {
+  border-top: 4px solid var(--rumba-hijau);
+  border-radius: 10px;
+}
+
+.for-login a,
+.for-signup a,
+.for-forgot a,
+.page-card a {
+  color: var(--rumba-hijau);
+}
+.for-login a:hover,
+.page-card a:hover {
+  color: var(--rumba-hijau-gelap);
+}
+
+/* ------------------------------------------------------------
+   8. KELAS BANTU (paritas dengan rumba_theme.css)
+   ------------------------------------------------------------ */
+.rumba-merah  { color: var(--rumba-merah) !important; font-weight: 700; }
+.rumba-hijau  { color: var(--rumba-hijau) !important; }
+.rumba-kuning { color: var(--rumba-kuning) !important; }
+
+/* ============================================================
+   SELESAI — rumba_web.css v2.1
+   ============================================================ */

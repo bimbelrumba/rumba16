@@ -95,6 +95,7 @@ def buat_spp_dimuka(murid, jumlah_bulan, mulai=None, submit=1):
 
     company = _default_company()
     rate, item = _resolve_tarif(m)  # tarif per bulan (override murid > Item Price)
+    cost_center = frappe.db.get_value("Rumba Unit", m.nama_unit, "cost_center") if m.nama_unit else None
 
     mulai_date = get_first_day(getdate(mulai) if mulai else getdate(today()))
     akhir_date = get_last_day(add_months(mulai_date, jumlah_bulan - 1))
@@ -115,12 +116,15 @@ def buat_spp_dimuka(murid, jumlah_bulan, mulai=None, submit=1):
     inv.rumba_unit = m.nama_unit
     inv.rumba_murid = m.name
     inv.spp_periode = f"DIMUKA {mulai_date:%Y-%m}..{akhir_date:%Y-%m}"
+    if cost_center:
+        inv.cost_center = cost_center
     inv.append(
         "items",
         {
             "item_code": item,
             "qty": jumlah_bulan,
             "rate": rate_net,  # tarif per bulan setelah diskon
+            "cost_center": cost_center,
             # F6 — deferred revenue per baris (BUKAN global di Item; SPP bulanan
             # reguler tetap diakui langsung).
             "enable_deferred_revenue": 1,
@@ -157,7 +161,6 @@ def buat_spp_dimuka(murid, jumlah_bulan, mulai=None, submit=1):
         "service_end": str(akhir_date),
         "total_setelah_diskon": flt(inv.grand_total),
     }
-
 
 @frappe.whitelist()
 def hanguskan_saldo_dimuka(murid, tanggal_efektif=None):

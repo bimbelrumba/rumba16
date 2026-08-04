@@ -1,0 +1,204 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"pu1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"pu2\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udef0\ufe0f Pantauan Unit\",\"col\":12}},{\"id\":\"pu3\",\"type\":\"header\",\"data\":{\"text\":\"Pemantauan Kurikulum\",\"col\":12}},{\"id\":\"pu4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"pu5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Naik Level Bulan Ini\",\"col\":4}},{\"id\":\"pu6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Lulus Bulan Ini\",\"col\":4}},{\"id\":\"pu7\",\"type\":\"header\",\"data\":{\"text\":\"Pemantauan Tutor & Sesi\",\"col\":12}},{\"id\":\"pu8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":4}},{\"id\":\"pu9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi Menunggu Persetujuan\",\"col\":4}},{\"id\":\"pu10\",\"type\":\"header\",\"data\":{\"text\":\"Pemantauan Keuangan Unit\",\"col\":12}},{\"id\":\"pu11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"pu12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nominal SPP Belum Dibayar\",\"col\":4}},{\"id\":\"pu13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pengeluaran (Bulan Ini)\",\"col\":4}},{\"id\":\"pu14\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pu15\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcd1 Laporan Pemantauan\",\"col\":12}},{\"id\":\"pu16\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Kurikulum\",\"col\":4}},{\"id\":\"pu17\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Tutor & Sesi\",\"col\":4}},{\"id\":\"pu18\",\"type\":\"card\",\"data\":{\"card_name\":\"Laporan Keuangan Unit\",\"col\":4}}]",
+ "creation": "2026-08-02 15:58:11.930742",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Kepala Halaman Unit"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "eye",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Pantauan Unit",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Kurikulum",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Bintang Murid",
+   "link_count": 0,
+   "link_to": "Rekap Bintang Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Riwayat Ujian Kenaikan Level",
+   "link_count": 0,
+   "link_to": "Riwayat Ujian Kenaikan Level",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sertifikat Murid",
+   "link_count": 0,
+   "link_to": "Rumba Sertifikat",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Tutor & Sesi",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Jam Mengajar (F-GAJ-01)",
+   "link_count": 0,
+   "link_to": "Rekap Jam Mengajar (F-GAJ-01)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rekap Kehadiran Murid",
+   "link_count": 0,
+   "link_to": "Rekap Kehadiran Murid",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sesi Rombel",
+   "link_count": 0,
+   "link_to": "Rumba Sesi Kelas",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laporan Keuangan Unit",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Piutang SPP per Unit (Aging)",
+   "link_count": 0,
+   "link_to": "Piutang SPP per Unit (Aging)",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penerimaan (Kas Masuk)",
+   "link_count": 0,
+   "link_to": "Penerimaan (Kas Masuk)",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Payment Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pembayaran (Kas Keluar)",
+   "link_count": 0,
+   "link_to": "Pembayaran (Kas Keluar)",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Payment Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Laba Rugi (Unit)",
+   "link_count": 0,
+   "link_to": "Profit and Loss Statement",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-04 06:34:53.547470",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Pantauan Unit",
+ "number_cards": [
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Murid Naik Level Bulan Ini",
+   "number_card_name": "Murid Naik Level Bulan Ini"
+  },
+  {
+   "label": "Murid Lulus Bulan Ini",
+   "number_card_name": "Murid Lulus Bulan Ini"
+  },
+  {
+   "label": "Sesi Terlaksana (Bulan Ini)",
+   "number_card_name": "Sesi Terlaksana (Bulan Ini)"
+  },
+  {
+   "label": "Presensi Menunggu Persetujuan",
+   "number_card_name": "Presensi Menunggu Persetujuan"
+  },
+  {
+   "label": "Nominal SPP Terbayar Bulan Ini",
+   "number_card_name": "Nominal SPP Terbayar Bulan Ini"
+  },
+  {
+   "label": "Nominal SPP Belum Dibayar",
+   "number_card_name": "Nominal SPP Belum Dibayar"
+  },
+  {
+   "label": "Pengeluaran (Bulan Ini)",
+   "number_card_name": "Pengeluaran (Bulan Ini)"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Kepala Unit"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [],
+ "title": "Pantauan Unit",
+ "type": "Workspace"
+}

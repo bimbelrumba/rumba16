@@ -1,0 +1,94 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udccc Ringkasan\",\"col\":12}},{\"id\":\"n1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbit Bulan Ini\",\"col\":4}},{\"id\":\"n2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Terbayar Bulan Ini\",\"col\":4}},{\"id\":\"n3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":4}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"\u26a0\ufe0f Perlu Tindakan\",\"col\":12}},{\"id\":\"n4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP Belum Dibayar\",\"col\":6}},{\"id\":\"n5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pendaftaran Menunggu\",\"col\":6}},{\"id\":\"sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"\u26a1 Aksi Cepat\",\"col\":12}},{\"id\":\"q1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Tagihan\",\"col\":3}},{\"id\":\"q2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Penerimaan\",\"col\":3}},{\"id\":\"q3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pembayaran\",\"col\":3}},{\"id\":\"q4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jurnal\",\"col\":3}}]",
+ "creation": "2026-08-02 15:58:12.556108",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "accounting",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Keuangan",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-08-02 17:25:49.910201",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Keuangan",
+ "number_cards": [
+  {
+   "label": "Invoice SPP Terbit Bulan Ini",
+   "number_card_name": "Invoice SPP Terbit Bulan Ini"
+  },
+  {
+   "label": "Invoice SPP Terbayar Bulan Ini",
+   "number_card_name": "Invoice SPP Terbayar Bulan Ini"
+  },
+  {
+   "label": "Invoice SPP Belum Dibayar",
+   "number_card_name": "Invoice SPP Belum Dibayar"
+  },
+  {
+   "label": "Murid Aktif",
+   "number_card_name": "Murid Aktif"
+  },
+  {
+   "label": "Pendaftaran Menunggu",
+   "number_card_name": "Pendaftaran Menunggu"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Sales Invoice",
+   "label": "Tagihan"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  }
+ ],
+ "sequence_id": 4.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Tagihan",
+   "type": "URL",
+   "url": "/app/sales-invoice/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Penerimaan",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Receive"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Pembayaran",
+   "type": "URL",
+   "url": "/app/payment-entry/new?payment_type=Pay"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Jurnal",
+   "type": "URL",
+   "url": "/app/journal-entry/new"
+  }
+ ],
+ "title": "Keuangan",
+ "type": "Workspace"
+}

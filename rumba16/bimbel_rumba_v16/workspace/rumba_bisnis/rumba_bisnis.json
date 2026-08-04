@@ -1,0 +1,98 @@
+{
+ "app": "rumba16",
+ "charts": [],
+ "content": "[{\"id\":\"rb1\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc8 Rumba Bisnis\",\"col\":12}},{\"id\":\"rb2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prospek Mitra Aktif\",\"col\":3}},{\"id\":\"rb3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Deal Mitra Tahun Ini\",\"col\":3}},{\"id\":\"rb4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Event Aktif\",\"col\":3}},{\"id\":\"rb5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead Baru Bulan Ini\",\"col\":3}},{\"id\":\"rb6\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb7\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\ude80 Aksi Cepat\",\"col\":12}},{\"id\":\"rb8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Prospek Mitra\",\"col\":3}},{\"id\":\"rb9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Event\",\"col\":3}},{\"id\":\"rb10\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Aktivitas Pemasaran\",\"col\":3}},{\"id\":\"rb11\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rb12\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcca Laporan Utama\",\"col\":12}},{\"id\":\"rb13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Funnel Mitra\",\"col\":3}},{\"id\":\"rb14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Efektivitas Kanal\",\"col\":3}},{\"id\":\"rb15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitabilitas Event\",\"col\":3}}]",
+ "creation": "2026-07-16 14:42:36.256261",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "trending-up",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Rumba Bisnis",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-16 14:42:36.256261",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Rumba Bisnis",
+ "number_cards": [
+  {
+   "label": "Prospek Mitra Aktif",
+   "number_card_name": "Prospek Mitra Aktif"
+  },
+  {
+   "label": "Deal Mitra Tahun Ini",
+   "number_card_name": "Deal Mitra Tahun Ini"
+  },
+  {
+   "label": "Event Aktif",
+   "number_card_name": "Event Aktif"
+  },
+  {
+   "label": "Lead Baru Bulan Ini",
+   "number_card_name": "Lead Baru Bulan Ini"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "RUMBA",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Bisnis"
+  },
+  {
+   "role": "Rumba Founder"
+  }
+ ],
+ "sequence_id": 0.6,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Prospek Mitra",
+   "type": "URL",
+   "url": "/app/rumba-mitra-lead/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Event",
+   "type": "URL",
+   "url": "/app/rumba-event/new"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "+ Aktivitas Pemasaran",
+   "type": "URL",
+   "url": "/app/rumba-aktivitas-pemasaran/new"
+  },
+  {
+   "doc_view": "",
+   "label": "Efektivitas Kanal",
+   "link_to": "Pemasaran - Efektivitas Kanal",
+   "report_ref_doctype": "Rumba Lead",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Funnel Mitra",
+   "link_to": "Kemitraan - Funnel Mitra",
+   "report_ref_doctype": "Rumba Mitra Lead",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Profitabilitas Event",
+   "link_to": "Profitabilitas Event",
+   "report_ref_doctype": "Rumba Event",
+   "type": "Report"
+  }
+ ],
+ "title": "Rumba Bisnis",
+ "type": "Workspace"
+}

@@ -1,0 +1,51 @@
+{
+ "app": "rumba16",
+ "charts": [
+  {
+   "chart_name": "Tren Penerimaan SPP per Bulan"
+  },
+  {
+   "chart_name": "Tren Pengeluaran per Bulan"
+  },
+  {
+   "chart_name": "Tren Tunggakan SPP per Bulan"
+  },
+  {
+   "chart_name": "Penerimaan SPP per Unit"
+  }
+ ],
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udcc8 Tren Keuangan (Live Transaksi)\",\"col\":12}},{\"id\":\"ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Penerimaan SPP per Bulan\",\"col\":6}},{\"id\":\"ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Pengeluaran per Bulan\",\"col\":6}},{\"id\":\"ch4\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Tren Tunggakan SPP per Bulan\",\"col\":6}},{\"id\":\"ch5\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Penerimaan SPP per Unit\",\"col\":6}},{\"id\":\"sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hn\",\"type\":\"header\",\"data\":{\"text\":\"\ud83d\udea7 1 item masih menunggu: \\\"Pendapatan vs Pengeluaran per Bulan\\\" \u2014 Group By di ERPNext tidak bisa gabung dengan tren bulanan, perlu Query Report kustom kalau tetap dibutuhkan sbg 1 chart (sementara pakai 2 chart di atas). \u2705 Piutang Aging 30/60/90+ per Cost Center SELESAI \u2014 pakai report native \\\"Accounts Receivable Summary\\\" di halaman Laporan Keuangan (bukan chart di sini), lihat catatan di sana.\",\"col\":12}}]",
+ "creation": "2026-08-02 17:33:08.359905",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 1,
+ "icon": "dashboard",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Dashboard Keuangan",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-08-03 12:04:40.887045",
+ "modified_by": "Administrator",
+ "module": "Bimbel Rumba v16",
+ "name": "Dashboard Keuangan",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Keuangan",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rumba Founder"
+  },
+  {
+   "role": "Rumba Finance"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Dashboard Keuangan",
+ "type": "Workspace"
+}

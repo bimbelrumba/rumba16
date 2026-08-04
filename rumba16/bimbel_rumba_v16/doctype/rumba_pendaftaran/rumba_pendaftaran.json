@@ -7,6 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "section_bimbel_rumba_tujuan",
+  "kode_provinsi",
+  "nama_provinsi",
   "nama_kota",
   "nama_unit",
   "column_break_jgrs",
@@ -80,7 +82,10 @@
   "tanggal_pembayaran",
   "disetujui_oleh",
   "tanggal_persetujuan",
-  "lead"
+  "lead",
+  "kesiswaan_section",
+  "jenis_pendaftaran",
+  "tanggal_mulai_belajar"
  ],
  "fields": [
   {
@@ -539,12 +544,45 @@
    "fieldtype": "Link",
    "label": "Lead",
    "options": "Rumba Lead"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Provinsi",
+   "options": "Rumba Provinsi"
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "label": "Nama Provinsi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kesiswaan_section",
+   "fieldtype": "Section Break",
+   "label": "KLASIFIKASI KESISWAAN"
+  },
+  {
+   "default": "Siswa Baru",
+   "description": "Masuk Lagi = murid lama (pernah Berhenti) yang mendaftar kembali (SML).",
+   "fieldname": "jenis_pendaftaran",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Jenis Pendaftaran",
+   "options": "Siswa Baru\nMasuk Lagi"
+  },
+  {
+   "description": "Rencana mulai masuk. Kosong = mulai segera. Sudah bayar + tanggal di masa depan = BD (Bayar Dulu).",
+   "fieldname": "tanggal_mulai_belajar",
+   "fieldtype": "Date",
+   "label": "Tanggal Mulai Belajar"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-26 23:18:23.943585",
+ "modified": "2026-07-26 16:48:48.726032",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Pendaftaran",

@@ -2,13 +2,14 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "format:RL-{YYYY}-{#####}",
  "creation": "2026-06-17 13:05:30.787555",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "sec_identitas",
   "tanggal_lead",
+  "kode_provinsi",
+  "nama_provinsi",
   "nama_kota",
   "nama_unit",
   "kode_unit",
@@ -166,7 +167,7 @@
   {
    "fieldname": "kelas_trial",
    "fieldtype": "Link",
-   "label": "Kelas Trial",
+   "label": "Rombel Trial",
    "options": "Rumba Kelas"
   },
   {
@@ -295,16 +296,29 @@
    "fieldname": "catatan_tunggu",
    "fieldtype": "Small Text",
    "label": "Catatan Daftar Tunggu"
+  },
+  {
+   "fieldname": "kode_provinsi",
+   "fieldtype": "Link",
+   "label": "Provinsi",
+   "options": "Rumba Provinsi"
+  },
+  {
+   "fetch_from": "kode_provinsi.nama_provinsi",
+   "fieldname": "nama_provinsi",
+   "fieldtype": "Data",
+   "label": "Nama Provinsi",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:32.758917",
+ "modified": "2026-07-26 16:30:28.667056",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Lead",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

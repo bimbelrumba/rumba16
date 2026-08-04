@@ -14,6 +14,7 @@
   "panduan_nama_kelas",
   "status_kelas",
   "program_periode_section",
+  "wali_kelas",
   "tahun_ajaran",
   "semester",
   "column_break_bbwv",
@@ -41,13 +42,13 @@
   {
    "fieldname": "identitas_kelas_section",
    "fieldtype": "Section Break",
-   "label": "IDENTITAS KELAS"
+   "label": "IDENTITAS ROMBEL"
   },
   {
    "fieldname": "nama_kelas",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nama Kelas",
+   "label": "Nama Rombel",
    "reqd": 1,
    "unique": 1
   },
@@ -56,7 +57,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Status Kelas",
+   "label": "Status Rombel",
    "options": "Draft\nAktif\nSelesai\nDibatalkan",
    "reqd": 1
   },
@@ -185,7 +186,7 @@
   {
    "fieldname": "panduan_nama_kelas",
    "fieldtype": "HTML",
-   "label": "Panduan Nama Kelas",
+   "label": "Panduan Nama Rombel",
    "options": "<div class=\"text-muted small\">\nGunakan pola: [Kode_Unit]-[Kode_Program]-[Jenis Kelas]-[Hari]-[Jam Mulai]- [Semester]-[Tahun Ajaran]<br>\n<b>Contoh</b>: 1901-KIDD-Reguler-Sen,Rab-09:30-S1- 2026/2027</b>\n</div>\n<br/>"
   },
   {
@@ -209,7 +210,7 @@
   {
    "fieldname": "roster_section",
    "fieldtype": "Section Break",
-   "label": "ANGGOTA KELAS"
+   "label": "ANGGOTA ROMBEL"
   },
   {
    "fieldname": "jumlah_anggota",
@@ -221,14 +222,23 @@
   {
    "fieldname": "anggota_kelas",
    "fieldtype": "Table",
-   "label": "Anggota Kelas",
+   "label": "Anggota Rombel",
    "options": "Rumba Anggota Kelas"
+  },
+  {
+   "description": "Tutor pengampu utama kelas ini. Menentukan kelas mana yang tampil untuk akun Tutor.",
+   "fieldname": "wali_kelas",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Wali Rombel (Tutor)",
+   "options": "Employee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-27 01:29:34.317834",
+ "modified": "2026-07-26 16:49:29.810464",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rumba Kelas",
@@ -270,12 +280,6 @@
    "read": 1,
    "report": 1,
    "role": "Rumba Kepala Unit"
-  },
-  {
-   "export": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Rumba Lead Tutor"
   },
   {
    "export": 1,
