@@ -126,3 +126,52 @@ def hide_unused_standard_workspaces():
     frappe.logger().info(
         f"[rumba16] hide_unused_standard_workspaces: {changed} workspace disembunyikan"
     )
+
+
+# ── Tambahan (4 Agu 2026): sembunyikan bawaan tersisa + landing ke RUMBA ────────
+# Memperbarui ERP-WS-003 §2.2: hanya Payroll & Invoicing bawaan yang dibiarkan
+# tampil; sisanya disembunyikan. Plus jadikan RUMBA halaman depan /app.
+EXTRA_HIDDEN_WORKSPACES = [
+    "HR Setup",
+    "Tenure",
+    "Recruitment",
+    "Shift & Attendance",
+    "Leaves",
+    "Financial Reports",
+    "Selling",
+    "Expenses",
+    "Stock",
+    "Performance",
+    "Tax & Benefits",
+]
+
+LANDING_WORKSPACE = "RUMBA"
+LANDING_SEQUENCE_ID = -1
+
+
+def hide_extra_standard_workspaces():
+    """Sembunyikan workspace bawaan tersisa (Payroll & Invoicing dibiarkan tampil)."""
+    changed = 0
+    for name in EXTRA_HIDDEN_WORKSPACES:
+        if not frappe.db.exists("Workspace", name):
+            continue
+        if not frappe.db.get_value("Workspace", name, "is_hidden"):
+            frappe.db.set_value("Workspace", name, "is_hidden", 1)
+            changed += 1
+    if changed:
+        frappe.clear_cache()
+    frappe.logger().info(
+        f"[rumba16] hide_extra_standard_workspaces: {changed} workspace disembunyikan"
+    )
+
+
+def set_default_landing_workspace():
+    """Jadikan RUMBA workspace pendaratan /app (sequence_id terkecil & unik)."""
+    if not frappe.db.exists("Workspace", LANDING_WORKSPACE):
+        return
+    if frappe.db.get_value("Workspace", LANDING_WORKSPACE, "sequence_id") != LANDING_SEQUENCE_ID:
+        frappe.db.set_value("Workspace", LANDING_WORKSPACE, "sequence_id", LANDING_SEQUENCE_ID)
+        frappe.clear_cache()
+    frappe.logger().info(
+        f"[rumba16] set_default_landing_workspace: {LANDING_WORKSPACE} sequence_id={LANDING_SEQUENCE_ID}"
+    )
