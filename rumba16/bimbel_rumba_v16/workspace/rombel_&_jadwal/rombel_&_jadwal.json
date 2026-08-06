@@ -1,12 +1,16 @@
 {
  "app": "rumba16",
  "charts": [],
- "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udccc Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1\ufe0f Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\uddc2\ufe0f Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
- "creation": "2026-07-27 20:52:29.442241",
+ "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\udccc Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"rpp_16\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Rombel Perlu Pengganti (Tutor Izin)\",\"col\":12}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u26a1\ufe0f Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\ud83d\uddc2\ufe0f Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
+ "creation": "2026-08-06 09:32:46.220124",
  "custom_blocks": [
   {
    "custom_block_name": "Kepala Halaman Unit",
    "label": "Kepala Halaman Unit"
+  },
+  {
+   "custom_block_name": "Rombel Perlu Pengganti (Tutor Izin)",
+   "label": "Rombel Perlu Pengganti (Tutor Izin)"
   }
  ],
  "docstatus": 0,
@@ -88,7 +92,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-07-28 21:05:31.196922",
+ "modified": "2026-08-06 22:04:08.604141",
  "modified_by": "Administrator",
  "module": "Bimbel Rumba v16",
  "name": "Rombel & Jadwal",

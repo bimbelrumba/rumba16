@@ -305,7 +305,7 @@
     "label": "Okupansi Kelas"
    }
   ],
-  "content": "[{\"id\":\"PN2jqS9til\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"aWe4djv8Bk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 RINGKASAN UNIT</span>\",\"col\":12}},{\"id\":\"vVUxxkeW3k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":6}},{\"id\":\"pggjt35Wiu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"1hx5J1jUj0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JURFtOHBNJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚠️ PERLU TINDAKAN</b></span>\",\"col\":12}},{\"id\":\"w2Lb8SUs6E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead belum ditindaklanjuti\",\"col\":6}},{\"id\":\"iaqhD_0LxR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi menunggu persetujuan\",\"col\":6}},{\"id\":\"GXha6XdoL6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP belum dibayar\",\"col\":6}},{\"id\":\"bHOrLe_C0k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel tanpa Tutor\",\"col\":6}},{\"id\":\"0mI3R4JWWj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TFHhAR85R0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡️ AKSI CEPAT</b></span>\",\"col\":12}},{\"id\":\"ctFver_Wfs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":4}},{\"id\":\"cLf-h1ETFL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jadwalkan Sesi\",\"col\":4}},{\"id\":\"1scb-7Ql1U\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Catat Penerimaan Uang\",\"col\":4}},{\"id\":\"pSbxD4rIiT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tM7zChRLek\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Okupansi Kelas\",\"col\":12}}]",
+  "content": "[{\"id\":\"PN2jqS9til\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"aWe4djv8Bk\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 RINGKASAN UNIT</span>\",\"col\":12}},{\"id\":\"vVUxxkeW3k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Murid Aktif\",\"col\":6}},{\"id\":\"pggjt35Wiu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Hari Ini\",\"col\":6}},{\"id\":\"1hx5J1jUj0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JURFtOHBNJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚠️ PERLU TINDAKAN</b></span>\",\"col\":12}},{\"id\":\"w2Lb8SUs6E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead belum ditindaklanjuti\",\"col\":6}},{\"id\":\"iaqhD_0LxR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Presensi menunggu persetujuan\",\"col\":6}},{\"id\":\"GXha6XdoL6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoice SPP belum dibayar\",\"col\":6}},{\"id\":\"bHOrLe_C0k\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel tanpa Tutor\",\"col\":6}},{\"id\":\"izin_ttd_17\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Izin Tutor Diajukan\",\"col\":6}},{\"id\":\"0mI3R4JWWj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TFHhAR85R0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>⚡️ AKSI CEPAT</b></span>\",\"col\":12}},{\"id\":\"ctFver_Wfs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Pendaftaran\",\"col\":4}},{\"id\":\"cLf-h1ETFL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Jadwalkan Sesi\",\"col\":4}},{\"id\":\"1scb-7Ql1U\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Catat Penerimaan Uang\",\"col\":4}},{\"id\":\"pSbxD4rIiT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tM7zChRLek\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Okupansi Kelas\",\"col\":12}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Kepala Halaman Unit",
@@ -324,7 +324,7 @@
   "link_to": null,
   "link_type": "DocType",
   "links": [],
-  "modified": "2026-07-28 09:17:14.509140",
+  "modified": "2026-08-06 22:03:22.223476",
   "module": "Bimbel Rumba v16",
   "name": "Operasional",
   "number_cards": [
@@ -351,6 +351,10 @@
    {
     "label": "Rombel tanpa Tutor",
     "number_card_name": "Kelas Tanpa Tutor"
+   },
+   {
+    "label": "Izin Tutor Diajukan",
+    "number_card_name": "Izin Tutor Diajukan"
    }
   ],
   "parent_page": null,
@@ -2495,11 +2499,15 @@
  {
   "app": "rumba16",
   "charts": [],
-  "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">⚡️ Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">🗂️ Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
+  "content": "[{\"id\":\"kj1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Kepala Halaman Unit\",\"col\":12}},{\"id\":\"kj2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">📌 Ringkasan</span>\",\"col\":12}},{\"id\":\"kj3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Aktif\",\"col\":4}},{\"id\":\"kj4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Kritis\",\"col\":4}},{\"id\":\"kj101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rombel Tanpa Tutor\",\"col\":4}},{\"id\":\"rpp_16\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Rombel Perlu Pengganti (Tutor Izin)\",\"col\":12}},{\"id\":\"kj9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">⚡️ Jadwal Belajar</span>\",\"col\":12}},{\"id\":\"kj6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Rombel\",\"col\":4}},{\"id\":\"kj7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Sesi Rombel\",\"col\":4}},{\"id\":\"kj8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sesi Perlu Disetujui\",\"col\":4}},{\"id\":\"TqOHQG_NYq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Minggu Ini\",\"col\":6}},{\"id\":\"3h6buefl2I\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sesi Terlaksana (Bulan Ini)\",\"col\":6}},{\"id\":\"kj13\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kj14\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">🗂️ Dokumen</span>\",\"col\":12}},{\"id\":\"kj15\",\"type\":\"card\",\"data\":{\"card_name\":\"Rombel & Jadwal\",\"col\":4}},{\"id\":\"CJrxkSjON5\",\"type\":\"card\",\"data\":{\"card_name\":\"BKM (Buku Kegiatan Murid)\",\"col\":4}}]",
   "custom_blocks": [
    {
     "custom_block_name": "Kepala Halaman Unit",
     "label": "Kepala Halaman Unit"
+   },
+   {
+    "custom_block_name": "Rombel Perlu Pengganti (Tutor Izin)",
+    "label": "Rombel Perlu Pengganti (Tutor Izin)"
    }
   ],
   "docstatus": 0,
@@ -2620,7 +2628,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-07-28 21:05:31.196922",
+  "modified": "2026-08-06 22:04:08.604141",
   "module": "Bimbel Rumba v16",
   "name": "Rombel & Jadwal",
   "number_cards": [
@@ -4291,7 +4299,7 @@
   "link_to": null,
   "link_type": "DocType",
   "links": [],
-  "modified": "2026-07-19 18:34:15.538971",
+  "modified": "2026-08-06 09:33:40.737726",
   "module": "Bimbel Rumba v16",
   "name": "RUMBA",
   "number_cards": [
@@ -4393,7 +4401,7 @@
     "role": "Rumba Founder"
    }
   ],
-  "sequence_id": 0.0,
+  "sequence_id": -1.0,
   "shortcuts": [],
   "title": "RUMBA",
   "type": "Workspace"
