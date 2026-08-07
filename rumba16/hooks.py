@@ -32,11 +32,12 @@ app_logo_url = "/assets/rumba16/images/splash-singa.png"
 
 # include js, css files in header of desk.html
 app_include_css = "rumba_theme.bundle.css"
-app_include_js = "/assets/rumba16/js/rumba_desk_landing.js"
+app_include_js = "/assets/rumba16/js/rumba_desk_landing.js?v=20260806b"
 
 # include js, css files in header of web template
 web_include_css = "rumba_web.bundle.css"
-# web_include_js = "/assets/rumba16/js/rumba16.js"
+
+web_include_js = "/assets/rumba16/js/rumba_login_no_redirect.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "rumba16/public/scss/website"
@@ -415,6 +416,8 @@ doc_events = {
 after_migrate = [
     "rumba16.maintenance.remove_unused_standard_dashboards",
     "rumba16.maintenance.hide_unused_standard_workspaces",
+    "rumba16.maintenance.hide_extra_standard_workspaces",
+    "rumba16.maintenance.set_default_landing_workspace",
 ]
 
 extend_bootinfo = "rumba16.boot.extend_bootinfo"
